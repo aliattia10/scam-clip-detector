@@ -108,6 +108,7 @@
   html[lang=es] .en-only{display:none}
   html:not([lang=es]) .es-only{display:none}
   @media (max-width:860px){.pack-top,.previews,section.tools{grid-template-columns:1fr}.pack ul.formats{columns:1}.hdr-r a.hide-m{display:none}}
+  @media (max-width:860px){section.guide{grid-template-columns:1fr!important}}
   footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
   @media (max-width:860px){.hero,#out{grid-template-columns:1fr}h1{font-size:38px}}
   section.faq,section.guides{margin:0 0 28px}
@@ -263,6 +264,20 @@
     </div>
   </section>
 
+  <section class="guide" id="guide" style="background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:0 0 28px;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center">
+    <div>
+      <p style="margin:0 0 6px;color:var(--mute);font-size:13px;letter-spacing:.12em;text-transform:uppercase">New · PDF guide</p>
+      <h2 style="margin:0 0 8px">How I made 900 faceless comedy Shorts in 3 languages</h2>
+      <p class="hint en-only" style="margin:0">The production system behind “Unethical Ways to Make Money”: 300 EN, 300 ES and 300 FR vertical Shorts. Script formula, batch pipeline, captions, translation, file naming, posting schedule and satire safety rules. 16 pages, English.</p>
+      <p class="hint es-only" style="margin:0">El sistema de producción detrás de “Formas poco éticas de ganar dinero”: 300 Shorts en inglés, 300 en español y 300 en francés. Fórmula de guion, producción por lotes, subtítulos, traducción, nombres de archivo, calendario y reglas de sátira. PDF de 16 páginas, en inglés.</p>
+    </div>
+    <div class="buybox">
+      <p class="pwyw" style="margin:0 0 10px"><b>19€</b></p>
+      <a class="btn pay-link" data-amount="19EUR" href="https://paypal.me/nowbabe10/19EUR" target="_blank" rel="noopener">Buy with PayPal</a>
+      <p class="deliv" style="margin-top:10px"><a href="/shorts-guide/">See what is inside</a>. Manual delivery: put your email in the PayPal note and you get the PDF within 24h.</p>
+    </div>
+  </section>
+
   <section class="tools" id="tools">
     <a class="tool" href="/giveaway-checker/"><b data-i18n="t1h">🎁 Is this crypto giveaway / airdrop a scam?</b><p data-i18n="t1p">New free tool: paste the giveaway post or link. It checks for wallet-connect asks, “send X get 2X”, seed-phrase requests, lookalike domains and urgency.</p></a>
     <a class="tool" href="#demo"><b data-i18n="t2h">🚩 Scam-Clip Detector</b><p data-i18n="t2p">Paste any money claim and get a scam score, the math check and a roast hook to film.</p></a>
@@ -288,7 +303,7 @@
   <p class="socials"><span data-i18n="soc">Follow Ali for more roasts:</span> TikTok / YouTube / Instagram <a href="https://www.tiktok.com/@alibadmoney" target="_blank" rel="noopener">@alibadmoney</a> (EN) · <a href="https://www.tiktok.com/@alidineromalo" target="_blank" rel="noopener">@alidineromalo</a> (ES)</p>
 
   <footer>
-    <p style="margin:0 0 10px"><a href="/giveaway-checker/">Giveaway / airdrop checker</a> · <a href="#pack">Scam-Roast Script Pack</a> · <a href="#support">Tip jar</a> · <a href="/guides/">Guides</a> · <a href="/es/" hreflang="es">Español</a></p>
+    <p style="margin:0 0 10px"><a href="/giveaway-checker/">Giveaway / airdrop checker</a> · <a href="#pack">Scam-Roast Script Pack</a> · <a href="/shorts-guide/">900 Shorts guide (19€)</a> · <a href="#support">Tip jar</a> · <a href="/guides/">Guides</a> · <a href="/es/" hreflang="es">Español</a></p>
     Scam-Clip Detector is a comedy + awareness tool by @alibadmoney / @alidineromalo. It flags common hype patterns using keyword rules; a low score does not mean something is safe, and a high score is not a legal finding. Not financial advice. “Grok” is a trademark of xAI; this page is not affiliated with xAI, and any “Grok Gold” bot is not an official xAI product.
   </footer>
 </div>
