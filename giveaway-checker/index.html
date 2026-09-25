@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crypto Giveaway &amp; Airdrop Scam Checker (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Is this crypto giveaway or airdrop a scam? Paste the post or link and get a free rule-based red-flag score: wallet-connect asks, send-X-get-2X, seed phrase requests, lookalike domains and urgency. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/giveaway-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%9A%A9%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="Is this crypto giveaway / airdrop a scam? Free checker">
+<meta property="og:description" content="Paste the post or link. Get a red-flag score for wallet-connect asks, send-X-get-2X, seed phrase requests, lookalike domains and urgency.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/giveaway-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/giveaway-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Crypto giveaway / airdrop scam checker">
+<meta name="twitter:description" content="Free rule-based red-flag score, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/giveaway-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:110px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  .domains{margin-top:12px;font-size:14px}
+  .domains div{padding:6px 10px;border-radius:8px;background:#15171c;margin-top:6px}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 28px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Giveaway Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">🚩 Scam-Clip Detector</a>
+      <a class="hide-m" href="/#pack" data-i18n="navp">📦 Script Pack</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">Is this crypto giveaway or airdrop <em>a scam?</em></h1>
+    <p class="sub" data-i18n="sub">Paste the post, DM or link. In one second you get a red-flag score based on the tricks drainers and fake giveaways use most: wallet-connect asks, “send X, get 2X”, seed phrase requests, lookalike domains and urgency.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a giveaway / airdrop</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It's a rule-based awareness tool, not a security audit: a low score does not make a link safe.</p>
+    <label for="txt" data-i18n="l1">Post, DM or tweet text</label>
+    <textarea id="txt" placeholder="e.g. 🎁 We're celebrating! Send 0.1 ETH to the address below and get 0.2 ETH back instantly. Only 2 hours left!"></textarea>
+    <label for="url" data-i18n="l2">Link (optional)</label>
+    <input type="text" id="url" placeholder="e.g. https://metamask-airdrop-claim.xyz" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it 🔍</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: doubling livestream</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: airdrop claim link</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: “wallet sync” DM</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: careful official post</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <div class="domains" id="doms"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">✅ What to do now</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">🔑 Nobody legit asks for your seed phrase</b><p data-i18n="c1p">Not support, not an airdrop, not a “wallet sync”. Anyone with those 12/24 words owns your wallet.</p></div>
+    <div class="card"><b data-i18n="c2h">🎁 A giveaway never needs you to send first</b><p data-i18n="c2p">“Send 1, get 2 back” is the oldest trick in crypto. The only thing that gets doubled is their wallet.</p></div>
+    <div class="card"><b data-i18n="c3h">✍️ “Approve” and “sign” can move your tokens</b><p data-i18n="c3p">Read what you're signing. Unlimited approvals and “permit” signatures are how drainers empty wallets.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES), including fake giveaways and airdrop drainers. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack →</a>
+  </section>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="/#support" data-i18n="ft">Tip jar</a> · <a href="https://www.tiktok.com/@alibadmoney" target="_blank" rel="noopener">@alibadmoney</a> · <a href="https://www.tiktok.com/@alidineromalo" target="_blank" rel="noopener">@alidineromalo</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword and domain rules and can be wrong both ways. Brand names appear only to spot lookalike domains that impersonate them; they are not accused of anything. Not financial or security advice. If you've lost funds, report it to the police and the platform, and ignore anyone who offers to “recover” it for a fee.</span>
+  </footer>
+</div>
+
+<script>
+/* ---------- i18n ---------- */
+var I18N={
+ en:{brand:'Giveaway Checker',navd:'🚩 Scam-Clip Detector',navp:'📦 Script Pack',
+  h1:'Is this crypto giveaway or airdrop <em>a scam?</em>',
+  sub:'Paste the post, DM or link. In one second you get a red-flag score based on the tricks drainers and fake giveaways use most: wallet-connect asks, “send X, get 2X”, seed phrase requests, lookalike domains and urgency.',
+  h2:'Check a giveaway / airdrop',hint:'Runs 100% in your browser. Nothing is sent anywhere. It\'s a rule-based awareness tool, not a security audit: a low score does not make a link safe.',
+  l1:'Post, DM or tweet text',l2:'Link (optional)',go:'Check it 🔍',e0:'Example: doubling livestream',e1:'Example: airdrop claim link',e2:'Example: “wallet sync” DM',e3:'Example: careful official post',
+  of:'/ 100 scam score',todoh:'✅ What to do now',
+  c1h:'🔑 Nobody legit asks for your seed phrase',c1p:'Not support, not an airdrop, not a “wallet sync”. Anyone with those 12/24 words owns your wallet.',
+  c2h:'🎁 A giveaway never needs you to send first',c2p:'“Send 1, get 2 back” is the oldest trick in crypto. The only thing that gets doubled is their wallet.',
+  c3h:'✍️ “Approve” and “sign” can move your tokens',c3p:'Read what you\'re signing. Unlimited approvals and “permit” signatures are how drainers empty wallets.',
+  ctah:'Want to roast these on camera?',ctap:'The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES), including fake giveaways and airdrop drainers. Pay what you want, from 5€.',ctab:'See the Script Pack →',
+  fd:'Scam-Clip Detector',fp:'Scam-Roast Script Pack',ft:'Tip jar',
+  disc:'Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword and domain rules and can be wrong both ways. Brand names appear only to spot lookalike domains that impersonate them; they are not accused of anything. Not financial or security advice. If you\'ve lost funds, report it to the police and the platform, and ignore anyone who offers to “recover” it for a fee.'},
+ es:{brand:'Comprobador de sorteos',navd:'🚩 Detector de estafas',navp:'📦 Pack de guiones',
+  h1:'¿Este sorteo o airdrop cripto <em>es una estafa?</em>',
+  sub:'Pega el post, el mensaje o el enlace. En un segundo tienes una nota de banderas rojas basada en los trucos más usados por los drainers y los sorteos falsos: “conecta tu wallet”, “envía X y recibe 2X”, que te pidan la frase semilla, dominios que imitan a otros y urgencia.',
+  h2:'Comprueba un sorteo / airdrop',hint:'Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples, no una auditoría de seguridad: una nota baja no hace seguro un enlace.',
+  l1:'Texto del post, mensaje o tuit',l2:'Enlace (opcional)',go:'Comprobar 🔍',e0:'Ejemplo: directo que “duplica”',e1:'Ejemplo: enlace para reclamar airdrop',e2:'Ejemplo: DM de “sincroniza tu wallet”',e3:'Ejemplo: post oficial prudente',
+  of:'/ 100 nota de estafa',todoh:'✅ Qué hacer ahora',
+  c1h:'🔑 Nadie legítimo te pide la frase semilla',c1p:'Ni soporte, ni un airdrop, ni una “sincronización”. Quien tenga esas 12/24 palabras es el dueño de tu wallet.',
+  c2h:'🎁 Un sorteo nunca te pide enviar primero',c2p:'“Envía 1 y recibe 2” es el truco más viejo de las cripto. Lo único que se duplica es su wallet.',
+  c3h:'✍️ “Aprobar” y “firmar” pueden mover tus tokens',c3p:'Lee lo que firmas. Las aprobaciones ilimitadas y las firmas tipo “permit” son como los drainers vacían wallets.',
+  ctah:'¿Quieres hacer un roast de esto en vídeo?',ctap:'El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES), incluidos sorteos falsos y airdrops que vacían wallets. Paga lo que quieras, desde 5 €.',ctab:'Ver el pack de guiones →',
+  fd:'Detector de estafas',fp:'Pack de guiones Scam-Roast',ft:'Bote de propinas',
+  disc:'Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y dominios y puede fallar en ambos sentidos. Las marcas aparecen solo para detectar dominios que las imitan; no se las acusa de nada. No es asesoramiento financiero ni de seguridad. Si has perdido fondos, denúncialo a la policía y a la plataforma, e ignora a quien se ofrezca a “recuperarlos” cobrando.'}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+
+/* ---------- Domain helpers ---------- */
+var BRANDS={metamask:['metamask.io'],binance:['binance.com'],coinbase:['coinbase.com'],kraken:['kraken.com'],uniswap:['uniswap.org'],opensea:['opensea.io'],
+  ledger:['ledger.com'],trezor:['trezor.io'],phantom:['phantom.app','phantom.com'],trustwallet:['trustwallet.com'],pancakeswap:['pancakeswap.finance'],
+  bybit:['bybit.com'],okx:['okx.com'],kucoin:['kucoin.com'],bitget:['bitget.com'],ethereum:['ethereum.org'],solana:['solana.com'],arbitrum:['arbitrum.io'],
+  optimism:['optimism.io'],polygon:['polygon.technology'],magiceden:['magiceden.io'],raydium:['raydium.io'],layerzero:['layerzero.network'],
+  starknet:['starknet.io'],zksync:['zksync.io'],walletconnect:['walletconnect.com','walletconnect.network'],tesla:['tesla.com'],spacex:['spacex.com'],
+  twitter:['twitter.com','x.com'],telegram:['telegram.org','t.me']};
+var RISKY_TLD=/\.(xyz|top|click|live|site|online|icu|buzz|gift|claims?|rest|cfd|sbs|lol|shop|pro|fun|space|website|info|ru|tk|ml|ga|cf|gq)$/i;
+var BAIT_WORD=/(support|help|secure|login|claim|airdrop|giveaway|bonus|reward|drop|verify|validate|sync|rectif|restore|recover|connect|dapp|wallet|double|free|gift|event|promo|reclam|regalo|sorteo)/i;
+var SHORT=/^(bit\.ly|tinyurl\.com|t\.co|cutt\.ly|is\.gd|rb\.gy|shorturl\.at|goo\.su|tiny\.cc|ow\.ly|rebrand\.ly)$/i;
+function lev(a,b){var m=a.length,n=b.length,d=[];for(var i=0;i<=m;i++){d[i]=[i];}for(var j=0;j<=n;j++)d[0][j]=j;
+  for(i=1;i<=m;i++)for(j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n];}
+function deglyph(s){return s.replace(/0/g,'o').replace(/1/g,'l').replace(/3/g,'e').replace(/5/g,'s').replace(/4/g,'a').replace(/rn/g,'m').replace(/vv/g,'w');}
+function extractHosts(text){var out=[],seen={},re=/\b(?:https?:\/\/)?((?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+(?:xn--[a-z0-9-]+|[a-z]{2,24}))(?=[\/:?#\s"'),]|$)/gi,x;
+  while((x=re.exec(text))){var h=x[1].toLowerCase().replace(/^www\./,'');if(/^\d+(\.\d+)*$/.test(h)||/\.(png|jpe?g|gif|pdf|mp4)$/.test(h))continue;if(!seen[h]){seen[h]=1;out.push(h);}}
+  return out;}
+function checkHost(h){
+  var r={host:h,official:null,look:null,notes:[]};
+  for(var b in BRANDS)for(var k=0;k<BRANDS[b].length;k++){var od=BRANDS[b][k];if(h===od||h.slice(-(od.length+1))==='.'+od){r.official=od;return r;}}
+  var labels=h.split('.'),reg=labels.slice(-2).join('.'),name=labels.slice(0,-1).join('-');
+  if(/xn--/.test(h))r.notes.push('puny');
+  if(SHORT.test(reg))r.notes.push('short');
+  if(RISKY_TLD.test(h))r.notes.push('tld');
+  if(BAIT_WORD.test(name))r.notes.push('bait');
+  var parts=name.split(/[-.]/).filter(Boolean),flat=parts.join(''),dg=deglyph(flat);
+  for(b in BRANDS){
+    if(b.length<4&&b!=='okx')continue;
+    if(flat.indexOf(b)>=0||dg.indexOf(b)>=0){r.look={brand:b,official:BRANDS[b][0],how:'contains'};break;}
+    for(var p=0;p<parts.length;p++){var t=deglyph(parts[p]);if(t.length>=4&&t!==b&&lev(t,b)<=(b.length>=7?2:1)){r.look={brand:b,official:BRANDS[b][0],how:'typo'};break;}}
+    if(r.look)break;
+  }
+  return r;}
+
+/* ---------- Rules ---------- */
+function negated(t,idx){return /(never|no one|nobody|won'?t|will not|don'?t|do not|nunca|jam[aá]s|nadie|no te)[^.!?\n]{0,30}$/i.test(t.slice(Math.max(0,idx-45),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+var RULES=[
+ {id:'seed',w:35,neg:true,en:'Asks for your seed phrase / private key',es:'Pide tu frase semilla / clave privada',
+  wen:'No real project, exchange or support team ever needs these. This alone means scam.',wes:'Ningún proyecto, exchange ni soporte real los necesita. Solo esto ya es estafa.',
+  re:[/seed ?phrase|recovery ?phrase|secret ?(?:recovery )?phrase|mnemonic|private ?key|12[- ]words?|24[- ]words?|(?:validate|sync|synchroni[sz]e|rectify|restore|verify) (?:your )?wallet/i,/frase semilla|frase de recuperaci[oó]n|clave privada|12 palabras|24 palabras|(?:sincroniza|valida|verifica|restaura) (?:tu )?(?:wallet|cartera|billetera)/i]},
+ {id:'double',w:40,neg:true,en:'“Send X, get 2X back”',es:'“Envía X y recibe 2X”',
+  wen:'A giveaway where you pay first is a takeaway. Nobody doubles strangers\' crypto.',wes:'Un sorteo donde pagas tú primero es un atraco. Nadie duplica las criptos de desconocidos.',
+  re:[/send(?:[^.!?\n]|\.(?=\d)){0,40}(?:get|receive|back)(?:[^.!?\n]|\.(?=\d)){0,25}(?:2x|x2|double|twice|back)/i,/(?:double|doubl(?:e|ing)) (?:your|any|all|it)/i,/\b(?:2x|x2)\b(?:[^.!?\n]|\.(?=\d)){0,30}(?:back|return)/i,/send(?:[^.!?\n]|\.(?=\d)){0,20}\d+(?:[.,]\d+)?\s*(?:btc|eth|sol|bnb|usdt|usdc|xrp|doge|ada|trx)(?:[^.!?\n]|\.(?=\d)){0,40}(?:get|receive|send (?:you )?back|return)(?:[^.!?\n]|\.(?=\d)){0,15}\d+(?:[.,]\d+)?/i,/env[ií]a(?:[^.!?\n]|\.(?=\d)){0,40}(?:recibe|recibir[aá]s|te devolvemos|te devolver[eé])|el doble|duplica(?:mos)? tu/i]},
+ {id:'wallet',w:20,neg:true,en:'Wallet-connect / approve / sign request',es:'Te piden conectar, aprobar o firmar con tu wallet',
+  wen:'“Connect”, “approve” and “sign” can give a contract permission to move your tokens.',wes:'“Conectar”, “aprobar” y “firmar” pueden dar permiso a un contrato para mover tus tokens.',
+  re:[/connect (?:your )?wallet|wallet ?connect|approve (?:the )?(?:transaction|token|contract|spending)|\bapprove\b|sign (?:the |this )?(?:transaction|message|request)|setapprovalforall|\bpermit\b|claim (?:your |now|here|tokens?|airdrop|rewards?|nft)/i,/conecta (?:tu )?(?:wallet|cartera|billetera)|aprueba|firma (?:la |el )?(?:transacci[oó]n|mensaje)|reclama (?:tu|tus|ya|aqu[ií])/i]},
+ {id:'fee',w:15,en:'Pay a fee to receive your prize',es:'Pagar una comisión para recibir el premio',
+  wen:'Real airdrops don\'t charge “gas”, “activation” or “unlock” fees up front via a transfer to them.',wes:'Los airdrops reales no te cobran “gas”, “activación” ni “desbloqueo” por adelantado.',
+  re:[/(?:gas|activation|unlock|processing|withdrawal|verification|small|network) fee|pay (?:a |the )?(?:small )?fee|fee to (?:claim|receive|unlock|withdraw)|minimum deposit/i,/comisi[oó]n (?:de|para) (?:activaci[oó]n|desbloqueo|retiro|reclamar)|tasa de|paga (?:una )?(?:peque[nñ]a )?comisi[oó]n|dep[oó]sito m[ií]nimo/i]},
+ {id:'urg',w:10,en:'Urgency / countdown pressure',es:'Presión de urgencia / cuenta atrás',
+  wen:'Scams need you to act before you check.',wes:'Las estafas necesitan que actúes antes de comprobar.',
+  re:[/only \d+ (?:hours?|hrs?|minutes?|mins?|spots?|left)|ends? (?:in|soon|today)|last chance|hurry|act (?:fast|now)|limited time|first \d+|before it'?s too late|expires?|right now|within \d+|don'?t miss/i,/solo quedan|[uú]ltim[ao]s? (?:horas?|oportunidad)|date prisa|termina (?:hoy|en)|los primeros \d+|antes de que|caduca|ahora mismo|no te lo pierdas|tiempo limitado/i,/⏰|🚨|⌛|!{3,}/]},
+ {id:'imp',w:10,en:'Borrowed fame / “official” event framing',es:'Fama prestada / “evento oficial”',
+  wen:'Fake giveaways copy famous founders, exchanges and “anniversary” events to borrow trust.',wes:'Los sorteos falsos copian a fundadores famosos, exchanges y “aniversarios” para ganar confianza.',
+  re:[/official (?:giveaway|airdrop|event)|celebrat|anniversary|billionaire|founder|\bceo\b|live ?stream|live now|we are giving away|giving away \d|biggest giveaway/i,/sorteo oficial|celebra|aniversario|multimillonario|fundador|en directo|regalamos/i]},
+ {id:'dm',w:10,neg:true,en:'Moves you to DMs / “support” chat',es:'Te lleva a mensajes privados / “soporte”',
+  wen:'Real support doesn\'t DM you first on Telegram, WhatsApp or X.',wes:'El soporte real no te escribe primero por Telegram, WhatsApp o X.',
+  re:[/\bdm (?:me|us)\b|message (?:me|us|our (?:support|admin))|support (?:team )?will (?:contact|dm|message)|contact (?:our )?(?:support|admin) on|whatsapp|telegram (?:support|admin)|admin will/i,/escr[ií]beme|escr[ií]benos|mensaje privado|soporte (?:te )?(?:contactar[aá]|escribir[aá])|por whatsapp|por telegram/i]},
+ {id:'addr',w:10,en:'Wallet address pasted in the post',es:'Dirección de wallet pegada en el post',
+  wen:'A raw address to send funds to is how doubling scams collect.',wes:'Una dirección para enviar fondos es como cobran las estafas de “duplicar”.',
+  re:[/\b0x[a-fA-F0-9]{40}\b/,/\b(?:bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}\b/,/\b[1-9A-HJ-NP-Za-km-z]{32,44}\b/]}
+];
+
+function analyze(text,url){
+  var t=(text||'')+'\n'+(url||''),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var hosts=extractHosts(t),doms=hosts.map(checkHost),look=doms.filter(function(d){return d.look||d.notes.indexOf('puny')>=0;}),
+      sus=doms.filter(function(d){return !d.official&&!d.look&&(d.notes.indexOf('tld')>=0||d.notes.indexOf('bait')>=0||d.notes.indexOf('short')>=0);});
+  var dRule={id:'look',w:25,en:'Lookalike or suspicious domain',es:'Dominio que imita a otro o sospechoso',
+    wen:'Drainers use names like brand-claim.xyz or typos of real brands. Type official sites yourself.',wes:'Los drainers usan nombres tipo marca-claim.xyz o erratas de marcas reales. Escribe tú la web oficial.'};
+  var dHit=look.length>0,dPartial=!dHit&&sus.length>0;
+  hits.splice(4,0,{rule:dRule,hit:dHit||dPartial,ev:(look[0]||sus[0]||{}).host||null});
+  if(dHit)score+=25;else if(dPartial)score+=12;
+  var n=hits.filter(function(h){return h.hit;}).length;
+  if(n>=4)score+=5;
+  if(hits[1].hit&&hits.some(function(h){return h.hit&&h.rule.id==='addr';}))score+=10; // doubling + address to send to = classic pattern
+  if(hits[0].hit)score=Math.max(score,85); // seed phrase ask = scam on its own
+  score=Math.min(100,score);
+  return {score:score,hits:hits,doms:doms,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['🚨 Estafa casi segura','Tiene el patrón típico de drainer o sorteo falso. No conectes la wallet, no firmes, no envíes nada y no des ninguna frase.']:['🚨 Almost certainly a scam','This matches the classic drainer / fake-giveaway pattern. Don\'t connect, don\'t sign, don\'t send, don\'t share any phrase.'];
+  if(s>=40)return es?['🚩 Muchas banderas rojas','Trátalo como estafa hasta que lo confirmes en la web y las cuentas oficiales, escribiéndolas tú.']:['🚩 Big red flags','Treat it as a scam until you confirm it on the official site and accounts, typed in yourself.'];
+  if(s>=15)return es?['🤨 Huele raro','Alguna señal típica. Comprueba el dominio y la cuenta antes de hacer nada.']:['🤨 Kinda sus','Some classic signals. Check the domain and the account before doing anything.'];
+  return es?['✅ Pocas banderas','No salta casi nada. Eso no lo hace seguro: entra siempre desde la web oficial y nunca des tu frase semilla.']:['✅ Few flags','Not much trips the rules. That doesn\'t make it safe: always go through the official site and never share your seed phrase.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  if(on('seed'))L.push(es?'Si ya escribiste tu frase semilla en algún sitio: crea una wallet nueva YA y mueve lo que quede desde otro dispositivo.':'If you already typed your seed phrase anywhere: create a new wallet NOW and move what\'s left from a clean device.');
+  if(on('wallet'))L.push(es?'Si ya aprobaste algo, revoca los permisos con un revocador de aprobaciones de confianza y revisa tu historial.':'If you already approved something, revoke permissions with a trusted token-approval revoker and check your history.');
+  if(on('double')||on('addr'))L.push(es?'No envíes nada. Las transacciones cripto no se pueden deshacer.':'Don\'t send anything. Crypto transactions can\'t be reversed.');
+  L.push(es?'Escribe tú la web oficial del proyecto (o usa un marcador guardado) y comprueba allí si el airdrop existe.':'Type the project\'s official site yourself (or use a saved bookmark) and check there whether the airdrop exists.');
+  L.push(es?'Denuncia el post o la cuenta en la plataforma y avisa a quien te lo haya pasado.':'Report the post or account on the platform, and warn whoever sent it to you.');
+  L.push(es?'Si perdiste dinero: denúncialo a la policía. Ignora a los “expertos en recuperación”: son la segunda estafa.':'If you lost money: report it to the police. Ignore “recovery experts”: they are the second scam.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'🎁 LIVE NOW: We are celebrating our anniversary with the biggest giveaway ever! Send 0.1 to 1 ETH to the address below and get 2X back instantly. Only 2 hours left!!! 0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063',u:''},
+ {t:'🪂 You\'re eligible for the Season 2 airdrop! Connect your wallet and claim your tokens before the snapshot ends in 24h. Small gas fee required.',u:'https://arbitrum-claim-rewards.xyz/connect'},
+ {t:'Hi, this is Metamask support. We detected an error on your account. Please validate your wallet by entering your 12-word recovery phrase at our secure portal within 12 hours or your funds will be frozen.',u:'https://metarnask-support.help'},
+ {t:'Our community airdrop is live. Check eligibility only on our official site. We will never DM you and never ask for your seed phrase. No fees, no deadline pressure.',u:'https://ethereum.org'}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  var NOTE={puny:es?'usa caracteres raros (punycode)':'uses odd characters (punycode)',short:es?'acortador de enlaces: no ves el destino':'link shortener: you can\'t see the destination',tld:es?'extensión muy usada en estafas':'extension often used in scams',bait:es?'palabra cebo en el dominio (claim, airdrop, verify…)':'bait word in the domain (claim, airdrop, verify…)'};
+  document.getElementById('doms').innerHTML=r.doms.map(function(d){
+    if(d.official)return '<div>🟢 <b>'+esc(d.host)+'</b>: '+(es?'coincide con el dominio habitual de la marca ('+d.official+'). Aun así, escríbelo tú.':'matches the brand\'s usual domain ('+d.official+'). Still, type it yourself.')+'</div>';
+    var bits=[];if(d.look)bits.push(d.look.how==='typo'?(es?'parece una errata de “'+d.look.brand+'” (el habitual es '+d.look.official+')':'looks like a typo of “'+d.look.brand+'” (usual domain: '+d.look.official+')'):(es?'usa el nombre “'+d.look.brand+'” pero no es '+d.look.official:'uses the name “'+d.look.brand+'” but isn\'t '+d.look.official));
+    d.notes.forEach(function(n){bits.push(NOTE[n]);});
+    return '<div>'+(bits.length?'🔴':'⚪')+' <b>'+esc(d.host)+'</b>'+(bits.length?': '+bits.join('; '):(es?': sin señales en el dominio (eso no lo hace seguro)':': no domain signals (that doesn\'t make it safe)'))+'</div>';}).join('');
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'🚩':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,60))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);
+if(typeof module!=='undefined')module.exports={analyze:analyze,checkHost:checkHost,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>

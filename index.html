@@ -3,8 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Scam-Clip Detector by alibadmoney (free beta)</title>
-<meta name="description" content="Paste any money claim, get a scam score, a plain-language verdict and a 30-second roast hook to film. Free beta by @alibadmoney / @alidineromalo.">
+<title>Scam-Clip Detector: free scam score for get-rich-quick claims | alibadmoney</title>
+<meta name="description" content="Paste any money claim, get a scam score, a plain-language verdict and a 30-second roast hook to film. Free, EN/ES, by @alibadmoney / @alidineromalo. Plus a free crypto giveaway checker and a 30-script roast pack.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%9A%A9%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="Scam-Clip Detector: paste the hype, get the red flags, film the roast">
+<meta property="og:description" content="Free scam score for get-rich-quick claims (EN/ES), plus a crypto giveaway checker and a 30-script roast pack.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scam-Clip Detector: Paste the hype. Get the red flags. Film the roast.">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Scam-Clip Detector by alibadmoney">
+<meta name="twitter:description" content="Free scam score for get-rich-quick claims, plus a giveaway checker and a 30-script roast pack.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/og-image.png">
 <style>
   :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
   *{box-sizing:border-box}
@@ -57,6 +75,35 @@
   a.btn{display:inline-block;text-decoration:none}
   .socials{color:var(--mute);font-size:15px;margin:0 0 28px}
   .socials a{font-weight:700;text-decoration:none}
+  section.pack{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:28px;margin:0 0 28px}
+  .pack-top{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+  .pack ul.formats{columns:2;gap:24px;padding-left:18px;margin:8px 0 0;color:var(--ink);font-size:15px}
+  .buybox{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .buybox .pwyw{font-size:30px;font-weight:900;line-height:1.1;margin:0 0 6px}
+  .buybox .pwyw b{color:var(--lime)}
+  .deliv{color:var(--mute);font-size:14px;margin:12px 0 0}
+  .soon{display:none;color:var(--amber);font-size:13px;margin:8px 0 0}
+  body.pay-pending .soon{display:block}
+  .previews{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+  .pv{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px;font-size:14px}
+  .pv h3{margin:8px 0 4px;font-size:17px}
+  .pv .meta{color:var(--mute);font-size:12px;margin:0 0 10px}
+  .pv ol{margin:0;padding-left:0;list-style:none}
+  .pv li{padding:7px 0;border-top:1px solid #1d2027}
+  .pv li .t{display:inline-block;min-width:54px;color:var(--lime);font-weight:800;font-size:12px}
+  .pv li .os{display:block;color:var(--amber);font-size:13px;margin:2px 0}
+  .pv .mc{margin-top:10px;color:var(--amber);font-size:13px}
+  .free{background:#12230a;color:var(--lime);border:1px solid #2f5b0f;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+  section.tools{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 28px}
+  .tool{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;text-decoration:none;color:var(--ink);display:block}
+  .tool:hover{border-color:var(--lime)}
+  .tool b{font-size:18px}
+  .tool p{color:var(--mute);margin:6px 0 0;font-size:14px}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  html[lang=es] .en-only{display:none}
+  html:not([lang=es]) .es-only{display:none}
+  @media (max-width:860px){.pack-top,.previews,section.tools{grid-template-columns:1fr}.pack ul.formats{columns:1}.hdr-r a.hide-m{display:none}}
   footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
   @media (max-width:860px){.hero,#out{grid-template-columns:1fr}h1{font-size:38px}}
 </style>
@@ -65,9 +112,13 @@
 <div class="wrap">
   <header>
     <div class="logo">alibad<span>money</span> · Scam-Clip Detector</div>
+    <div class="hdr-r">
+    <a class="hide-m" href="/giveaway-checker/" data-i18n="navg">🎁 Giveaway checker</a>
+    <a class="hide-m" href="#pack" data-i18n="navp">📦 Script Pack</a>
     <div class="lang" role="group" aria-label="Language">
       <button id="bEN" class="on" onclick="setLang('en')">EN</button>
       <button id="bES" onclick="setLang('es')">ES</button>
+    </div>
     </div>
   </header>
 
@@ -117,20 +168,126 @@
     </div>
   </section>
 
+  <section class="pack" id="pack">
+    <div class="pack-top">
+      <div>
+        <h2 data-i18n="ph">📦 Scam-Roast Script Pack — pay what you want (from 5€)</h2>
+        <p class="hint" data-i18n="psub">30 ready-to-film 20–30s scripts: 15 in English + 15 matching versions in Spain Spanish. Each one has a hook, timed beats, on-screen text and a math-check joke (all math verified). 19-page PDF. Roasts the formats, never names real people or channels.</p>
+        <ul class="formats">
+          <li data-i18n="f1">Gold / forex robots (EAs)</li>
+          <li data-i18n="f2">“AI trading bot” win rates</li>
+          <li data-i18n="f3">VIP signal Telegrams</li>
+          <li data-i18n="f4">Memecoin “next 100x” calls</li>
+          <li data-i18n="f5">Dropshipping gurus</li>
+          <li data-i18n="f6">“Passive income” courses</li>
+          <li data-i18n="f7">MLM “be your own boss”</li>
+          <li data-i18n="f8">Fake “send 1, get 2” giveaways</li>
+          <li data-i18n="f9">“Copy my trades”</li>
+          <li data-i18n="f10">Airdrop wallet drainers</li>
+          <li data-i18n="f11">Prop-firm challenge upsells</li>
+          <li data-i18n="f12">Rented-lifestyle flexes</li>
+          <li data-i18n="f13">“Guaranteed 1% daily” platforms</li>
+          <li data-i18n="f14">“We recover your crypto” services</li>
+          <li data-i18n="f15">“Wrong number” friends with a trading app</li>
+        </ul>
+      </div>
+      <div class="buybox">
+        <p class="pwyw" data-i18n="pw">Pay what you want, <b>from 5€</b></p>
+        <p class="hint" style="margin:0 0 14px" data-i18n="pw2">PDF · 30 scripts · EN + ES · personal licence to film and post.</p>
+        <a class="btn pay-link" data-amount="5EUR" href="https://paypal.me/nowbabe10/5EUR" target="_blank" rel="noopener" data-i18n="pbtn">Buy via PayPal (from 5€)</a>
+        <p class="soon" data-i18n="soon">PayPal link going live soon.</p>
+        <p class="deliv" data-i18n="deliv">After paying, send your email in the PayPal note and you'll get the pack within 24h. Delivery is manual (Ali sends it himself). Want to pay more than 5€? Just change the amount on PayPal.</p>
+      </div>
+    </div>
+
+    <div class="previews">
+      <div class="pv">
+        <span class="free" data-i18n="freep">Free preview</span>
+        <div class="en-only">
+          <h3>02 · “AI trading bot, 95% win rate”</h3>
+          <p class="meta">~27s · patient teacher, then savage</p>
+          <ol>
+            <li><span class="t">0–3s</span><span class="os">“AI BOT · 95% WIN RATE” 🤖✅</span>“AI bot. Ninety-five percent win rate.” Wow. Anyway.</li>
+            <li><span class="t">3–12s</span><span class="os">Win rate ≠ profit</span>Win rate is the favourite number of people hiding the other number. How much do you win, and how much do you lose?</li>
+            <li><span class="t">12–22s</span><span class="os">95 wins × $1 = +$95 · 5 losses × $30 = −$150 · Total: −$55 📉</span>Win one dollar ninety-five times. Lose thirty dollars five times. That's a ninety-five percent win rate, and you're down fifty-five bucks. Congrats, you're a very accurate loser.</li>
+            <li><span class="t">22–28s</span><span class="os">Ask for: risk per trade · max drawdown · verified live results</span>Also, “AI” is doing a lot of work in that sentence. Ask for drawdown and verified live results. I'm Ali, this is bad money.</li>
+          </ol>
+          <p class="mc">🧮 Math check: 95 × $1 − 5 × $30 = −$55.</p>
+        </div>
+        <div class="es-only">
+          <h3>02 · “Bot con IA, 95% de aciertos”</h3>
+          <p class="meta">~27s · profe paciente, luego sin piedad</p>
+          <ol>
+            <li><span class="t">0–3s</span><span class="os">“BOT CON IA · 95% DE ACIERTOS” 🤖✅</span>“Bot con IA. Noventa y cinco por ciento de aciertos.” Qué bien. Bueno.</li>
+            <li><span class="t">3–12s</span><span class="os">Aciertos ≠ beneficio</span>El porcentaje de aciertos es el número favorito de quien esconde el otro número. ¿Cuánto ganas cuando aciertas y cuánto pierdes cuando fallas?</li>
+            <li><span class="t">12–22s</span><span class="os">95 aciertos × 1 € = +95 € · 5 fallos × 30 € = −150 € · Total: −55 € 📉</span>Ganas un euro noventa y cinco veces. Pierdes treinta euros cinco veces. Noventa y cinco por ciento de aciertos, y vas cincuenta y cinco euros abajo. Enhorabuena: pierdes con mucha precisión.</li>
+            <li><span class="t">22–28s</span><span class="os">Pide: riesgo por operación · drawdown máximo · resultados reales verificados</span>Y lo de “IA” está haciendo mucho trabajo en esa frase. Pide el drawdown y resultados reales verificados. Soy Ali, esto es dinero malo.</li>
+          </ol>
+          <p class="mc">🧮 La cuenta: 95 × 1 € − 5 × 30 € = −55 €.</p>
+        </div>
+      </div>
+      <div class="pv">
+        <span class="free" data-i18n="freep">Free preview</span>
+        <div class="en-only">
+          <h3>07 · MLM: “Be your own boss”</h3>
+          <p class="meta">~28s · fake-cheerful</p>
+          <ol>
+            <li><span class="t">0–3s</span><span class="os">“BE YOUR OWN BOSS 💅 just recruit 6 friends”</span>Be your own boss! Step one: find six friends. Step two: they find six friends.</li>
+            <li><span class="t">3–12s</span><span class="os">Not a pyramid 🔺 (it's a pyramid)</span>It's a “business opportunity”. Totally not a pyramid. It's a triangle. With a starter kit.</li>
+            <li><span class="t">12–22s</span><span class="os">Level 10: 60,466,176 people · Level 13: 13,060,694,016 🌍</span>Six recruits each, ten levels down, is sixty million people. That's more than Spain. Level thirteen is thirteen billion. Earth has about eight. You'll need recruits from Mars.</li>
+            <li><span class="t">22–28s</span><span class="os">Earn from customers, not from recruits.</span>If you mostly earn by recruiting, the product is you. I'm Ali, this is bad money.</li>
+          </ol>
+          <p class="mc">🧮 Math check: 6^10 = 60,466,176 (Spain ≈ 49M); 6^13 = 13,060,694,016 (Earth ≈ 8.2B).</p>
+        </div>
+        <div class="es-only">
+          <h3>07 · Multinivel: “Sé tu propio jefe”</h3>
+          <p class="meta">~28s · alegría falsa</p>
+          <ol>
+            <li><span class="t">0–3s</span><span class="os">“SÉ TU PROPIO JEFE 💅 solo invita a 6 amigos”</span>¡Sé tu propio jefe! Paso uno: busca seis amigos. Paso dos: ellos buscan seis amigos.</li>
+            <li><span class="t">3–12s</span><span class="os">No es una pirámide 🔺 (es una pirámide)</span>Es una “oportunidad de negocio”. Nada de pirámide, eh. Es un triángulo. Con kit de inicio.</li>
+            <li><span class="t">12–22s</span><span class="os">Nivel 10: 60.466.176 personas · Nivel 13: 13.060.694.016 🌍</span>Seis fichajes cada uno, diez niveles para abajo, son sesenta millones de personas. Más que toda España. En el nivel trece son trece mil millones. En la Tierra hay unos ocho mil. Vas a tener que fichar en Marte.</li>
+            <li><span class="t">22–28s</span><span class="os">Gana con clientes, no con fichajes.</span>Si lo que más te da dinero es fichar gente, el producto eres tú. Soy Ali, esto es dinero malo.</li>
+          </ol>
+          <p class="mc">🧮 La cuenta: 6^10 = 60.466.176 (España ≈ 49 millones); 6^13 = 13.060.694.016 (la Tierra ≈ 8.200 millones).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tools" id="tools">
+    <a class="tool" href="/giveaway-checker/"><b data-i18n="t1h">🎁 Is this crypto giveaway / airdrop a scam?</b><p data-i18n="t1p">New free tool: paste the giveaway post or link. It checks for wallet-connect asks, “send X get 2X”, seed-phrase requests, lookalike domains and urgency.</p></a>
+    <a class="tool" href="#demo"><b data-i18n="t2h">🚩 Scam-Clip Detector</b><p data-i18n="t2p">Paste any money claim and get a scam score, the math check and a roast hook to film.</p></a>
+  </section>
+
   <section class="tip" id="support">
     <h2 data-i18n="wh">💚 Support / tip jar</h2>
     <p class="hint" data-i18n="wsub">The detector is a free beta and stays free. If it saved you from a scam or gave you a roast worth filming, you can tip the tool to keep it going.</p>
-    <a class="btn" href="#TIP_LINK" data-i18n="wbtn">Tip the tool (coming soon)</a>
+    <a class="btn pay-link" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="wbtn">💚 Tip the tool via PayPal</a>
+    <p class="soon" data-i18n="soon">PayPal link going live soon.</p>
   </section>
 
   <p class="socials"><span data-i18n="soc">Follow Ali for more roasts:</span> TikTok / YouTube / Instagram <a href="https://www.tiktok.com/@alibadmoney" target="_blank" rel="noopener">@alibadmoney</a> (EN) · <a href="https://www.tiktok.com/@alidineromalo" target="_blank" rel="noopener">@alidineromalo</a> (ES)</p>
 
   <footer>
+    <p style="margin:0 0 10px"><a href="/giveaway-checker/">Giveaway / airdrop checker</a> · <a href="#pack">Scam-Roast Script Pack</a> · <a href="#support">Tip jar</a></p>
     Scam-Clip Detector is a comedy + awareness tool by @alibadmoney / @alidineromalo. It flags common hype patterns using keyword rules; a low score does not mean something is safe, and a high score is not a legal finding. Not financial advice. “Grok” is a trademark of xAI; this page is not affiliated with xAI, and any “Grok Gold” bot is not an official xAI product.
   </footer>
 </div>
 
 <script>
+/* ======== PAYMENT LINK: the ONE value to change if the PayPal.me link ever changes ========
+   Every element with class "pay-link" (tip button + Script Pack buy button) gets its href from here.
+   Buttons with data-amount (e.g. "5EUR") get TIP_LINK + "/5EUR" as the default amount (buyer can change it on PayPal).
+   Set it to '#TIP_LINK' to switch back to "coming soon" mode. */
+const TIP_LINK = 'https://paypal.me/nowbabe10';
+(function(){var pending=TIP_LINK.charAt(0)==='#',base=TIP_LINK.replace(/\/+$/,'');
+  document.querySelectorAll('a.pay-link').forEach(function(a){
+    var amt=a.getAttribute('data-amount');
+    a.href=(!pending&&amt&&/paypal\.me\//i.test(base))?base+'/'+amt:TIP_LINK;
+    if(pending){a.removeAttribute('target');}else{a.target='_blank';a.rel='noopener';}
+  });
+  if(pending)document.body.classList.add('pay-pending');})();
+
 /* ---------- i18n (headline + bullets + tip jar) ---------- */
 var I18N={
   en:{h1:'Paste the hype. <em>Get the red flags.</em> Film the roast.',
@@ -139,16 +296,34 @@ var I18N={
       b2:'Plain-language verdict: no finance-bro jargon, just “this is sus, and here’s why”.',
       b3:'A ready-to-film 20–30s comedy hook, math check included, so the roast writes itself.',
       price:'Free beta: 100% free to use',wh:'💚 Support / tip jar',
-      wsub:'The detector is a free beta and stays free. If it saved you from a scam or gave you a roast worth filming, you can tip the tool to keep it going.',wbtn:'Tip the tool (coming soon)',
-      soc:'Follow Ali for more roasts:'},
+      wsub:'The detector is a free beta and stays free. If it saved you from a scam or gave you a roast worth filming, you can tip the tool to keep it going.',wbtn:'💚 Tip the tool via PayPal',
+      soc:'Follow Ali for more roasts:',
+      navg:'🎁 Giveaway checker',navp:'📦 Script Pack',soon:'PayPal link going live soon.',
+      ph:'📦 Scam-Roast Script Pack — pay what you want (from 5€)',
+      psub:'30 ready-to-film 20–30s scripts: 15 in English + 15 matching versions in Spain Spanish. Each one has a hook, timed beats, on-screen text and a math-check joke (all math verified). 19-page PDF. Roasts the formats, never names real people or channels.',
+      f1:'Gold / forex robots (EAs)',f2:'“AI trading bot” win rates',f3:'VIP signal Telegrams',f4:'Memecoin “next 100x” calls',f5:'Dropshipping gurus',f6:'“Passive income” courses',f7:'MLM “be your own boss”',f8:'Fake “send 1, get 2” giveaways',f9:'“Copy my trades”',f10:'Airdrop wallet drainers',f11:'Prop-firm challenge upsells',f12:'Rented-lifestyle flexes',f13:'“Guaranteed 1% daily” platforms',f14:'“We recover your crypto” services',f15:'“Wrong number” friends with a trading app',
+      pw:'Pay what you want, <b>from 5€</b>',pw2:'PDF · 30 scripts · EN + ES · personal licence to film and post.',pbtn:'Buy via PayPal (from 5€)',
+      deliv:'After paying, send your email in the PayPal note and you\'ll get the pack within 24h. Delivery is manual (Ali sends it himself). Want to pay more than 5€? Just change the amount on PayPal.',
+      freep:'Free preview',
+      t1h:'🎁 Is this crypto giveaway / airdrop a scam?',t1p:'New free tool: paste the giveaway post or link. It checks for wallet-connect asks, “send X get 2X”, seed-phrase requests, lookalike domains and urgency.',
+      t2h:'🚩 Scam-Clip Detector',t2p:'Paste any money claim and get a scam score, the math check and a roast hook to film.'},
   es:{h1:'Pega el hype. <em>Ve las banderas rojas.</em> Graba el roast.',
       sub:'“Un bot convierte 50 $ en 400 $ a la semana.” “Señales VIP 100x.” Pega cualquier promesa de dinero y en 2 segundos tienes una nota de estafa, un veredicto claro y un gancho gracioso de 30 segundos para grabar.',
       b1:'Nota de banderas rojas al instante: ganancias sin verificar, embudos VIP/DM, multiplicadores locos, “conecta tu wallet”, links de afiliado, urgencia y escasez falsa.',
       b2:'Veredicto en lenguaje normal: sin jerga de gurú, solo “esto huele raro, y te digo por qué”.',
       b3:'Un gancho cómico de 20–30 s listo para grabar, con la cuenta hecha, para que el roast se escriba solo.',
       price:'Beta gratis: 100% gratis',wh:'💚 Apoyo / bote de propinas',
-      wsub:'El detector es una beta gratis y seguirá siendo gratis. Si te salvó de una estafa o te dio un roast para grabar, puedes dejar una propina para mantenerlo.',wbtn:'Deja una propina (próximamente)',
-      soc:'Sigue a Ali para más roasts:'}
+      wsub:'El detector es una beta gratis y seguirá siendo gratis. Si te salvó de una estafa o te dio un roast para grabar, puedes dejar una propina para mantenerlo.',wbtn:'☕ Invita a un café vía PayPal',
+      soc:'Sigue a Ali para más roasts:',
+      navg:'🎁 Comprobador de sorteos',navp:'📦 Pack de guiones',soon:'El enlace de PayPal estará activo en breve.',
+      ph:'📦 Pack de guiones Scam-Roast: paga lo que quieras (desde 5 €)',
+      psub:'30 guiones de 20–30 s listos para grabar: 15 en inglés + 15 versiones equivalentes en español de España. Cada uno con gancho, tiempos, texto en pantalla y un chiste con la cuenta hecha (todas comprobadas). PDF de 19 páginas. Se ríe de los formatos, nunca nombra a personas ni canales reales.',
+      f1:'Robots de oro / forex (EAs)',f2:'Los “aciertos” de los bots con IA',f3:'Telegrams de señales VIP',f4:'Señales de memecoins “el próximo 100x”',f5:'Gurús del dropshipping',f6:'Cursos de “ingresos pasivos”',f7:'Multinivel “sé tu propio jefe”',f8:'Sorteos falsos “envía 1, recibe 2”',f9:'“Copia mis operaciones”',f10:'Airdrops que vacían tu wallet',f11:'Retos de fondeo con extras',f12:'Postureo de alquiler',f13:'Plataformas del “1% diario garantizado”',f14:'Servicios de “recuperamos tus criptos”',f15:'El “número equivocado” con app de trading',
+      pw:'Paga lo que quieras, <b>desde 5 €</b>',pw2:'PDF · 30 guiones · EN + ES · licencia personal para grabar y publicar.',pbtn:'Comprar por PayPal (desde 5 €)',
+      deliv:'Después de pagar, pon tu email en la nota de PayPal y recibirás el pack en menos de 24 h. La entrega es manual (lo envía Ali). ¿Quieres pagar más de 5 €? Cambia el importe en PayPal.',
+      freep:'Vista previa gratis',
+      t1h:'🎁 ¿Este sorteo o airdrop cripto es una estafa?',t1p:'Nueva herramienta gratis: pega el post o el enlace del sorteo. Detecta si te piden conectar la wallet, “envía X y recibe 2X”, la frase semilla, dominios imitados y urgencia.',
+      t2h:'🚩 Detector de estafas',t2p:'Pega cualquier promesa de dinero y obtén una nota de estafa, la cuenta hecha y un gancho para grabar.'}
 };
 var lang='en';
 function setLang(l){lang=l;document.documentElement.lang=l;
