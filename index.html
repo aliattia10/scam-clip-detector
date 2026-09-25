@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scam-Clip Detector by alibadmoney (free beta)</title>
+<meta name="description" content="Paste any money claim, get a scam score, a plain-language verdict and a 30-second roast hook to film. Free beta by @alibadmoney / @alidineromalo.">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em}
+  .logo span{color:var(--lime)}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:28px 0 36px}
+  h1{font-size:52px;line-height:1.02;letter-spacing:-.03em;margin:0 0 16px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0 0 22px;max-width:560px}
+  ul.benefits{list-style:none;padding:0;margin:0 0 26px}
+  ul.benefits li{padding:8px 0 8px 34px;position:relative;font-size:17px}
+  ul.benefits li:before{content:"🚩";position:absolute;left:0;top:7px}
+  .price{display:inline-flex;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:700}
+  .price b{color:var(--lime)}
+  .badge{background:#2b1d00;color:var(--amber);border:1px solid #5a3d00;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+  .meme{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;transform:rotate(1.2deg);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+  .meme .fake{background:#101216;border-radius:12px;padding:14px;font-size:15px;border-left:4px solid var(--red)}
+  .meme .stamp{display:inline-block;margin-top:14px;border:3px solid var(--red);color:var(--red);font-weight:900;padding:4px 12px;transform:rotate(-6deg);font-size:22px;letter-spacing:.06em}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 36px}
+  h2{font-size:28px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  textarea{width:100%;min-height:96px;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:6px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center}
+  .checklist li.hit{color:var(--ink)} .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .math{margin-top:12px;font-size:14px;color:var(--amber)}
+  pre.script{white-space:pre-wrap;font:15px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;margin:0}
+  .copy{margin-top:10px}
+  section.tip{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:28px;margin:0 0 28px}
+  a.btn{display:inline-block;text-decoration:none}
+  .socials{color:var(--mute);font-size:15px;margin:0 0 28px}
+  .socials a{font-weight:700;text-decoration:none}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){.hero,#out{grid-template-columns:1fr}h1{font-size:38px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">alibad<span>money</span> · Scam-Clip Detector</div>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+      <button id="bES" onclick="setLang('es')">ES</button>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1 data-i18n="h1">Paste the hype. <em>Get the red flags.</em> Film the roast.</h1>
+      <p class="sub" data-i18n="sub">“Bot turns $50 into $400 a week.” “100x VIP calls.” Drop any money claim in, and in 2 seconds you get a scam score, a verdict in plain words, and a funny 30-second hook to film.</p>
+      <ul class="benefits">
+        <li data-i18n="b1">Red-flag score in seconds: fake P&amp;L, VIP/DM funnels, crazy multiples, wallet-connect asks, affiliate links, urgency and fake scarcity.</li>
+        <li data-i18n="b2">Plain-language verdict: no finance-bro jargon, just “this is sus, and here’s why”.</li>
+        <li data-i18n="b3">A ready-to-film 20–30s comedy hook, math check included, so the roast writes itself.</li>
+      </ul>
+      <div class="price"><span data-i18n="price">Free beta: 100% free to use</span> <span class="badge">beta</span></div>
+    </div>
+    <div class="meme" aria-hidden="true">
+      <div class="fake">🤖💰 <b>GROK GOLD BOT</b> turned my <b>$50 into $400</b> THIS WEEK 🚀🚀 DM “GOLD” for VIP access, only 7 spots left!! 🔥</div>
+      <div class="stamp">SCORE 90 · SCAM-CLIP BINGO</div>
+    </div>
+  </div>
+
+  <section class="demo" id="demo">
+    <h2>Try it: paste a money claim</h2>
+    <p class="hint">Runs 100% in your browser with a simple rule set. It's a comedy/awareness tool, not financial or legal advice.</p>
+    <textarea id="claim" placeholder="e.g. INSIDERS 100x VIP memecoin calls, join the Telegram before it's too late"></textarea>
+    <div class="row">
+      <button class="btn" onclick="run()">Detect 🚩</button>
+      <button class="chip" onclick="ex(0)">Example: Grok Gold bot</button>
+      <button class="chip" onclick="ex(1)">Example: 100x VIP memecoin</button>
+      <button class="chip" onclick="ex(2)">Example: $300k dog painting</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span>/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <div class="math" id="math"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <b>🎬 Your 20–30s hook</b><span class="badge" id="hookLang">EN</span>
+        </div>
+        <pre class="script" id="script"></pre>
+        <div class="row copy"><button class="chip" onclick="copyScript()">Copy script</button><span id="copied" style="color:var(--mute);font-size:13px"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tip" id="support">
+    <h2 data-i18n="wh">💚 Support / tip jar</h2>
+    <p class="hint" data-i18n="wsub">The detector is a free beta and stays free. If it saved you from a scam or gave you a roast worth filming, you can tip the tool to keep it going.</p>
+    <a class="btn" href="#TIP_LINK" data-i18n="wbtn">Tip the tool (coming soon)</a>
+  </section>
+
+  <p class="socials"><span data-i18n="soc">Follow Ali for more roasts:</span> TikTok / YouTube / Instagram <a href="https://www.tiktok.com/@alibadmoney" target="_blank" rel="noopener">@alibadmoney</a> (EN) · <a href="https://www.tiktok.com/@alidineromalo" target="_blank" rel="noopener">@alidineromalo</a> (ES)</p>
+
+  <footer>
+    Scam-Clip Detector is a comedy + awareness tool by @alibadmoney / @alidineromalo. It flags common hype patterns using keyword rules; a low score does not mean something is safe, and a high score is not a legal finding. Not financial advice. “Grok” is a trademark of xAI; this page is not affiliated with xAI, and any “Grok Gold” bot is not an official xAI product.
+  </footer>
+</div>
+
+<script>
+/* ---------- i18n (headline + bullets + tip jar) ---------- */
+var I18N={
+  en:{h1:'Paste the hype. <em>Get the red flags.</em> Film the roast.',
+      sub:'“Bot turns $50 into $400 a week.” “100x VIP calls.” Drop any money claim in, and in 2 seconds you get a scam score, a verdict in plain words, and a funny 30-second hook to film.',
+      b1:'Red-flag score in seconds: fake P&amp;L, VIP/DM funnels, crazy multiples, wallet-connect asks, affiliate links, urgency and fake scarcity.',
+      b2:'Plain-language verdict: no finance-bro jargon, just “this is sus, and here’s why”.',
+      b3:'A ready-to-film 20–30s comedy hook, math check included, so the roast writes itself.',
+      price:'Free beta: 100% free to use',wh:'💚 Support / tip jar',
+      wsub:'The detector is a free beta and stays free. If it saved you from a scam or gave you a roast worth filming, you can tip the tool to keep it going.',wbtn:'Tip the tool (coming soon)',
+      soc:'Follow Ali for more roasts:'},
+  es:{h1:'Pega el hype. <em>Ve las banderas rojas.</em> Graba el roast.',
+      sub:'“Un bot convierte 50 $ en 400 $ a la semana.” “Señales VIP 100x.” Pega cualquier promesa de dinero y en 2 segundos tienes una nota de estafa, un veredicto claro y un gancho gracioso de 30 segundos para grabar.',
+      b1:'Nota de banderas rojas al instante: ganancias sin verificar, embudos VIP/DM, multiplicadores locos, “conecta tu wallet”, links de afiliado, urgencia y escasez falsa.',
+      b2:'Veredicto en lenguaje normal: sin jerga de gurú, solo “esto huele raro, y te digo por qué”.',
+      b3:'Un gancho cómico de 20–30 s listo para grabar, con la cuenta hecha, para que el roast se escriba solo.',
+      price:'Beta gratis: 100% gratis',wh:'💚 Apoyo / bote de propinas',
+      wsub:'El detector es una beta gratis y seguirá siendo gratis. Si te salvó de una estafa o te dio un roast para grabar, puedes dejar una propina para mantenerlo.',wbtn:'Deja una propina (próximamente)',
+      soc:'Sigue a Ali para más roasts:'}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){el.innerHTML=I18N[l][el.getAttribute('data-i18n')];});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+
+/* ---------- Detection engine (pure, testable) ---------- */
+var RULES=[
+ {id:'pnl',sen:'unverified profits',ses:'ganancias sin verificar',w:20,en:'Unverified profits / guaranteed returns',es:'Ganancias sin verificar / garantizadas',
+  why:'Claims a result with no audited track record, broker statement or on-chain proof.',
+  fn:function(t,m){return !!m.from||m.income>=2000||(m.pct>0&&!!m.period)||
+    /\b(?:guarantee[ds]?|risk[- ]?free|can'?t lose|no risk|passive income|profits?|pnl|p&l|hit \d+x)\b/i.test(t)||
+    /\b(?:makes?|made|making|earns?|earned|earning|pulls?)\b[^.]{0,20}(?:\$|€)\s?\d/i.test(t)||
+    /garantizad|sin riesgo|ingresos pasivos|ganancias/i.test(t);}},
+ {id:'multi',sen:'crazy numbers',ses:'cifras locas',w:20,en:'Extreme multiples / unrealistic numbers',es:'Multiplicadores extremos / cifras irreales',
+  why:'10x+ gains, 100%+ per week, or huge monthly income from a low-effort idea.',
+  fn:function(t,m){return m.bigMultiple||m.bigIncome;}},
+ {id:'vip',sen:'VIP/DM funnel',ses:'embudo VIP',w:15,en:'VIP / DM / private-group funnel',es:'Embudo VIP / DM / grupo privado',
+  why:'Real edges are not sold in DMs. The funnel is the product.',
+  re:[/\bvip\b/i,/\bdm\b|\bdm me\b|\bmessage me\b|\binbox\b/i,/telegram|discord|whatsapp|private (?:group|channel)|signals?\b|calls?\b/i,/escr[ií]beme|mensaje privado|grupo privado|señales/i]},
+ {id:'wallet',sen:'wallet/contract ask',ses:'piden tu wallet',w:15,en:'Wallet-connect / contract-address ask',es:'Pide conectar wallet / dirección de contrato',
+  why:'“Connect wallet”, seed phrases, CA drops and “claim” links are how drainers work.',
+  re:[/connect (?:your )?wallet|seed phrase|private key|recovery phrase|claim (?:your )?(?:airdrop|tokens?)|approve\b/i,/\bCA\s*[:=]/,/\b0x[a-fA-F0-9]{8,}/,/\b[1-9A-HJ-NP-Za-km-z]{32,44}\b/,/memecoin|meme coin|\bpump\b|presale|conecta tu wallet|frase semilla/i]},
+ {id:'aff',sen:'affiliate/paid link',ses:'link de afiliado',w:10,en:'Affiliate link / paid product / deposit',es:'Link de afiliado / producto de pago / depósito',
+  why:'The seller earns from your sign-up or deposit whether or not you win.',
+  re:[/link in (?:my )?bio|use (?:my )?code|promo code|ref(?:erral)?\s*(?:link|code)|\bref=|affiliate|sign ?up|course|mentorship|masterclass|buy (?:the |my )?(?:bot|ea|course)|minimum deposit|deposit\b/i,/\b(?:EA|MT[45]|expert advisor)\b/,/enlace en (?:la )?bio|c[oó]digo|curso|dep[oó]sito/i]},
+ {id:'urg',sen:'urgency',ses:'urgencia',w:10,en:'Urgency pressure',es:'Presión de urgencia',
+  why:'Scams need you to act before you think.',
+  re:[/\b(?:now|today only|tonight|hurry|last chance|before it'?s too late|don'?t miss|act fast|limited time|ending soon|asap|right now)\b/i,/ahora|solo hoy|última oportunidad|date prisa|antes de que sea tarde|no te lo pierdas/i,/!{2,}|🚨|⏰/]},
+ {id:'scar',sen:'fake scarcity',ses:'escasez falsa',w:10,en:'Fake scarcity / insider framing',es:'Escasez falsa / “insiders”',
+  why:'“Only 7 spots”, “insiders” and “secret” create fake exclusivity.',
+  re:[/only \d+ (?:spots?|seats?|slots?|left)|limited (?:spots?|seats?|slots?)|spots? left|few spots|exclusive|insiders?|secret|nobody (?:is )?talking about|they don'?t want you to know/i,/plazas limitadas|quedan \d+|exclusiv|secreto|nadie (?:te )?cuenta/i]},
+ {id:'brand',sen:'borrowed brand',ses:'marca prestada',w:10,en:'Borrowed brand / AI-bot hype',es:'Marca prestada / hype de bot con IA',
+  why:'Slapping “Grok”, “ChatGPT”, “Elon” or “AI bot” on a product borrows trust it hasn’t earned.',
+  re:[/\bgrok\b|chat ?gpt|openai|\bxai\b|elon|musk|\bai (?:bot|trading|robot)\b|\btrading bot\b|\bbot\b|algorithm|quantum/i]}
+];
+
+function parseMoney(s){var re=/(?:\$|€|usd\s?)\s?(\d[\d,]*(?:\.\d+)?)\s*(k|m|mil|million|thousand)?\b|(\d[\d,]*(?:\.\d+)?)\s*(k|m)?\s*(?:\$|€|usd|dollars|euros)/gi,out=[],x;
+  while((x=re.exec(s))){var n=parseFloat((x[1]||x[3]).replace(/,/g,'')),u=(x[2]||x[4]||'').toLowerCase();
+    if(u==='k'||u==='thousand'||u==='mil')n*=1e3;if(u==='m'||u==='million')n*=1e6;out.push({n:n,i:x.index,end:re.lastIndex});}
+  return out;}
+function periodOf(s){var p=s.match(/(?:\/|\ba\b|per|every|each|al|a la|por)\s*(day|week|wk|month|mo|year|yr|día|dia|semana|mes|año)\b/i);if(!p)return null;
+  var k=p[1].toLowerCase();return /day|d[ií]a/.test(k)?'day':/week|wk|semana/.test(k)?'week':/month|mo|mes/.test(k)?'month':'year';}
+
+function analyze(text){
+  var t=text||'',m={};
+  var money=parseMoney(t),period=periodOf(t);
+  var mx=[],r=/(\d+(?:\.\d+)?)\s?x\b/gi,y;while((y=r.exec(t)))mx.push(parseFloat(y[1]));
+  m.maxX=mx.length?Math.max.apply(null,mx):0;
+  var into=t.match(/(\$?\s?\d[\d,.]*\s*[km]?\s*\$?)\s*(?:into|to|→|->|en|a)\s*(\$?\s?\d[\d,.]*\s*[km]?\s*\$?)/i);
+  if(into&&money.length>=2){m.from=money[0].n;m.to=money[1].n;m.ratio=m.to/m.from;}
+  m.period=period;
+  var pct=t.match(/(\d+(?:\.\d+)?)\s?%/);m.pct=pct?parseFloat(pct[1]):0;
+  if(!m.ratio&&m.pct&&period)m.ratio=1+m.pct/100;
+  if(!m.ratio&&m.maxX)m.ratio=m.maxX;
+  var toMonthly={day:30,week:4.33,month:1,year:1/12};
+  m.income=(!m.from&&money.length&&period)?Math.max.apply(null,money.map(function(q){return q.n;}))*toMonthly[period]:0;
+  m.bigMultiple=m.maxX>=10||(m.ratio>=3&&!!m.from)||(m.pct>=50&&!!period)||/1000\s?%|moon|lambo|to the moon/i.test(t);
+  m.bigIncome=m.income>=10000;
+  m.lowEffort=(t.match(/(dog|cat|pet)\s*\w*\s*(?:painting|portraits?)|painting|faceless|dropshipping|print on demand|ai art|coloring book|youtube automation|side hustle|site|website|app/i)||[''])[0];
+  var hits=RULES.map(function(rule){var hit=rule.fn?!!rule.fn(t,m):rule.re.some(function(rx){return rx.test(t);});return {rule:rule,hit:hit};});
+  var score=hits.reduce(function(a,h){return a+(h.hit?h.rule.w:0);},0);
+  var n=hits.filter(function(h){return h.hit;}).length;
+  if(n>=4)score+=5; // stacking bonus: many flags at once
+  var mc=mathCheck(m,false);if(mc&&mc.v>=1e6)score+=10; // absurdity bonus: the claim's own math implies $1M+
+  score=Math.min(100,score);
+  return {score:score,hits:hits,m:m,count:n};
+}
+
+function fmt(n){if(!isFinite(n))return 'infinity';var a=Math.abs(n),u=[[1e15,' quadrillion'],[1e12,' trillion'],[1e9,' billion'],[1e6,' million'],[1e3,'k']];
+  for(var i=0;i<u.length;i++)if(a>=u[i][0]){var v=n/u[i][0];return '$'+(v>=100?Math.round(v):v.toFixed(1).replace(/\.0$/,''))+u[i][1];}
+  return '$'+Math.round(n).toLocaleString('en-US');}
+function fmtES(n){var s=fmt(n).replace('$','');s=s.replace(' quadrillion',' mil billones').replace(' trillion',' billones').replace(' billion',' mil millones').replace(' million',' millones').replace('k',' mil');return s.replace('.',',')+' $';}
+
+function mathCheck(m,es){
+  var F=es?fmtES:fmt,per={day:es?'días':'days',week:es?'semanas':'weeks',month:es?'meses':'months',year:es?'años':'years'};
+  if(m.from&&m.ratio>1&&m.period){var steps={day:30,week:12,month:12,year:5}[m.period],v=m.from*Math.pow(m.ratio,steps);
+    return {v:v,line:es?('Si esto fuera real: '+F(m.from)+' × '+(+m.ratio.toFixed(2))+' durante '+steps+' '+per[m.period]+' = '+F(v)+'.'):('If this were real: '+F(m.from)+' × '+(+m.ratio.toFixed(2))+' for '+steps+' '+per[m.period]+' = '+F(v)+'.')};}
+  if(m.maxX>=10){var v2=100*Math.pow(m.maxX,3);
+    return {v:v2,line:es?('Si fuera real: 100 $ con tres “'+m.maxX+'x” seguidos = '+F(v2)+'.'):('If real: $100 hitting three '+m.maxX+'x calls in a row = '+F(v2)+'.')};}
+  if(m.income>=10000){var hr=m.income/(30*24);
+    return {v:m.income*12,line:es?('Eso es '+F(m.income*12)+' al año, unos '+F(hr)+' por hora, también mientras duermes.'):('That’s '+F(m.income*12)+' a year, about '+F(hr)+' every hour, including while you sleep.')};}
+  return null;}
+
+function verdict(s,es){
+  if(s>=70)return es?['🚨 Bingo de estafa','Casi todas las banderas rojas en una sola frase. Trátalo como publicidad o como estafa hasta que haya pruebas auditadas. No conectes wallets, no deposites, no pagues “acceso VIP”.']:['🚨 Scam-clip bingo','Almost every red flag in one sentence. Treat it as an ad or a scam until there is audited proof. Don’t connect a wallet, don’t deposit, don’t pay for “VIP access”.'];
+  if(s>=45)return es?['🚩 Muchas banderas rojas','Promesas grandes, pruebas cero. Pide extractos verificados o historial on-chain antes de creer nada.']:['🚩 Big red flags','Big promises, zero proof. Ask for verified statements or an on-chain history before believing any of it.'];
+  if(s>=20)return es?['🤨 Huele raro','Algunas señales típicas del hype. Puede ser marketing exagerado; comprueba quién gana dinero si tú te apuntas.']:['🤨 Kinda sus','Some classic hype signals. Might just be loud marketing; check who gets paid when you sign up.'];
+  return es?['✅ Pocas banderas','No salta casi nada en las reglas. Eso no lo hace seguro; sigue haciendo tus deberes.']:['✅ Few flags','Not much trips the rules. That doesn’t make it safe; still do your homework.'];
+}
+
+function hash(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h);}
+
+function hook(text,res,es){
+  var m=res.m,mc=mathCheck(m,es),on=function(id){return res.hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var subj=(text.match(/\b(grok\s*gold|grok|chat ?gpt)[\w\s]{0,12}?bot\b/i)||text.match(/\b[A-Z]{3,}\b/)||[''])[0].trim();
+  var h=hash(text)%2,L=[];
+  if(es){
+    L.push('[0–3s · a cámara, cara seria] '+(on('multi')&&m.from?('¿Un bot que convierte '+fmtES(m.from)+' en '+fmtES(m.to)+({day:' al día',week:' a la semana',month:' al mes',year:' al año'}[m.period]||'')+'? Hermano, yo no convierto 50 € ni en una cena.'):on('wallet')||on('vip')?'“Insiders”. “100x”. “VIP”. Tres palabras que significan: tú eres la salida de liquidez.':m.lowEffort?('¿'+fmtES(m.income)+' al mes con '+({'dog painting':'cuadros de perros'}[m.lowEffort.toLowerCase()]||m.lowEffort)+'? Entonces, ¿por qué me lo cuentas a mí?'):'Vamos a pasar esta promesa por el detector de estafas.'));
+    L.push('[3–10s · leyendo la captura] Detector de estafas: '+res.score+'/100. Banderas: '+(res.count?res.hits.filter(function(x){return x.hit;}).slice(0,3).map(function(x){return x.rule.ses;}).join(', '):'ninguna')+'.');
+    if(mc)L.push('[10–20s · calculadora en mano] '+mc.line+(mc.v>1e12?' Eso es más que el PIB mundial. Con 50 €.':' Y aun así te lo tiene que vender a ti.'));
+    L.push('[20–28s · remate] '+(res.score<20?'¿Aburrido? Sí. ¿Estafa? Probablemente no. El dinero de verdad es aburrido.':on('wallet')?'Lo único que hace 100x aquí es la velocidad a la que se vacía tu wallet.':on('aff')?'Lo único que se multiplica aquí es la comisión de afiliado.':h?'Si de verdad funcionara, no tendría un Telegram: tendría un yate y un abogado.':'Si funcionara, no necesitaría tus 50 €. Necesitaría un banco.')+' Soy Ali, y esto es dinero malo. Sígueme para más.');
+  }else{
+    L.push('[0–3s · straight to camera, dead serious] '+(on('multi')&&m.from?('A bot that turns '+fmt(m.from)+' into '+fmt(m.to)+' '+(m.period?'a '+m.period:'')+'? Bro, I can’t turn $50 into dinner.'):on('wallet')||on('vip')?'“Insiders.” “100x.” “VIP.” Three words that mean: you are the exit liquidity.':m.lowEffort?(fmt(m.income)+' a month from '+m.lowEffort+'? Then why are you telling ME?'):'Let’s run this money claim through the scam-clip detector.'));
+    L.push('[3–10s · reading the screenshot] Scam score: '+res.score+'/100. Flags: '+(res.count?res.hits.filter(function(x){return x.hit;}).slice(0,3).map(function(x){return x.rule.sen;}).join(', '):'none')+'.');
+    if(mc)L.push('[10–20s · calculator out] '+mc.line+(mc.v>1e12?' That’s more than the entire world economy. From fifty bucks.':' And somehow they still need YOUR money.'));
+    L.push('[20–28s · punchline] '+(res.score<20?'Boring? Yes. Scam? Probably not. Boring is what real money looks like.':on('wallet')?'The only thing doing 100x here is how fast your wallet empties.':on('aff')?'The only thing multiplying here is the affiliate commission.':h?'If it actually worked, they wouldn’t have a Telegram. They’d have a yacht and a lawyer.':'If it worked, they wouldn’t need your fifty bucks. They’d need a bank.')+' I’m Ali, this is bad money. Follow for more.');
+  }
+  return L.join('\n\n');
+}
+
+/* ---------- UI ---------- */
+var EXAMPLES=[
+ 'Grok Gold bot turns $50 into $400 a week 🤖💰 fully automated AI trading, DM me "GOLD" for the link. Only 10 spots left!!',
+ 'INSIDERS 100x VIP memecoin calls 🚀 last call hit 63x. Join the Telegram before it\'s too late. CA: 7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU',
+ 'This guy makes $300k/month with a dog painting site. Faceless, passive income, full course at the link in bio.'
+];
+function ex(i){document.getElementById('claim').value=EXAMPLES[i];run();}
+function run(){
+  var t=document.getElementById('claim').value.trim();if(!t){document.getElementById('claim').focus();return;}
+  var es=lang==='es',r=analyze(t),v=verdict(r.score,es),mc=mathCheck(r.m,es);
+  var o=document.getElementById('out');o.style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=45?'var(--amber)':r.score>=20?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('math').textContent=mc?('🧮 '+mc.line):'';
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'🚩':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+h.rule.why+'</small>':'')+'</span></li>';}).join('');
+  document.getElementById('script').textContent=hook(t,r,es);
+  document.getElementById('hookLang').textContent=es?'ES':'EN';
+}
+function copyScript(){var s=document.getElementById('script').textContent;(navigator.clipboard?navigator.clipboard.writeText(s):Promise.reject()).then(function(){document.getElementById('copied').textContent='Copied';},function(){document.getElementById('copied').textContent='Select & copy manually';});}
+var hm=location&&location.hash&&location.hash.match(/ex=(\d)/);if(/lang=es/.test(location.hash||''))setLang('es');if(hm)ex(+hm[1]);
+if(typeof module!=='undefined')module.exports={analyze:analyze,verdict:verdict,hook:hook,mathCheck:mathCheck,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
