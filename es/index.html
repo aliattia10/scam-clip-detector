@@ -98,7 +98,7 @@
   .pv li .os{display:block;color:var(--amber);font-size:13px;margin:2px 0}
   .pv .mc{margin-top:10px;color:var(--amber);font-size:13px}
   .free{background:#12230a;color:var(--lime);border:1px solid #2f5b0f;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
-  section.tools{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 28px}
+  section.tools{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin:0 0 28px}
   .tool{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;text-decoration:none;color:var(--ink);display:block}
   .tool:hover{border-color:var(--lime)}
   .tool b{font-size:18px}
@@ -123,6 +123,7 @@
     <div class="logo">alidinero<span>malo</span> · Detector de estafas</div>
     <div class="hdr-r">
     <a class="hide-m" href="/giveaway-checker/#lang=es" data-i18n="navg">🎁 Giveaway checker</a>
+    <a class="hide-m" href="/signal-group-checker/#lang=es" data-i18n="navs">Signal group checker</a>
     <a class="hide-m" href="#pack" data-i18n="navp">📦 Script Pack</a>
     <div class="lang" role="group" aria-label="Language">
       <button id="bEN" class="on" onclick="setLang('en')">EN</button>
@@ -265,6 +266,7 @@
 
   <section class="tools" id="tools">
     <a class="tool" href="/giveaway-checker/#lang=es"><b data-i18n="t1h">🎁 Is this crypto giveaway / airdrop a scam?</b><p data-i18n="t1p">New free tool: paste the giveaway post or link. It checks for wallet-connect asks, “send X get 2X”, seed-phrase requests, lookalike domains and urgency.</p></a>
+    <a class="tool" href="/signal-group-checker/#lang=es"><b data-i18n="t3h">Is this VIP / signal group a scam?</b><p data-i18n="t3p">New free tool: paste a Telegram or Discord pitch. It flags guaranteed returns, VIP fees, wallet-connect asks, urgency, affiliate funnels and fake screenshot language.</p></a>
     <a class="tool" href="#demo"><b data-i18n="t2h">🚩 Scam-Clip Detector</b><p data-i18n="t2p">Paste any money claim and get a scam score, the math check and a roast hook to film.</p></a>
   </section>
 
@@ -288,7 +290,7 @@
   <p class="socials"><span data-i18n="soc">Follow Ali for more roasts:</span> TikTok / YouTube / Instagram <a href="https://www.tiktok.com/@alibadmoney" target="_blank" rel="noopener">@alibadmoney</a> (EN) · <a href="https://www.tiktok.com/@alidineromalo" target="_blank" rel="noopener">@alidineromalo</a> (ES)</p>
 
   <footer>
-    <p style="margin:0 0 10px"><a href="/giveaway-checker/#lang=es">Comprobador de sorteos y airdrops</a> · <a href="#pack">Pack de guiones</a> · <a href="#support">Propinas</a> · <a href="/es/guias/">Guías</a> · <a href="/" hreflang="en">English</a></p>
+    <p style="margin:0 0 10px"><a href="/giveaway-checker/#lang=es">Comprobador de sorteos y airdrops</a> · <a href="/signal-group-checker/#lang=es">Comprobador de grupos VIP / señales</a> · <a href="#pack">Pack de guiones</a> · <a href="#support">Propinas</a> · <a href="/es/guias/">Guías</a> · <a href="/" hreflang="en">English</a></p>
     El Detector de estafas es una herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Marca patrones típicos del hype con reglas de palabras clave: una nota baja no significa que algo sea seguro y una nota alta no es una conclusión legal. No es asesoramiento financiero. “Grok” es una marca de xAI; esta página no tiene relación con xAI y ningún bot “Grok Gold” es un producto oficial de xAI.
   </footer>
 </div>
@@ -317,7 +319,7 @@ var I18N={
       price:'Free beta: 100% free to use',wh:'💚 Support / tip jar',
       wsub:'The detector is a free beta and stays free. If it saved you from a scam or gave you a roast worth filming, you can tip the tool to keep it going.',wbtn:'💚 Tip the tool via PayPal',
       soc:'Follow Ali for more roasts:',
-      navg:'🎁 Giveaway checker',navp:'📦 Script Pack',soon:'PayPal link going live soon.',
+      navg:'🎁 Giveaway checker',navs:'Signal group checker',navp:'📦 Script Pack',soon:'PayPal link going live soon.',
       ph:'📦 Scam-Roast Script Pack — pay what you want (from 5€)',
       psub:'30 ready-to-film 20–30s scripts: 15 in English + 15 matching versions in Spain Spanish. Each one has a hook, timed beats, on-screen text and a math-check joke (all math verified). 19-page PDF. Roasts the formats, never names real people or channels.',
       f1:'Gold / forex robots (EAs)',f2:'“AI trading bot” win rates',f3:'VIP signal Telegrams',f4:'Memecoin “next 100x” calls',f5:'Dropshipping gurus',f6:'“Passive income” courses',f7:'MLM “be your own boss”',f8:'Fake “send 1, get 2” giveaways',f9:'“Copy my trades”',f10:'Airdrop wallet drainers',f11:'Prop-firm challenge upsells',f12:'Rented-lifestyle flexes',f13:'“Guaranteed 1% daily” platforms',f14:'“We recover your crypto” services',f15:'“Wrong number” friends with a trading app',
@@ -325,7 +327,8 @@ var I18N={
       deliv:'After paying, send your email in the PayPal note and you\'ll get the pack within 24h. Delivery is manual (Ali sends it himself). Want to pay more than 5€? Just change the amount on PayPal.',
       freep:'Free preview',
       t1h:'🎁 Is this crypto giveaway / airdrop a scam?',t1p:'New free tool: paste the giveaway post or link. It checks for wallet-connect asks, “send X get 2X”, seed-phrase requests, lookalike domains and urgency.',
-      t2h:'🚩 Scam-Clip Detector',t2p:'Paste any money claim and get a scam score, the math check and a roast hook to film.'},
+      t2h:'🚩 Scam-Clip Detector',t2p:'Paste any money claim and get a scam score, the math check and a roast hook to film.',
+      t3h:'Is this VIP / signal group a scam?',t3p:'New free tool: paste a Telegram or Discord pitch. It flags guaranteed returns, VIP fees, wallet-connect asks, urgency, affiliate funnels and fake screenshot language.'},
   es:{h1:'Pega el hype. <em>Ve las banderas rojas.</em> Graba el roast.',
       sub:'“Un bot convierte 50 $ en 400 $ a la semana.” “Señales VIP 100x.” Pega cualquier promesa de dinero y en 2 segundos tienes una nota de estafa, un veredicto claro y un gancho gracioso de 30 segundos para grabar.',
       b1:'Nota de banderas rojas al instante: ganancias sin verificar, embudos VIP/DM, multiplicadores locos, “conecta tu wallet”, links de afiliado, urgencia y escasez falsa.',
@@ -334,7 +337,7 @@ var I18N={
       price:'Beta gratis: 100% gratis',wh:'💚 Apoyo / bote de propinas',
       wsub:'El detector es una beta gratis y seguirá siendo gratis. Si te salvó de una estafa o te dio un roast para grabar, puedes dejar una propina para mantenerlo.',wbtn:'☕ Invita a un café vía PayPal',
       soc:'Sigue a Ali para más roasts:',
-      navg:'🎁 Comprobador de sorteos',navp:'📦 Pack de guiones',soon:'El enlace de PayPal estará activo en breve.',
+      navg:'🎁 Comprobador de sorteos',navs:'Comprobador de señales',navp:'📦 Pack de guiones',soon:'El enlace de PayPal estará activo en breve.',
       ph:'📦 Pack de guiones Scam-Roast: paga lo que quieras (desde 5 €)',
       psub:'30 guiones de 20–30 s listos para grabar: 15 en inglés + 15 versiones equivalentes en español de España. Cada uno con gancho, tiempos, texto en pantalla y un chiste con la cuenta hecha (todas comprobadas). PDF de 19 páginas. Se ríe de los formatos, nunca nombra a personas ni canales reales.',
       f1:'Robots de oro / forex (EAs)',f2:'Los “aciertos” de los bots con IA',f3:'Telegrams de señales VIP',f4:'Señales de memecoins “el próximo 100x”',f5:'Gurús del dropshipping',f6:'Cursos de “ingresos pasivos”',f7:'Multinivel “sé tu propio jefe”',f8:'Sorteos falsos “envía 1, recibe 2”',f9:'“Copia mis operaciones”',f10:'Airdrops que vacían tu wallet',f11:'Retos de fondeo con extras',f12:'Postureo de alquiler',f13:'Plataformas del “1% diario garantizado”',f14:'Servicios de “recuperamos tus criptos”',f15:'El “número equivocado” con app de trading',
@@ -342,7 +345,8 @@ var I18N={
       deliv:'Después de pagar, pon tu email en la nota de PayPal y recibirás el pack en menos de 24 h. La entrega es manual (lo envía Ali). ¿Quieres pagar más de 5 €? Cambia el importe en PayPal.',
       freep:'Vista previa gratis',
       t1h:'🎁 ¿Este sorteo o airdrop cripto es una estafa?',t1p:'Nueva herramienta gratis: pega el post o el enlace del sorteo. Detecta si te piden conectar la wallet, “envía X y recibe 2X”, la frase semilla, dominios imitados y urgencia.',
-      t2h:'🚩 Detector de estafas',t2p:'Pega cualquier promesa de dinero y obtén una nota de estafa, la cuenta hecha y un gancho para grabar.'}
+      t2h:'🚩 Detector de estafas',t2p:'Pega cualquier promesa de dinero y obtén una nota de estafa, la cuenta hecha y un gancho para grabar.',
+      t3h:'¿Este grupo VIP / de señales es una estafa?',t3p:'Nueva herramienta gratis: pega un pitch de Telegram o Discord. Marca ganancias garantizadas, cuotas VIP, conectar wallet, urgencia, afiliados y lenguaje de capturas.'}
 };
 var lang='en';
 function setLang(l){lang=l;document.documentElement.lang=l;
