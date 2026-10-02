@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fake Job Offer Red-Flag Checker (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Is this remote job or hiring DM a scam? Paste the offer or message and get a free rule-based red-flag score: upfront fees, crypto/gift-card pay, fake HR, cheque overpayment, urgency and identity-theft asks. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/job-offer-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EJ%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="Is this job offer a scam? Free red-flag checker">
+<meta property="og:description" content="Paste a hiring email or LinkedIn/WhatsApp DM. Get a red-flag score for upfront fees, crypto pay, fake HR, cheque overpayment, urgency and ID theft asks.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/job-offer-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/job-offer-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fake job offer red-flag checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for remote job and hiring DMs, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/job-offer-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Job Offer Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/giveaway-checker/" data-i18n="navg">Giveaway checker</a>
+      <a class="hide-m" href="/signal-group-checker/" data-i18n="navs">Signal group</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">Is this job offer <em>a scam?</em></h1>
+    <p class="sub" data-i18n="sub">Paste a hiring email, LinkedIn message or WhatsApp DM. In one second you get a red-flag score for the tricks fake recruiters use most: upfront fees, crypto or gift-card pay, fake HR domains, cheque overpayment, urgency and ID theft asks.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a job / hiring message</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool, not a background check: a low score does not make an offer safe.</p>
+    <label for="txt" data-i18n="l1">Offer email, DM or job post</label>
+    <textarea id="txt" placeholder="e.g. Congrats! You are hired as Remote Data Entry. No interview needed. Pay $49 training fee today via Bitcoin to unlock onboarding. Reply with passport scan."></textarea>
+    <label for="url" data-i18n="l2">Apply / payment link (optional)</label>
+    <input type="text" id="url" placeholder="e.g. https://bit.ly/fake-hr or mailto:hr@amaz0n-careers.com" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: fee + crypto</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: cheque overpay</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: fake HR urgency</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: careful real hire</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do now</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">Real jobs do not charge you to start</b><p data-i18n="c1p">Training fees, “equipment deposits”, software licences paid by the candidate — those are classic advance-fee scams, not onboarding.</p></div>
+    <div class="card"><b data-i18n="c2h">Weird pay channels are a stop sign</b><p data-i18n="c2p">Crypto, gift cards, wire to a stranger, or “cash this cheque and send the rest back” are how money-mule and overpayment scams work.</p></div>
+    <div class="card"><b data-i18n="c3h">Verify the company, not the logo</b><p data-i18n="c3p">Lookalike domains, free-mail HR addresses and “hired with no interview” pitches steal IDs and bank details. Call the real company switchboard.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES). Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it saved you from a fake hire or gave you a roast worth filming, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a> · <a href="https://www.tiktok.com/@alibadmoney" target="_blank" rel="noopener">@alibadmoney</a> · <a href="https://www.tiktok.com/@alidineromalo" target="_blank" rel="noopener">@alidineromalo</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Not legal or employment advice. If you have lost money or shared ID documents, report it to the police and the platform, and ignore anyone who offers to “recover” it for a fee.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{brand:'Job Offer Checker',navd:'Scam-Clip Detector',navg:'Giveaway checker',navs:'Signal group',
+  h1:'Is this job offer <em>a scam?</em>',
+  sub:'Paste a hiring email, LinkedIn message or WhatsApp DM. In one second you get a red-flag score for the tricks fake recruiters use most: upfront fees, crypto or gift-card pay, fake HR domains, cheque overpayment, urgency and ID theft asks.',
+  h2:'Check a job / hiring message',hint:'Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool, not a background check: a low score does not make an offer safe.',
+  l1:'Offer email, DM or job post',l2:'Apply / payment link (optional)',go:'Check it',
+  e0:'Example: fee + crypto',e1:'Example: cheque overpay',e2:'Example: fake HR urgency',e3:'Example: careful real hire',
+  of:'/ 100 scam score',todoh:'What to do now',
+  c1h:'Real jobs do not charge you to start',c1p:'Training fees, “equipment deposits”, software licences paid by the candidate — those are classic advance-fee scams, not onboarding.',
+  c2h:'Weird pay channels are a stop sign',c2p:'Crypto, gift cards, wire to a stranger, or “cash this cheque and send the rest back” are how money-mule and overpayment scams work.',
+  c3h:'Verify the company, not the logo',c3p:'Lookalike domains, free-mail HR addresses and “hired with no interview” pitches steal IDs and bank details. Call the real company switchboard.',
+  ctah:'Want to roast these on camera?',ctap:'The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES). Pay what you want, from 5€.',ctab:'See the Script Pack',
+  tiph:'Tip jar',tipp:'This checker is free and stays free. If it saved you from a fake hire or gave you a roast worth filming, you can tip.',tipb:'Tip via PayPal',
+  moreg:'Giveaway / airdrop checker',moresig:'Signal / VIP group checker',mores:'900 Shorts guide (19€)',
+  fd:'Scam-Clip Detector',fg:'Giveaway checker',fp:'Scam-Roast Script Pack',ft:'Tip jar',
+  disc:'Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Not legal or employment advice. If you have lost money or shared ID documents, report it to the police and the platform, and ignore anyone who offers to “recover” it for a fee.'},
+ es:{brand:'Comprobador de ofertas de trabajo',navd:'Detector de estafas',navg:'Comprobador de sorteos',navs:'Grupos de señales',
+  h1:'¿Esta oferta de trabajo <em>es una estafa?</em>',
+  sub:'Pega el email de contratación, el mensaje de LinkedIn o el WhatsApp. En un segundo tienes una nota de banderas rojas por los trucos más usados: cuotas por adelantado, pago en cripto o tarjetas regalo, RR.HH. falsos, cheques de más, urgencia y robo de identidad.',
+  h2:'Comprueba un mensaje de oferta / contratación',hint:'Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples, no una verificación laboral: una nota baja no hace segura una oferta.',
+  l1:'Email, mensaje o anuncio de oferta',l2:'Enlace de solicitud / pago (opcional)',go:'Comprobar',
+  e0:'Ejemplo: cuota + cripto',e1:'Ejemplo: cheque de más',e2:'Ejemplo: RR.HH. falso urgente',e3:'Ejemplo: contratación prudente',
+  of:'/ 100 nota de estafa',todoh:'Qué hacer ahora',
+  c1h:'Un trabajo real no te cobra por empezar',c1p:'Cuotas de formación, “depósitos de equipo” o licencias que paga el candidato son estafas de pago por adelantado, no onboarding.',
+  c2h:'Canales de pago raros son una señal de alto',c2p:'Cripto, tarjetas regalo, transferencias a un desconocido o “cobra este cheque y envía el resto” es como operan las estafas de mulas y sobresueldo.',
+  c3h:'Verifica la empresa, no el logo',c3p:'Dominios parecidos, correos gratis de “RR.HH.” y “contratado sin entrevista” roban DNI y datos bancarios. Llama a la centralita real de la empresa.',
+  ctah:'¿Quieres hacer un roast de esto en vídeo?',ctap:'El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES). Paga lo que quieras, desde 5 €.',ctab:'Ver el pack de guiones',
+  tiph:'Bote de propinas',tipp:'Este comprobador es gratis y seguirá siéndolo. Si te salvó de una oferta falsa o te dio un roast para grabar, puedes dejar una propina.',tipb:'Propina por PayPal',
+  moreg:'Comprobador de sorteos / airdrops',moresig:'Comprobador de grupos VIP / señales',mores:'Guía de 900 Shorts (19 €)',
+  fd:'Detector de estafas',fg:'Comprobador de sorteos',fp:'Pack de guiones Scam-Roast',ft:'Bote de propinas',
+  disc:'Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. No es asesoramiento legal ni laboral. Si has perdido dinero o has enviado documentos de identidad, denúncialo a la policía y a la plataforma, e ignora a quien se ofrezca a “recuperarlos” cobrando.'}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|no one|nobody|won'?t|will not|don'?t|do not|we (?:do )?not|nunca|jam[aá]s|nadie|no te|no pedimos)[^.!?\n]{0,40}$/i.test(t.slice(Math.max(0,idx-50),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'fee',w:30,neg:true,en:'Upfront fee / training / equipment deposit',es:'Cuota por adelantado / formación / depósito de equipo',
+  wen:'Legitimate employers pay you. Asking for training fees, deposits or licence money before day one is a classic advance-fee scam.',wes:'Un empleador legítimo te paga a ti. Pedir cuotas de formación, depósitos o licencias antes del primer día es una estafa clásica de pago por adelantado.',
+  re:[/training (?:fee|cost|payment)|registration fee|onboarding fee|equipment (?:fee|deposit|cost)|pay (?:a |the )?fee|send (?:\$|€|usd|eur)\s?\d+|processing fee|software (?:licence|license) fee|starter kit|buy (?:our |the )?(?:kit|laptop|phone)/i,/cuota de (?:formaci[oó]n|inscripci[oó]n|alta)|dep[oó]sito de equipo|paga (?:la )?cuota|tasa de (?:procesamiento|alta)|kit de inicio|compra (?:el |nuestro )?(?:kit|port[aá]til)/i]},
+ {id:'crypto',w:28,neg:true,en:'Crypto / gift card / wire payment ask',es:'Pago en cripto / tarjeta regalo / transferencia',
+  wen:'Salary is not paid in Bitcoin, Steam cards or Western Union to a stranger. Those channels are irreversible.',wes:'El sueldo no se cobra en Bitcoin, tarjetas Steam ni Western Union a un desconocido. Esos canales son irreversibles.',
+  re:[/bitcoin|btc|usdt|ethereum|crypto(?:currency)?|gift ?cards?|steam (?:card|wallet)|itunes|google play card|western union|moneygram|wire (?:transfer|funds)|cashapp|zelle/i,/bitcoin|btc|usdt|ethereum|criptomoneda|tarjeta(?:s)? (?:regalo|steam)|western union|moneygram|transferencia (?:internacional|urgente)/i]},
+ {id:'overpay',w:26,en:'Cheque / overpayment mule pattern',es:'Cheque / patrón de sobresueldo (mula)',
+  wen:'“We overpaid — cash the cheque and send the difference back” turns you into a money mule. The cheque later bounces.',wes:'“Te hemos pagado de más: cobra el cheque y devuelve la diferencia” te convierte en mula. El cheque luego rebota.',
+  re:[/overpaid|overpayment|too much|send (?:the )?(?:rest|difference|balance|remaining) back|wire (?:the )?(?:rest|difference|balance|remaining).{0,40}back|cash (?:the |this )?che(?:que|ck)|(?:deposit|cash) (?:it|this|the).{0,40}che(?:que|ck)|money order|cashier'?s? check|send.{0,20}back to (?:our |the )?vendor|equipment che(?:que|ck)/i,/te (?:hemos )?pagado de m[aá]s|sobrepago|devuelve (?:la )?diferencia|cobra (?:el )?cheque|giro postal|ingresa (?:este|el) cheque|transfiere.{0,30}de vuelta|cheque de equipo/i]},
+ {id:'noid',w:22,en:'Hired with no interview / instant offer',es:'Contratado sin entrevista / oferta instantánea',
+  wen:'Real roles interview you. “You’re hired, start today, no call needed” is how scammers skip scrutiny.',wes:'Los puestos reales te entrevistan. “Estás contratado, empiezas hoy, sin llamada” es cómo evitan el escrutinio.',
+  re:[/no interview|without (?:an )?interview|hired immediately|instant(?:ly)? hired|start (?:today|tomorrow|asap)|you(?:'| a)?re hired|congratulations[,!] you (?:are|have been) (?:selected|hired)|we (?:have )?selected you/i,/sin entrevista|contratado(?:a)? (?:de inmediato|ya)|empieza (?:hoy|ma[nñ]ana)|has sido (?:seleccionad|contratad)|te hemos seleccionado|felicidades[,!] has sido/i]},
+ {id:'idtheft',w:24,neg:true,en:'Asks for ID / passport / bank details early',es:'Pide DNI / pasaporte / datos bancarios pronto',
+  wen:'Sharing passport scans, SSN/NIE or full bank login before a verified employer is how identity theft starts.',wes:'Enviar escaneos de pasaporte, NIE/DNI o acceso bancario antes de verificar al empleador es el inicio del robo de identidad.',
+  re:[/passport (?:scan|copy|photo)|driver'?s? license|national id|social security|ssn\b|nie\b|dni\b|bank (?:login|password|details|statement)|routing number|iban\b|send (?:your )?(?:id|documents?|photos of)/i,/pasaporte|escaneo del dni|copia del dni|n[uú]mero de la seguridad social|\bnie\b|\bdni\b|datos bancarios|contrase[nñ]a del banco|iban\b|env[ií]a (?:tu |tus )?(?:dni|documentos?|fotos)/i]},
+ {id:'fakehr',w:18,en:'Lookalike / free-mail “HR” address',es:'Correo de “RR.HH.” falso o gratuito',
+  wen:'HR at a real company uses the company domain. Free mail (Gmail/Outlook) plus a brand name in the display name is a common tell.',wes:'RR.HH. de una empresa real usa el dominio de la empresa. Correo gratis (Gmail/Outlook) con el nombre de la marca en el remitente es una señal típica.',
+  re:[/@gmail\.com|@yahoo\.com|@hotmail\.com|@outlook\.com|@proton\.me|hr@|careers@|recruit(?:ing|er)?@|amaz[o0]n-|micros[o0]ft-|g[o0]ogle-|apple-careers|bit\.ly\/|tinyurl\.com/i,/@gmail\.com|@yahoo\.com|@hotmail\.com|@outlook\.com|rrhh@|seleccion@|empleo@/i]},
+ {id:'urg',w:12,en:'Urgency / secrecy pressure',es:'Urgencia / presión de secreto',
+  wen:'Scams need you to pay or send docs before you verify. “Reply in 2 hours, keep this confidential” is pressure, not process.',wes:'Las estafas necesitan que pagues o envíes docs antes de comprobar. “Responde en 2 horas, mantén esto confidencial” es presión, no proceso.',
+  re:[/within \d+ hours?|reply (?:asap|immediately|today)|urgent(?:ly)?|limited (?:slots?|positions?)|keep (?:this )?(?:confidential|secret)|do not (?:tell|share) anyone|act (?:fast|now)|expires? (?:tonight|today)/i,/en \d+ horas?|responde (?:ya|hoy|de inmediato)|urgente|plazas? limitad|mant[eé]n(?:lo)? (?:en )?confidencial|no se lo digas a nadie|caduca (?:hoy|esta noche)/i]},
+ {id:'remote',w:8,en:'Vague remote role + huge pay',es:'Puesto remoto vago + sueldo enorme',
+  wen:'“Data entry / package reship / mystery shopper, $5k+/week, work from phone” with no company detail is a common lure.',wes:'“Introducción de datos / reenvío de paquetes / mystery shopper, 5.000 €/semana, desde el móvil” sin detalle de empresa es un cebo habitual.',
+  re:[/data entry|package (?:reship|handler)|mystery shopper|work from (?:home|phone)|\$\s?[2-9],?\d{3}\s*(?:\/|per )\s*week|(?:€|eur)\s?[2-9]\.?\d{3}\s*(?:\/|por )\s*semana|no experience (?:needed|required)/i,/introducci[oó]n de datos|reenv[ií]o de paquetes|mystery shopper|trabaja desde (?:casa|el m[oó]vil)|sin experiencia (?:necesaria|requerida)|[2-9]\.?\d{3}\s*€?\s*(?:\/|por )\s*semana/i]},
+ {id:'task',w:10,en:'Paid “task” / app review funnel',es:'Embudo de “tareas” / reseñas de apps',
+  wen:'“Complete tasks for commission, then deposit to unlock higher tiers” is a task-scam / pig-butchering hybrid.',wes:'“Haz tareas por comisión y luego deposita para subir de nivel” es un híbrido de estafa de tareas.',
+  re:[/complete (?:daily )?tasks?|task (?:app|platform)|earn commission|unlock (?:higher|next) (?:level|tier)|recharge (?:to|and)|top ?up (?:your )?balance|negative review|five[- ]star review for pay/i,/completa (?:las )?tareas|app de tareas|gana comisi[oó]n|desbloquea (?:el )?(?:siguiente|nivel)|recarga (?:para|y)|rese[nñ]a de cinco estrellas/i]}
+];
+
+function analyze(text,url){
+  var t=(text||'')+'\n'+(url||''),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var n=hits.filter(function(h){return h.hit;}).length;
+  if(n>=4)score+=8;
+  if(hits.some(function(h){return h.hit&&h.rule.id==='fee';})&&hits.some(function(h){return h.hit&&(h.rule.id==='crypto'||h.rule.id==='overpay');}))score+=12;
+  if(hits.some(function(h){return h.hit&&h.rule.id==='fee';}))score=Math.max(score,75);
+  if(hits.some(function(h){return h.hit&&h.rule.id==='overpay';}))score=Math.max(score,80);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Estafa casi segura','Encaja con el patrón típico de oferta falsa. No pagues, no envíes documentos de identidad y no cobres cheques raros.']:['Almost certainly a scam','This matches the classic fake-job pattern. Do not pay, do not send ID documents and do not cash weird cheques.'];
+  if(s>=40)return es?['Muchas banderas rojas','Trátalo como estafa hasta verificar la empresa por un canal oficial (web real, centralita) y que no te pidan dinero.']:['Big red flags','Treat it as a scam until you verify the company on an official channel and confirm they never ask you for money.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. Comprueba el dominio del correo, la empresa real y si hay entrevista antes de enviar nada.']:['Kinda sus','Some classic signals. Check the email domain, the real company and whether there is a real interview before you send anything.'];
+  return es?['Pocas banderas','No salta casi nada. Eso no lo hace seguro: sigue verificando al empleador por un canal oficial.']:['Few flags','Not much trips the rules. That does not make it safe: still verify the employer on an official channel.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  if(on('fee')||on('crypto'))L.push(es?'No pagues ninguna cuota ni envíes cripto/tarjetas. Si ya pagaste, guarda capturas y contacta a tu banco.':'Do not pay any fee or send crypto/gift cards. If you already paid, keep screenshots and contact your bank.');
+  if(on('overpay'))L.push(es?'No cobres el cheque ni devuelvas dinero. Es un patrón de mula: el cheque acaba rebotando.':'Do not cash the cheque or send money back. That is a mule pattern: the cheque later bounces.');
+  if(on('idtheft'))L.push(es?'Si ya enviaste DNI/pasaporte: cambia contraseñas, vigila fraude de identidad y denúncialo.':'If you already sent ID/passport: change passwords, watch for identity fraud and report it.');
+  L.push(es?'Busca el nombre de la empresa + “estafa empleo” / “job scam” y llama a la centralita real (no al número del mensaje).':'Search the company name + “job scam” and call the real switchboard (not the number in the message).');
+  L.push(es?'Si ya perdiste dinero: denuncia en la plataforma y ante la policía. Ignora a los “recuperadores”.':'If you already lost money: report it on the platform and to the police. Ignore “recovery” offers.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Congratulations! You have been selected for Remote Data Entry Specialist. No interview needed. Pay the $49 training fee today via Bitcoin to unlock onboarding. Reply with passport scan and start tomorrow. Only 3 slots left.',u:'https://bit.ly/fake-hr-onboard'},
+ {t:'We are sending a $4,850 equipment cheque. Deposit it, keep $850 for your home office kit, and wire the remaining $4,000 back to our vendor within 24 hours. Keep this confidential.',u:''},
+ {t:'Hi, I am Sarah from Amaz0n HR (hr.careers@gmail.com). You are hired as package handler work from phone $3200/week. Urgent — reply ASAP with your bank details and national ID photo.',u:'mailto:hr.careers@gmail.com'},
+ {t:'Thank you for interviewing with us. Next step is a video call with the hiring manager next Tuesday. We never ask candidates for fees, crypto, gift cards or bank passwords. Please use only emails from @examplecorp.com.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
