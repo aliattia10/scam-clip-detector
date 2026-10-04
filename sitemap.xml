@@ -87,4 +87,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alibadmoney-scam-detector.netlify.app/guides/ai-trading-bot-scam-red-flags/"/>
   </url>
   <url><loc>https://alibadmoney-scam-detector.netlify.app/shorts-guide/</loc><lastmod>2026-09-25</lastmod></url>
+  <url>
+    <loc>https://alibadmoney-scam-detector.netlify.app/recovery-checker/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
