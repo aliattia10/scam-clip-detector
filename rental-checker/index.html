@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fake Rental Listing / Deposit Scam Checker (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Is this flat or room listing a scam? Paste the ad or the landlord's message and get a free rule-based red-flag score: deposit before viewing, owner abroad, keys by courier, fake Airbnb/Idealista payment, too-cheap rent. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/rental-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3ER%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="Is this rental listing a scam? Free checker">
+<meta property="og:description" content="Paste a flat or room ad, or the landlord's reply. Get a red-flag score for deposits before viewing, owners abroad, keys by post and fake booking-site payments.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/rental-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/rental-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fake rental listing checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for fake flat and room listings and deposit scams, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/rental-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Rental Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/phishing-email-checker/" data-i18n="navp">Phishing</a>
+      <a class="hide-m" href="/job-offer-checker/" data-i18n="navj">Job offers</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">Is this flat listing <em>a scam?</em></h1>
+    <p class="sub" data-i18n="sub">Paste a flat or room ad, or the landlord’s reply. In one second you get a red-flag score for deposits before a viewing, owners “abroad”, keys by courier, fake Airbnb or Idealista payment pages, rent that is too cheap and pressure to pay today.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a rental listing or message</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not make a listing safe. Never pay a deposit for a place you have not seen in person or on a live video call with the real owner.</p>
+    <label for="txt" data-i18n="l1">Listing text, email or WhatsApp from the “landlord”</label>
+    <textarea id="txt" placeholder="e.g. I am working abroad so I cannot show the flat. Send the first month plus deposit by Western Union and I will post you the keys. Many people are interested, please confirm today."></textarea>
+    <label for="url" data-i18n="l2">Payment link / sender (optional)</label>
+    <input type="text" id="url" placeholder="e.g. airbnb-secure-payment.com or landlord.rent@gmail.com" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: owner abroad + keys by post</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: fake Airbnb payment</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: ES WhatsApp, Bizum señal</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: normal agency listing</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do now</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">No viewing, no money</b><p data-i18n="c1p">A deposit, “reservation fee” or first month paid before you have seen the place is the core of almost every rental scam.</p></div>
+    <div class="card"><b data-i18n="c2h">Keys never come by courier</b><p data-i18n="c2p">“I am abroad, I will send the keys by DHL / Airbnb after you pay” is the oldest script there is.</p></div>
+    <div class="card"><b data-i18n="c3h">Booking sites don’t take bank transfers by email</b><p data-i18n="c3p">Airbnb, Booking and Idealista never ask you to pay by transfer, Bizum, Western Union or crypto from a link in an email.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) for exactly this kind of message. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it saved your deposit or gave you a roast worth filming, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a> · <a href="https://www.tiktok.com/@alibadmoney" target="_blank" rel="noopener">@alibadmoney</a> · <a href="https://www.tiktok.com/@alidineromalo" target="_blank" rel="noopener">@alidineromalo</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Not legal advice. If you already paid, contact your bank immediately to try to stop or recall the payment, keep every message, and report it to the police and to the platform where the ad appeared.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{brand:'Rental Checker',navd:'Scam-Clip Detector',navp:'Phishing',navj:'Job offers',
+  h1:'Is this flat listing <em>a scam?</em>',
+  sub:'Paste a flat or room ad, or the landlord’s reply. In one second you get a red-flag score for deposits before a viewing, owners “abroad”, keys by courier, fake Airbnb or Idealista payment pages, rent that is too cheap and pressure to pay today.',
+  h2:'Check a rental listing or message',hint:'Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not make a listing safe. Never pay a deposit for a place you have not seen in person or on a live video call with the real owner.',
+  l1:'Listing text, email or WhatsApp from the “landlord”',l2:'Payment link / sender (optional)',go:'Check it',
+  e0:'Example: owner abroad + keys by post',e1:'Example: fake Airbnb payment',e2:'Example: ES WhatsApp, Bizum señal',e3:'Example: normal agency listing',
+  of:'/ 100 scam score',todoh:'What to do now',
+  c1h:'No viewing, no money',c1p:'A deposit, “reservation fee” or first month paid before you have seen the place is the core of almost every rental scam.',
+  c2h:'Keys never come by courier',c2p:'“I am abroad, I will send the keys by DHL / Airbnb after you pay” is the oldest script there is.',
+  c3h:'Booking sites don’t take bank transfers by email',c3p:'Airbnb, Booking and Idealista never ask you to pay by transfer, Bizum, Western Union or crypto from a link in an email.',
+  ctah:'Want to roast these on camera?',ctap:'The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) for exactly this kind of message. Pay what you want, from 5€.',ctab:'See the Script Pack',
+  tiph:'Tip jar',tipp:'This checker is free and stays free. If it saved your deposit or gave you a roast worth filming, you can tip.',tipb:'Tip via PayPal',
+  morerec:'Crypto recovery checker',morep:'Phishing / invoice checker',morej:'Job offer checker',moreg:'Giveaway / airdrop checker',moresig:'Signal / VIP group checker',mores:'900 Shorts guide (19€)',
+  fd:'Scam-Clip Detector',frec:'Recovery checker',fpish:'Phishing checker',fj:'Job offer checker',fg:'Giveaway checker',fp:'Scam-Roast Script Pack',ft:'Tip jar',
+  disc:'Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Not legal advice. If you already paid, contact your bank immediately to try to stop or recall the payment, keep every message, and report it to the police and to the platform where the ad appeared.'},
+ es:{brand:'Comprobador de alquileres',navd:'Detector de estafas',navp:'Phishing',navj:'Ofertas de trabajo',
+  h1:'¿Este anuncio de piso <em>es una estafa?</em>',
+  sub:'Pega el anuncio de un piso o habitación, o la respuesta del “propietario”. En un segundo tienes una nota de banderas rojas por fianzas antes de la visita, dueños “en el extranjero”, llaves por mensajería, pagos falsos de Airbnb o Idealista, alquileres demasiado baratos y prisas por pagar hoy.',
+  h2:'Comprueba un anuncio o mensaje de alquiler',hint:'Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples: una nota baja no hace seguro un anuncio. No pagues nunca una señal o fianza por un piso que no hayas visto en persona o en videollamada en directo con el dueño real.',
+  l1:'Texto del anuncio, email o WhatsApp del “propietario”',l2:'Enlace de pago / remitente (opcional)',go:'Comprobar',
+  e0:'Ejemplo: dueño fuera + llaves por correo',e1:'Ejemplo: pago falso de Airbnb',e2:'Ejemplo: WhatsApp, señal por Bizum',e3:'Ejemplo: anuncio normal de agencia',
+  of:'/ 100 nota de estafa',todoh:'Qué hacer ahora',
+  c1h:'Sin visita, sin dinero',c1p:'Una fianza, “reserva” o primer mes pagado antes de ver el piso es el centro de casi todas las estafas de alquiler.',
+  c2h:'Las llaves no llegan por mensajería',c2p:'“Estoy en el extranjero, te envío las llaves por DHL / Airbnb cuando pagues” es el guion más viejo que existe.',
+  c3h:'Las webs de reservas no cobran por transferencia desde un email',c3p:'Airbnb, Booking e Idealista nunca te piden pagar por transferencia, Bizum, Western Union o cripto desde un enlace en un correo.',
+  ctah:'¿Quieres hacer un roast de esto en vídeo?',ctap:'El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) para mensajes como este. Paga lo que quieras, desde 5 €.',ctab:'Ver el pack de guiones',
+  tiph:'Bote de propinas',tipp:'Este comprobador es gratis y seguirá siéndolo. Si salvó tu fianza o te dio un roast para grabar, puedes dejar una propina.',tipb:'Propina por PayPal',
+  morerec:'Comprobador de recuperación de cripto',morep:'Comprobador de phishing / facturas',morej:'Comprobador de ofertas de trabajo',moreg:'Comprobador de sorteos / airdrops',moresig:'Comprobador de grupos VIP / señales',mores:'Guía de 900 Shorts (19 €)',
+  fd:'Detector de estafas',frec:'Comprobador de recuperación',fpish:'Comprobador de phishing',fj:'Comprobador de ofertas',fg:'Comprobador de sorteos',fp:'Pack de guiones Scam-Roast',ft:'Bote de propinas',
+  disc:'Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. No es asesoramiento legal. Si ya pagaste, llama a tu banco cuanto antes para intentar parar o devolver el pago, guarda todos los mensajes y denúncialo a la policía y a la plataforma donde salió el anuncio.'}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|no one|nobody|won'?t|will not|don'?t|do not|we (?:do )?not|no need to|nunca|jam[aá]s|nadie|no te|no pedimos|no cobramos|no hace falta|sin)[^.!?\n]{0,40}$/i.test(t.slice(Math.max(0,idx-50),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'abroad',w:26,en:'Owner abroad / cannot show the flat',es:'Dueño en el extranjero / no puede enseñarlo',
+  wen:'“I am working abroad / a missionary / a doctor overseas, so no viewing” is the signature line of fake listings.',wes:'“Estoy trabajando fuera / soy médico en el extranjero, así que no hay visita” es la frase firma de los anuncios falsos.',
+  re:[/(?:i am|i'?m|we are|currently) (?:working |living |based )?(?:abroad|overseas|out of the country|in (?:the )?(?:uk|usa|london|france|germany))|cannot (?:show|meet)|can'?t (?:show|meet)|no viewings?|not (?:possible|able) to (?:show|view|visit)|moved (?:abroad|for work)/i,/(?:estoy|vivo|trabajo|me encuentro) (?:ahora )?(?:en el extranjero|fuera de espa[nñ]a|en (?:londres|francia|alemania|inglaterra|ee\.? ?uu))|no (?:puedo|podemos) (?:ense[nñ]arlo|ense[nñ]ar el piso|quedar)|sin visitas?|no (?:hay|es posible la) visita/i]},
+ {id:'prepay',w:28,neg:true,en:'Deposit / reservation before viewing',es:'Fianza / señal / reserva antes de ver',
+  wen:'Paying a deposit, “reservation fee” or first month before seeing the property and signing is how the money disappears.',wes:'Pagar fianza, señal, “reserva” o el primer mes antes de ver el piso y firmar es cómo desaparece el dinero.',
+  re:[/(?:send|pay|transfer|wire) (?:the |me )?(?:deposit|first month|reservation|holding fee|advance)|deposit (?:first|before|to (?:reserve|secure|hold))|reservation fee|holding (?:fee|deposit)|pay (?:before|to) (?:the )?(?:viewing|visit)|to (?:reserve|secure|hold) (?:the |this )?(?:flat|apartment|room|property)/i,/(?:env[ií]a|paga|transfiere|ingresa)(?:me)? (?:la |el )?(?:fianza|se[nñ]al|reserva|primer mes|adelanto)|fianza (?:antes|para reservar)|se[nñ]al para (?:reservar|apartar|guardar)|pago de reserva|para (?:reservar|asegurar|apartar)(?:te)? (?:el piso|la habitaci[oó]n|el apartamento)|antes de (?:la visita|verlo)/i]},
+ {id:'keys',w:22,en:'Keys / contract sent by post or “agency”',es:'Llaves / contrato por mensajería o “agencia”',
+  wen:'Real landlords hand over keys in person. Keys “sent by DHL / Airbnb / a trusted agent after payment” do not exist.',wes:'Los caseros reales entregan las llaves en mano. Las llaves “enviadas por DHL / Airbnb / un agente de confianza tras el pago” no existen.',
+  re:[/(?:send|post|mail|ship|courier) (?:you )?(?:the )?keys|keys (?:by|via|through) (?:post|courier|dhl|ups|fedex|mail|airbnb)|dhl|fedex|ups delivery|(?:airbnb|booking|idealista) will (?:send|deliver|handle)/i,/(?:te )?(?:env[ií]o|mando|mandar[eé]) (?:las )?llaves|llaves (?:por|v[ií]a|a trav[eé]s de) (?:correo|mensajer[ií]a|dhl|seur|ups|airbnb)|dhl|seur|airbnb (?:te )?(?:enviar[aá]|gestiona)/i]},
+ {id:'method',w:24,neg:true,en:'Untraceable payment method',es:'Método de pago imposible de recuperar',
+  wen:'Western Union, MoneyGram, crypto, gift cards, Wise to a stranger, Bizum or a transfer to a foreign IBAN for a flat you have not seen are very hard to reverse.',wes:'Western Union, MoneyGram, cripto, tarjetas regalo, Bizum o una transferencia a un IBAN extranjero por un piso que no has visto son casi imposibles de recuperar.',
+  re:[/western union|moneygram|\bria\b|gift ?cards?|bitcoin|\bbtc\b|usdt|crypto|wise transfer|transfer(?:wise)?|bank transfer to (?:my|our)|iban|bizum|paysafecard|ria money/i,/western union|moneygram|tarjetas? regalo|bitcoin|\bbtc\b|usdt|cripto|transferencia (?:a mi|al) (?:cuenta|iban)|iban|bizum|paysafecard/i]},
+ {id:'fakesite',w:22,en:'Fake booking-site payment / “protection”',es:'Pago falso “protegido” por Airbnb / Idealista',
+  wen:'Emails or links saying Airbnb, Booking or Idealista will “hold the money safely” are cloned pages. Those sites never take rent by email link or transfer.',wes:'Emails o enlaces que dicen que Airbnb, Booking o Idealista “guardan el dinero de forma segura” son páginas clonadas. Esas webs nunca cobran alquiler por enlace de email ni transferencia.',
+  re:[/(?:airbnb|booking|idealista|fotocasa|spotahome|rentola)[^\s]*(?:secure|payment|pay|protect|escrow|guarantee)|(?:airbnb|booking|idealista) (?:protection|guarantee|escrow|holds?)|(?:secure|protected) (?:payment|escrow) (?:system|service)|-(?:secure|payment|rent)\.(?:com|net|xyz|top)/i,/(?:airbnb|booking|idealista|fotocasa|spotahome)[^\s]*(?:seguro|pago|protec|garant)|pago (?:seguro|protegido) (?:de|por) (?:airbnb|idealista|booking)|(?:airbnb|idealista) (?:guarda|retiene|protege) (?:el )?dinero/i]},
+ {id:'cheap',w:14,en:'Too-good price or perfect story',es:'Precio demasiado bueno o historia perfecta',
+  wen:'Well below market, “all bills included, furnished, centre, available now” plus a long personal story is bait.',wes:'Muy por debajo del mercado, “todo incluido, amueblado, céntrico, disponible ya” más una historia personal larga es cebo.',
+  re:[/(?:below|under) market|very cheap|unbeatable price|bargain|all bills included|everything included|(?:my )?(?:late )?(?:daughter|son|husband|wife|mother)|missionary|god bless|i just want (?:a )?(?:good|responsible) (?:person|tenant)/i,/(?:muy )?por debajo (?:del|de) mercado|chollo|precio (?:inmejorable|de risa)|todo incluido|gastos incluidos|mi (?:difunt[ao]|hij[ao]|marido|mujer|madre)|misionero|que dios te bendiga|solo quiero (?:una )?persona (?:responsable|de confianza)/i]},
+ {id:'urg',w:12,en:'Pressure to pay fast',es:'Prisa por pagar',
+  wen:'“Many people are interested, first to pay gets it” is pressure designed to stop you checking.',wes:'“Hay mucha gente interesada, se lo queda el primero que pague” es presión para que no compruebes nada.',
+  re:[/many (?:people|others) (?:are )?interested|first (?:to|who) (?:pay|pays|transfer)|(?:confirm|pay|decide) (?:today|now|tonight|within)|(?:only|just) (?:today|24 ?h)|act (?:now|fast)|other (?:applicants|candidates)/i,/(?:hay )?mucha gente interesada|(?:el|al) primero que pague|(?:confirma|paga|decide) (?:hoy|ya|esta noche|en \d+)|solo (?:hoy|24 ?h)|otros (?:interesados|candidatos)/i]},
+ {id:'docs',w:12,neg:true,en:'Asks for ID / passport copy early',es:'Pide DNI / pasaporte desde el principio',
+  wen:'Asking for your passport, DNI or bank details before any viewing is a second scam: identity theft.',wes:'Pedir tu pasaporte, DNI o datos bancarios antes de cualquier visita es una segunda estafa: robo de identidad.',
+  re:[/(?:copy|photo|scan) of (?:your )?(?:passport|id|dni|nie)|send (?:me )?(?:your )?(?:passport|id card|dni|nie|payslips?)/i,/(?:copia|foto) (?:de )?(?:tu |del )?(?:dni|nie|pasaporte)|(?:env[ií]a|m[aá]nda)me (?:tu |el )?(?:dni|nie|pasaporte|n[oó]minas?)/i]},
+ {id:'contact',w:10,en:'Off-platform contact only',es:'Contacto solo fuera de la plataforma',
+  wen:'Moving you straight to a personal Gmail or WhatsApp keeps the conversation away from the listing site’s fraud checks.',wes:'Llevarte directamente a un Gmail personal o WhatsApp saca la conversación de los controles antifraude del portal.',
+  re:[/write (?:to )?me (?:on|at)|contact me (?:on|at|by) (?:my )?(?:email|whatsapp|gmail)|whatsapp|wa\.me\/|@gmail\.com|@outlook\.|@hotmail\.|t\.me\//i,/escr[ií]beme (?:a|al|por)|cont[aá]ctame (?:por|al) (?:email|correo|whatsapp)|whatsapp|wa\.me\/|@gmail\.com|@outlook\.|@hotmail\.|t\.me\//i]}
+];
+
+function analyze(text,url){
+  var t=(text||'')+'\n'+(url||''),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  if(n>=4)score+=8;
+  if(on('abroad')&&(on('prepay')||on('keys')))score=Math.max(score,85);
+  if(on('fakesite'))score=Math.max(score,75);
+  if(on('prepay')&&on('method'))score+=10;
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Estafa de alquiler casi segura','Encaja con el guion típico: no hay visita y hay que pagar antes. No envíes dinero ni documentos.']:['Almost certainly a rental scam','This matches the classic script: no viewing, money first. Do not send money or documents.'];
+  if(s>=40)return es?['Muchas banderas rojas','Trátalo como estafa hasta ver el piso en persona y comprobar quién es el propietario (nota simple del Registro).']:['Big red flags','Treat it as a scam until you see the place in person and confirm who owns it (in Spain, a nota simple from the Land Registry).'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. No pagues nada hasta ver el piso y tener contrato.']:['Kinda sus','Some classic signals. Do not pay anything until you have seen the place and have a contract.'];
+  return es?['Pocas banderas','No salta casi nada. Aun así: visita, contrato y pago trazable, por ese orden.']:['Few flags','Not much trips the rules. Still: viewing, contract, traceable payment, in that order.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  if(on('prepay')||on('method'))L.push(es?'No pagues señal, fianza ni primer mes antes de visitar el piso y firmar. Paga siempre por transferencia a nombre del propietario que firma.':'Do not pay a deposit, holding fee or first month before you view and sign. Pay only by traceable transfer to the person named on the contract.');
+  if(on('abroad')||on('keys'))L.push(es?'Pide una visita en persona o una videollamada en directo dentro del piso. Si no puede, es una estafa.':'Ask for an in-person viewing or a live video call inside the flat. If they cannot, walk away.');
+  if(on('fakesite'))L.push(es?'Entra tú mismo en la web o app oficial (no desde el enlace) y comprueba si existe la reserva. Si no está ahí, no es real.':'Open the official site or app yourself (not from the link) and check whether the booking exists. If it is not there, it is not real.');
+  if(on('docs'))L.push(es?'No envíes DNI, pasaporte ni nóminas hasta haber visto el piso y verificado al propietario.':'Do not send your passport, ID or payslips until you have viewed the place and verified the owner.');
+  L.push(es?'Haz una búsqueda inversa de las fotos (Google Lens). Si salen en otra ciudad o en otro anuncio, es falso.':'Reverse-search the photos (Google Lens). If they appear in another city or another ad, it is fake.');
+  L.push(es?'Si ya pagaste: llama a tu banco ya para intentar parar el pago, guarda los mensajes y denúncialo a la policía y al portal.':'If you already paid: call your bank now to try to stop the payment, keep the messages, and report it to the police and the listing site.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Hello, thank you for your interest in my flat. I am working abroad in the UK so I cannot show it, but it is fully furnished and all bills are included. Please send the first month plus deposit by Western Union and I will send you the keys by DHL. Many people are interested so please confirm today.',u:'landlord.maria.rent@gmail.com'},
+ {t:'To secure the apartment, Airbnb protection will hold your payment until you receive the keys. Please complete the bank transfer of 1,400 EUR to the IBAN on the secure payment page within 24h. God bless.',u:'https://airbnb-secure-payment.com/rent/88421'},
+ {t:'Hola, el piso sigue disponible. Ahora vivo en Londres por trabajo y no puedo enseñarlo. Hay mucha gente interesada: si me haces un Bizum de 300 € de señal para reservar el piso te envío las llaves por mensajería. Mándame también foto de tu DNI.',u:'wa.me/447700900123'},
+ {t:'Piso de 2 habitaciones en el centro de Oviedo, 750 € al mes. Visitas de lunes a viernes con cita previa en nuestra oficina. Contrato con la agencia y fianza legal tras la firma; no cobramos reservas antes de la visita.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
