@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wallapop / Vinted / Marketplace Scam Checker (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Is this buyer or seller a scam? Paste a Wallapop, Vinted, Facebook Marketplace or Milanuncios chat and get a free rule-based red-flag score: fake shipping links, Bizum requests, fake payment emails, overpayment, their own courier, QR codes. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/marketplace-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="Is this buyer or seller a scam? Free marketplace checker">
+<meta property="og:description" content="Paste a Wallapop, Vinted, Marketplace or Milanuncios chat. Get a red-flag score for fake shipping links, Bizum requests, fake payment emails, overpayment and courier tricks.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/marketplace-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/marketplace-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Second-hand marketplace scam checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for Wallapop, Vinted, Facebook Marketplace and Milanuncios buyer and seller scams, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/marketplace-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Marketplace Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/rental-checker/" data-i18n="navr">Rentals</a>
+      <a class="hide-m" href="/phishing-email-checker/" data-i18n="navp">Phishing</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">Is this buyer or seller <em>a scam?</em></h1>
+    <p class="sub" data-i18n="sub">Paste a chat from Wallapop, Vinted, Facebook Marketplace or Milanuncios, or the email or SMS that came after it. In one second you get a red-flag score for fake shipping and payment links, Bizum requests, fake payment confirmations, overpayments, “my courier will collect it” and prices that are too good to be true.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a buyer or seller message</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not make someone safe. Keep the chat and the payment inside the app, or meet in person and pay on the spot.</p>
+    <label for="txt" data-i18n="l1">Chat message, email or SMS from the buyer or seller</label>
+    <textarea id="txt" placeholder="e.g. Hi, I bought your item and paid through Wallapop Envíos. Click the link and enter your card details to receive the money. My courier will pick it up tomorrow. Add me on WhatsApp."></textarea>
+    <label for="url" data-i18n="l2">Link or sender (optional)</label>
+    <input type="text" id="url" placeholder="e.g. wallapop-envios-pago.com or vinted.support.team@gmail.com" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: fake Wallapop Envíos link</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: overpayment + their courier</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: ES Bizum request + QR</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: normal in-app sale</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do now</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">Getting paid takes zero steps</b><p data-i18n="c1p">No real platform asks a seller to enter card details, accept a Bizum request or scan a QR code to receive money.</p></div>
+    <div class="card"><b data-i18n="c2h">Stay inside the app</b><p data-i18n="c2p">Wallapop, Vinted and Marketplace only protect chats and payments made in the app. “Add me on WhatsApp” is how scammers get you out of that protection.</p></div>
+    <div class="card"><b data-i18n="c3h">An email is not money</b><p data-i18n="c3p">A “payment received” email, SMS or screenshot proves nothing. Check your balance in the app or your bank yourself before you ship.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) for exactly this kind of message. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it saved a sale or gave you a roast worth filming, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a> · <a href="https://www.tiktok.com/@alibadmoney" target="_blank" rel="noopener">@alibadmoney</a> · <a href="https://www.tiktok.com/@alidineromalo" target="_blank" rel="noopener">@alidineromalo</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Platform and courier names appear only because scammers impersonate them; they are not accused of anything. Not legal advice. If you entered card details or already paid, call your bank immediately to block the card and try to stop the payment, keep every message, and report it to the police and to the platform.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{brand:'Marketplace Checker',navd:'Scam-Clip Detector',navr:'Rentals',navp:'Phishing',
+  h1:'Is this buyer or seller <em>a scam?</em>',
+  sub:'Paste a chat from Wallapop, Vinted, Facebook Marketplace or Milanuncios, or the email or SMS that came after it. In one second you get a red-flag score for fake shipping and payment links, Bizum requests, fake payment confirmations, overpayments, “my courier will collect it” and prices that are too good to be true.',
+  h2:'Check a buyer or seller message',hint:'Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not make someone safe. Keep the chat and the payment inside the app, or meet in person and pay on the spot.',
+  l1:'Chat message, email or SMS from the buyer or seller',l2:'Link or sender (optional)',go:'Check it',
+  e0:'Example: fake Wallapop Envíos link',e1:'Example: overpayment + their courier',e2:'Example: ES Bizum request + QR',e3:'Example: normal in-app sale',
+  of:'/ 100 scam score',todoh:'What to do now',
+  c1h:'Getting paid takes zero steps',c1p:'No real platform asks a seller to enter card details, accept a Bizum request or scan a QR code to receive money.',
+  c2h:'Stay inside the app',c2p:'Wallapop, Vinted and Marketplace only protect chats and payments made in the app. “Add me on WhatsApp” is how scammers get you out of that protection.',
+  c3h:'An email is not money',c3p:'A “payment received” email, SMS or screenshot proves nothing. Check your balance in the app or your bank yourself before you ship.',
+  ctah:'Want to roast these on camera?',ctap:'The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) for exactly this kind of message. Pay what you want, from 5€.',ctab:'See the Script Pack',
+  tiph:'Tip jar',tipp:'This checker is free and stays free. If it saved a sale or gave you a roast worth filming, you can tip.',tipb:'Tip via PayPal',
+  morer:'Rental listing checker',morerec:'Crypto recovery checker',morep:'Phishing / invoice checker',morej:'Job offer checker',moreg:'Giveaway / airdrop checker',moresig:'Signal / VIP group checker',mores:'900 Shorts guide (19€)',
+  fd:'Scam-Clip Detector',fr:'Rental checker',frec:'Recovery checker',fpish:'Phishing checker',fj:'Job offer checker',fg:'Giveaway checker',fp:'Scam-Roast Script Pack',ft:'Tip jar',
+  disc:'Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Platform and courier names appear only because scammers impersonate them; they are not accused of anything. Not legal advice. If you entered card details or already paid, call your bank immediately to block the card and try to stop the payment, keep every message, and report it to the police and to the platform.'},
+ es:{brand:'Comprobador de segunda mano',navd:'Detector de estafas',navr:'Alquileres',navp:'Phishing',
+  h1:'¿Este comprador o vendedor <em>es una estafa?</em>',
+  sub:'Pega un chat de Wallapop, Vinted, Facebook Marketplace o Milanuncios, o el email o SMS que te llegó después. En un segundo tienes una nota de banderas rojas por enlaces falsos de envío y de cobro, solicitudes de Bizum, confirmaciones de pago falsas, pagos de más, “mi mensajero pasará a recogerlo” y precios demasiado buenos para ser verdad.',
+  h2:'Comprueba un mensaje de un comprador o vendedor',hint:'Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples: una nota baja no hace segura a una persona. Mantén el chat y el pago dentro de la app, o queda en persona y paga en el momento.',
+  l1:'Mensaje del chat, email o SMS del comprador o vendedor',l2:'Enlace o remitente (opcional)',go:'Comprobar',
+  e0:'Ejemplo: enlace falso de Wallapop Envíos',e1:'Ejemplo: pago de más + su mensajero',e2:'Ejemplo: solicitud de Bizum + QR',e3:'Ejemplo: venta normal en la app',
+  of:'/ 100 nota de estafa',todoh:'Qué hacer ahora',
+  c1h:'Cobrar no requiere ningún paso',c1p:'Ninguna plataforma real pide a un vendedor que meta los datos de su tarjeta, acepte una solicitud de Bizum o escanee un código QR para recibir dinero.',
+  c2h:'Quédate dentro de la app',c2p:'Wallapop, Vinted y Marketplace solo protegen los chats y pagos hechos en la app. “Agrégame por WhatsApp” es cómo te sacan de esa protección.',
+  c3h:'Un email no es dinero',c3p:'Un email, SMS o captura de “pago recibido” no demuestra nada. Mira tu saldo en la app o en tu banco antes de enviar nada.',
+  ctah:'¿Quieres hacer un roast de esto en vídeo?',ctap:'El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) para mensajes como este. Paga lo que quieras, desde 5 €.',ctab:'Ver el pack de guiones',
+  tiph:'Bote de propinas',tipp:'Este comprobador es gratis y seguirá siéndolo. Si te salvó una venta o te dio un roast para grabar, puedes dejar una propina.',tipb:'Propina por PayPal',
+  morer:'Comprobador de alquileres',morerec:'Comprobador de recuperación de cripto',morep:'Comprobador de phishing / facturas',morej:'Comprobador de ofertas de trabajo',moreg:'Comprobador de sorteos / airdrops',moresig:'Comprobador de grupos VIP / señales',mores:'Guía de 900 Shorts (19 €)',
+  fd:'Detector de estafas',fr:'Comprobador de alquileres',frec:'Comprobador de recuperación',fpish:'Comprobador de phishing',fj:'Comprobador de ofertas',fg:'Comprobador de sorteos',fp:'Pack de guiones Scam-Roast',ft:'Bote de propinas',
+  disc:'Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. Los nombres de plataformas y mensajerías aparecen solo porque los estafadores los suplantan; no se les acusa de nada. No es asesoramiento legal. Si metiste los datos de tu tarjeta o ya pagaste, llama a tu banco cuanto antes para bloquear la tarjeta e intentar parar el pago, guarda todos los mensajes y denúncialo a la policía y a la plataforma.'}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|no one|nobody|won'?t|will not|don'?t|do not|we (?:do )?not|no need to|nunca|jam[aá]s|nadie|no te|no pedimos|no cobramos|no hace falta|sin)[^.!?\n]{0,40}$/i.test(t.slice(Math.max(0,idx-50),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var BR='(?:wallapop|vinted|milanuncios|marketplace|facebook|correos|seur|mrw|gls|dhl|ups|inpost|paypal)';
+var KW='(?:pay|pago|pagos|cobro|cobros|envio|envios|delivery|deliver|shipping|secure|safe|verify|verif|confirm|order|pedido|receive|recibir|refund)';
+var RULES=[
+ {id:'link',w:30,en:'Fake shipping or payment link',es:'Enlace falso de envío o de cobro',
+  wen:'A link to “receive the money”, “confirm the shipment” or “Wallapop Envíos / Vinted delivery” sent by chat, email or SMS is a cloned page that steals your card. Real payouts happen inside the app.',wes:'Un enlace para “recibir el dinero”, “confirmar el envío” o de “Wallapop Envíos / Vinted” mandado por chat, email o SMS es una página clonada que roba tu tarjeta. Los cobros reales se hacen dentro de la app.',
+  re:[new RegExp(BR+'[a-z0-9]*[-.](?:[a-z0-9-]*[-.])?'+KW+'[a-z0-9-]*\\.(?:com|net|org|es|info|xyz|top|shop|online|site|icu|cfd|sbs|live|app|link|click)','i'),new RegExp(KW+'[-.]'+BR,'i'),
+   /(?:click|tap|open|use|follow) (?:on )?(?:the|this|my) link (?:to|and) (?:receive|get|confirm|accept|claim)|link to (?:receive|get|claim|confirm) (?:the |your )?(?:money|payment|funds|shipment|delivery)|(?:enter|fill in|type|add|put) (?:in )?(?:your )?(?:card|bank) (?:details|number|data|info) (?:to|and) (?:receive|get|claim)|\.(?:xyz|top|icu|cfd|sbs)\b/i,
+   /(?:pulsa|haz clic|entra|abre|usa|sigue) (?:en )?(?:el|este|mi) enlace (?:para|y) (?:recibir|cobrar|confirmar|aceptar)|enlace (?:para|de) (?:recibir|cobrar|confirmar) (?:el |tu )?(?:dinero|pago|cobro|env[ií]o)|(?:pon|introduce|rellena|mete) (?:tus |los )?datos (?:de (?:la |tu )?tarjeta|bancarios) (?:para|y) (?:recibir|cobrar)|(?:formulario|p[aá]gina) (?:de|para) (?:cobro|recibir el (?:pago|dinero))/i]},
+ {id:'offapp',w:14,neg:true,en:'Wants to move to WhatsApp, Telegram or email',es:'Quiere pasar a WhatsApp, Telegram o email',
+  wen:'Moving the chat out of the app removes buyer and seller protection and the platform’s fraud checks. It is the first step of almost every marketplace scam.',wes:'Sacar el chat de la app elimina la protección al comprador y al vendedor y los controles antifraude de la plataforma. Es el primer paso de casi todas las estafas de segunda mano.',
+  re:[/whatsapp|wa\.me\/|telegram|t\.me\/|(?:send|give) me your (?:number|phone|email)|(?:text|message|email) me (?:on|at)|@gmail\.com|@outlook\.|@hotmail\.|@yahoo\./i,/(?:p[aá]same|dame|m[aá]ndame) tu (?:n[uú]mero|m[oó]vil|tel[eé]fono|correo|email)|escr[ií]beme (?:al|por|a mi)/i]},
+ {id:'confirm',w:22,en:'Fake “payment received” email, SMS or screenshot',es:'Email, SMS o captura falsa de “pago recibido”',
+  wen:'Messages saying the money is “confirmed”, “held until you ship” or that you must upgrade to a seller or business account are forged. Check your balance in the app yourself.',wes:'Los mensajes que dicen que el dinero está “confirmado”, “retenido hasta que envíes” o que necesitas una cuenta de vendedor o profesional son falsos. Mira tu saldo en la app tú mismo.',
+  re:[/payment (?:has been |was |is )?(?:received|confirmed|approved|completed|processed|on hold|pending)|(?:funds|money|payment) (?:is |are |will be |has been )?(?:held|on hold|pending|frozen|released (?:after|once|when))|(?:upgrade|switch) (?:to |your account to )?(?:a )?(?:business|seller|premium) account|check your (?:email|inbox|spam)|screenshot of (?:the |my )?(?:payment|transfer|receipt)/i,
+   /pago (?:ha sido |fue |est[aá] )?(?:recibido|confirmado|aprobado|completado|retenido|pendiente)|(?:fondos|dinero|pago) (?:est[aá]n? |queda(?:n)? )?(?:retenidos?|bloqueados?|pendientes?)|(?:revisa|mira) tu (?:correo|email|bandeja|spam)|captura (?:del|de la) (?:pago|transferencia|bizum)|cuenta (?:de vendedor|profesional|business) para (?:recibir|cobrar)/i]},
+ {id:'overpay',w:24,neg:true,en:'Overpayment and “refund the difference”',es:'Pago de más y “devuélveme la diferencia”',
+  wen:'They “accidentally” pay too much and ask you to send back the extra. Their payment is fake or gets reversed; your refund is real money.',wes:'“Sin querer” pagan de más y te piden que devuelvas lo que sobra. Su pago es falso o se anula; tu devolución es dinero real.',
+  re:[/overpa(?:id|y|yment)|(?:paid|sent|transferred) (?:you )?[^.\n]{0,30}(?:too much|more than (?:the|agreed)|extra|by mistake|twice|instead of)|(?:refund|return|send back|give back|pay back) (?:me )?(?:the )?(?:difference|extra|rest|excess|remaining)/i,
+   /pagado de m[aá]s|(?:enviado|mandado|pagado|transferido|hecho un bizum) [^.\n]{0,30}(?:de m[aá]s|m[aá]s de la cuenta|por error|dos veces|en vez de)|(?:devu[eé]lve(?:me)?|reemb[oó]lsa(?:me)?|m[aá]ndame|env[ií]ame) (?:la diferencia|el resto|lo que sobra|el exceso)/i]},
+ {id:'courier',w:20,en:'Their own courier or agent picks it up',es:'Su propio mensajero o agente lo recoge',
+  wen:'“My courier, driver or cousin will collect it, I am abroad” lets them pair a fake shipping company with a fake payment. Use only the platform’s own shipping or hand it over in person.',wes:'“Mi mensajero, chófer o primo pasará a recogerlo, estoy fuera” les permite juntar una empresa de envíos falsa con un pago falso. Usa solo el envío de la plataforma o entrégalo en mano.',
+  re:[/my (?:own )?(?:courier|agent|driver|shipping (?:company|agent)|transport(?:er)?|delivery (?:man|guy|company|agent)|cousin|assistant)|(?:courier|agent|driver|transporter) (?:will|is going to|can) (?:pick|collect|come)|(?:i will|i'?ll) (?:send|arrange) (?:a|my) (?:courier|driver|agent)|(?:i am|i'?m) (?:abroad|out of the country|overseas)/i,
+   /mi (?:propio )?(?:transportista|mensajero|agencia|empresa de (?:transporte|env[ií]os)|ch[oó]fer|primo|asistente)|(?:mensajero|transportista|repartidor|agente) (?:pasar[aá]|ir[aá]|va a (?:ir|pasar)|lo recoger[aá]|vendr[aá])\b|(?:mando|env[ií]o|enviar[eé]) (?:a )?(?:un|mi) (?:mensajero|transportista)|(?:estoy|vivo) (?:en el extranjero|fuera de espa[nñ]a)/i]},
+ {id:'request',w:26,en:'Bizum “request money” or a code instead of a payment',es:'Solicitud de Bizum o un código en vez de un pago',
+  wen:'To receive a Bizum you do nothing. A “request” that you accept takes money out of your account. Never share a code that arrives by SMS either: that is how accounts get stolen.',wes:'Para recibir un Bizum no tienes que hacer nada. Una “solicitud” que aceptas saca dinero de tu cuenta. Tampoco compartas nunca un código que te llegue por SMS: así roban cuentas.',
+  re:[/bizum request|request (?:money|payment) (?:in|on|via|with|through) bizum|(?:accept|approve|confirm) (?:the |my )?(?:bizum|request|payment request)|(?:send|give|tell) me (?:the )?(?:code|otp|sms code|verification code)/i,
+   /solicitud (?:de )?(?:bizum|dinero|pago|cobro)|(?:enviado|mandado|hecho) (?:una )?solicitud|(?:acepta|aprueba|confirma)(?:la)? (?:la |el |mi )?(?:solicitud|bizum|pago)|solicitar dinero|(?:p[aá]same|dime|m[aá]ndame|env[ií]ame) (?:el )?c[oó]digo/i]},
+ {id:'qr',w:22,en:'QR code to “receive” the money',es:'Código QR para “recibir” el dinero',
+  wen:'Scanning a QR code never pays you. It opens a payment page, a card-stealing form or a request that charges you.',wes:'Escanear un código QR nunca te paga. Abre una página de pago, un formulario que roba la tarjeta o una solicitud que te cobra.',
+  re:[/(?:scan|use) (?:the |this |my )?qr|qr ?code/i,/(?:escanea|usa|lee) (?:el |este |mi )?(?:c[oó]digo )?qr|c[oó]digo qr|\bqr\b/i]},
+ {id:'refuse',w:18,en:'Refuses in-app payment, protection or meeting in person',es:'Rechaza el pago en la app, la protección o quedar en persona',
+  wen:'Someone who only takes Bizum, a bank transfer, PayPal “friends and family” or crypto, and will not meet or use in-app payment, is removing every way you could get your money back.',wes:'Quien solo acepta Bizum, transferencia, PayPal “amigos y familiares” o cripto, y no quiere quedar ni pagar por la app, está quitando cualquier forma de recuperar tu dinero.',
+  re:[/friends (?:and|&) family|family (?:and|&) friends|(?:only|just) (?:accept )?(?:bizum|bank transfer|transfer|paypal|crypto|western union|revolut)|(?:don'?t|do not|won'?t|can'?t|cannot) use (?:the )?(?:in-?app|wallapop|vinted|app) (?:payment|shipping|envios?|system|checkout)|outside (?:of )?(?:the )?(?:app|platform|wallapop|vinted)|(?:can'?t|cannot|won'?t|don'?t|do not) meet|no (?:meet ?ups?|pick ?ups?|collection)|pay (?:first|upfront|in advance|before (?:shipping|i ship|delivery))|western union|gift ?cards?|bitcoin|usdt/i,
+   /amigos y familiares|familiares y amigos|solo (?:por |acepto |con )?(?:bizum|transferencia|paypal|cripto|western union|revolut)|no (?:uso|acepto|hago) (?:el )?(?:pago|env[ií]o)s? (?:por|de|con) (?:la app|wallapop|vinted)|fuera de (?:la app|la aplicaci[oó]n|wallapop|vinted|la plataforma)|no (?:puedo |podemos )?quedar|no (?:hago |acepto )?(?:entregas? en mano|recogidas?)|(?:paga|pagar|p[aá]game) (?:primero|por adelantado|antes de(?:l env[ií]o| enviar))|tarjetas? regalo/i]},
+ {id:'cheap',w:14,en:'Price far below market',es:'Precio muy por debajo del mercado',
+  wen:'A nearly new phone, console or bike at half price “because I am moving abroad” or “I need the money today” is bait for a pay-first scam.',wes:'Un móvil, consola o bici casi nueva a mitad de precio “porque me mudo fuera” o “necesito el dinero hoy” es el cebo de una estafa de pago por adelantado.',
+  re:[/(?:below|under) (?:market|retail)|half (?:the )?price|(?:very|super|crazy) cheap|too good to be true|urgent sale|moving abroad|need (?:the )?money (?:fast|urgently|today)|unbeatable price/i,/por debajo (?:del|de) (?:mercado|precio)|a mitad de precio|(?:muy|super|s[uú]per) barat[oa]|chollo|precio (?:de risa|inmejorable|de saldo)|venta urgente|me mudo (?:al extranjero|fuera)|necesito (?:el )?dinero (?:ya|urgente|hoy)/i]},
+ {id:'urg',w:10,en:'Pressure and urgency',es:'Presión y prisas',
+  wen:'“Do it now or I buy elsewhere” is pressure designed to stop you checking the app or calling your bank.',wes:'“Hazlo ya o se lo compro a otro” es presión para que no mires la app ni llames a tu banco.',
+  re:[/(?:pay|send|confirm|decide|ship|accept) (?:it )?(?:today|now|right now|immediately|asap|within)|urgent(?:ly)?|asap|(?:many|other) (?:people|buyers) (?:are )?interested|first (?:to|who) (?:pay|pays)|(?:or|otherwise) i(?:'?ll| will) (?:sell|buy) (?:it )?(?:to|from|elsewhere)/i,
+   /(?:paga|env[ií]a|confirma|decide|manda|acepta)(?:lo|me|la)? (?:hoy|ya|ahora|cuanto antes)|urgente|cuanto antes|tengo prisa|(?:mucha gente|m[aá]s gente|otros compradores) interesad[oa]s|(?:el|al) primero que (?:pague|lo pague)|si no,? se lo (?:vendo|compro) a otr[oa]/i]}
+];
+
+function analyze(text,url){
+  var t=(text||'')+'\n'+(url||''),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  if(n>=4)score+=8;
+  if(on('link'))score=Math.max(score,80);
+  if(on('request')||on('qr'))score=Math.max(score,70);
+  if(on('overpay')&&(on('confirm')||on('courier')))score=Math.max(score,85);
+  if(on('courier')&&(on('link')||on('confirm')))score=Math.max(score,85);
+  if(on('offapp')&&(on('link')||on('request')))score+=10;
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Estafa de segunda mano casi segura','Encaja con un guion conocido: sacarte de la app y luego un enlace, una solicitud o una devolución falsa. No pulses, no aceptes, no escanees y no envíes nada.']:['Almost certainly a marketplace scam','This matches a known script: get you out of the app, then a fake link, request or refund. Do not click, accept, scan or ship.'];
+  if(s>=40)return es?['Muchas banderas rojas','Trátalo como estafa hasta que la venta y el pago aparezcan dentro de la propia app.']:['Big red flags','Treat it as a scam until the sale and the payment show up inside the app itself.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. Mantén todo dentro de la app o queda en persona.']:['Kinda sus','Some classic signals. Keep everything inside the app or meet in person.'];
+  return es?['Pocas banderas','No salta casi nada. Aun así: chatea y paga en la app, o queda en un sitio público y revisa el artículo antes de pagar.']:['Few flags','Not much trips the rules. Still: chat and pay in the app, or meet in a public place and check the item before paying.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  if(on('link'))L.push(es?'No abras el enlace ni metas datos de tu tarjeta. Abre tú la app oficial: si la venta y el cobro no aparecen ahí, no existen.':'Do not open the link or enter card details. Open the official app yourself: if the sale and the payment are not there, they do not exist.');
+  if(on('request')||on('qr'))L.push(es?'Rechaza la solicitud y no escanees ningún QR. Para recibir dinero no tienes que aceptar nada ni dar ningún código.':'Reject the request and do not scan any QR code. To receive money you never accept anything or share any code.');
+  if(on('confirm'))L.push(es?'No envíes el artículo por un email, SMS o captura. Comprueba el saldo en la app o en tu banco tú mismo.':'Do not ship because of an email, SMS or screenshot. Check the balance in the app or your bank yourself.');
+  if(on('overpay'))L.push(es?'No devuelvas ninguna “diferencia”. Cancela la venta; si el pago es real, que lo reclame por la plataforma.':'Do not refund any “difference”. Cancel the sale; if the payment is real, they can claim it back through the platform.');
+  if(on('courier')||on('refuse'))L.push(es?'Usa solo el envío de la propia plataforma (Wallapop Envíos, envío de Vinted) o queda en un sitio público y cobra en mano.':'Use only the platform’s own shipping (Wallapop Envíos, Vinted shipping) or meet in a public place and get paid on the spot.');
+  if(on('offapp'))L.push(es?'Sigue la conversación dentro de la app y no des tu número de móvil.':'Keep the conversation inside the app and do not give out your phone number.');
+  L.push(es?'Denuncia el perfil dentro de la app para que lo revisen y bloquéalo.':'Report the profile inside the app so it gets reviewed, then block it.');
+  L.push(es?'Si ya pagaste o metiste la tarjeta: llama a tu banco ya para bloquearla e intentar parar el pago, guarda los mensajes y denúncialo a la policía y a la plataforma.':'If you already paid or entered your card: call your bank now to block it and try to stop the payment, keep the messages, and report it to the police and the platform.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Hi, I bought your item. The payment has been confirmed through Wallapop Envíos. To receive the money, click the link and enter your card details to receive the funds. Please confirm today or the order will be cancelled.',u:'https://wallapop-envios-pago.com/cobro/88421'},
+ {t:'Hello, I am abroad for work so my courier will pick up the item. I sent you 450 EUR instead of 250 EUR by mistake, please refund the difference by bank transfer. Check your email for the PayPal confirmation. Add me on WhatsApp.',u:'buyer.express.service@gmail.com'},
+ {t:'Hola, me interesa. Te he enviado una solicitud de Bizum para pagarte, solo tienes que aceptarla. Si no te llega, escanea este código QR para recibir el dinero. Pásame tu número de WhatsApp, que tengo prisa: hay otros compradores interesados.',u:''},
+ {t:'Hi, is the bike still available? I can buy it through the app with Vinted shipping, or we can meet in a public place in the centre and I pay in cash after I check it.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
