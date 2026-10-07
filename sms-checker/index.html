@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scam SMS Checker: parcel, DGT fine, bank and "Hola mamá" texts (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Is this text message a scam? Paste an SMS or WhatsApp and get a free rule-based red-flag score for fake parcel customs fees, traffic fines and tolls, bank blocked-account alerts, tax refunds and Hi Mum new-number scams. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/sms-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="Is this text message a scam? Free SMS checker">
+<meta property="og:description" content="Paste an SMS or WhatsApp. Get a red-flag score for fake parcel fees, traffic fines, bank alerts, tax refunds and Hi Mum new-number scams.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/sms-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/sms-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Scam SMS and WhatsApp checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for parcel, fine, bank, tax refund and Hi Mum text scams, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/sms-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">SMS Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/marketplace-checker/" data-i18n="navm">Marketplace</a>
+      <a class="hide-m" href="/phishing-email-checker/" data-i18n="navp">Phishing</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">Is this text message <em>a scam?</em></h1>
+    <p class="sub" data-i18n="sub">Paste an SMS or WhatsApp message: a parcel “held at customs”, an unpaid traffic fine or toll, a bank “blocked account” alert, a tax refund, or a “Hi Mum, this is my new number”. In one second you get a red-flag score and what to do next.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a text message</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not make a message safe. Never use the link or number inside a message; open the official app or type the website yourself.</p>
+    <label for="txt" data-i18n="l1">SMS or WhatsApp message</label>
+    <textarea id="txt" placeholder="e.g. Correos: your parcel is held at customs. Pay 1.99 EUR within 24 hours or it will be returned: correos-aduana-pago.top/es"></textarea>
+    <label for="url" data-i18n="l2">Sender or link (optional)</label>
+    <input type="text" id="url" placeholder="e.g. +44 7700 900123 or bit.ly/3xYzAb" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: parcel customs fee</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: ES traffic fine</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: ES “Hola mamá”</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: bank alert + code</button>
+      <button class="chip" onclick="ex(4)" data-i18n="e4">Example: normal delivery text</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do now</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">Couriers do not text for small fees</b><p data-i18n="c1p">A “1.99 to release your parcel” link is the most common smishing text in Europe. The tiny amount is only there to get your card number.</p></div>
+    <div class="card"><b data-i18n="c2h">Fines and refunds live in official apps</b><p data-i18n="c2p">Traffic fines, tolls and tax refunds are checked in the official app or website you type yourself, never through a link in a text.</p></div>
+    <div class="card"><b data-i18n="c3h">Call the old number first</b><p data-i18n="c3p">“Hi Mum, I lost my phone, this is my new number” followed by an urgent payment is a script. Call your child on the number you already have.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) for exactly this kind of message. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it stopped you, or your parents, from tapping a bad link, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/marketplace-checker/" data-i18n="morem">Marketplace scam checker</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/marketplace-checker/" data-i18n="fm">Marketplace checker</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a> · <a href="https://www.tiktok.com/@alibadmoney" target="_blank" rel="noopener">@alibadmoney</a> · <a href="https://www.tiktok.com/@alidineromalo" target="_blank" rel="noopener">@alidineromalo</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Company and agency names appear only because scammers impersonate them; they are not accused of anything. Not legal advice. If you entered card details or shared a code, call your bank immediately to block the card, keep the message, and report it to the police. In Spain you can also call INCIBE’s free helpline on 017.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{brand:'SMS Checker',navd:'Scam-Clip Detector',navm:'Marketplace',navp:'Phishing',
+  h1:'Is this text message <em>a scam?</em>',
+  sub:'Paste an SMS or WhatsApp message: a parcel “held at customs”, an unpaid traffic fine or toll, a bank “blocked account” alert, a tax refund, or a “Hi Mum, this is my new number”. In one second you get a red-flag score and what to do next.',
+  h2:'Check a text message',hint:'Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not make a message safe. Never use the link or number inside a message; open the official app or type the website yourself.',
+  l1:'SMS or WhatsApp message',l2:'Sender or link (optional)',go:'Check it',
+  e0:'Example: parcel customs fee',e1:'Example: ES traffic fine',e2:'Example: ES “Hola mamá”',e3:'Example: bank alert + code',e4:'Example: normal delivery text',
+  of:'/ 100 scam score',todoh:'What to do now',
+  c1h:'Couriers do not text for small fees',c1p:'A “1.99 to release your parcel” link is the most common smishing text in Europe. The tiny amount is only there to get your card number.',
+  c2h:'Fines and refunds live in official apps',c2p:'Traffic fines, tolls and tax refunds are checked in the official app or website you type yourself, never through a link in a text.',
+  c3h:'Call the old number first',c3p:'“Hi Mum, I lost my phone, this is my new number” followed by an urgent payment is a script. Call your child on the number you already have.',
+  ctah:'Want to roast these on camera?',ctap:'The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) for exactly this kind of message. Pay what you want, from 5€.',ctab:'See the Script Pack',
+  tiph:'Tip jar',tipp:'This checker is free and stays free. If it stopped you, or your parents, from tapping a bad link, you can tip.',tipb:'Tip via PayPal',
+  morem:'Marketplace scam checker',morer:'Rental listing checker',morerec:'Crypto recovery checker',morep:'Phishing / invoice checker',morej:'Job offer checker',moreg:'Giveaway / airdrop checker',moresig:'Signal / VIP group checker',mores:'900 Shorts guide (19€)',
+  fd:'Scam-Clip Detector',fm:'Marketplace checker',fr:'Rental checker',frec:'Recovery checker',fpish:'Phishing checker',fj:'Job offer checker',fg:'Giveaway checker',fp:'Scam-Roast Script Pack',ft:'Tip jar',
+  disc:'Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Company and agency names appear only because scammers impersonate them; they are not accused of anything. Not legal advice. If you entered card details or shared a code, call your bank immediately to block the card, keep the message, and report it to the police. In Spain you can also call INCIBE’s free helpline on 017.'},
+ es:{brand:'Comprobador de SMS',navd:'Detector de estafas',navm:'Segunda mano',navp:'Phishing',
+  h1:'¿Este SMS <em>es una estafa?</em>',
+  sub:'Pega un SMS o mensaje de WhatsApp: un paquete “retenido en aduanas”, una multa de tráfico o un peaje sin pagar, un aviso de “cuenta bloqueada” del banco, una devolución de Hacienda o un “Hola mamá, este es mi número nuevo”. En un segundo tienes una nota de banderas rojas y qué hacer.',
+  h2:'Comprueba un mensaje',hint:'Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples: una nota baja no hace seguro un mensaje. No uses nunca el enlace ni el teléfono del mensaje; abre la app oficial o escribe tú la web.',
+  l1:'SMS o mensaje de WhatsApp',l2:'Remitente o enlace (opcional)',go:'Comprobar',
+  e0:'Ejemplo: tasa de aduanas',e1:'Ejemplo: multa de la DGT',e2:'Ejemplo: “Hola mamá”',e3:'Ejemplo: aviso del banco + código',e4:'Ejemplo: aviso de entrega normal',
+  of:'/ 100 nota de estafa',todoh:'Qué hacer ahora',
+  c1h:'Las mensajerías no cobran tasas por SMS',c1p:'Un enlace de “1,99 € para liberar tu paquete” es el SMS fraudulento más común en Europa. El importe pequeño solo sirve para sacarte la tarjeta.',
+  c2h:'Multas y devoluciones, en la app oficial',c2p:'Las multas, los peajes y las devoluciones de Hacienda se consultan en la app o web oficial que escribes tú, nunca desde un enlace de un SMS.',
+  c3h:'Llama primero al número de siempre',c3p:'“Hola mamá, se me ha roto el móvil, este es mi número nuevo” seguido de un pago urgente es un guion. Llama a tu hijo o hija al número que ya tienes.',
+  ctah:'¿Quieres hacer un roast de esto en vídeo?',ctap:'El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) para mensajes como este. Paga lo que quieras, desde 5 €.',ctab:'Ver el pack de guiones',
+  tiph:'Bote de propinas',tipp:'Este comprobador es gratis y seguirá siéndolo. Si evitó que tú, o tus padres, pulsarais un enlace malo, puedes dejar una propina.',tipb:'Propina por PayPal',
+  morem:'Comprobador de segunda mano',morer:'Comprobador de alquileres',morerec:'Comprobador de recuperación de cripto',morep:'Comprobador de phishing / facturas',morej:'Comprobador de ofertas de trabajo',moreg:'Comprobador de sorteos / airdrops',moresig:'Comprobador de grupos VIP / señales',mores:'Guía de 900 Shorts (19 €)',
+  fd:'Detector de estafas',fm:'Comprobador de segunda mano',fr:'Comprobador de alquileres',frec:'Comprobador de recuperación',fpish:'Comprobador de phishing',fj:'Comprobador de ofertas',fg:'Comprobador de sorteos',fp:'Pack de guiones Scam-Roast',ft:'Bote de propinas',
+  disc:'Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. Los nombres de empresas y organismos aparecen solo porque los estafadores los suplantan; no se les acusa de nada. No es asesoramiento legal. Si metiste los datos de tu tarjeta o compartiste un código, llama a tu banco cuanto antes para bloquear la tarjeta, guarda el mensaje y denúncialo a la policía. También puedes llamar gratis al 017, la línea de ayuda en ciberseguridad de INCIBE.'}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|no one|nobody|won'?t|will not|don'?t|do not|we (?:do )?not|no need to|nunca|jam[aá]s|nadie|no te|no pedimos|no cobramos|no hace falta|sin)[^.!?\n]{0,40}$/i.test(t.slice(Math.max(0,idx-50),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var BR='(?:correos|seur|mrw|gls|dhl|ups|fedex|inpost|ctt|amazon|dgt|aeat|hacienda|agenciatributaria|tributaria|bbva|santander|caixa|caixabank|sabadell|bankinter|ing|unicaja|kutxa|abanca|openbank|paypal|bizum|netflix|movistar|vodafone|orange|endesa|iberdrola|autopista|peaje|toll|evri|royalmail|hmrc|usps)';
+var RULES=[
+ {id:'link',w:24,en:'Suspicious link',es:'Enlace sospechoso',
+  wen:'Shortened links, odd endings like .top or .xyz, or a brand name glued to words like “pay” or “customs” are how cloned pages hide. Real companies send you to their own domain, or ask you to open their app.',wes:'Los enlaces acortados, terminaciones raras como .top o .xyz, o una marca pegada a palabras como “pago” o “aduana” son como se esconden las páginas clonadas. Las empresas reales te mandan a su propio dominio o te piden abrir su app.',
+  re:[/\b(?:bit\.ly|tinyurl\.com|t\.co|cutt\.ly|is\.gd|rb\.gy|shorturl\.at|s\.id|ow\.ly|tiny\.cc|rebrand\.ly)\/\S+/i,
+   /\b[a-z0-9-]+\.(?:top|xyz|icu|cfd|sbs|click|link|live|vip|shop|online|site|info|cc|buzz|rest|monster|lat)\b(?:\/\S*)?/i,
+   new RegExp(BR+'[-.][a-z0-9-]*\\.[a-z]{2,}|[a-z0-9]+-'+BR+'[a-z0-9-]*\\.[a-z]{2,}','i')]},
+ {id:'parcel',w:24,en:'Parcel held, address problem or customs fee',es:'Paquete retenido, dirección incompleta o tasa de aduanas',
+  wen:'“Your parcel is held”, “incomplete address” or “pay the customs fee” with a link is the classic delivery smishing text. Track parcels only in the courier’s app or the shop where you ordered.',wes:'“Tu paquete está retenido”, “dirección incompleta” o “paga la tasa de aduanas” con un enlace es el SMS de entrega falso más típico. Sigue tus envíos solo en la app de la mensajería o en la tienda donde compraste.',
+  re:[/(?:parcel|package|shipment|delivery) (?:is |has been |was )?(?:on hold|held|suspended|pending|returned|stopped|could not be delivered|failed)|(?:customs|delivery|redelivery|shipping) (?:fee|charge|duty|tax)|(?:incomplete|incorrect|invalid|wrong) (?:address|delivery address)|(?:update|confirm|verify) (?:your )?(?:address|delivery details)|(?:missed|failed) delivery/i,
+   /(?:paquete|env[ií]o|pedido) (?:est[aá] |ha sido |fue |queda )?(?:retenido|en espera|pendiente|suspendido|devuelto|detenido|bloqueado)|(?:tasas?|aranceles?|gastos?|cargos?) (?:de )?(?:aduanas?|env[ií]o|entrega|reenv[ií]o)|direcci[oó]n (?:incompleta|incorrecta|err[oó]nea|no v[aá]lida)|(?:actualiza|confirma|verifica) (?:tu |la )?direcci[oó]n|no (?:se )?(?:ha )?(?:podido|pudo) (?:entregar|realizar la entrega)|entrega fallida/i]},
+ {id:'fine',w:22,en:'Unpaid fine, toll or tax refund',es:'Multa, peaje sin pagar o devolución de Hacienda',
+  wen:'Agencies do not send payment or refund links by SMS. A “pending fine”, “unpaid toll” or “you have a tax refund” text with a link is impersonation.',wes:'Los organismos no mandan enlaces de pago ni de devolución por SMS. Un “multa pendiente”, “peaje sin pagar” o “tienes una devolución” con enlace es una suplantación.',
+  re:[/(?:traffic|parking|speeding|pending|unpaid|outstanding) (?:fine|ticket|penalty|toll)|(?:unpaid|outstanding|overdue) (?:toll|road charge)|tax refund|(?:you are|you'?re) (?:eligible|entitled) (?:for|to) a (?:tax )?refund|refund (?:of|for) [0-9]/i,
+   /multa(?:s)? (?:de tr[aá]fico|pendiente|impagada|sin pagar|no abonada)|(?:tienes|hay|existe|consta) una (?:multa|sanci[oó]n|denuncia)|sanci[oó]n (?:pendiente|de tr[aá]fico)|peaje (?:pendiente|sin pagar|impagado)|devoluci[oó]n (?:de (?:la renta|hacienda|impuestos|la agencia tributaria)|pendiente)|(?:tienes|le corresponde) (?:derecho a )?(?:una|un) (?:devoluci[oó]n|reembolso)|\bdgt\b[^.\n]{0,40}(?:multa|sanci[oó]n|pago|pagar)/i]},
+ {id:'bank',w:22,en:'Bank “blocked account” or “unusual access” alert',es:'Aviso del banco de “cuenta bloqueada” o “acceso inusual”',
+  wen:'“Your account has been blocked, verify here” or “unusual sign-in, call this number” is how bank-impersonation calls start. Open your bank’s app or call the number on your card.',wes:'“Su cuenta ha sido bloqueada, verifique aquí” o “acceso inusual, llame a este número” es como empiezan las llamadas de falso banco. Abre la app de tu banco o llama al número de tu tarjeta.',
+  re:[/(?:account|card) (?:has been |was |is |will be )?(?:blocked|suspended|locked|restricted|deactivated|frozen)|(?:unusual|suspicious|unauthori[sz]ed|new) (?:activity|sign-?in|login|access|transaction|payment|device)|verify your (?:identity|account|card|details)|(?:reactivate|unlock|unblock) your (?:account|card)/i,
+   /(?:cuenta|tarjeta) (?:ha sido |fue |est[aá] |ser[aá] |queda(?:r[aá])? )?(?:bloqueada|suspendida|restringida|desactivada|congelada)|(?:acceso|actividad|inicio de sesi[oó]n|movimiento|operaci[oó]n|cargo|dispositivo) (?:inusual|sospechos[oa]|no autorizad[oa]|nuev[oa])|(?:verifique|verifica|confirme|confirma) (?:su |tu )?(?:identidad|cuenta|tarjeta|datos)|(?:reactivar|desbloquear|reactive|desbloquee) (?:su |tu )?(?:cuenta|tarjeta)/i]},
+ {id:'family',w:24,en:'“Hi Mum / Dad, this is my new number”',es:'“Hola mamá / papá, este es mi número nuevo”',
+  wen:'A relative writing from an unknown number because their phone “broke” or “fell in the toilet”, who then needs money, is one of the biggest WhatsApp scams in Spain and the UK. Call them on their usual number.',wes:'Un familiar que escribe desde un número desconocido porque se le “rompió” o “cayó al váter” el móvil y luego necesita dinero es una de las mayores estafas por WhatsApp en España. Llámale a su número de siempre.',
+  re:[/\b(?:hi|hello|hey) (?:mum|mom|mam|mummy|mommy|dad|daddy|grandma|nan)\b|(?:this is|it'?s) my new (?:number|phone)|(?:my )?(?:phone|mobile) (?:broke|is broken|fell|got (?:stolen|broken|wet)|was stolen)|(?:lost|broke|dropped) my (?:phone|mobile)|save (?:this|my new) number/i,
+   /\bhola (?:mam[aá]|mami|pap[aá]|papi|abuela|abuelo|t[ií]a|t[ií]o)\b|(?:este|[eé]ste) es mi (?:nuevo )?n[uú]mero(?: nuevo)?|(?:se me ha|se me|me han) (?:roto|ca[ií]do|mojado|robado) (?:el )?m[oó]vil|(?:he perdido|perd[ií]|romp[ií]) (?:el|mi) m[oó]vil|(?:guarda|apunta) (?:este|mi) (?:nuevo )?n[uú]mero|m[oó]vil nuevo/i]},
+ {id:'askmoney',w:20,neg:true,en:'Asks you to pay, transfer or Bizum',es:'Te pide pagar, transferir o hacer un Bizum',
+  wen:'A text that ends in “pay”, “transfer” or “send a Bizum” is the actual scam. Small amounts are bait for your card; family “emergencies” are bait for a transfer.',wes:'Un mensaje que termina en “paga”, “transfiere” o “hazme un Bizum” es la estafa en sí. Los importes pequeños son cebo para tu tarjeta; las “urgencias” familiares, para una transferencia.',
+  re:[/(?:pay|transfer|send me|lend me|wire) (?:the |a |me )?(?:[0-9€£$]|money|fee|amount|bill|invoice)|(?:can you|could you|please) (?:pay|transfer|send)|pay (?:now|here|online|today)|(?:make|do) (?:a|the) (?:payment|transfer)/i,
+   /(?:paga|pague|abona|abone|transfiere|transfi[eé]reme|ingresa|ing[ré]same|env[ií]ame|m[aá]ndame|d[eé]jame|prest[aá]me) (?:el |la |un |una |los |las )?(?:[0-9€]|dinero|importe|tasa|factura|recibo|pago|cantidad)|(?:hazme|haz|puedes hacerme|me haces) (?:un |una )?(?:bizum|transferencia|ingreso|pago)|(?:puedes|podr[ií]as) (?:pagar|pagarme|transferir|hacer un pago)|(?:pagar|abonar) (?:ahora|aqu[ií]|hoy|online)/i]},
+ {id:'small',w:12,en:'Tiny amount to “release” something',es:'Importe pequeño para “liberar” algo',
+  wen:'1.99, 2.99 or 0.50 is not the real cost. Once your card is in their form they take far more, or sign you up to a subscription.',wes:'1,99, 2,99 o 0,50 € no es el coste real. Cuando tu tarjeta está en su formulario te cobran mucho más o te dan de alta en una suscripción.',
+  re:[/(?:€|eur|£|\$)\s?[0-4][.,][0-9]{2}\b|\b[0-4][.,][0-9]{2}\s?(?:€|eur|euros?|£|gbp|usd)/i]},
+ {id:'code',w:26,en:'Asks for a code, PIN or card details',es:'Pide un código, PIN o datos de la tarjeta',
+  wen:'No bank, courier, WhatsApp or relative needs the code that just arrived on your phone. Sharing it gives them your account or your WhatsApp.',wes:'Ningún banco, mensajería, WhatsApp ni familiar necesita el código que te acaba de llegar. Si lo compartes, les das tu cuenta o tu WhatsApp.',
+  re:[/(?:send|give|tell|share|forward|read) (?:me |us )?(?:the |your |that )?(?:6.digit |verification |security |sms |one.time |whatsapp )?(?:code|otp|pin|password)|(?:enter|confirm|provide|update) (?:your )?(?:card (?:details|number)|cvv|pin|bank details)/i,
+   /(?:p[aá]same|dime|m[aá]ndame|env[ií]ame|reenv[ií]ame|facil[ií]tanos|ind[ií]quenos|com[uú]nicanos|facil[ií]tenos|ind[ií]quenos|comun[ií]quenos|d[ií]ganos) (?:el |tu |su |ese )?(?:c[oó]digo|pin|clave|contrase[nñ]a)|c[oó]digo que (?:te|le) (?:ha|habr[aá]|va a) llega(?:do|r)|(?:te|le) (?:ha|habr[aá]) llegado un c[oó]digo|(?:introduce|introduzca|confirma|confirme|actualiza|actualice) (?:los |sus |tus )?(?:datos de (?:la |su |tu )?tarjeta|cvv|pin|datos bancarios)/i]},
+ {id:'call',w:12,en:'Call or WhatsApp this number',es:'Llama o escribe a este número',
+  wen:'A number inside the message reaches the scammer, not the company. Premium numbers starting 806, 807 or 905 in Spain also cost you per minute.',wes:'Un número dentro del mensaje te lleva al estafador, no a la empresa. Los números que empiezan por 806, 807 o 905 además te cobran por minuto.',
+  re:[/(?:call|ring|phone|contact|whatsapp|text) (?:us |me )?(?:on |at |now )?\+?[0-9][0-9 ]{7,}|\b(?:806|807|905)[ 0-9]{6,}/i,
+   /(?:llame|llama|ll[aá]menos|ll[aá]mame|contacte|contacta|escriba|escr[ií]benos|escr[ií]beme) (?:al|a este n[uú]mero|ahora|urgentemente)?[^.\n]{0,20}\+?[0-9][0-9 ]{7,}|\b(?:806|807|905)[ 0-9]{6,}/i]},
+ {id:'urg',w:10,en:'Deadline or threat',es:'Plazo o amenaza',
+  wen:'“Within 24 hours”, “last notice” or “it will be returned, destroyed or doubled” is pressure designed to stop you checking.',wes:'“En 24 horas”, “último aviso” o “se devolverá, se destruirá o se duplicará el importe” es presión para que no lo compruebes.',
+  re:[/within (?:24|48|12|2) ?(?:h|hours?)|(?:last|final) (?:notice|warning|reminder|chance)|(?:will be|is going to be) (?:returned|destroyed|cancelled|suspended|doubled|increased|sent to (?:collections|court))|(?:today|now|immediately|urgent(?:ly)?)\b/i,
+   /(?:en|antes de) (?:las )?(?:24|48|12|2) ?(?:h|horas)|(?:[uú]ltimo|[uú]nico) aviso|(?:ser[aá]|va a ser|quedar[aá]) (?:devuelto|destruido|cancelad[oa]|suspendid[oa]|duplicad[oa]|incrementad[oa]|recargad[oa])|recargo|embargo|(?:hoy mismo|ahora mismo|inmediatamente|urgente|cuanto antes)/i]}
+];
+
+function analyze(text,url){
+  var t=(text||'')+'\n'+(url||''),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  var lure=on('parcel')||on('fine')||on('bank');
+  if(n>=4)score+=8;
+  if(on('link')&&lure)score=Math.max(score,85);
+  if(on('family')&&(on('askmoney')||on('code')))score=Math.max(score,85);
+  if(on('code'))score=Math.max(score,70);
+  if(lure&&on('code'))score=Math.max(score,85);
+  if(lure&&(on('small')||on('askmoney')||on('call')))score=Math.max(score,70);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['SMS fraudulento casi seguro','Encaja con un guion conocido de smishing o de “Hola mamá”. No pulses el enlace, no llames al número, no pagues y no compartas ningún código.']:['Almost certainly a scam text','This matches a known smishing or “Hi Mum” script. Do not tap the link, call the number, pay or share any code.'];
+  if(s>=40)return es?['Muchas banderas rojas','Trátalo como estafa. Compruébalo tú en la app oficial o llamando al número de siempre.']:['Big red flags','Treat it as a scam. Check it yourself in the official app or by calling the number you already know.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. No uses el enlace ni el número del mensaje.']:['Kinda sus','Some classic signals. Do not use the link or the number in the message.'];
+  return es?['Pocas banderas','No salta casi nada. Aun así, si te pide algo, compruébalo en la app oficial y no desde el mensaje.']:['Few flags','Not much trips the rules. Still, if it asks you for anything, check in the official app rather than through the message.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  if(on('link'))L.push(es?'No pulses el enlace. Si crees que puede ser real, abre tú la app oficial o escribe la web a mano.':'Do not tap the link. If you think it might be real, open the official app or type the website yourself.');
+  if(on('parcel'))L.push(es?'Mira el estado del envío en la tienda donde compraste o en la app de la mensajería. Ninguna te cobra la aduana por SMS con enlace.':'Check the delivery status in the shop where you ordered or in the courier’s app. None of them charge customs through a link in a text.');
+  if(on('fine'))L.push(es?'Consulta multas en la app miDGT o en la web oficial de la DGT, y devoluciones en la web de la Agencia Tributaria que escribes tú.':'Check fines and refunds only on the official agency app or website you type yourself (in Spain: miDGT and the Agencia Tributaria site).');
+  if(on('bank'))L.push(es?'Abre la app de tu banco o llama al número que aparece en tu tarjeta. Tu banco no te pide claves ni códigos por SMS.':'Open your bank’s app or call the number on the back of your card. Your bank will never ask for codes or passwords by text.');
+  if(on('family'))L.push(es?'Llama a tu familiar a su número de siempre o hazle una pregunta que solo él o ella sepa. No pagues nada hasta hablar con su voz.':'Call your relative on their usual number, or ask a question only they would know. Pay nothing until you have heard their voice.');
+  if(on('code'))L.push(es?'No compartas el código con nadie. Si ya lo hiciste, cambia la contraseña y activa la verificación en dos pasos ahora.':'Do not share the code with anyone. If you already did, change your password and turn on two-step verification now.');
+  if(on('call'))L.push(es?'No llames al número del mensaje. Busca tú el teléfono oficial de la empresa.':'Do not call the number in the message. Look up the company’s official number yourself.');
+  L.push(es?'Borra el mensaje y bloquea el número. En España también puedes reenviarlo o consultarlo gratis en el 017 de INCIBE.':'Delete the message and block the number. In Spain you can also check it for free with INCIBE on 017.');
+  L.push(es?'Si ya pagaste o metiste la tarjeta: llama a tu banco ya para bloquearla e intentar parar el pago, guarda el mensaje y denúncialo a la policía.':'If you already paid or entered your card: call your bank now to block it and try to stop the payment, keep the message, and report it to the police.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Correos: your parcel is on hold due to an unpaid customs fee of 1.99 EUR. Pay within 24 hours or it will be returned to the sender.',u:'https://correos-aduana-pago.top/es'},
+ {t:'DGT: Tiene una multa de tráfico pendiente de pago. Abone el importe antes de 48 horas para evitar un recargo del 20%. Consulte aquí:',u:'https://dgt-multas-gob.info/pago'},
+ {t:'Hola mamá, se me ha caído el móvil al váter y este es mi número nuevo, guárdalo. Tengo que pagar una factura hoy y desde el móvil nuevo no puedo entrar al banco. ¿Puedes hacerme un Bizum de 680 € y te lo devuelvo mañana?',u:'+34 611 000 000'},
+ {t:'BBVA: Hemos detectado un acceso inusual en su cuenta desde un nuevo dispositivo. Su tarjeta será bloqueada. Si no reconoce la operación llame al 910 000 000 y facilítenos el código que le ha llegado por SMS.',u:''},
+ {t:'Your order from the shop has been dispatched and will arrive on Friday. You can follow it in the app you ordered from. No action is needed.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
