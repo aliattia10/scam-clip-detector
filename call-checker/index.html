@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scam Call Checker: fake bank, police, tech support and "safe account" calls (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Was that phone call a scam? Describe what the caller said and get a free rule-based red-flag score for fake bank fraud departments, safe-account transfers, police impersonation, tech support, remote-access apps, card couriers and AI voice family emergencies. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/call-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="Was that phone call a scam? Free call checker">
+<meta property="og:description" content="Describe what the caller said. Get a red-flag score for fake bank, police, tech support, safe-account and voice-clone family calls.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/call-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/call-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Scam phone call checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for fake bank, safe-account, police, tech support and voice-clone calls, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/call-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Call Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/sms-checker/" data-i18n="navs">SMS</a>
+      <a class="hide-m" href="/phishing-email-checker/" data-i18n="navp">Phishing</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">Was that phone call <em>a scam?</em></h1>
+    <p class="sub" data-i18n="sub">Describe what the caller said: your bank’s “fraud department”, a transfer to a “safe account”, the police, Microsoft or your internet provider, an app to install, a courier coming for your card, or a crying relative who needs money now. In one second you get a red-flag score and what to do next.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a phone call</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not make a call safe. If in doubt, hang up and call the official number yourself, from a different phone if you can.</p>
+    <label for="txt" data-i18n="l1">What did the caller say or ask?</label>
+    <textarea id="txt" placeholder="e.g. They said they were from my bank’s fraud department, someone was trying to take money from my account, and I had to move my savings to a safe account today."></textarea>
+    <label for="url" data-i18n="l2">Number that called (optional)</label>
+    <input type="text" id="url" placeholder="e.g. 910 000 000 or +44 20 0000 0000" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: safe account</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: ES fake bank + code</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: tech support + AnyDesk</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: ES relative in trouble</button>
+      <button class="chip" onclick="ex(4)" data-i18n="e4">Example: normal appointment call</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do now</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">There is no “safe account”</b><p data-i18n="c1p">No bank, police force or regulator will ever ask you to move your money to protect it. Anyone who says so on the phone is the thief.</p></div>
+    <div class="card"><b data-i18n="c2h">The number on screen can be faked</b><p data-i18n="c2p">Caller ID spoofing lets scammers show your bank’s real number. Hang up and call the number on your card yourself.</p></div>
+    <div class="card"><b data-i18n="c3h">Voices can be cloned</b><p data-i18n="c3p">A few seconds of audio is enough to copy a relative’s voice. Agree a family code word and call back on their usual number.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) for exactly this kind of call. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it stopped you, or your parents, from moving money on a scam call, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/sms-checker/" data-i18n="mores2">SMS / WhatsApp checker</a>
+    <a href="/marketplace-checker/" data-i18n="morem">Marketplace scam checker</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/sms-checker/" data-i18n="fs">SMS checker</a> · <a href="/marketplace-checker/" data-i18n="fm">Marketplace checker</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Company and agency names appear only because scammers impersonate them; they are not accused of anything. Not legal advice. If you moved money, gave a code or let someone into your computer, call your bank now from a different phone to block cards and try to recall the payment, disconnect the computer from the internet, and report it to the police. In Spain you can also call INCIBE’s free helpline on 017.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{brand:'Call Checker',navd:'Scam-Clip Detector',navs:'SMS',navp:'Phishing',
+  h1:'Was that phone call <em>a scam?</em>',
+  sub:'Describe what the caller said: your bank’s “fraud department”, a transfer to a “safe account”, the police, Microsoft or your internet provider, an app to install, a courier coming for your card, or a crying relative who needs money now. In one second you get a red-flag score and what to do next.',
+  h2:'Check a phone call',hint:'Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not make a call safe. If in doubt, hang up and call the official number yourself, from a different phone if you can.',
+  l1:'What did the caller say or ask?',l2:'Number that called (optional)',go:'Check it',
+  e0:'Example: safe account',e1:'Example: ES fake bank + code',e2:'Example: tech support + AnyDesk',e3:'Example: ES relative in trouble',e4:'Example: normal appointment call',
+  of:'/ 100 scam score',todoh:'What to do now',
+  c1h:'There is no “safe account”',c1p:'No bank, police force or regulator will ever ask you to move your money to protect it. Anyone who says so on the phone is the thief.',
+  c2h:'The number on screen can be faked',c2p:'Caller ID spoofing lets scammers show your bank’s real number. Hang up and call the number on your card yourself.',
+  c3h:'Voices can be cloned',c3p:'A few seconds of audio is enough to copy a relative’s voice. Agree a family code word and call back on their usual number.',
+  ctah:'Want to roast these on camera?',ctap:'The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) for exactly this kind of call. Pay what you want, from 5€.',ctab:'See the Script Pack',
+  tiph:'Tip jar',tipp:'This checker is free and stays free. If it stopped you, or your parents, from moving money on a scam call, you can tip.',tipb:'Tip via PayPal',
+  mores2:'SMS / WhatsApp checker',morem:'Marketplace scam checker',morer:'Rental listing checker',morerec:'Crypto recovery checker',morep:'Phishing / invoice checker',morej:'Job offer checker',moreg:'Giveaway / airdrop checker',moresig:'Signal / VIP group checker',mores:'900 Shorts guide (19€)',
+  fd:'Scam-Clip Detector',fs:'SMS checker',fm:'Marketplace checker',fr:'Rental checker',frec:'Recovery checker',fpish:'Phishing checker',fj:'Job offer checker',fg:'Giveaway checker',fp:'Scam-Roast Script Pack',ft:'Tip jar',
+  disc:'Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Company and agency names appear only because scammers impersonate them; they are not accused of anything. Not legal advice. If you moved money, gave a code or let someone into your computer, call your bank now from a different phone to block cards and try to recall the payment, disconnect the computer from the internet, and report it to the police. In Spain you can also call INCIBE’s free helpline on 017.'},
+ es:{brand:'Comprobador de llamadas',navd:'Detector de estafas',navs:'SMS',navp:'Phishing',
+  h1:'¿Esa llamada <em>era una estafa?</em>',
+  sub:'Describe lo que te dijo quien llamó: el “departamento de fraude” de tu banco, pasar el dinero a una “cuenta segura”, la policía, Microsoft o tu compañía de internet, una app que instalar, un mensajero que viene a por tu tarjeta o un familiar llorando que necesita dinero ya. En un segundo tienes una nota de banderas rojas y qué hacer.',
+  h2:'Comprueba una llamada',hint:'Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples: una nota baja no hace segura una llamada. Si dudas, cuelga y llama tú al número oficial, desde otro teléfono si puedes.',
+  l1:'¿Qué te dijo o te pidió quien llamó?',l2:'Número que te llamó (opcional)',go:'Comprobar',
+  e0:'Ejemplo: cuenta segura',e1:'Ejemplo: falso banco + código',e2:'Ejemplo: soporte técnico + AnyDesk',e3:'Ejemplo: familiar en apuros',e4:'Ejemplo: llamada de cita normal',
+  of:'/ 100 nota de estafa',todoh:'Qué hacer ahora',
+  c1h:'La “cuenta segura” no existe',c1p:'Ningún banco, policía ni organismo te va a pedir que muevas tu dinero para protegerlo. Quien te lo pide por teléfono es el ladrón.',
+  c2h:'El número de la pantalla se puede falsificar',c2p:'Con el spoofing los estafadores muestran el número real de tu banco. Cuelga y llama tú al número de tu tarjeta.',
+  c3h:'Las voces se pueden clonar',c3p:'Bastan unos segundos de audio para copiar la voz de un familiar. Pactad una palabra clave en familia y devuelve la llamada a su número de siempre.',
+  ctah:'¿Quieres hacer un roast de esto en vídeo?',ctap:'El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) para llamadas como esta. Paga lo que quieras, desde 5 €.',ctab:'Ver el pack de guiones',
+  tiph:'Bote de propinas',tipp:'Este comprobador es gratis y seguirá siéndolo. Si evitó que tú, o tus padres, movierais dinero en una llamada falsa, puedes dejar una propina.',tipb:'Propina por PayPal',
+  mores2:'Comprobador de SMS / WhatsApp',morem:'Comprobador de segunda mano',morer:'Comprobador de alquileres',morerec:'Comprobador de recuperación de cripto',morep:'Comprobador de phishing / facturas',morej:'Comprobador de ofertas de trabajo',moreg:'Comprobador de sorteos / airdrops',moresig:'Comprobador de grupos VIP / señales',mores:'Guía de 900 Shorts (19 €)',
+  fd:'Detector de estafas',fs:'Comprobador de SMS',fm:'Comprobador de segunda mano',fr:'Comprobador de alquileres',frec:'Comprobador de recuperación',fpish:'Comprobador de phishing',fj:'Comprobador de ofertas',fg:'Comprobador de sorteos',fp:'Pack de guiones Scam-Roast',ft:'Bote de propinas',
+  disc:'Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. Los nombres de empresas y organismos aparecen solo porque los estafadores los suplantan; no se les acusa de nada. No es asesoramiento legal. Si moviste dinero, diste un código o dejaste que alguien entrara en tu ordenador, llama ya a tu banco desde otro teléfono para bloquear tarjetas e intentar recuperar el pago, desconecta el ordenador de internet y denúncialo a la policía. También puedes llamar gratis al 017, la línea de ayuda en ciberseguridad de INCIBE.'}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|no one|nobody|won'?t|will not|don'?t|do not|we (?:do )?not|no need to|nunca|jam[aá]s|nadie|no te|no pedimos|no cobramos|no hace falta|sin)[^.!?\n]{0,40}$/i.test(t.slice(Math.max(0,idx-50),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'safe',w:30,en:'Move your money to a “safe account”',es:'Pasar tu dinero a una “cuenta segura”',
+  wen:'This is the core of the biggest phone fraud in Europe. Your bank, the police or the Bank of Spain will never ask you to move money to protect it.',wes:'Es el núcleo del mayor fraude telefónico en Europa. Tu banco, la policía o el Banco de España nunca te piden mover el dinero para protegerlo.',
+  re:[/safe (?:account|wallet)|secure (?:account|holding account|wallet)|(?:move|transfer|withdraw|protect) (?:all |your )?(?:money|savings|funds|balance)(?: to (?:a|another|the) (?:new|safe|secure|protected) account)?|(?:new|protected|temporary) account (?:in your name|for your money)|withdraw (?:the )?cash and/i,
+   /cuenta (?:segura|protegida|puente|temporal|de seguridad|nueva a tu nombre)|(?:mover|pasar|transferir|traspasar|sacar|retirar|proteger) (?:todo )?(?:el |tu |su )?(?:dinero|ahorros|saldo|fondos)|(?:te|le) (?:abrimos|vamos a abrir|hemos abierto) una cuenta nueva/i]},
+ {id:'bank',w:20,en:'Says it is your bank’s fraud or security department',es:'Dice ser el departamento de fraude o seguridad de tu banco',
+  wen:'“Fraud department”, “suspicious transaction”, “someone is trying to take your money” is the opening line of bank-impersonation calls (vishing). Hang up and call the number on your card.',wes:'“Departamento de fraude”, “operación sospechosa”, “alguien intenta sacar tu dinero” es la frase de entrada del falso banco (vishing). Cuelga y llama al número de tu tarjeta.',
+  re:[/(?:fraud|security|anti-?fraud) (?:department|team|unit|centre|center)|(?:suspicious|unusual|unauthori[sz]ed|fraudulent) (?:transaction|activity|payment|transfer|login|access|charge)|someone (?:is trying|tried) to (?:take|steal|access|withdraw|use)|your (?:account|card) (?:has been |is |was )?(?:compromised|hacked|blocked|cloned)/i,
+   /departamento (?:de )?(?:fraude|seguridad|antifraude)|(?:operaci[oó]n|movimiento|cargo|transferencia|acceso|compra) (?:sospechos[oa]|inusual|no autorizad[oa]|fraudulent[oa])|(?:alguien|un tercero) (?:est[aá] intentando|ha intentado|intenta) (?:sacar|robar|acceder|usar|retirar)|(?:su|tu) (?:cuenta|tarjeta) (?:ha sido |est[aá] |fue )?(?:comprometida|hackeada|bloqueada|clonada|intervenida)/i]},
+ {id:'auth',w:20,en:'Claims to be police, a court, tax office or regulator',es:'Dice ser policía, juzgado, Hacienda u otro organismo',
+  wen:'Police and agencies do not phone to demand payment, ask for codes or tell you to keep the call secret from your bank. Impersonating them is the second-stage of the “safe account” scam.',wes:'La policía y los organismos no llaman para exigir pagos, pedir códigos o decirte que no se lo cuentes a tu banco. Suplantarlos es la segunda fase de la estafa de la “cuenta segura”.',
+  re:[/\b(?:police|detective|officer|inspector|europol|interpol|court|judge|hmrc|tax office|irs|financial conduct|fca|central bank|bank of spain|cybercrime unit)\b/i,
+   /\b(?:polic[ií]a|comisar[ií]a|guardia civil|mossos|ertzaintza|inspector|agente|juzgado|juez|fiscal[ií]a|hacienda|agencia tributaria|aeat|banco de espa[nñ]a|cnmv|seguridad social|europol|interpol|unidad de delitos)\b/i]},
+ {id:'tech',w:18,en:'Tech support, Microsoft, Amazon or your internet provider',es:'Soporte técnico, Microsoft, Amazon o tu compañía de internet',
+  wen:'Microsoft, Apple, Amazon and phone companies do not call you about a virus, a hacked router or a refund they owe you. Those calls end with an app to install or a payment.',wes:'Microsoft, Apple, Amazon y las telefónicas no te llaman por un virus, un router hackeado o un reembolso que te deben. Esas llamadas acaban en una app que instalar o en un pago.',
+  re:[/\b(?:microsoft|windows|apple|icloud|amazon|tech(?:nical)? support|help ?desk|broadband|internet provider|router)\b[^.\n]{0,60}(?:virus|hack|infected|problem|error|refund|licen[cs]e|expired|compromised|subscription|order)/i,
+   /\b(?:microsoft|windows|apple|icloud|amazon|soporte t[eé]cnico|servicio t[eé]cnico|movistar|vodafone|orange|digi|jazztel|telef[oó]nica|router|fibra)\b[^.\n]{0,60}(?:virus|hack|infectad|problema|error|reembolso|devoluci[oó]n|licencia|caducad|comprometid|suscripci[oó]n|pedido)/i]},
+ {id:'remote',w:26,en:'Asks you to install an app or give remote access',es:'Te pide instalar una app o darle acceso remoto',
+  wen:'AnyDesk, TeamViewer, QuickSupport or any “security app” lets the caller see and control your phone or computer, including your banking app.',wes:'AnyDesk, TeamViewer, QuickSupport o cualquier “app de seguridad” deja que quien llama vea y controle tu móvil u ordenador, incluida la app del banco.',
+  re:[/\b(?:anydesk|teamviewer|quick ?support|rustdesk|ultraviewer|supremo|screen ?share|remote (?:access|desktop|control|support))\b|(?:install|download) (?:an |the |this |a )?(?:app|application|program|software|security app)/i,
+   /\b(?:anydesk|teamviewer|quick ?support|rustdesk|ultraviewer|supremo|compartir (?:la )?pantalla|acceso remoto|control remoto|escritorio remoto)\b|(?:instala|instale|instalar|descarga|descargue|descargar|bajarte|bajar) (?:una |la |esta |un |el )?(?:app|aplicaci[oó]n|programa|software)/i]},
+ {id:'code',w:26,neg:true,en:'Asks for a code, PIN, password or card details',es:'Pide un código, PIN, contraseña o datos de la tarjeta',
+  wen:'The code your bank just texted you is how they approve the transfer. No real bank employee ever asks you to read it out.',wes:'El código que te acaba de mandar el banco es con lo que aprueban la transferencia. Ningún empleado real del banco te pide que se lo leas.',
+  re:[/(?:read|give|tell|send|confirm|share) (?:me |us )?(?:the |your |that )?(?:6.digit |verification |security |sms |one.time )?(?:code|otp|pin|password|cvv|card number)|(?:card (?:number|details)|cvv|pin) (?:to|so (?:we|i) can) (?:verify|cancel|block|confirm)|code (?:you(?:'ve| have) (?:just )?received|we (?:just )?sent)/i,
+   /(?:l[eé]eme|d[ií]game|dime|d[ií]ganos|facil[ií]teme|facil[ií]tenos|conf[ií]rmeme|conf[ií]rmame|p[aá]same|mire) (?:el |su |tu |ese )?(?:c[oó]digo|pin|clave|contrase[nñ]a|cvv|n[uú]mero de (?:la )?tarjeta)|c[oó]digo que (?:te|le|me) (?:ha|había|acaba de|acababa de|va a) llega(?:do|r)|(?:te|le|me) (?:ha|acaba de|acababa de) llega(?:do|r) un (?:c[oó]digo|sms)|(?:les |le )?(?:dijera|dijese|leyera|leyese|diera|diese) (?:el |mi |su )?(?:c[oó]digo|pin|clave|contrase[nñ]a|cvv)|(?:pidi[oó]|ped[ií]a|quer[ií]a|me pidieron|piden) (?:el |mi )?(?:c[oó]digo|pin|clave|contrase[nñ]a|cvv)/i]},
+ {id:'courier',w:24,en:'A courier or agent will collect your card, cash or valuables',es:'Un mensajero o agente pasará a recoger tu tarjeta, dinero o joyas',
+  wen:'Nobody from a bank or the police comes to your door to collect a “compromised” card, cash or jewellery. The person who arrives works for the scammer.',wes:'Nadie del banco ni de la policía va a tu casa a recoger una tarjeta “comprometida”, dinero o joyas. Quien aparece trabaja para el estafador.',
+  re:[/(?:courier|driver|agent|officer|someone|colleague) (?:will|is going to|is coming to) (?:collect|pick up|come for|come and get)|(?:collect|pick up) (?:your )?(?:card|cards|cash|money|gold|jewel(?:le)?ry)|put (?:the |your )?card in an envelope/i,
+   /(?:mensajero|repartidor|agente|compa[nñ]ero|alguien|una persona) (?:pasar[aá]|pasar[ií]a|ir[aá]|ir[ií]a|vendr[aá]|vendr[ií]a|va a pasar|va a ir|iba a pasar) (?:a recoger|por|a por|a buscar)|recoger (?:su |tu |la |las )?(?:tarjeta|tarjetas|dinero|efectivo|joyas|oro)|(?:mete|meta|pon|ponga) (?:la |su |tu )?tarjeta en un sobre/i]},
+ {id:'family',w:22,en:'Relative in an emergency, crying or in trouble',es:'Familiar en apuros, llorando o con un problema',
+  wen:'A grandchild arrested, a son in hospital or a daughter in an accident who needs money now, often with a lawyer or doctor taking over the call, is a classic script. AI voice cloning makes it sound real.',wes:'Un nieto detenido, un hijo en el hospital o una hija con un accidente que necesita dinero ya, muchas veces con un abogado o médico que se pone al teléfono, es un guion clásico. La clonación de voz con IA lo hace sonar real.',
+  re:[/(?:grandson|granddaughter|grandchild|son|daughter|nephew|niece|mum|mom|dad|brother|sister)\b[^.\n]{0,60}(?:arrested|accident|hospital|jail|police station|in trouble|crying|kidnapped|needs? (?:money|help|bail))|\b(?:bail|lawyer|solicitor) (?:needs|fee|money)|needs? (?:€|£|\$)?[0-9][0-9,.]* (?:for (?:the )?bail|now)/i,
+   /(?:nieto|nieta|hijo|hija|sobrino|sobrina|mam[aá]|pap[aá]|hermano|hermana)\b[^.\n]{0,60}(?:detenid[oa]|accidente|hospital|c[aá]rcel|comisar[ií]a|en apuros|un problema|llorando|secuestrad[oa]|necesita (?:dinero|ayuda)|fianza)|\b(?:fianza|abogado) (?:necesita|para)/i]},
+ {id:'pay',w:20,neg:true,en:'Asks you to pay by transfer, Bizum, gift cards, crypto or cash',es:'Te pide pagar por transferencia, Bizum, tarjetas regalo, cripto o efectivo',
+  wen:'Gift cards, crypto ATMs, Bizum to a stranger or a transfer “to cancel the fraud” are untraceable once sent. Real organisations do not take fees this way on a phone call.',wes:'Tarjetas regalo, cajeros de cripto, Bizum a un desconocido o una transferencia “para cancelar el fraude” no se pueden recuperar una vez enviados. Ningún organismo real cobra así por teléfono.',
+  re:[/\b(?:gift ?cards?|steam card|google play card|itunes card|apple card|amazon voucher|bitcoin|crypto(?:currency)?|usdt|bitcoin atm|crypto atm)\b|(?:pay|transfer|send|wire) (?:a |the |me )?(?:fee|fine|amount|money|bail|deposit|[0-9€£$])|(?:make|do) (?:a|the) (?:transfer|payment)/i,
+   /\b(?:tarjetas? regalo|tarjeta de google play|tarjeta de steam|cup[oó]n de amazon|bitcoin|cripto(?:moneda)?s?|usdt|cajero de (?:bitcoin|cripto))\b|(?:hazle|hazme|haga|hacer|haz) (?:un |una )?(?:bizum|transferencia|ingreso)|(?:paga|pague|pagar|transfiere|transfiera|transferir|ingresa|ingrese|ingresar|env[ií]a|env[ií]e) (?:el |la |un |una |los )?(?:dinero|importe|multa|tasa|fianza|dep[oó]sito|[0-9€])|necesit(?:a|aba|o|amos) [0-9.,]+ ?(?:€|euros)/i]},
+ {id:'secret',w:14,en:'Do not hang up, do not tell anyone',es:'No cuelgues, no se lo digas a nadie',
+  wen:'“Stay on the line”, “do not tell the branch, they are involved”, “keep this confidential” is designed to stop you checking with anyone.',wes:'“No cuelgue”, “no lo cuente en la oficina, están implicados”, “es confidencial” sirve para que no lo compruebes con nadie.',
+  re:[/(?:do not|don'?t) (?:hang up|tell (?:anyone|anybody|the bank|the branch|your family))|stay on the (?:line|phone)|keep (?:this|it) (?:confidential|secret|between us)|(?:branch|staff|employees?) (?:are|is|may be) (?:involved|part of)/i,
+   /no (?:cuelgue|cuelgues|se lo (?:diga|digas|dijera|dijese|cuente|cuentes|contara) a nadie|lo (?:comente|comentes|cuente|cuentes))|no (?:hable|hables) con (?:nadie|la oficina|el banco|tu familia)|(?:mant[eé]n|mantenga|qu[eé]date|qu[eé]dese) (?:en (?:la )?l[ií]nea|al tel[eé]fono)|(?:es|esto es) (?:confidencial|secreto)|(?:la oficina|los empleados|el director) (?:est[aá]n?|podr[ií]an? estar) implicad/i]},
+ {id:'robot',w:10,en:'Recorded message: “press 1” or missed call from abroad',es:'Mensaje grabado: “pulse 1” o perdida desde el extranjero',
+  wen:'“Press 1 to speak to an agent” robocalls and one-ring missed calls from unknown foreign numbers (Wangiri) try to get you onto a premium line or a scam agent.',wes:'Las llamadas grabadas de “pulse 1 para hablar con un agente” y las perdidas de un solo tono desde números extranjeros (Wangiri) buscan meterte en una línea de pago o con un estafador.',
+  re:[/press (?:1|one|9|nine)|(?:recorded|automated|robot) (?:message|voice|call)|missed call from (?:\+|abroad|an? (?:unknown|foreign))|(?:one|single) ring/i,
+   /pulse (?:el )?(?:1|uno|9|nueve)|(?:mensaje|voz|llamada) (?:grabad[oa]|autom[aá]tic[oa]|de un robot)|llamada perdida (?:de|desde) (?:un n[uú]mero )?(?:extranjer|desconocid|\+)|un solo tono|\b(?:806|807|905)[ 0-9]{6,}/i]},
+ {id:'urg',w:10,en:'Urgency: right now, today, or you lose everything',es:'Urgencia: ahora mismo, hoy o lo pierdes todo',
+  wen:'“Right now or you lose your savings” is pressure. A real bank gives you time to hang up and call back.',wes:'“Ahora mismo o pierdes tus ahorros” es presión. Un banco real te deja tiempo para colgar y devolver la llamada.',
+  re:[/right now|immediately|urgent(?:ly)?|today|within (?:the next )?(?:an hour|[0-9]+ (?:minutes|hours))|(?:lose|losing) (?:all )?(?:your )?(?:money|savings)|(?:will be|is being) (?:emptied|drained|arrested)/i,
+   /ahora mismo|inmediatamente|urgente|hoy mismo|cuanto antes|en (?:los pr[oó]ximos )?[0-9]+ (?:minutos|horas)|(?:perder|pierde|pierdes|perder[aá]) (?:todo|todos )?(?:el |tu |su |sus |tus )?(?:dinero|ahorros)|(?:vaciar|vac[ií]en|est[aá]n vaciando)|orden de detenci[oó]n/i]}
+];
+function analyze(text,url){
+  var t=(text||'')+'\n'+(url||''),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  var imp=on('bank')||on('auth')||on('tech');
+  if(n>=4)score+=8;
+  if(on('safe'))score=Math.max(score,85);
+  if(on('courier')&&(imp||on('code')))score=Math.max(score,90);
+  if(imp&&(on('code')||on('remote')))score=Math.max(score,85);
+  if(on('family')&&on('pay'))score=Math.max(score,80);
+  if(on('remote'))score=Math.max(score,60);
+  if(on('code'))score=Math.max(score,60);
+  if(imp&&(on('pay')||on('secret')))score=Math.max(score,70);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Llamada fraudulenta casi segura','Encaja con un guion conocido de vishing (falso banco, falsa policía o soporte técnico) o de familiar en apuros. Cuelga, no muevas dinero, no instales nada y no leas ningún código.']:['Almost certainly a scam call','This matches a known vishing script (fake bank, fake police or tech support) or a relative-in-trouble call. Hang up, move no money, install nothing and read out no code.'];
+  if(s>=40)return es?['Muchas banderas rojas','Trátala como estafa. Cuelga y llama tú al número oficial que ya conoces.']:['Big red flags','Treat it as a scam. Hang up and call the official number you already know.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. No hagas nada de lo que te pidieron hasta comprobarlo por tu cuenta.']:['Kinda sus','Some classic signals. Do nothing they asked until you have checked it yourself.'];
+  return es?['Pocas banderas','No salta casi nada. Aun así, si te pidieron dinero, datos o instalar algo, cuelga y llama tú al número oficial.']:['Few flags','Not much trips the rules. Still, if they asked for money, details or an install, hang up and call the official number yourself.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  L.push(es?'Cuelga. Espera unos minutos o usa otro teléfono, porque algunos estafadores mantienen la línea abierta.':'Hang up. Wait a few minutes or use a different phone, because some scammers keep the line open.');
+  if(on('bank')||on('safe')||on('code'))L.push(es?'Llama tú al número de la parte de atrás de tu tarjeta o entra en la app de tu banco. Pregunta si hay algún problema real.':'Call the number on the back of your card or open your banking app yourself. Ask whether there is a real problem.');
+  if(on('safe'))L.push(es?'No muevas ni un euro. Si ya lo hiciste, llama al banco ahora y pide que intenten recuperar la transferencia.':'Do not move a single euro. If you already did, call your bank now and ask them to try to recall the transfer.');
+  if(on('code'))L.push(es?'Si leíste un código o una clave, cámbiala ya y avisa al banco para bloquear operaciones.':'If you read out a code or password, change it now and tell your bank to block transactions.');
+  if(on('remote'))L.push(es?'Si instalaste una app de acceso remoto, desinstálala, desconecta internet y cambia las contraseñas desde otro dispositivo.':'If you installed a remote-access app, uninstall it, disconnect from the internet and change passwords from another device.');
+  if(on('courier'))L.push(es?'No entregues la tarjeta, dinero ni joyas a nadie que venga a tu puerta. Llama al 091 o al 112 si alguien se presenta.':'Do not hand your card, cash or jewellery to anyone who comes to your door. Call the police if someone turns up.');
+  if(on('family'))L.push(es?'Llama a tu familiar a su número de siempre o a alguien que esté con él. Usa una palabra clave familiar para la próxima vez.':'Call your relative on their usual number or someone who is with them. Agree a family code word for next time.');
+  if(on('auth'))L.push(es?'Busca tú el teléfono oficial del organismo y llama. La policía no cobra multas ni fianzas por teléfono.':'Look up the agency’s official number yourself and call it. Police do not collect fines or bail over the phone.');
+  if(on('robot'))L.push(es?'No devuelvas llamadas perdidas de números extranjeros desconocidos ni pulses teclas en mensajes grabados. Bloquea el número.':'Do not call back unknown foreign missed calls or press keys on recorded messages. Block the number.');
+  L.push(es?'En España puedes consultarlo gratis en el 017 de INCIBE. Si perdiste dinero, guarda el número y la hora, y denúncialo a la policía.':'In Spain you can check it for free with INCIBE on 017. If you lost money, note the number and time, and report it to the police.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'They said they were from my bank’s fraud department. Someone was trying to take money from my account, so I had to move my savings to a safe account in my name today. They told me not to tell the branch because staff may be involved.',u:'+34 910 000 000'},
+ {t:'Me llamó el departamento de seguridad del banco. Me dijeron que había una operación sospechosa de 1.200 € y que para cancelarla les dijera el código que me acababa de llegar por SMS. El número que salía en pantalla era el del banco.',u:'900 000 000'},
+ {t:'A man from Microsoft technical support said my computer was infected with a virus and my bank details were compromised. He asked me to download AnyDesk so he could fix it, then to log in to my bank.',u:''},
+ {t:'Me llamó mi nieto llorando, dijo que había tenido un accidente y estaba detenido en comisaría. Luego se puso un abogado y me dijo que necesitaba 3.000 € para la fianza ahora mismo y que no se lo dijera a nadie. Un mensajero pasaría a recoger el dinero.',u:''},
+ {t:'The dental clinic called to confirm my appointment on Tuesday at 10 and asked if I could still make it. They said to call the usual clinic number if I need to change it.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
