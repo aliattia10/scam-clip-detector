@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ticket Scam Checker: fake concert, football and festival tickets (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Buying a resale ticket for a concert, match or festival? Describe the seller and the deal and get a free rule-based red-flag score for Bizum and bank transfer payments, sold-out bargains, screenshots and PDFs, hacked friend accounts, fake resale sites and pressure. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/ticket-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="Are those tickets real? Free ticket scam checker">
+<meta property="og:description" content="Describe the seller and the deal. Get a red-flag score for Bizum payments, sold-out bargains, screenshots, hacked accounts and fake resale sites.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/ticket-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/ticket-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ticket scam checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for fake concert, football and festival tickets, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/ticket-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Ticket Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/marketplace-checker/" data-i18n="navi">Marketplace</a>
+      <a class="hide-m" href="/sms-checker/" data-i18n="navs">SMS</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">Are those tickets <em>real?</em></h1>
+    <p class="sub" data-i18n="sub">Describe the deal: a sold-out concert, football match or festival, a seller on Instagram, X, Facebook, Telegram or Wallapop, a price that feels lucky, and a request to pay by Bizum or transfer. In one second you get a red-flag score and what to do before you pay.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a ticket deal</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not prove the tickets are real. The safest ticket is one bought from the official seller or its official resale exchange.</p>
+    <label for="txt" data-i18n="l1">What did the seller say, offer or ask for?</label>
+    <textarea id="txt" placeholder="e.g. Saw a story from a friend's Instagram selling 2 tickets for the sold-out concert at face value. He says pay 180€ by Bizum and he will send the PDF after."></textarea>
+    <label for="url" data-i18n="l2">Where you found them, or the website address (optional)</label>
+    <input type="text" id="url" placeholder="e.g. Instagram, X, Telegram, a website address" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: hacked friend story</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: ES Bizum for a match</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: fake resale site</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: ES festival screenshot</button>
+      <button class="chip" onclick="ex(4)" data-i18n="e4">Example: official resale</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do before you pay</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">Sold out is the bait</b><p data-i18n="c1p">Ticket scammers wait for the big sell-outs. The more desperate buyers are, the less they check.</p></div>
+    <div class="card"><b data-i18n="c2h">No buyer protection, no deal</b><p data-i18n="c2p">Bizum, bank transfer, PayPal friends and family and crypto cannot be reversed. That is why scammers ask for them.</p></div>
+    <div class="card"><b data-i18n="c3h">A screenshot is not a ticket</b><p data-i18n="c3p">The same QR code or PDF can be sold to twenty people. Only the first one through the gate gets in.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it saved you from paying for a ticket that never existed, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/marketplace-checker/" data-i18n="morem">Marketplace scam checker</a>
+    <a href="/romance-checker/" data-i18n="morer2">Romance scam checker</a>
+    <a href="/investment-checker/" data-i18n="morei">Investment scam checker</a>
+    <a href="/call-checker/" data-i18n="morec">Scam call checker</a>
+    <a href="/sms-checker/" data-i18n="mores2">SMS / WhatsApp checker</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/marketplace-checker/" data-i18n="fm">Marketplace checker</a> · <a href="/romance-checker/" data-i18n="fro">Romance checker</a> · <a href="/investment-checker/" data-i18n="fi">Investment checker</a> · <a href="/call-checker/" data-i18n="fc">Call checker</a> · <a href="/sms-checker/" data-i18n="fs">SMS checker</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Ticketing companies, clubs, artists and apps appear only because scammers impersonate them or misuse them; they are not accused of anything. Not legal advice. If you already paid, contact your bank or payment app right away to try to recall the payment or open a dispute, keep the chat and the seller profile, report the account on the platform and report it to the police. In Spain you can also call INCIBE’s free helpline on 017.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{"brand": "Ticket Checker", "navd": "Scam-Clip Detector", "navi": "Marketplace", "navs": "SMS", "h1": "Are those tickets <em>real?</em>", "sub": "Describe the deal: a sold-out concert, football match or festival, a seller on Instagram, X, Facebook, Telegram or Wallapop, a price that feels lucky, and a request to pay by Bizum or transfer. In one second you get a red-flag score and what to do before you pay.", "h2": "Check a ticket deal", "hint": "Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not prove the tickets are real. The safest ticket is one bought from the official seller or its official resale exchange.", "l1": "What did the seller say, offer or ask for?", "l2": "Where you found them, or the website address (optional)", "go": "Check it", "e0": "Example: hacked friend story", "e1": "Example: ES Bizum for a match", "e2": "Example: fake resale site", "e3": "Example: ES festival screenshot", "e4": "Example: official resale", "of": "/ 100 scam score", "todoh": "What to do before you pay", "c1h": "Sold out is the bait", "c1p": "Ticket scammers wait for the big sell-outs. The more desperate buyers are, the less they check.", "c2h": "No buyer protection, no deal", "c2p": "Bizum, bank transfer, PayPal friends and family and crypto cannot be reversed. That is why scammers ask for them.", "c3h": "A screenshot is not a ticket", "c3p": "The same QR code or PDF can be sold to twenty people. Only the first one through the gate gets in.", "ctah": "Want to roast these on camera?", "ctap": "The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.", "ctab": "See the Script Pack", "tiph": "Tip jar", "tipp": "This checker is free and stays free. If it saved you from paying for a ticket that never existed, you can tip.", "tipb": "Tip via PayPal", "morer2": "Romance scam checker", "morei": "Investment scam checker", "morec": "Scam call checker", "mores2": "SMS / WhatsApp checker", "morem": "Marketplace scam checker", "morer": "Rental listing checker", "morerec": "Crypto recovery checker", "morep": "Phishing / invoice checker", "morej": "Job offer checker", "moreg": "Giveaway / airdrop checker", "moresig": "Signal / VIP group checker", "mores": "900 Shorts guide (19€)", "fd": "Scam-Clip Detector", "fro": "Romance checker", "fi": "Investment checker", "fc": "Call checker", "fs": "SMS checker", "fm": "Marketplace checker", "fr": "Rental checker", "frec": "Recovery checker", "fpish": "Phishing checker", "fj": "Job offer checker", "fg": "Giveaway checker", "fp": "Scam-Roast Script Pack", "ft": "Tip jar", "disc": "Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Ticketing companies, clubs, artists and apps appear only because scammers impersonate them or misuse them; they are not accused of anything. Not legal advice. If you already paid, contact your bank or payment app right away to try to recall the payment or open a dispute, keep the chat and the seller profile, report the account on the platform and report it to the police. In Spain you can also call INCIBE’s free helpline on 017."},
+ es:{"brand": "Comprobador de entradas", "navd": "Detector de estafas", "navi": "Segunda mano", "navs": "SMS", "h1": "¿Esas entradas <em>son reales?</em>", "sub": "Describe el trato: un concierto, partido o festival agotado, un vendedor en Instagram, X, Facebook, Telegram o Wallapop, un precio que parece suerte y una petición de pagar por Bizum o transferencia. En un segundo tienes una nota de banderas rojas y qué hacer antes de pagar.", "h2": "Comprueba una venta de entradas", "hint": "Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples: una nota baja no demuestra que las entradas sean reales. La entrada más segura es la del vendedor oficial o su plataforma oficial de reventa.", "l1": "¿Qué ha dicho, ofrecido o pedido el vendedor?", "l2": "Dónde lo encontraste, o la dirección de la web (opcional)", "go": "Comprobar", "e0": "Ejemplo: historia de un amigo hackeado", "e1": "Ejemplo: Bizum por un partido", "e2": "Ejemplo: web de reventa falsa", "e3": "Ejemplo: captura de un festival", "e4": "Ejemplo: reventa oficial", "of": "/ 100 nota de estafa", "todoh": "Qué hacer antes de pagar", "c1h": "El “agotado” es el cebo", "c1p": "Los estafadores de entradas esperan a los grandes llenos. Cuanto más desesperado está el comprador, menos comprueba.", "c2h": "Sin protección al comprador, no hay trato", "c2p": "Bizum, transferencia, PayPal “amigos y familiares” y cripto no se pueden revertir. Por eso los piden.", "c3h": "Una captura no es una entrada", "c3p": "El mismo código QR o PDF se puede vender a veinte personas. Solo entra el primero que llega a la puerta.", "ctah": "¿Quieres hacer un roast de esto en vídeo?", "ctap": "El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) sobre las estafas más comunes. Paga lo que quieras, desde 5 €.", "ctab": "Ver el pack de guiones", "tiph": "Bote de propinas", "tipp": "Este comprobador es gratis y seguirá siéndolo. Si te ahorró pagar por una entrada que no existía, puedes dejar una propina.", "tipb": "Propina por PayPal", "morer2": "Comprobador de romances", "morei": "Comprobador de inversiones", "morec": "Comprobador de llamadas", "mores2": "Comprobador de SMS / WhatsApp", "morem": "Comprobador de segunda mano", "morer": "Comprobador de alquileres", "morerec": "Comprobador de recuperación de cripto", "morep": "Comprobador de phishing / facturas", "morej": "Comprobador de ofertas de trabajo", "moreg": "Comprobador de sorteos / airdrops", "moresig": "Comprobador de grupos VIP / señales", "mores": "Guía de 900 Shorts (19 €)", "fd": "Detector de estafas", "fro": "Comprobador de romances", "fi": "Comprobador de inversiones", "fc": "Comprobador de llamadas", "fs": "Comprobador de SMS", "fm": "Comprobador de segunda mano", "fr": "Comprobador de alquileres", "frec": "Comprobador de recuperación", "fpish": "Comprobador de phishing", "fj": "Comprobador de ofertas", "fg": "Comprobador de sorteos", "fp": "Pack de guiones Scam-Roast", "ft": "Bote de propinas", "disc": "Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. Las ticketeras, clubes, artistas y apps aparecen solo porque los estafadores los suplantan o los usan; no se les acusa de nada. No es asesoramiento legal. Si ya pagaste, contacta ya con tu banco o app de pago para intentar recuperar el pago o abrir una reclamación, guarda la conversación y el perfil del vendedor, denuncia la cuenta en la plataforma y denúncialo a la policía. También puedes llamar gratis al 017, la línea de ayuda en ciberseguridad de INCIBE."}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|won'?t|will not|didn'?t|did not|don'?t|do not|hasn'?t|has not|no need to|nunca|jam[aá]s|no me|no te|no ha|no hace falta|sin)[^.!?\n]{0,30}$/i.test(t.slice(Math.max(0,idx-40),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'pay',w:24,neg:true,en:'Wants Bizum, bank transfer, PayPal friends and family or crypto',es:'Quiere Bizum, transferencia, PayPal amigos y familiares o cripto',
+  wen:'These payments cannot be reversed and have no buyer protection. Genuine sellers can use the official resale exchange or a platform that holds the money until the ticket arrives.',wes:'Estos pagos no se pueden revertir y no tienen protección al comprador. Un vendedor de verdad puede usar la reventa oficial o una plataforma que retiene el dinero hasta que llega la entrada.',
+  re:[/\bbizum\b|bank transfer|wire (?:it|the money)|transfer (?:the money|it) to (?:my|his|her)|\biban\b|friends (?:and|&) family|\bf ?& ?f\b|(?:paypal|pay ?pal) (?:as a )?(?:gift|friend)|\b(?:usdt|bitcoin|btc|crypto)\b|revolut (?:me|link)|western union|gift ?cards?/i,
+   /\bbizum\b|transferencia|\biban\b|amigos y familiares|paypal (?:como )?(?:amigos|regalo)|\b(?:usdt|bitcoin|btc|cripto)\b|western union|tarjetas? regalo/i]},
+ {id:'social',w:12,en:'Seller found in comments, stories, DMs, Telegram or a fan group',es:'Vendedor encontrado en comentarios, historias, mensajes privados, Telegram o un grupo de fans',
+  wen:'Fake sellers reply to every “anyone selling?” post within minutes. Accounts that only exist to sell tickets are the most common source of fake ones.',wes:'Los falsos vendedores responden en minutos a cada “¿alguien vende?”. Las cuentas que solo existen para vender entradas son la fuente más común de entradas falsas.',
+  re:[/(?:instagram|insta|facebook|tiktok|twitter|\bx\b|telegram|whatsapp|discord|reddit)[^.\n]{0,30}(?:story|stories|comments?|dm|message|group|post|reply|replied|seller|account)|(?:dm|messaged|replied to) (?:me|my post)|fan (?:group|page|chat)|(?:telegram|whatsapp|facebook) group|anyone selling|(?:friend|someone)[^.\n]{0,25}on (?:instagram|facebook|tiktok)/i,
+   /(?:instagram|insta|facebook|tiktok|twitter|\bx\b|telegram|whatsapp|discord)[^.\n]{0,30}(?:historia|stories|comentario|mensaje|privado|grupo|publicaci[oó]n|respondi[oó]|vendedor|cuenta)|me escribi[oó] (?:por|al) privado|grupo de (?:fans|telegram|whatsapp|facebook)|alguien vende/i]},
+ {id:'friend',w:18,en:'A friend’s account suddenly sells tickets it “can’t use”',es:'La cuenta de un amigo de repente vende entradas que “no puede usar”',
+  wen:'Hacked Instagram and Facebook accounts are used to sell fake tickets to the owner’s friends, because you trust the name. Call your friend on the phone before paying.',wes:'Se usan cuentas de Instagram y Facebook hackeadas para vender entradas falsas a los amigos del dueño, porque confías en el nombre. Llama a tu amigo por teléfono antes de pagar.',
+  re:[/(?:friend|mate|cousin|colleague|classmate)(?:'s)?[^.\n]{0,40}(?:selling|sells|posted|story|can'?t (?:go|make it|use))|can'?t (?:go|make it) any ?more|(?:sick|ill|work came up|family emergency)[^.\n]{0,30}(?:tickets?|selling)/i,
+   /(?:amig[oa]|prim[oa]|compa[nñ]er[oa]|conocid[oa])[^.\n]{0,40}(?:vende|vendiendo|public[oó]|historia|no puede (?:ir|usarl))|ya no puede ir|no puedo ir|(?:enferm[oa]|me ha surgido|le ha surgido|un imprevisto)[^.\n]{0,30}(?:entradas?|vend)/i]},
+ {id:'cheap',w:14,en:'Sold-out event at face value or cheaper, or “last tickets”',es:'Evento agotado a precio original o más barato, o “últimas entradas”',
+  wen:'When an event is sold out, real resale prices go up, not down. A bargain on a sell-out is the bait.',wes:'Cuando un evento está agotado, la reventa real sube de precio, no baja. Una ganga en un lleno es el cebo.',
+  re:[/sold.?out|face value|(?:below|under|less than) (?:face value|the original price|what i paid)|cheaper than|half price|last (?:two |2 )?tickets|(?:great|good|crazy) (?:price|deal)/i,
+   /agotad[oa]s?|precio (?:original|de taquilla|oficial)|(?:m[aá]s barat[oa]s?|por debajo) (?:que|del) (?:precio|lo que)|mitad de precio|[uú]ltimas (?:dos |2 )?entradas|(?:buen|muy buen) precio|chollo|ganga/i]},
+ {id:'pdf',w:18,en:'Ticket sent as a screenshot, PDF or QR picture, or “after you pay”',es:'Entrada enviada como captura, PDF o foto del QR, o “cuando pagues”',
+  wen:'A screenshot or PDF can be copied and sold many times. Many events now use app tickets with rotating QR codes; ask for an official transfer inside the ticketing app.',wes:'Una captura o un PDF se pueden copiar y vender muchas veces. Muchos eventos usan entradas en la app con QR dinámico; pide una transferencia oficial dentro de la app de la ticketera.',
+  re:[/screenshot|screen ?shot|\bpdf\b|(?:photo|picture|pic|image) of (?:the )?(?:ticket|qr|barcode)|qr code|(?:send|email|forward)[^.\n]{0,25}(?:after|once) (?:i|you) (?:pay|paid|send)|after (?:payment|you pay)/i,
+   /captura|pantallazo|\bpdf\b|foto (?:de la entrada|del qr|del c[oó]digo)|c[oó]digo qr|\bqr\b|(?:te la|te las|las|la) (?:env[ií]o|mando|paso)[^.\n]{0,25}(?:cuando|despu[eé]s de|al) (?:pag|recib)|cuando pagues|despu[eé]s del pago/i]},
+ {id:'rush',w:12,en:'Pressure: other buyers waiting, pay now, deposit to reserve',es:'Presión: otros compradores esperando, paga ya, señal para reservar',
+  wen:'Urgency stops you from checking. A real seller can wait ten minutes while you verify.',wes:'La prisa te impide comprobar. Un vendedor real puede esperar diez minutos mientras verificas.',
+  re:[/(?:other|another|lots of|many|\d+) (?:people|buyers)[^.\n]{0,25}(?:interested|waiting|asking|want)|(?:pay|send it) (?:now|today|right away|in the next)|deposit to (?:reserve|hold|keep)|first (?:to pay|come)|(?:hold|reserve) (?:them|it) for you if/i,
+   /(?:otras?|m[aá]s|mucha|\d+) (?:personas?|gente|compradores?)[^.\n]{0,25}(?:interesad|esperando|preguntando|quieren)|(?:paga|p[aá]game|env[ií]a(?:lo)?) (?:ya|hoy|ahora)|se[nñ]al para (?:reservar|guardar)|el primero que pague|te las (?:guardo|reservo) si/i]},
+ {id:'site',w:18,en:'Unknown resale website, a lookalike address or an ad link',es:'Web de reventa desconocida, una dirección parecida a la oficial o un enlace de anuncio',
+  wen:'Fake ticket shops copy official designs and appear in search ads above the real seller. Type the official site address yourself or use the artist’s or club’s official link.',wes:'Las tiendas falsas de entradas copian el diseño oficial y aparecen en anuncios por encima del vendedor real. Escribe tú la dirección oficial o usa el enlace oficial del artista o del club.',
+  re:[/https?:\/\/(?![^\s\/]*\b(?:ticketmaster\.(?:es|com|co\.uk|fr|de)|seetickets\.com|dice\.fm|eventbrite\.(?:es|com)|entradas\.com|elcorteingles\.es|laliga\.com)\b)[^\s]*(?:ticket|entrada|tix|concert|festival|tour)[^\s]*|\b[a-z0-9]+-(?:tickets?|entradas?)[a-z0-9-]*\.(?:com|net|shop|store|xyz|top|online|site|live)\b|\.(?:shop|xyz|top|online|site|live|store)\b[^\n]{0,30}(?:ticket|entrada)|(?:google|instagram|facebook) (?:ad|advert|sponsored)/i,
+   /(?:anuncio|patrocinad[oa]) (?:de|en) (?:google|instagram|facebook)|web (?:que no conoc[ií]a|desconocida|rara)/i]},
+ {id:'notransfer',w:14,en:'Can’t transfer in the official app or change the name, “just use mine”',es:'No puede transferir en la app oficial ni cambiar el nombre, “usa la mía”',
+  wen:'Official apps let real owners transfer tickets in a few taps. An excuse not to transfer usually means there is no ticket, or it was sold already.',wes:'Las apps oficiales permiten a los dueños reales transferir entradas en pocos toques. Una excusa para no transferir suele significar que no hay entrada, o que ya la ha vendido.',
+  re:[/(?:can'?t|cannot|won'?t|unable to|not able to|no way to) (?:transfer|send (?:it|them) (?:in|through) the app|change the name)|(?:app|account) (?:is )?(?:locked|blocked|not working)|use (?:my|his|her) (?:account|login|name|id)|log ?in (?:to|with) my account|(?:just|simply) show (?:the|my) (?:screenshot|pdf)/i,
+   /no (?:puede|puedo|se puede) (?:transferir|pasarla por la app|cambiar el nombre)|(?:app|cuenta) (?:est[aá] )?(?:bloqueada|no funciona)|usa (?:mi|su) (?:cuenta|usuario|nombre|dni)|entra con mi cuenta|(?:solo|basta con) ense[nñ]ar (?:la captura|el pdf)/i]},
+ {id:'post',w:14,en:'Seller abroad or will post paper tickets or send them later by courier',es:'Vendedor en el extranjero o enviará entradas en papel por correo o mensajería',
+  wen:'If you cannot meet and you pay in advance for something “in the post”, you have no way to get your money back when nothing arrives.',wes:'Si no podéis veros y pagas por adelantado algo “que llega por correo”, no podrás recuperar el dinero cuando no llegue nada.',
+  re:[/(?:i'?m|he'?s|she'?s|currently|seller (?:is|lives)) (?:abroad|in (?:the uk|london|france|germany|another country|portugal))|(?:post|mail|courier|ship|send)[^.\n]{0,25}(?:paper|physical|hard) tickets?|(?:tickets?|them) (?:by|in the) (?:post|mail|courier)/i,
+   /(?:est[aá]|estoy|vive) (?:fuera|en el extranjero|en (?:londres|francia|alemania|portugal|otro pa[ií]s))|(?:por|enviar[eé]?|mandar[eé]?)[^.\n]{0,25}(?:correo|mensajer[ií]a|seur|mrw|correos)[^.\n]{0,25}entradas?|entradas? (?:en papel|f[ií]sicas)[^.\n]{0,25}(?:correo|env[ií]o|mensajer)/i]},
+ {id:'fee',w:20,en:'Asks for an extra fee to “unlock”, insure or release the tickets',es:'Pide una tasa extra para “desbloquear”, asegurar o liberar las entradas',
+  wen:'After the first payment comes a “transfer fee”, “insurance” or “verification” charge. It never ends because there is no ticket.',wes:'Tras el primer pago llega una “tasa de transferencia”, un “seguro” o un cargo de “verificación”. Nunca termina porque no hay entrada.',
+  re:[/(?:transfer|release|unlock|insurance|verification|activation|platform|processing) (?:fee|charge|payment|cost)|pay (?:a little |a bit )?more (?:to|for|before)|(?:another|one more|extra) (?:payment|fee|\d+ ?(?:€|eur|euros?))/i,
+   /(?:tasa|cargo|coste|comisi[oó]n) (?:de|por) (?:transferencia|liberaci[oó]n|desbloqueo|seguro|verificaci[oó]n|activaci[oó]n|plataforma)|pagar (?:un poco )?m[aá]s (?:para|antes)|(?:otro|un [uú]ltimo) pago|(?:otros|\d+) (?:€|euros) m[aá]s/i]}
+];
+function analyze(text,url){
+  var t=(text||'')+'\n'+(url||''),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  var official=/(?:official (?:resale|exchange|fan to fan|app|website|ticketing)|reventa oficial|intercambio oficial|web oficial|app oficial|ticketmaster(?: fan.to.fan| resale)?|transferred? (?:it|them)? ?(?:in|through) the (?:official )?app|me (?:la|las) transfiri[oó] (?:en|por) la app)/i.test(t);
+  if(n>=4)score+=8;
+  if(on('fee'))score=Math.max(score,82);
+  if(on('friend')&&on('pay'))score=Math.max(score,80);
+  if(on('pay')&&(on('pdf')||on('notransfer')||on('post')))score=Math.max(score,75);
+  if(on('pay')&&on('cheap')&&on('social'))score=Math.max(score,75);
+  if(on('site')&&(on('cheap')||on('rush')))score=Math.max(score,70);
+  if(on('pay'))score=Math.max(score,45);
+  if(on('site'))score=Math.max(score,45);
+  if(official&&!on('pay')&&!on('fee')&&!on('site'))score=Math.min(score,10);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Estafa de entradas casi segura','Encaja con un guion conocido: evento agotado, vendedor en redes, pago sin protección y una entrada que no puedes comprobar. No pagues.']:['Almost certainly a ticket scam','This matches a known script: a sold-out event, a seller on social media, a payment with no protection and a ticket you cannot verify. Do not pay.'];
+  if(s>=40)return es?['Muchas banderas rojas','Solo sigue si el vendedor acepta la reventa oficial o una transferencia dentro de la app oficial, y pagas con protección al comprador.']:['Big red flags','Only continue if the seller agrees to the official resale exchange or an in-app transfer, and you pay with buyer protection.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. Pide la transferencia oficial en la app y no pagues por Bizum ni transferencia.']:['Kinda sus','Some classic signals. Ask for an official in-app transfer and do not pay by Bizum or bank transfer.'];
+  return es?['Pocas banderas','No salta casi nada. Aun así, compra en el vendedor oficial o su reventa oficial y paga con tarjeta.']:['Few flags','Not much trips the rules. Still, buy from the official seller or its official resale exchange and pay by card.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  L.push(es?'Mira primero la reventa oficial del evento (la ticketera, el club o el festival). Si hay entradas allí, cómpralas allí.':'Check the event’s official resale first (the ticketing company, the club or the festival). If tickets are there, buy them there.');
+  L.push(es?'Pide que te la transfieran dentro de la app oficial y acepta la transferencia antes de pagar, o paga por una plataforma que retenga el dinero.':'Ask for a transfer inside the official app and accept it before paying, or pay through a platform that holds the money.');
+  L.push(es?'Paga con tarjeta o con un método con protección al comprador. Nunca Bizum, transferencia, PayPal amigos y familiares ni cripto a un desconocido.':'Pay by card or with buyer protection. Never Bizum, bank transfer, PayPal friends and family or crypto to a stranger.');
+  if(on('friend'))L.push(es?'Llama a tu amigo por teléfono (no por el mismo chat). Si no sabe nada, su cuenta está hackeada: avísale.':'Phone your friend (not in the same chat). If they know nothing, their account is hacked: tell them.');
+  if(on('site'))L.push(es?'Cierra esa web. Escribe tú la dirección oficial o entra desde el enlace oficial del artista o del club.':'Close that site. Type the official address yourself or use the artist’s or club’s official link.');
+  if(on('fee'))L.push(es?'No pagues ninguna tasa extra. Ese pago no desbloquea nada.':'Do not pay any extra fee. That payment unlocks nothing.');
+  if(on('pdf'))L.push(es?'Una captura o PDF no garantiza nada: puede haberse vendido a muchas personas.':'A screenshot or PDF guarantees nothing: it may have been sold to many people.');
+  L.push(es?'Si ya pagaste, contacta ya con tu banco o app de pago, guarda la conversación y el perfil, denuncia la cuenta y ve a la policía.':'If you already paid, contact your bank or payment app now, keep the chat and the profile, report the account and go to the police.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Saw a story from my friend Marta on Instagram, she is sick and can\'t go anymore so she is selling 2 tickets for the sold-out concert at face value. She asked me to pay 180€ by Bizum and she will send the PDF after you pay.',u:'Instagram'},
+ {t:'Un vendedor me respondió en X a mi mensaje de "alguien vende" para el partido del sábado, que está agotado. Me pide pagar por Bizum hoy porque hay otras personas interesadas, y me manda una captura del QR.',u:'X'},
+ {t:'I found cheap tickets for the festival through a Google sponsored ad. The site looks official but after paying they want a 45€ transfer fee to unlock the tickets.',u:'https://festival-tickets-official.shop'},
+ {t:'En un grupo de Telegram de fans venden entradas para el festival más baratas que el precio original. El vendedor está en Londres, dice que no puede transferir en la app y que usemos su cuenta. Pago por transferencia.',u:'Telegram'},
+ {t:'I bought two tickets on the official resale exchange of the ticketing site, paid by card and they were transferred to me in the official app.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
