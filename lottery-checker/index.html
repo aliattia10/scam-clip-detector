@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lottery and Prize Scam Checker: fake EuroMillions, Lotería, ONCE and “you’ve won” messages (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Got an email, WhatsApp or SMS saying you won the EuroMillions, the Lotería de Navidad, an ONCE draw or a prize you never entered? Paste it and get a free rule-based red-flag score for upfront taxes and fees, bank detail requests, Bizum or crypto payments, fake certificates and lookalike domains. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/lottery-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="Did you really win? Free lottery and prize scam checker">
+<meta property="og:description" content="Paste the “you have won” message. Get a red-flag score for prizes you never entered, upfront taxes and courier fees, bank detail requests, fake certificates and lookalike domains.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/lottery-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/lottery-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lottery and prize scam checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for fake lottery wins, prize emails and “pay the tax first” messages, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/lottery-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Lottery Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/shop-checker/" data-i18n="navi">Shop</a>
+      <a class="hide-m" href="/sms-checker/" data-i18n="navs">SMS</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">Did you really <em>win?</em></h1>
+    <p class="sub" data-i18n="sub">Paste the message: an email, WhatsApp or SMS saying you won the EuroMillions, the Christmas lottery, an ONCE draw, a phone company promo or a car, even though you never bought a ticket. Then it asks for a tax, a courier fee or your bank details to “release” the prize. In one second you get a red-flag score and what to do before you reply.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a “you have won” message</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not prove the prize is real. Real lotteries never ask you to pay anything to collect a prize; check your ticket yourself on the operator’s official website or at an official lottery outlet.</p>
+    <label for="txt" data-i18n="l1">Paste the message, email or what they told you</label>
+    <textarea id="txt" placeholder="e.g. Email: Congratulations, your email was selected in the EuroMillions international draw and you won 850,000 EUR. To release the funds, pay the 1,200 EUR tax and send your bank details to our claims agent within 48 hours."></textarea>
+    <label for="url" data-i18n="l2">Sender, web address or where it came from (optional)</label>
+    <input type="text" id="url" placeholder="e.g. premios@euromillones-pagos.com, WhatsApp +44, SMS" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: EuroMillions email, pay tax</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: ES WhatsApp, pay by Bizum</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: courier fee for a car</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: ES certificate PDF</button>
+      <button class="chip" onclick="ex(4)" data-i18n="e4">Example: real ticket I bought</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do before you reply</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">No ticket, no prize</b><p data-i18n="c1p">You cannot win a lottery you never entered. “Your email or phone number was selected in a random draw” is the opening line of the scam, not of a win.</p></div>
+    <div class="card"><b data-i18n="c2h">Real prizes never cost money</b><p data-i18n="c2p">In Spain, tax on big lottery prizes is withheld from the prize itself. Nobody asks you to pay a tax, notary, customs or courier fee in advance to receive it.</p></div>
+    <div class="card"><b data-i18n="c3h">Official look, fake source</b><p data-i18n="c3p">Logos, stamps, case numbers and a PDF “winning certificate” take minutes to fake. Check the operator’s real website yourself instead of the link or number in the message.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it stopped you paying a “tax” on a prize that never existed, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/shop-checker/" data-i18n="moresh">Fake shop checker</a>
+    <a href="/ticket-checker/" data-i18n="moret">Ticket scam checker</a>
+    <a href="/marketplace-checker/" data-i18n="morem">Marketplace scam checker</a>
+    <a href="/romance-checker/" data-i18n="morer2">Romance scam checker</a>
+    <a href="/investment-checker/" data-i18n="morei">Investment scam checker</a>
+    <a href="/call-checker/" data-i18n="morec">Scam call checker</a>
+    <a href="/sms-checker/" data-i18n="mores2">SMS / WhatsApp checker</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/shop-checker/" data-i18n="fsh">Shop checker</a> · <a href="/ticket-checker/" data-i18n="ftk">Ticket checker</a> · <a href="/marketplace-checker/" data-i18n="fm">Marketplace checker</a> · <a href="/romance-checker/" data-i18n="fro">Romance checker</a> · <a href="/investment-checker/" data-i18n="fi">Investment checker</a> · <a href="/call-checker/" data-i18n="fc">Call checker</a> · <a href="/sms-checker/" data-i18n="fs">SMS checker</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Lottery operators, charities, banks, couriers and brands appear only because scammers impersonate them; they are not accused of anything. Not legal or tax advice. If you already paid or shared bank details, call your bank right away to block cards and try to recall the payment, change your online banking password, keep the messages, emails and documents, and report it to the police. In Spain you can also call INCIBE’s free helpline on 017.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{"brand": "Lottery Checker", "navd": "Scam-Clip Detector", "navi": "Shop", "navs": "SMS", "h1": "Did you really <em>win?</em>", "sub": "Paste the message: an email, WhatsApp or SMS saying you won the EuroMillions, the Christmas lottery, an ONCE draw, a phone company promo or a car, even though you never bought a ticket. Then it asks for a tax, a courier fee or your bank details to “release” the prize. In one second you get a red-flag score and what to do before you reply.", "h2": "Check a “you have won” message", "hint": "Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not prove the prize is real. Real lotteries never ask you to pay anything to collect a prize; check your ticket yourself on the operator’s official website or at an official lottery outlet.", "l1": "Paste the message, email or what they told you", "l2": "Sender, web address or where it came from (optional)", "go": "Check it", "e0": "Example: EuroMillions email, pay tax", "e1": "Example: ES WhatsApp, pay by Bizum", "e2": "Example: courier fee for a car", "e3": "Example: ES certificate PDF", "e4": "Example: real ticket I bought", "of": "/ 100 scam score", "todoh": "What to do before you reply", "c1h": "No ticket, no prize", "c1p": "You cannot win a lottery you never entered. “Your email or phone number was selected in a random draw” is the opening line of the scam, not of a win.", "c2h": "Real prizes never cost money", "c2p": "In Spain, tax on big lottery prizes is withheld from the prize itself. Nobody asks you to pay a tax, notary, customs or courier fee in advance to receive it.", "c3h": "Official look, fake source", "c3p": "Logos, stamps, case numbers and a PDF “winning certificate” take minutes to fake. Check the operator’s real website yourself instead of the link or number in the message.", "ctah": "Want to roast these on camera?", "ctap": "The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.", "ctab": "See the Script Pack", "tiph": "Tip jar", "tipp": "This checker is free and stays free. If it stopped you paying a “tax” on a prize that never existed, you can tip.", "tipb": "Tip via PayPal", "moresh": "Fake shop checker", "moret": "Ticket scam checker", "morer2": "Romance scam checker", "morei": "Investment scam checker", "morec": "Scam call checker", "mores2": "SMS / WhatsApp checker", "morem": "Marketplace scam checker", "morer": "Rental listing checker", "morerec": "Crypto recovery checker", "morep": "Phishing / invoice checker", "morej": "Job offer checker", "moreg": "Giveaway / airdrop checker", "moresig": "Signal / VIP group checker", "mores": "900 Shorts guide (19€)", "fd": "Scam-Clip Detector", "fsh": "Shop checker", "ftk": "Ticket checker", "fro": "Romance checker", "fi": "Investment checker", "fc": "Call checker", "fs": "SMS checker", "fm": "Marketplace checker", "fr": "Rental checker", "frec": "Recovery checker", "fpish": "Phishing checker", "fj": "Job offer checker", "fg": "Giveaway checker", "fp": "Scam-Roast Script Pack", "ft": "Tip jar", "disc": "Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Lottery operators, charities, banks, couriers and brands appear only because scammers impersonate them; they are not accused of anything. Not legal or tax advice. If you already paid or shared bank details, call your bank right away to block cards and try to recall the payment, change your online banking password, keep the messages, emails and documents, and report it to the police. In Spain you can also call INCIBE’s free helpline on 017."},
+ es:{"brand": "Comprobador de premios", "navd": "Detector de estafas", "navi": "Tiendas", "navs": "SMS", "h1": "¿De verdad te ha <em>tocado?</em>", "sub": "Pega el mensaje: un email, WhatsApp o SMS que dice que te ha tocado el Euromillones, la Lotería de Navidad, un sorteo de la ONCE, una promoción de tu compañía de teléfono o un coche, aunque nunca compraste ningún boleto. Luego te pide una tasa, unos gastos de envío o tus datos bancarios para “liberar” el premio. En un segundo tienes una nota de banderas rojas y qué hacer antes de contestar.", "h2": "Comprueba un mensaje de “has ganado”", "hint": "Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples: una nota baja no demuestra que el premio sea real. Las loterías de verdad nunca te piden pagar nada para cobrar un premio; comprueba tú el boleto en la web oficial del operador o en una administración de lotería.", "l1": "Pega el mensaje, el email o lo que te dijeron", "l2": "Remitente, dirección web o de dónde vino (opcional)", "go": "Comprobar", "e0": "Ejemplo: email del Euromillones, paga la tasa", "e1": "Ejemplo: WhatsApp, paga por Bizum", "e2": "Ejemplo: envío de un coche", "e3": "Ejemplo: certificado en PDF", "e4": "Ejemplo: décimo que sí compré", "of": "/ 100 nota de estafa", "todoh": "Qué hacer antes de contestar", "c1h": "Sin boleto no hay premio", "c1p": "No puede tocarte un sorteo en el que no participaste. “Tu email o tu número ha sido seleccionado en un sorteo” es el principio de la estafa, no de un premio.", "c2h": "Un premio real nunca cuesta dinero", "c2p": "En España, el impuesto de los premios grandes se retiene del propio premio. Nadie te pide pagar por adelantado Hacienda, notario, aduanas ni mensajería para recibirlo.", "c3h": "Aspecto oficial, origen falso", "c3p": "Logos, sellos, números de expediente y un “certificado de premio” en PDF se falsifican en minutos. Entra tú en la web real del operador en lugar de usar el enlace o el teléfono del mensaje.", "ctah": "¿Quieres hacer un roast de esto en vídeo?", "ctap": "El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) sobre las estafas más comunes. Paga lo que quieras, desde 5 €.", "ctab": "Ver el pack de guiones", "tiph": "Bote de propinas", "tipp": "Este comprobador es gratis y seguirá siéndolo. Si te ahorró pagar una “tasa” por un premio que nunca existió, puedes dejar una propina.", "tipb": "Propina por PayPal", "moresh": "Comprobador de tiendas online", "moret": "Comprobador de entradas", "morer2": "Comprobador de romances", "morei": "Comprobador de inversiones", "morec": "Comprobador de llamadas", "mores2": "Comprobador de SMS / WhatsApp", "morem": "Comprobador de segunda mano", "morer": "Comprobador de alquileres", "morerec": "Comprobador de recuperación de cripto", "morep": "Comprobador de phishing / facturas", "morej": "Comprobador de ofertas de trabajo", "moreg": "Comprobador de sorteos / airdrops", "moresig": "Comprobador de grupos VIP / señales", "mores": "Guía de 900 Shorts (19 €)", "fd": "Detector de estafas", "fsh": "Comprobador de tiendas", "ftk": "Comprobador de entradas", "fro": "Comprobador de romances", "fi": "Comprobador de inversiones", "fc": "Comprobador de llamadas", "fs": "Comprobador de SMS", "fm": "Comprobador de segunda mano", "fr": "Comprobador de alquileres", "frec": "Comprobador de recuperación", "fpish": "Comprobador de phishing", "fj": "Comprobador de ofertas", "fg": "Comprobador de sorteos", "fp": "Pack de guiones Scam-Roast", "ft": "Bote de propinas", "disc": "Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. Los operadores de lotería, ONG, bancos, empresas de mensajería y marcas aparecen solo porque los estafadores se hacen pasar por ellos; no se les acusa de nada. No es asesoramiento legal ni fiscal. Si ya pagaste o diste tus datos bancarios, llama ya a tu banco para bloquear las tarjetas e intentar recuperar el pago, cambia la contraseña de la banca online, guarda los mensajes, emails y documentos, y denúncialo a la policía. También puedes llamar gratis al 017, la línea de ayuda en ciberseguridad de INCIBE."}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|won'?t|will not|didn'?t|did not|don'?t|do not|hasn'?t|has not|no need to|nunca|jam[aá]s|no me|no te|no ha|no hace falta|sin)[^.!?\n]{0,30}$/i.test(t.slice(Math.max(0,idx-40),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'fee',w:26,neg:true,en:'You must pay a tax, fee, customs, notary, insurance or courier charge before you get the prize',es:'Tienes que pagar un impuesto, tasa, aduana, notario, seguro o mensajería antes de recibir el premio',
+  wen:'This is the whole scam. Real lotteries pay you; tax on big prizes is withheld from the prize itself. Any “fee to release the prize” goes straight to the scammer, and there is always a second fee.',wes:'Esta es toda la estafa. Las loterías reales te pagan a ti; el impuesto de los premios grandes se retiene del propio premio. Cualquier “tasa para liberar el premio” va directa al estafador, y siempre llega una segunda tasa.',
+  re:[/(?:pay|send|transfer|cover|deposit)[^.\n]{0,40}(?:tax|taxes|fee|fees|charge|customs|duty|notary|insurance|courier|delivery|shipping|processing|handling|clearance|transfer cost|release|activation|registration)|(?:tax|taxes|fee|fees|customs|duty|notary|insurance|courier|delivery|shipping|processing|handling|clearance|release|activation|registration) (?:fee |charge |cost )?(?:of|is|first|before|in advance|upfront)|(?:to|before (?:we|they) can) (?:release|send|transfer|deliver|unlock|process) (?:the |your )?(?:prize|winnings|funds|money|payment|car|parcel)|(?:upfront|advance|in advance) (?:fee|payment|tax)/i,
+   /(?:paga[rs]?|pague|ingresa[rs]?|abona[rs]?|transfiere|env[ií]a[rs]?|enviar|adelanta[rs]?)[^.\n]{0,40}(?:impuesto|tasa|tasas|hacienda|aduana|notar[ií]a|notario|seguro|gastos|env[ií]o|mensajer[ií]a|tramitaci[oó]n|gesti[oó]n|liberaci[oó]n|transferencia internacional|comisi[oó]n|fianza|activaci[oó]n)|(?:tasa|tasas|impuesto|gastos|comisi[oó]n) (?:de )?(?:liberaci[oó]n|tramitaci[oó]n|gesti[oó]n|env[ií]o|aduana|notar[ií]a|transferencia|seguro|hacienda)|para (?:liberar|recibir|cobrar|desbloquear|tramitar|enviarte) (?:el |tu )?(?:premio|dinero|coche|paquete|pago|importe)|(?:por|de) adelantado/i]},
+ {id:'pay',w:20,neg:true,en:'Wants Bizum, bank transfer, Western Union, crypto or gift cards',es:'Pide Bizum, transferencia, Western Union, cripto o tarjetas regalo',
+  wen:'Payment methods you cannot reverse are the scammer’s favourite. A real prize office never asks you to send money through Bizum, crypto or vouchers.',wes:'Los pagos que no se pueden anular son los favoritos del estafador. Una oficina de premios real nunca te pide dinero por Bizum, cripto ni vales.',
+  re:[/\bbizum\b|bank transfer|wire (?:it|the money|transfer)|\biban\b|western union|moneygram|\bria\b money|\b(?:usdt|bitcoin|btc|crypto|ethereum)\b|gift ?cards?|google play cards?|(?:itunes|apple|amazon|steam) (?:gift )?cards?|paysafe ?card|prepaid (?:card|voucher)/i,
+   /\bbizum\b|transferencia|\biban\b|western union|moneygram|\b(?:usdt|bitcoin|btc|cripto|criptomonedas?)\b|tarjetas? regalo|tarjetas? (?:de )?(?:google play|amazon|itunes|apple|steam)|paysafe ?card|tarjeta prepago|cupones?/i]},
+ {id:'unsol',w:18,en:'You won something you never entered: “your email or number was selected”',es:'Te ha tocado algo en lo que no participaste: “tu email o tu número ha sido seleccionado”',
+  wen:'You cannot win a lottery without a ticket. “Selected at random from email addresses or phone numbers” is not how any real lottery works.',wes:'No te puede tocar una lotería sin boleto. “Elegido al azar entre direcciones de email o números de teléfono” no es como funciona ninguna lotería real.',
+  re:[/(?:never|didn'?t|did not|don'?t remember|do not remember) (?:enter(?:ed)?|bought|buy|play(?:ed)?|take part|took part|sign(?:ed)? up|participat)|(?:your|this) (?:e-?mail|email address|phone|mobile|number|whatsapp|account)[^.\n]{0,40}(?:selected|chosen|picked|drawn|won|winner|winning)|(?:selected|chosen|picked) (?:at random|randomly|as (?:a|the|one of)[^.\n]{0,20}winners?)|random (?:e-?mail|draw|selection|ballot)|(?:international|online|e-?mail|whatsapp|mobile|internet|anniversary|annual|promotional) (?:lottery|lotto|draw|promotion|award|sweepstakes?)|lucky (?:winner|number|draw)/i,
+   /(?:nunca|no) (?:he |hab[ií]a )?(?:compr[eé]|comprado|jugu[eé]|jugado|particip[eé]|participado|me apunt[eé]|me he apuntado|me inscrib[ií])|no recuerdo (?:haber )?(?:comprado|jugado|participado)|(?:tu|su|este) (?:e-?mail|correo|direcci[oó]n de correo|tel[eé]fono|m[oó]vil|n[uú]mero|whatsapp|cuenta)[^.\n]{0,40}(?:seleccionad[oa]|elegid[oa]|premiad[oa]|ganador|agraciad[oa])|(?:seleccionad[oa]|elegid[oa]) (?:al azar|aleatoriamente|como (?:uno de los )?ganador)|sorteo (?:internacional|online|por (?:e-?mail|correo|internet)|aleatorio|de aniversario|electr[oó]nico)|loter[ií]a (?:internacional|online|por (?:e-?mail|correo|internet)|electr[oó]nica)|afortunad[oa] ganador/i]},
+ {id:'bank',w:18,neg:true,en:'Asks for bank details, card number, PIN, online banking login or a copy of your ID',es:'Pide datos bancarios, número de tarjeta, PIN, claves de la banca online o una copia del DNI',
+  wen:'With your card, banking login or ID they can empty your account or open loans in your name. To pay a real prize, nobody needs your PIN or your password.',wes:'Con tu tarjeta, tus claves o tu DNI pueden vaciarte la cuenta o pedir préstamos a tu nombre. Para pagar un premio real nadie necesita tu PIN ni tu contraseña.',
+  re:[/bank (?:details|account details|information|info|login)|account (?:number|details)|card (?:number|details)|\bcvv\b|\bcvc\b|\bpin\b|online banking (?:password|login|details)|(?:copy|photo|scan) of (?:your )?(?:id|passport|dni|driving licen[cs]e)|(?:id|passport) (?:copy|photo|scan)|date of birth and address|verification code|sms code|one.time (?:code|password)/i,
+   /datos (?:bancarios|de (?:tu|su|la) (?:cuenta|tarjeta))|n[uú]mero de (?:cuenta|tarjeta)|\bcvv\b|\bcvc\b|\bpin\b|claves? (?:de (?:la )?banca|del banco|de acceso)|contrase[nñ]a (?:del banco|de la banca)|(?:copia|foto|escaneo) (?:de(?:l)? |de tu |de su )?(?:dni|nie|pasaporte|carn[eé])|c[oó]digo (?:de verificaci[oó]n|que te llegue|sms|por sms)/i]},
+ {id:'docs',w:12,en:'Official-looking proof: PDF certificate, stamps, case or ticket numbers, a lawyer, notary or “claims agent”',es:'Pruebas con aspecto oficial: certificado en PDF, sellos, número de expediente o de boleto, abogado, notario o “agente de reclamaciones”',
+  wen:'Scammers send stamped PDFs, reference numbers and letters from fake lawyers, banks or ministries because they look serious. They prove nothing.',wes:'Los estafadores mandan PDF con sellos, números de referencia y cartas de falsos abogados, bancos o ministerios porque parecen serios. No demuestran nada.',
+  re:[/certificate|(?:winning|prize|award) (?:notification|letter|document|form)|claim (?:form|number|code|agent|officer)|(?:reference|ref|batch|ticket|serial|case|file) (?:number|no\.?|code)|\bref(?:erence)?[:#]|notary|lawyer|solicitor|attorney|barrister|fiduciary|claims? (?:agent|department|office|manager)|(?:payment|paying|remittance) (?:agent|bank|officer)|central bank|ministry of finance|\bstamp(?:ed)?\b|official seal|signed by the director/i,
+   /certificado|carta de (?:premio|notificaci[oó]n)|notificaci[oó]n (?:oficial|de premio)|formulario de (?:reclamaci[oó]n|cobro)|(?:n[uú]mero|c[oó]digo) de (?:referencia|expediente|boleto|lote|serie|reclamaci[oó]n|ganador)|\bref(?:erencia)?[:#]|notari[oa]|abogad[oa]|letrad[oa]|despacho|agente (?:de reclamaciones|fiduciario|de pagos|pagador)|departamento de (?:reclamaciones|premios|pagos)|banco de espa[nñ]a|ministerio de hacienda|agencia tributaria|sello oficial|firmado por el director/i]},
+ {id:'domain',w:16,en:'Lookalike web address or a free email address pretending to be the lottery',es:'Dirección web parecida o un email gratuito que se hace pasar por la lotería',
+  wen:'Real operators write from their own official domain. Gmail, Outlook or addresses like “euromillions-claims.net” or “loterias-pagos.com” are a giveaway.',wes:'Los operadores reales escriben desde su propio dominio oficial. Gmail, Outlook o direcciones como “euromillones-pagos.com” o “loterias-premios.net” lo delatan.',
+  re:[/@(?:gmail|hotmail|outlook|live|yahoo|aol|proton(?:mail)?|gmx|mail|yandex|zoho)\.[a-z]{2,4}\b|\b[a-z0-9-]*(?:lotter(?:y|ies)|loteri(?:a|as)|lotto|euromill(?:ions|ones)|primitiva|bonoloto|selae|once|gordo|jackpot|sweepstakes?|premios?|prize|award|winners?|ganadores?)[a-z0-9-]*\.(?:com|net|org|info|biz|co|eu|online|site|top|xyz|shop|live|click|vip|icu|cfd|sbs)\b|\b[a-z0-9-]+-(?:claims?|pagos?|premios?|payout|winners?|ganadores?|oficial|official|support|soporte)\.[a-z]{2,6}\b|bit\.ly|tinyurl|wa\.me\/\+?(?:44|234|233|1|27|91)/i,
+   /@(?:gmail|hotmail|outlook|live|yahoo|aol|gmx)\.[a-z]{2,4}\b/i]},
+ {id:'premium',w:12,en:'Call or text a premium or foreign number, or reply on WhatsApp or Telegram to claim',es:'Llama o escribe a un número de tarificación especial o extranjero, o contesta por WhatsApp o Telegram para reclamar',
+  wen:'Premium-rate numbers (806, 807, 803, 905 in Spain) bill you by the minute while they “check your prize”. Foreign numbers and chat apps keep the scammer out of reach.',wes:'Los números de tarificación especial (806, 807, 803, 905) te cobran por minuto mientras “comprueban tu premio”. Los números extranjeros y las apps de chat dejan al estafador fuera de alcance.',
+  re:[/\b(?:80[3-7]|905|118\d\d)\s?\d{2,3}\s?\d{2,3}\b|premium.rate|(?:call|text|ring|contact|message|whatsapp|reply)[^.\n]{0,30}(?:\+|00)(?:44|234|233|229|27|1|91|371|372)\b|(?:\+|00)(?:234|233|229)\b|(?:contact|reply|message|write)[^.\n]{0,25}(?:on|via|by) (?:whatsapp|telegram|signal)|whatsapp (?:only|us|this number)/i,
+   /tarificaci[oó]n (?:especial|adicional)|ll[aá]m(?:a|e|anos) (?:al|a este)|(?:escr[ií]be(?:nos)?|contesta|responde|contacta)[^.\n]{0,30}(?:por|en|a trav[eé]s de) (?:whatsapp|telegram|signal)|solo por whatsapp/i]},
+ {id:'rush',w:10,en:'Deadline or secrecy: “claim within 48 hours”, “keep this confidential”',es:'Prisa o secreto: “reclama en 48 horas”, “mantén esto en secreto”',
+  wen:'Deadlines stop you from asking anyone. Secrecy stops your family or bank from telling you it is a scam. Real prizes give you months to claim.',wes:'Los plazos impiden que preguntes a nadie. El secreto impide que tu familia o tu banco te digan que es una estafa. Los premios reales dan meses para cobrar.',
+  re:[/within (?:\d+|twenty.four|forty.eight|seventy.two) ?(?:hours|hrs|h|days)|(?:\d+|24|48|72) ?(?:hours|hrs|h) to (?:claim|respond|reply|pay)|(?:or|otherwise) (?:the |your )?(?:prize|winnings|money|funds)[^.\n]{0,25}(?:forfeit|cancel|lost|void|return|reassign|given)|forfeit|(?:keep|treat) (?:this|it|your win)[^.\n]{0,20}(?:confidential|secret|private)|do not (?:tell|share|inform) (?:anyone|anybody|your (?:bank|family))|(?:urgent|immediately|asap|final notice|last reminder)/i,
+   /(?:en|dentro de|antes de) (?:\d+|veinticuatro|cuarenta y ocho|setenta y dos) ?(?:horas|h|d[ií]as)|(?:perder[aá]s?|se perder[aá]|se anular[aá]|caduca(?:r[aá])?|se reasignar[aá]|se entregar[aá] a otro)[^.\n]{0,25}(?:premio|dinero|importe)?|(?:mant[eé]n|mantenga|guarde|guarda)[^.\n]{0,20}(?:confidencial|en secreto|en privado)|no (?:se lo digas|lo comentes|informe|lo cuentes) (?:a nadie|a tu banco|a su banco|a tu familia)|(?:urgente|inmediatamente|[uú]ltimo aviso|aviso final)/i]},
+ {id:'big',w:8,en:'Huge or vague prize: hundreds of thousands, millions, a car, a phone or “cash award”',es:'Premio enorme o vago: cientos de miles, millones, un coche, un móvil o un “premio en metálico”',
+  wen:'A fortune you did not expect makes people skip every check. The bigger the number, the more a small “fee” seems worth paying.',wes:'Una fortuna inesperada hace que te saltes todas las comprobaciones. Cuanto más grande la cifra, más “razonable” parece pagar una pequeña tasa.',
+  re:[/\b\d{1,3}(?:[.,\s]\d{3}){1,3}(?:[.,]\d{2})?\s?(?:€|eur|euros?|usd|dollars|gbp|pounds)\b|(?:€|\$|£)\s?\d{1,3}(?:[.,\s]\d{3}){1,3}|\b\d+(?:[.,]\d+)?\s?(?:million|millones|m) ?(?:€|eur|euros?|dollars|pounds)?|jackpot|cash (?:prize|award)|lump sum|(?:won|win|winner of) (?:a |an |the )?(?:new )?(?:car|iphone|samsung|mercedes|bmw|tesla|house|villa)/i,
+   /\b\d{1,3}(?:[.,\s]\d{3}){1,3}(?:[.,]\d{2})?\s?(?:€|eur|euros?)\b|\b\d+(?:[.,]\d+)?\s?millones|bote|premio en (?:met[aá]lico|efectivo)|(?:ganado|ganador de|te ha tocado) (?:un |una |el )?(?:coche|iphone|m[oó]vil|samsung|mercedes|bmw|piso|casa)/i]},
+ {id:'brand',w:8,en:'Uses a real lottery, operator or big brand name: EuroMillions, Lotería, ONCE, Powerball, a phone or tech company',es:'Usa el nombre de una lotería, operador o marca real: Euromillones, Lotería Nacional, ONCE, Powerball, una compañía de teléfono o tecnológica',
+  wen:'Scammers borrow the names of lotteries and brands you already trust. A real operator will never contact you out of the blue about a ticket you did not buy.',wes:'Los estafadores usan nombres de loterías y marcas en las que ya confías. Un operador real nunca te contacta de la nada por un boleto que no compraste.',
+  re:[/\b(?:euro ?millions?|euromillones|euro ?jackpot|primitiva|bonoloto|el gordo|gordo de navidad|loter[ií]a (?:nacional|de navidad)|christmas lottery|national lottery|loter[ií]as y apuestas|selae|cup[oó]n(?:azo)? de la once|powerball|mega ?millions|lotto|microsoft|google|whatsapp|facebook|meta|coca.?cola|amazon|apple|samsung|vodafone|movistar|orange|lidl|mercadona|carrefour|el corte ingl[eé]s|unicef|united nations|\bun\b lottery|world bank|imf|fbi)\b/i,/\bONCE\b/,/\b(?:de la|la) once\b/i]}
+];
+function analyze(text,url){
+  var t=(text||'')+'\n'+(url||''),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  var legit=/(?:i (?:bought|have|had|got) (?:a |the |my |an )?(?:ticket|d[eé]cimo|coupon)|(?:my|the) (?:own )?ticket (?:i bought|from (?:the|an|a) (?:shop|outlet|kiosk|lottery shop))|checked (?:it |the (?:ticket|numbers|results) )?(?:myself )?on the (?:official|operator)|(?:compr[eé]|tengo|llevo|juego) (?:un |el |mi |una )?(?:d[eé]cimo|boleto|cup[oó]n|participaci[oó]n)|(?:lo |la )?comprob[eé] (?:yo )?(?:en la web oficial|en la administraci[oó]n|en loteriasyapuestas|en la app oficial)|loteriasyapuestas\.es|juegosonce\.es|administraci[oó]n de loter[ií]a|lottery (?:shop|outlet|kiosk)|kiosko? de la once|vendedor(?:a)? de la once)/i.test(t);
+  if(n>=4)score+=8;
+  if(on('fee'))score=Math.max(score,82);
+  if(on('pay')&&(on('unsol')||on('brand')||on('docs')||on('big')))score=Math.max(score,80);
+  if(on('bank')&&(on('unsol')||on('big')||on('docs')||on('domain')))score=Math.max(score,76);
+  if(on('unsol')&&(on('big')||on('brand')))score=Math.max(score,72);
+  if(on('docs')&&(on('unsol')||on('domain')))score=Math.max(score,70);
+  if(on('premium')&&(on('unsol')||on('big')||on('brand')))score=Math.max(score,68);
+  if(on('domain')&&(on('brand')||on('big')))score=Math.max(score,62);
+  if(on('unsol'))score=Math.max(score,45);
+  if(on('pay'))score=Math.max(score,40);
+  if(on('bank'))score=Math.max(score,40);
+  if(legit&&!on('fee')&&!on('pay')&&!on('bank')&&!on('unsol')&&!on('domain')&&!on('premium'))score=Math.min(score,10);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Estafa de premio casi segura','Encaja con un guion conocido: un premio que no esperabas, nombres oficiales y una tasa, un pago o tus datos para “liberarlo”. No pagues nada, no envíes datos y no contestes.']:['Almost certainly a prize scam','This matches a known script: a prize you were not expecting, official-sounding names and a fee, a payment or your details to “release” it. Do not pay, do not send details and do not reply.'];
+  if(s>=40)return es?['Muchas banderas rojas','Antes de hacer nada, comprueba tú el sorteo en la web oficial del operador o en una administración. Si te piden dinero o datos, es una estafa.']:['Big red flags','Before doing anything, check the draw yourself on the operator’s official website or at an official outlet. If they want money or details, it is a scam.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. No uses el enlace ni el teléfono del mensaje: busca tú el contacto oficial.']:['Kinda sus','Some classic signals. Do not use the link or phone number in the message: look up the official contact yourself.'];
+  return es?['Pocas banderas','No salta casi nada. Aun así, cobra un premio solo presentando tu boleto en el canal oficial y nunca pagues por adelantado.']:['Few flags','Not much trips the rules. Still, only claim a prize by presenting your own ticket through the official channel, and never pay anything upfront.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  L.push(es?'Pregúntate: ¿compré un boleto para este sorteo? Si no, no hay premio. Fin.':'Ask yourself: did I buy a ticket for this draw? If not, there is no prize. End of story.');
+  L.push(es?'Si sí jugaste, comprueba tú los resultados en la web o app oficial del operador (por ejemplo loteriasyapuestas.es o juegosonce.es) o en una administración, nunca con el enlace del mensaje.':'If you did play, check the results yourself on the operator’s official website or app, or at an official outlet, never through the link in the message.');
+  L.push(es?'No pagues ninguna tasa, impuesto, notario, seguro ni envío. En España el impuesto de los premios grandes se descuenta del propio premio al cobrarlo.':'Do not pay any fee, tax, notary, insurance or delivery charge. In Spain, tax on big prizes is deducted from the prize itself when you collect it.');
+  L.push(es?'No envíes datos bancarios, número de tarjeta, PIN, claves ni foto del DNI. No hacen falta para nada.':'Do not send bank details, card number, PIN, passwords or a photo of your ID. None of them are needed.');
+  if(on('premium'))L.push(es?'No llames a números 806, 807, 803 o 905 ni a números extranjeros: te cobran por minuto.':'Do not call 806, 807, 803 or 905 numbers or foreign numbers: they bill you by the minute.');
+  if(on('docs'))L.push(es?'Un certificado en PDF o una carta de un “abogado” no demuestran nada. No abras adjuntos que no esperabas.':'A PDF certificate or a letter from a “lawyer” proves nothing. Do not open attachments you were not expecting.');
+  if(on('fee')||on('pay'))L.push(es?'Si ya pagaste, no pagues la siguiente tasa: siempre hay otra. Llama a tu banco para intentar recuperar el pago.':'If you already paid, do not pay the next fee: there is always another one. Call your bank to try to recall the payment.');
+  L.push(es?'Guarda el mensaje y los documentos, bloquea al remitente, márcalo como spam y denúncialo a la policía. Dudas: 017 de INCIBE.':'Keep the message and documents, block the sender, mark it as spam and report it to the police. In Spain, INCIBE’s 017 helpline can advise.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Congratulations! Your email address was selected in the EuroMillions International online draw and you have won 850,000 EUR. Ref: EM/2026/447. To release your winnings you must pay the 1,250 EUR tax first and send your bank details to our claims agent within 48 hours. Keep this confidential.',u:'claims@euromillions-payout.net'},
+ {t:'Hola, le escribimos de Loterías y Apuestas del Estado. Su número de móvil ha sido seleccionado en el sorteo de aniversario y ha ganado 25.000 euros. Para liberar el premio debe pagar 180 euros de gastos de tramitación por Bizum antes de 24 horas o se perderá el premio.',u:'WhatsApp +44 7700 900123'},
+ {t:'You are the lucky winner of a new Mercedes in the Coca-Cola anniversary promotion. The car is ready at the port; pay the customs and courier fee of 950 EUR by Western Union or Bitcoin and we will deliver it.',u:'coca-cola-winners.online'},
+ {t:'Me ha llegado un email con un certificado en PDF con sello del Ministerio de Hacienda que dice que me ha tocado la Lotería de Navidad, pero yo no compré ningún décimo. El abogado me pide una foto del DNI y el número de tarjeta. Contacto: premios.gordo@gmail.com',u:'Email'},
+ {t:'Compré un décimo de la Lotería de Navidad en una administración de lotería y lo comprobé en la web oficial loteriasyapuestas.es: tiene un reintegro. Lo voy a cobrar en la misma administración.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
