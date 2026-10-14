@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Travel and Booking Scam Checker: fake Booking.com and Airbnb messages, holiday rentals, airline support and visa sites (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Got a message asking you to re-confirm your card for a hotel booking, a host who wants you to pay outside Airbnb, a cheap holiday villa paid by transfer, an airline “agent” in your DMs or a visa site charging extra? Paste it and get a free rule-based red-flag score. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/travel-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="Is that booking message real? Free travel scam checker">
+<meta property="og:description" content="Paste the hotel, host, airline or visa message. Get a red-flag score for card re-confirmation links, payments outside the platform, transfers for holiday rentals, fake support agents and unofficial visa sites.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/travel-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/travel-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Travel and booking scam checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for fake booking messages, holiday rental scams, fake airline support and unofficial visa sites, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/travel-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Travel Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/rental-checker/" data-i18n="navr">Rentals</a>
+      <a class="hide-m" href="/sms-checker/" data-i18n="navs">SMS</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">Is that booking <em>real?</em></h1>
+    <p class="sub" data-i18n="sub">Paste the message: the hotel chat saying your reservation will be cancelled unless you re-confirm your card, the host who wants you to pay outside Airbnb, the cheap holiday villa paid by transfer, the airline “agent” who answered your complaint in a DM, or the visa site charging a fee. In one second you get a red-flag score and what to do before you pay.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a travel or booking message</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not prove the booking is real. Before paying, open the booking platform or airline app yourself, not the link in the message, and check that the reservation and the amount are there.</p>
+    <label for="txt" data-i18n="l1">Paste the message, listing or what they told you</label>
+    <textarea id="txt" placeholder="e.g. Booking chat: Dear guest, your reservation will be cancelled within 24 hours because your card verification failed. Please confirm your card details at the link below."></textarea>
+    <label for="url" data-i18n="l2">Web address, sender or where it came from (optional)</label>
+    <input type="text" id="url" placeholder="e.g. booking-guestverify.com, WhatsApp +44, X / Instagram DM" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: hotel chat, re-confirm card</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: ES host, pay outside Airbnb</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: airline agent in DMs</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: ES visa / ESTA site</button>
+      <button class="chip" onclick="ex(4)" data-i18n="e4">Example: booked in the app</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do before you pay</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">Real app, fake message</b><p data-i18n="c1p">Criminals break into hotels’ accounts and write to guests through the real booking chat. If a message asks you to “re-confirm” your card on a link, close it and check the reservation in the app yourself.</p></div>
+    <div class="card"><b data-i18n="c2h">Pay inside the platform</b><p data-i18n="c2p">Booking sites only protect you when you pay and talk through them. A host who offers a discount for paying by transfer, Bizum or WhatsApp is taking you outside that protection on purpose.</p></div>
+    <div class="card"><b data-i18n="c3h">Support does not DM you</b><p data-i18n="c3p">Airline “agents” who answer your complaint on X or Instagram, or numbers in sponsored search ads, are a classic trap. Use only the contact page of the airline’s own website or app.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it stopped you paying for a holiday that never existed, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/lottery-checker/" data-i18n="lotm">Lottery / prize checker</a>
+    <a href="/shop-checker/" data-i18n="moresh">Fake shop checker</a>
+    <a href="/ticket-checker/" data-i18n="moret">Ticket scam checker</a>
+    <a href="/marketplace-checker/" data-i18n="morem">Marketplace scam checker</a>
+    <a href="/romance-checker/" data-i18n="morer2">Romance scam checker</a>
+    <a href="/investment-checker/" data-i18n="morei">Investment scam checker</a>
+    <a href="/call-checker/" data-i18n="morec">Scam call checker</a>
+    <a href="/sms-checker/" data-i18n="mores2">SMS / WhatsApp checker</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/lottery-checker/" data-i18n="lotf">Lottery checker</a> · <a href="/shop-checker/" data-i18n="fsh">Shop checker</a> · <a href="/ticket-checker/" data-i18n="ftk">Ticket checker</a> · <a href="/marketplace-checker/" data-i18n="fm">Marketplace checker</a> · <a href="/romance-checker/" data-i18n="fro">Romance checker</a> · <a href="/investment-checker/" data-i18n="fi">Investment checker</a> · <a href="/call-checker/" data-i18n="fc">Call checker</a> · <a href="/sms-checker/" data-i18n="fs">SMS checker</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Booking platforms, hotels, airlines, governments and brands appear only because scammers impersonate them; they are not accused of anything. Not legal advice. If you already paid or entered card details, call your bank right away to block the card and dispute or recall the payment, report it to the platform through its official app or website, change your account password, keep the messages and screenshots, and report it to the police. In Spain you can also call INCIBE’s free helpline on 017.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{"lotm": "Lottery / prize checker", "lotf": "Lottery checker", "brand": "Travel Checker", "navd": "Scam-Clip Detector", "navr": "Rentals", "navs": "SMS", "h1": "Is that booking <em>real?</em>", "sub": "Paste the message: the hotel chat saying your reservation will be cancelled unless you re-confirm your card, the host who wants you to pay outside Airbnb, the cheap holiday villa paid by transfer, the airline “agent” who answered your complaint in a DM, or the visa site charging a fee. In one second you get a red-flag score and what to do before you pay.", "h2": "Check a travel or booking message", "hint": "Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not prove the booking is real. Before paying, open the booking platform or airline app yourself, not the link in the message, and check that the reservation and the amount are there.", "l1": "Paste the message, listing or what they told you", "l2": "Web address, sender or where it came from (optional)", "go": "Check it", "e0": "Example: hotel chat, re-confirm card", "e1": "Example: ES host, pay outside Airbnb", "e2": "Example: airline agent in DMs", "e3": "Example: ES visa / ESTA site", "e4": "Example: booked in the app", "of": "/ 100 scam score", "todoh": "What to do before you pay", "c1h": "Real app, fake message", "c1p": "Criminals break into hotels’ accounts and write to guests through the real booking chat. If a message asks you to “re-confirm” your card on a link, close it and check the reservation in the app yourself.", "c2h": "Pay inside the platform", "c2p": "Booking sites only protect you when you pay and talk through them. A host who offers a discount for paying by transfer, Bizum or WhatsApp is taking you outside that protection on purpose.", "c3h": "Support does not DM you", "c3p": "Airline “agents” who answer your complaint on X or Instagram, or numbers in sponsored search ads, are a classic trap. Use only the contact page of the airline’s own website or app.", "ctah": "Want to roast these on camera?", "ctap": "The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.", "ctab": "See the Script Pack", "tiph": "Tip jar", "tipp": "This checker is free and stays free. If it stopped you paying for a holiday that never existed, you can tip.", "tipb": "Tip via PayPal", "moresh": "Fake shop checker", "moret": "Ticket scam checker", "morer2": "Romance scam checker", "morei": "Investment scam checker", "morec": "Scam call checker", "mores2": "SMS / WhatsApp checker", "morem": "Marketplace scam checker", "morer": "Rental listing checker", "morerec": "Crypto recovery checker", "morep": "Phishing / invoice checker", "morej": "Job offer checker", "moreg": "Giveaway / airdrop checker", "moresig": "Signal / VIP group checker", "mores": "900 Shorts guide (19€)", "fd": "Scam-Clip Detector", "fsh": "Shop checker", "ftk": "Ticket checker", "fro": "Romance checker", "fi": "Investment checker", "fc": "Call checker", "fs": "SMS checker", "fm": "Marketplace checker", "fr": "Rental checker", "frec": "Recovery checker", "fpish": "Phishing checker", "fj": "Job offer checker", "fg": "Giveaway checker", "fp": "Scam-Roast Script Pack", "ft": "Tip jar", "disc": "Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Booking platforms, hotels, airlines, governments and brands appear only because scammers impersonate them; they are not accused of anything. Not legal advice. If you already paid or entered card details, call your bank right away to block the card and dispute or recall the payment, report it to the platform through its official app or website, change your account password, keep the messages and screenshots, and report it to the police. In Spain you can also call INCIBE’s free helpline on 017."},
+ es:{"lotm": "Comprobador de premios y loterías", "lotf": "Comprobador de premios", "brand": "Comprobador de viajes", "navd": "Detector de estafas", "navr": "Alquileres", "navs": "SMS", "h1": "¿Esa reserva es <em>real?</em>", "sub": "Pega el mensaje: el chat del hotel que dice que tu reserva se cancelará si no vuelves a confirmar la tarjeta, el anfitrión que quiere que pagues fuera de Airbnb, la casa de vacaciones barata que se paga por transferencia, el “agente” de la aerolínea que contestó a tu queja por mensaje privado o la web de visados que cobra una tasa. En un segundo tienes una nota de banderas rojas y qué hacer antes de pagar.", "h2": "Comprueba un mensaje de viaje o reserva", "hint": "Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples: una nota baja no demuestra que la reserva sea real. Antes de pagar, abre tú la app de la plataforma o de la aerolínea, no el enlace del mensaje, y comprueba que la reserva y el importe están ahí.", "l1": "Pega el mensaje, el anuncio o lo que te dijeron", "l2": "Dirección web, remitente o de dónde vino (opcional)", "go": "Comprobar", "e0": "Ejemplo: chat del hotel, confirma la tarjeta", "e1": "Ejemplo: anfitrión, paga fuera de Airbnb", "e2": "Ejemplo: agente de aerolínea por MD", "e3": "Ejemplo: web de visado / ESTA", "e4": "Ejemplo: reservado en la app", "of": "/ 100 nota de estafa", "todoh": "Qué hacer antes de pagar", "c1h": "App real, mensaje falso", "c1p": "Los delincuentes entran en las cuentas de los hoteles y escriben a los clientes por el chat real de la plataforma. Si un mensaje te pide “volver a confirmar” la tarjeta en un enlace, ciérralo y revisa tú la reserva en la app.", "c2h": "Paga dentro de la plataforma", "c2p": "Las webs de reservas solo te protegen si pagas y hablas a través de ellas. Un anfitrión que te ofrece descuento por pagar por transferencia, Bizum o WhatsApp te saca de esa protección a propósito.", "c3h": "El soporte no te escribe por privado", "c3p": "Los “agentes” de aerolíneas que contestan a tu queja en X o Instagram, o los teléfonos de anuncios patrocinados en buscadores, son una trampa clásica. Usa solo el contacto de la web o la app oficial de la aerolínea.", "ctah": "¿Quieres hacer un roast de esto en vídeo?", "ctap": "El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) sobre las estafas más comunes. Paga lo que quieras, desde 5 €.", "ctab": "Ver el pack de guiones", "tiph": "Bote de propinas", "tipp": "Este comprobador es gratis y seguirá siéndolo. Si te ahorró pagar unas vacaciones que nunca existieron, puedes dejar una propina.", "tipb": "Propina por PayPal", "moresh": "Comprobador de tiendas online", "moret": "Comprobador de entradas", "morer2": "Comprobador de romances", "morei": "Comprobador de inversiones", "morec": "Comprobador de llamadas", "mores2": "Comprobador de SMS / WhatsApp", "morem": "Comprobador de segunda mano", "morer": "Comprobador de alquileres", "morerec": "Comprobador de recuperación de cripto", "morep": "Comprobador de phishing / facturas", "morej": "Comprobador de ofertas de trabajo", "moreg": "Comprobador de sorteos / airdrops", "moresig": "Comprobador de grupos VIP / señales", "mores": "Guía de 900 Shorts (19 €)", "fd": "Detector de estafas", "fsh": "Comprobador de tiendas", "ftk": "Comprobador de entradas", "fro": "Comprobador de romances", "fi": "Comprobador de inversiones", "fc": "Comprobador de llamadas", "fs": "Comprobador de SMS", "fm": "Comprobador de segunda mano", "fr": "Comprobador de alquileres", "frec": "Comprobador de recuperación", "fpish": "Comprobador de phishing", "fj": "Comprobador de ofertas", "fg": "Comprobador de sorteos", "fp": "Pack de guiones Scam-Roast", "ft": "Bote de propinas", "disc": "Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. Las plataformas de reservas, hoteles, aerolíneas, gobiernos y marcas aparecen solo porque los estafadores se hacen pasar por ellos; no se les acusa de nada. No es asesoramiento legal. Si ya pagaste o metiste los datos de tu tarjeta, llama ya a tu banco para bloquearla y reclamar o intentar recuperar el pago, avisa a la plataforma desde su app o web oficial, cambia la contraseña de tu cuenta, guarda los mensajes y capturas, y denúncialo a la policía. También puedes llamar gratis al 017, la línea de ayuda en ciberseguridad de INCIBE."}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|won'?t|will not|didn'?t|did not|don'?t|do not|hasn'?t|has not|no need to|nunca|jam[aá]s|no me|no te|no ha|no hace falta|sin)[^.!?\n]{0,30}$/i.test(t.slice(Math.max(0,idx-40),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'card',w:24,neg:true,en:'Asks you to “verify”, “re-confirm” or re-enter your card, or says the payment failed and the booking will be cancelled',es:'Te pide “verificar”, “volver a confirmar” o meter otra vez la tarjeta, o dice que el pago falló y la reserva se cancelará',
+  wen:'This is the hacked-hotel-account script. The message can arrive in the real booking app, but the link goes to a copy of the payment page that steals your card. A real problem with your payment shows up in the app or by email from the platform itself, and you fix it there.',wes:'Es el guion de las cuentas de hotel hackeadas. El mensaje puede llegar por la app real de reservas, pero el enlace lleva a una copia de la página de pago que te roba la tarjeta. Un problema real con el pago aparece en la propia app o en un email de la plataforma, y se arregla ahí.',
+  re:[/(?:verify|confirm|re-?confirm|validate|re-?enter|update|re-?submit|re-?activate)[^.\n]{0,20}(?:card|payment (?:details|method|information|info)|bank (?:details|card)|billing (?:details|information))|card (?:verification|validation|confirmation|check)|payment (?:has )?(?:failed|was declined|declined|was not successful|could not be processed|unsuccessful|not received)|(?:booking|reservation|stay)[^.\n]{0,20}(?:will|may|is going to) be (?:cancel+ed|released|lost|void)|(?:unless|if you (?:do not|don'?t)) (?:you )?(?:confirm|verify|pay|update)|guarantee (?:your|the) (?:booking|reservation)|(?:send|give|share|provide|tell)[^.\n]{0,30}(?:card number|card details|cvv|cvc|security code|expiry date)/i,
+   /(?:verific|confirm|valid|actualiz|reactiv)(?:a|ar|e|ad)[^.\n]{0,25}(?:tarjeta|datos (?:de pago|bancarios|de (?:la|tu|su) tarjeta)|m[eé]todo de pago)|(?:vuelve|vuelva|volver) a (?:introducir|meter|confirmar|verificar)[^.\n]{0,20}(?:tarjeta|datos|pago)|verificaci[oó]n de (?:la |tu |su )?tarjeta|(?:pago|cargo|cobro) (?:fallido|rechazado|no (?:se )?ha (?:podido|sido)|no completado)|reserva[^.\n]{0,20}(?:ser[aá] cancelad|se cancelar[aá]|se anular[aá]|quedar[aá] anulad|se perder[aá])|si no (?:confirma|verifica|paga|actualiza)s?|garantizar (?:tu|su|la) reserva|(?:env[ií]a|manda|dame|d[ií]nos|facilita|indica)\w*[^.\n]{0,30}(?:n[uú]mero de (?:la )?tarjeta|datos de (?:la |tu |su )?tarjeta|\bcvv\b|\bcvc\b|c[oó]digo de seguridad|fecha de caducidad)/i]},
+ {id:'off',w:24,neg:true,en:'Wants you to book, pay or talk outside Airbnb, Booking.com or the platform (WhatsApp, email, “cheaper directly”)',es:'Quiere que reserves, pagues o hables fuera de Airbnb, Booking.com o la plataforma (WhatsApp, email, “más barato directamente”)',
+  wen:'Once you pay outside the platform there is no refund, no guarantee the place exists and no record of the deal. Fake hosts copy real listings and then move you to WhatsApp or email.',wes:'En cuanto pagas fuera de la plataforma no hay reembolso, ni garantía de que el alojamiento exista, ni registro del trato. Los falsos anfitriones copian anuncios reales y luego te llevan a WhatsApp o al email.',
+  re:[/(?:outside|off) (?:of )?(?:the )?(?:platform|app|site|website|airbnb|booking(?:\.com)?|vrbo)|(?:pay|book|send (?:the )?money|transfer)[^.\n]{0,20}directly (?:to me|to us|to the owner|to my|with me|with us)|(?:cheaper|discount|save)[^.\n]{0,30}(?:directly|outside|without (?:the )?(?:airbnb|booking|platform))|(?:avoid|skip|save) (?:the )?(?:airbnb|booking|platform|service) (?:fees?|commission)|(?:move|continue|talk|chat|contact)[^.\n]{0,20}(?:on|to|via|by) (?:whatsapp|telegram|e-?mail)[^.\n]{0,20}(?:to )?(?:book|pay|confirm|the booking)?|(?:whatsapp|e-?mail) me (?:to|for|and) (?:book|pay|confirm)/i,
+   /fuera de (?:la )?(?:plataforma|app|aplicaci[oó]n|web|airbnb|booking|vrbo)|sin pasar por (?:airbnb|booking|la plataforma|la app|la web)|(?:p[aá]ga(?:me|nos)?|pagar(?:me|nos)?|reserva(?:r)?|transfi[eé]re(?:me)?)[^.\n]{0,20}directamente|(?:m[aá]s barato|descuento|ahorr\w+)[^.\n]{0,30}(?:directamente|fuera|sin (?:airbnb|booking|la plataforma|comisi[oó]n))|(?:escr[ií]be(?:me|nos)|h[aá]bla(?:me|nos)|contact(?:a|ame|anos)|seguimos) (?:por|en|al) (?:whatsapp|telegram|e-?mail|correo)/i]},
+ {id:'pay',w:20,neg:true,en:'Wants Bizum, bank transfer, Western Union, crypto, gift cards or PayPal “friends and family”',es:'Pide Bizum, transferencia, Western Union, cripto, tarjetas regalo o PayPal “amigos y familiares”',
+  wen:'Payments you cannot reverse are what scammers want. Real hotels, airlines and platforms take card payments through their own checkout, which you can dispute with your bank.',wes:'Los pagos que no se pueden anular son lo que quiere el estafador. Los hoteles, aerolíneas y plataformas reales cobran con tarjeta en su propia pasarela, y ese pago se puede reclamar al banco.',
+  re:[/\bbizum\b|bank transfer|wire (?:it|the money|transfer)|\biban\b|western union|moneygram|\b(?:usdt|bitcoin|btc|crypto|ethereum)\b|gift ?cards?|(?:google play|itunes|apple|amazon|steam) (?:gift )?cards?|paysafe ?card|friends (?:and|&) family|\bf&f\b/i,
+   /\bbizum\b|transferencia|\biban\b|western union|moneygram|\b(?:usdt|bitcoin|btc|cripto|criptomonedas?)\b|tarjetas? regalo|paysafe ?card|amigos y familiares/i]},
+ {id:'link',w:16,en:'Lookalike web address or short link instead of the platform’s own site',es:'Dirección web parecida o enlace acortado en lugar de la web propia de la plataforma',
+  wen:'Real platforms use their own domain. Addresses like “booking-guestverify.com”, “airbnb-reserva.net”, “hotel-confirm.top” or a bit.ly link are made to look official for a few days.',wes:'Las plataformas reales usan su propio dominio. Direcciones como “booking-verificacion.com”, “airbnb-reserva.net”, “hotel-confirmar.top” o un enlace bit.ly están hechas para parecer oficiales unos días.',
+  re:[/\b[a-z0-9-]*(?:booking|airbnb|vrbo|expedia|edreams|ryanair|vueling|iberia|easyjet|renfe)[a-z0-9]*-[a-z0-9-]+\.[a-z]{2,8}\b|\b[a-z0-9-]+-(?:booking|airbnb|vrbo|expedia|edreams|ryanair|vueling|iberia|easyjet|renfe)[a-z0-9-]*\.[a-z]{2,8}\b|\b(?:booking|airbnb|vrbo|expedia)\.com[-.][a-z0-9-]+\.[a-z]{2,8}\b|\b(?:booking|airbnb)(?:confirm|verify|guest|secure|pay|reserv)[a-z0-9-]*\.[a-z]{2,8}\b|\b[a-z0-9-]*(?:reserv|confirm|guest|hotel|holiday|vacation|vacacion|viaje|travel|flight|vuelo|esta|etias|visa)[a-z0-9-]*\.(?:top|xyz|site|online|shop|live|click|icu|cfd|sbs|info|biz|vip|buzz|rest|cyou|lat)\b|bit\.ly|tinyurl|cutt\.ly|is\.gd|t\.ly\//i]},
+ {id:'deposit',w:12,neg:true,en:'Full payment or a deposit upfront, owner abroad, keys by post or no way to see the place',es:'Pago completo o señal por adelantado, dueño en el extranjero, llaves por correo o sin forma de ver el alojamiento',
+  wen:'The fake holiday rental script: a great place, an owner who is “abroad”, and a deposit or the full stay by transfer to “secure” it. When you arrive, the address does not exist or belongs to someone else.',wes:'El guion del falso alquiler vacacional: un sitio estupendo, un dueño que está “en el extranjero” y una señal o la estancia completa por transferencia para “asegurarlo”. Al llegar, la dirección no existe o es de otra persona.',
+  re:[/(?:full|whole|entire|100 ?%) (?:amount|payment|price|stay|balance)[^.\n]{0,20}(?:upfront|in advance|now|today|before)|(?:pay|send|transfer)[^.\n]{0,15}(?:a |the )?(?:deposit|advance|reservation fee|booking fee|holding fee)|(?:owner|landlord|host|i am|i'm|we are|we're)[^.\n]{0,15}(?:abroad|overseas|out of the country|working away|in (?:the uk|london|england|germany))|keys?[^.\n]{0,20}(?:sent|posted|delivered|send you) (?:by|via|through) (?:post|courier|mail|airbnb)|(?:can'?t|cannot|not possible to|unable to) (?:show|visit|see|view)[^.\n]{0,10}(?:property|apartment|flat|house|villa|place)/i,
+   /(?:pag|ingres|transfi?er|env[ií])\w*[^.\n]{0,15}(?:el total|el importe completo|el 100 ?%|todo por adelantado|la fianza|una fianza|la se[nñ]al|una se[nñ]al|el adelanto|un adelanto|el anticipo|un anticipo|el dep[oó]sito|un dep[oó]sito)|(?:propietari[oa]|due[nñ][oa]|anfitri[oó]n|yo|estoy|vivo|vive)[^.\n]{0,15}(?:en el extranjero|fuera de espa[nñ]a|en (?:londres|inglaterra|reino unido|alemania))|llaves? por (?:correo|mensajer[ií]a|airbnb)|no (?:puedo|podemos|se puede|es posible) (?:ense[nñ]ar|ver|visitar)[^.\n]{0,10}(?:piso|apartamento|casa|villa|alojamiento)/i]},
+ {id:'agent',w:14,neg:true,en:'“Customer service” that found you on social media or a search ad, refund or rebooking fees, remote access',es:'“Atención al cliente” que te encontró en redes o en un anuncio, tasas de reembolso o de cambio, acceso remoto',
+  wen:'Fake airline and travel agents watch for complaints on X, Instagram and Facebook, or buy ads for “customer service” searches. They ask for your booking code and card, a refund or rebooking fee, or a remote-access app.',wes:'Los falsos agentes de aerolíneas y viajes buscan quejas en X, Instagram y Facebook, o compran anuncios para búsquedas de “atención al cliente”. Te piden el localizador y la tarjeta, una tasa de reembolso o de cambio, o una app de acceso remoto.',
+  re:[/(?:customer (?:service|support|care)|support (?:team|agent|desk)|help ?desk|refund (?:team|department|agent)|claims (?:team|department))[^.\n]{0,60}(?:\bdm\b|direct message|instagram|twitter|\bx\b|facebook|messenger|whatsapp|telegram)|(?:dm(?:ed)?|messaged|contacted|replied to|wrote to) me (?:on|via) (?:x|twitter|instagram|facebook|messenger)|(?:saw|seen|noticed) your (?:complaint|post|tweet|comment)|(?:number|phone)[^.\n]{0,15}(?:found|from) (?:on )?(?:google|an ad|a sponsored)|sponsored (?:ad|result|link)|(?:refund|compensation|rebooking|change|processing|reactivation) (?:fee|charge)|anydesk|teamviewer|remote access|screen ?shar/i,
+   /(?:atenci[oó]n al cliente|servicio al cliente|soporte|agente|departamento de (?:reembolsos|reclamaciones))[^.\n]{0,60}(?:mensaje privado|\bmd\b|instagram|twitter|\bx\b|facebook|messenger|whatsapp|telegram)|me (?:escribieron|escribi[oó]|contactaron|contact[oó]|respondieron|respondi[oó]) (?:por|en) (?:x|twitter|instagram|facebook|mensaje privado|privado)|(?:vimos|hemos visto|vi) tu (?:queja|publicaci[oó]n|tuit|comentario)|(?:n[uú]mero|tel[eé]fono)[^.\n]{0,15}(?:encontr[eé]|sal[ií]a|sale) en (?:google|un anuncio)|anuncio patrocinado|(?:tasa|cargo|comisi[oó]n|gastos) (?:de|por) (?:reembolso|compensaci[oó]n|cambio|gesti[oó]n|reactivaci[oó]n)|anydesk|teamviewer|acceso remoto|compartir (?:la )?pantalla/i]},
+ {id:'visa',w:12,en:'Visa, ESTA, eTA or ETIAS through an agency site with a “processing” or “express” fee',es:'Visado, ESTA, eTA o ETIAS a través de una web de gestoría con tasa de “tramitación” o “urgente”',
+  wen:'Many sites look like the government form but charge several times the official fee, and some never file anything. Apply only on the official site: esta.cbp.dhs.gov (USA), gov.uk (UK ETA), canada.ca (Canada eTA) or travel-europe.europa.eu (EU ETIAS).',wes:'Muchas webs imitan el formulario oficial pero cobran varias veces la tasa real, y algunas no tramitan nada. Solicítalo solo en la web oficial: esta.cbp.dhs.gov (EE. UU.), gov.uk (ETA de Reino Unido), canada.ca (eTA de Canadá) o travel-europe.europa.eu (ETIAS de la UE).',
+  re:[/\b(?:esta|eta|e-?ta|etias|e-?visa|visa|visado|travel authori[sz]ation|autorizaci[oó]n de viaje)\b[^.\n]{0,60}(?:service fee|processing fee|handling fee|express|fast.?track|urgent|agency|in \d+ minutes|guaranteed approval|tramitaci[oó]n|gesti[oó]n|urgente|express|en \d+ minutos|aprobaci[oó]n garantizada|gestor[ií]a)|(?:service fee|processing fee|express|urgent|tramitaci[oó]n|urgente|gesti[oó]n)[^.\n]{0,40}\b(?:esta|etias|e-?visa|visa|visado)\b|\b[a-z0-9-]*(?:esta|etias|evisa)[a-z0-9]*-[a-z0-9-]+\.[a-z]{2,8}\b|\b[a-z0-9-]+-(?:esta|etias|evisa)[a-z0-9-]*\.[a-z]{2,8}\b/i]},
+ {id:'cheap',w:10,en:'Too good to be true: huge discount, luxury for little, “only today”, a free trip or cruise',es:'Demasiado bueno: descuentazo, lujo por poco, “solo hoy”, un viaje o crucero gratis',
+  wen:'A sea-view villa in August at half price is the hook. Scammers copy photos from real listings and price them low so you hurry and skip the checks.',wes:'Una villa con vistas al mar en agosto a mitad de precio es el anzuelo. Los estafadores copian fotos de anuncios reales y ponen un precio bajo para que tengas prisa y no compruebes nada.',
+  re:[/\b\d{2}\s?% off|half (?:the )?price|(?:only|just) \d+ ?(?:€|eur|euros?|\$|£) (?:a|per) (?:night|week)|last.minute (?:deal|offer|bargain)|(?:price|offer) (?:only )?(?:valid|available) (?:today|for (?:24|48))|(?:only|just) today|unbeatable (?:price|deal)|(?:free|complimentary) (?:holiday|trip|cruise|flights?|stay|vacation)|(?:won|win) a (?:free )?(?:holiday|trip|cruise)/i,
+   /\b\d{2}\s?% de descuento|mitad de precio|(?:solo|s[oó]lo) \d+ ?(?:€|eur|euros?) (?:la|por) (?:noche|semana)|chollo|ganga|oferta (?:de )?(?:[uú]ltima hora|solo (?:por )?hoy|flash)|solo (?:por )?hoy|precio (?:incre[ií]ble|imbatible)|(?:viaje|crucero|vacaciones|vuelos?|estancia) gratis|(?:has ganado|ganaste) un (?:viaje|crucero)/i]},
+ {id:'rush',w:10,en:'Deadline or pressure: “within 24 hours”, “other guests are interested”, “last room”',es:'Prisa o presión: “en 24 horas”, “hay más interesados”, “última habitación”',
+  wen:'Pressure stops you from opening the app, calling the hotel or asking anyone. A real reservation problem never needs fixing in the next hour through a link.',wes:'La presión impide que abras la app, llames al hotel o preguntes a alguien. Un problema real con una reserva nunca hay que arreglarlo en la próxima hora a través de un enlace.',
+  re:[/within (?:\d+|twenty.four|forty.eight|twelve|two) ?(?:hours|hrs|h)\b|(?:\d+) ?(?:hours|hrs|h) to (?:confirm|pay|verify|respond|reply)|(?:other|many|several) (?:guests|people|families|clients)[^.\n]{0,20}(?:interested|asking|want)|(?:last|only one) (?:room|apartment|date|slot|seat)s? (?:left|available)|(?:urgent|immediately|asap|final notice|last reminder)/i,
+   /(?:en|dentro de|antes de) (?:las )?(?:\d+|veinticuatro|cuarenta y ocho|doce|dos) ?(?:horas|h)\b|(?:hay|tengo) (?:m[aá]s|otros|otras|varios|varias|muchos) (?:interesad|familias|clientes|personas)|(?:[uú]ltima|solo queda una?) (?:habitaci[oó]n|plaza|fecha|apartamento)|(?:urgente|inmediatamente|[uú]ltimo aviso|aviso final)/i]},
+ {id:'brand',w:6,en:'Uses a real platform, airline or travel brand name: Booking.com, Airbnb, Vrbo, Expedia, eDreams, Ryanair, Vueling, Iberia, Renfe',es:'Usa el nombre de una plataforma, aerolínea o marca de viajes real: Booking.com, Airbnb, Vrbo, Expedia, eDreams, Ryanair, Vueling, Iberia, Renfe',
+  wen:'Scammers borrow names you already trust. The name in the message tells you nothing; where you pay and who you talk to tells you everything.',wes:'Los estafadores usan nombres en los que ya confías. El nombre del mensaje no dice nada; dónde pagas y con quién hablas lo dice todo.',
+  re:[/\bBooking\b/,/\b(?:booking\.com|airbnb|vrbo|homeaway|expedia|hotels\.com|trivago|edreams|lastminute|logitravel|destinia|ryanair|vueling|iberia|air europa|easyjet|lufthansa|british airways|renfe|ouigo|iryo|tui|holidu|wimdu|skyscanner)\b/i]}
+];
+function analyze(text,url){
+  var t=(text||'')+'\n'+(url||''),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  var legit=/(?:(?:booked|paid|pay|reserved|messag\w*|chat\w*|talk\w*)[^.\n]{0,30}(?:in|inside|through|via|on) the (?:official )?(?:booking(?:\.com)? |airbnb |airline'?s? |hotel'?s? )?(?:app|website|platform)|pay (?:at the (?:property|hotel|reception)|on arrival)|(?:reserv[eé]|pagu[eé]|pagar[eé]|pago|hablo|hablamos|mensajes?)[^.\n]{0,40}(?:en|dentro de|desde|por) la (?:propia )?(?:app|aplicaci[oó]n|web oficial|plataforma)|pagar[eé]? en (?:el (?:alojamiento|hotel)|recepci[oó]n|la llegada)|esta\.cbp\.dhs\.gov|travel-europe\.europa\.eu|gov\.uk\/|canada\.ca)/i.test(t);
+  if(n>=4)score+=8;
+  if(on('card')&&(on('link')||on('rush')||on('brand')))score=Math.max(score,82);
+  if(on('off')&&(on('pay')||on('deposit')))score=Math.max(score,80);
+  if(on('agent')&&(on('pay')||on('card')||on('link')))score=Math.max(score,78);
+  if(on('pay')&&(on('deposit')||on('cheap')))score=Math.max(score,74);
+  if(on('link')&&(on('brand')||on('card')||on('visa')))score=Math.max(score,70);
+  if(on('deposit')&&(on('cheap')||on('rush')))score=Math.max(score,66);
+  if(on('card'))score=Math.max(score,60);
+  if(on('off'))score=Math.max(score,55);
+  if(on('agent'))score=Math.max(score,50);
+  if(on('visa'))score=Math.max(score,45);
+  if(on('pay'))score=Math.max(score,40);
+  if(on('link'))score=Math.max(score,35);
+  if(legit&&!on('card')&&!on('off')&&!on('pay')&&!on('link')&&!on('agent')&&!on('visa')&&!on('deposit'))score=Math.min(score,10);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Estafa de viaje casi segura','Encaja con un guion conocido: un enlace para “confirmar” la tarjeta, un pago fuera de la plataforma, un adelanto por transferencia o un falso agente. No pagues, no metas la tarjeta y comprueba la reserva tú en la app oficial.']:['Almost certainly a travel scam','This matches a known script: a link to “confirm” your card, a payment outside the platform, a deposit by transfer or a fake agent. Do not pay, do not enter your card and check the booking yourself in the official app.'];
+  if(s>=40)return es?['Muchas banderas rojas','Antes de hacer nada, abre tú la app o la web oficial de la plataforma, el hotel o la aerolínea y comprueba si hay algo pendiente. Si solo existe en el mensaje, es una estafa.']:['Big red flags','Before doing anything, open the platform, hotel or airline app or website yourself and check whether anything is really pending. If it only exists in the message, it is a scam.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. No uses el enlace ni el teléfono del mensaje: busca tú el contacto oficial.']:['Kinda sus','Some classic signals. Do not use the link or phone number in the message: look up the official contact yourself.'];
+  return es?['Pocas banderas','No salta casi nada. Aun así, paga solo dentro de la plataforma o en la web oficial y nunca por transferencia a un particular.']:['Few flags','Not much trips the rules. Still, only pay inside the platform or on the official website, never by transfer to a private person.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  L.push(es?'No pulses el enlace del mensaje. Abre tú la app o la web oficial (escribiendo la dirección) y mira si la reserva y el importe están ahí.':'Do not tap the link in the message. Open the official app or website yourself (type the address) and check that the booking and the amount are there.');
+  if(on('card'))L.push(es?'Si te piden “confirmar” la tarjeta, no lo hagas. Llama al hotel a un teléfono que busques tú y avisa a la plataforma desde su app: su cuenta puede estar hackeada.':'If they ask you to “confirm” your card, do not. Call the hotel on a number you look up yourself and tell the platform through its app: their account may be hacked.');
+  L.push(es?'Paga solo dentro de la plataforma o en la web oficial, con tarjeta. Nunca por Bizum, transferencia, cripto ni tarjetas regalo a un particular.':'Only pay inside the platform or on the official website, by card. Never by Bizum, transfer, crypto or gift cards to a private person.');
+  if(on('off')||on('deposit'))L.push(es?'Si el anfitrión quiere seguir por WhatsApp o email, o pide una señal por transferencia, deja de hablar y repórtalo a la plataforma. Busca la dirección y las fotos en Google para ver si están copiadas.':'If the host wants to move to WhatsApp or email, or asks for a deposit by transfer, stop and report them to the platform. Search the address and photos online to see if they were copied.');
+  if(on('agent'))L.push(es?'Las aerolíneas no te piden la tarjeta ni una “tasa de reembolso” por mensaje privado. Usa solo el contacto de su web o app y no instales AnyDesk ni similares.':'Airlines do not ask for your card or a “refund fee” by direct message. Use only the contact page on their own website or app and never install AnyDesk or similar.');
+  if(on('visa'))L.push(es?'Para ESTA, eTA, ETA o ETIAS usa solo la web del gobierno (esta.cbp.dhs.gov, canada.ca, gov.uk, travel-europe.europa.eu) y compara la tasa oficial.':'For an ESTA, eTA, ETA or ETIAS, use only the government site (esta.cbp.dhs.gov, canada.ca, gov.uk, travel-europe.europa.eu) and compare the official fee.');
+  L.push(es?'Si ya pagaste o metiste la tarjeta, llama a tu banco ya para bloquearla y reclamar el cargo. Guarda capturas, avisa a la plataforma y denúncialo a la policía. Dudas: 017 de INCIBE.':'If you already paid or entered your card, call your bank now to block it and dispute the charge. Keep screenshots, tell the platform and report it to the police. In Spain, INCIBE’s 017 helpline can advise.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Booking chat from Hotel Marina Bay: Dear guest, your reservation will be cancelled within 24 hours because your card verification failed. To keep your room, please confirm your card details at the secure link below.',u:'booking-guestverify.com/res/88412'},
+ {t:'Hola, la casa está libre del 20 al 27 de agosto. Si reservas fuera de Airbnb te sale 300 € más barato. Escríbeme por WhatsApp y me haces una transferencia de la señal del 50%. Yo vivo en Londres, te envío las llaves por mensajería.',u:'WhatsApp +44 7700 900456'},
+ {t:'Hi, this is the airline customer support team, we saw your complaint on X about the cancelled flight. To process your refund please send us your booking code and card number, and pay the 25 EUR refund processing fee.',u:'X / Twitter DM'},
+ {t:'Solicita tu ESTA para viajar a Estados Unidos en 5 minutos. Tramitación urgente con aprobación garantizada por 89 euros.',u:'esta-visado-express.top'},
+ {t:'Reservé el hotel en la app de Booking.com, pagaré en el alojamiento a la llegada y todos los mensajes con el hotel son dentro de la app. No me han pedido nada más.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
