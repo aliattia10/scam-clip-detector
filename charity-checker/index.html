@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charity and Donation Scam Checker: fake disaster appeals, Bizum to a personal number, fake NGO calls and street collectors (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Asked to donate after a flood, a war or a sick child story, by WhatsApp, a call, a post or a collector in the street? Paste the appeal and how it reached you, and get a free rule-based red-flag score before you give. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/charity-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="Asked to donate? Free charity scam checker">
+<meta property="og:description" content="Paste the appeal and how it reached you. Get a red-flag score for fake disaster appeals, Bizum to a personal number, crypto and gift card donations, fake NGO calls asking for your card, and street collectors with no ID.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/charity-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/charity-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Charity and donation scam checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for fake charity appeals: disaster fundraisers, Bizum to a person, crypto donations, fake NGO calls, street collectors, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/charity-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Charity Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/qr-checker/" data-i18n="navr">QR</a>
+      <a class="hide-m" href="/sms-checker/" data-i18n="navs">SMS</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">Asked to <em>donate?</em></h1>
+    <p class="sub" data-i18n="sub">Paste the appeal and say how it reached you: a forwarded WhatsApp after a flood or a fire, a post about a sick child who needs surgery abroad, a call from a “charity” thanking you for past donations, an email from an aid agency, or a collector in the street or at your door. In one second you get a red-flag score and how to give safely, so your money reaches the people it is meant for.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a donation request</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not prove the appeal is real. The safest way to give is always the same: open the charity’s official website or app yourself and donate there, to an account in the charity’s own name.</p>
+    <label for="txt" data-i18n="l1">Paste the appeal, the message or what the caller or collector said</label>
+    <textarea id="txt" placeholder="e.g. Forwarded WhatsApp: families lost everything in the floods, Red Cross volunteers need help today, send a Bizum to 612 345 678 (Laura, coordinator)."></textarea>
+    <label for="url" data-i18n="l2">How it reached you (optional)</label>
+    <input type="text" id="url" placeholder="e.g. WhatsApp group, Instagram post, phone call, collector in the street" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: flood appeal, Bizum to a number</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: ES sick child, PayPal and crypto</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: “charity” call asks for card</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: ES street collector, cash only</button>
+      <button class="chip" onclick="ex(4)" data-i18n="e4">Example: ES donation on official site</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do before you give</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">Pay the charity, never a person</b><p data-i18n="c1p">Real charities take donations on their own website, by card, by transfer to an account in the charity’s name, or in Spain through Bizum’s “Donate” option with the NGO’s 5-digit code. A Bizum to “Laura, coordinator” is a gift to Laura.</p></div>
+    <div class="card"><b data-i18n="c2h">Check it is real in two minutes</b><p data-i18n="c2p">Type the charity’s address yourself, look for its full legal name and tax number (CIF in Spain), and search it in the official register of charities, associations or foundations. No name, no number, no website: no donation.</p></div>
+    <div class="card"><b data-i18n="c3h">Disasters bring out the fakes</b><p data-i18n="c3p">After a flood, a fire, a war or a viral sick-child story, fake appeals appear within hours. Give to organisations already working there, through their own channels, not through a forwarded message, a comment or a new account.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it kept your donation away from a fake appeal, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/qr-checker/" data-i18n="qrm">QR code checker</a>
+    <a href="/travel-checker/" data-i18n="trvm">Travel / booking checker</a>
+    <a href="/lottery-checker/" data-i18n="lotm">Lottery / prize checker</a>
+    <a href="/shop-checker/" data-i18n="moresh">Fake shop checker</a>
+    <a href="/ticket-checker/" data-i18n="moret">Ticket scam checker</a>
+    <a href="/marketplace-checker/" data-i18n="morem">Marketplace scam checker</a>
+    <a href="/romance-checker/" data-i18n="morer2">Romance scam checker</a>
+    <a href="/investment-checker/" data-i18n="morei">Investment scam checker</a>
+    <a href="/call-checker/" data-i18n="morec">Scam call checker</a>
+    <a href="/sms-checker/" data-i18n="mores2">SMS / WhatsApp checker</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/qr-checker/" data-i18n="qrf">QR checker</a> · <a href="/travel-checker/" data-i18n="trvf">Travel checker</a> · <a href="/lottery-checker/" data-i18n="lotf">Lottery checker</a> · <a href="/shop-checker/" data-i18n="fsh">Shop checker</a> · <a href="/ticket-checker/" data-i18n="ftk">Ticket checker</a> · <a href="/marketplace-checker/" data-i18n="fm">Marketplace checker</a> · <a href="/romance-checker/" data-i18n="fro">Romance checker</a> · <a href="/investment-checker/" data-i18n="fi">Investment checker</a> · <a href="/call-checker/" data-i18n="fc">Call checker</a> · <a href="/sms-checker/" data-i18n="fs">SMS checker</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Charities, NGOs, aid agencies, crowdfunding sites, payment apps and brands appear only because scammers impersonate them; they are not accused of anything. Not legal advice. If you already gave card details, call your bank right away to block the card and dispute the charge. If you sent a Bizum or a transfer, call your bank at once and ask them to try to recall it; these payments are usually instant and hard to reverse. Keep screenshots and report it to the police. In Spain you can also call INCIBE’s free helpline on 017.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{"brand": "Charity Checker", "navd": "Scam-Clip Detector", "navr": "QR", "navs": "SMS", "h1": "Asked to <em>donate?</em>", "sub": "Paste the appeal and say how it reached you: a forwarded WhatsApp after a flood or a fire, a post about a sick child who needs surgery abroad, a call from a “charity” thanking you for past donations, an email from an aid agency, or a collector in the street or at your door. In one second you get a red-flag score and how to give safely, so your money reaches the people it is meant for.", "h2": "Check a donation request", "hint": "Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool: a low score does not prove the appeal is real. The safest way to give is always the same: open the charity’s official website or app yourself and donate there, to an account in the charity’s own name.", "l1": "Paste the appeal, the message or what the caller or collector said", "l2": "How it reached you (optional)", "go": "Check it", "e0": "Example: flood appeal, Bizum to a number", "e1": "Example: ES sick child, PayPal and crypto", "e2": "Example: “charity” call asks for card", "e3": "Example: ES street collector, cash only", "e4": "Example: ES donation on official site", "of": "/ 100 scam score", "todoh": "What to do before you give", "c1h": "Pay the charity, never a person", "c1p": "Real charities take donations on their own website, by card, by transfer to an account in the charity’s name, or in Spain through Bizum’s “Donate” option with the NGO’s 5-digit code. A Bizum to “Laura, coordinator” is a gift to Laura.", "c2h": "Check it is real in two minutes", "c2p": "Type the charity’s address yourself, look for its full legal name and tax number (CIF in Spain), and search it in the official register of charities, associations or foundations. No name, no number, no website: no donation.", "c3h": "Disasters bring out the fakes", "c3p": "After a flood, a fire, a war or a viral sick-child story, fake appeals appear within hours. Give to organisations already working there, through their own channels, not through a forwarded message, a comment or a new account.", "ctah": "Want to roast these on camera?", "ctap": "The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.", "ctab": "See the Script Pack", "tiph": "Tip jar", "tipp": "This checker is free and stays free. If it kept your donation away from a fake appeal, you can tip.", "tipb": "Tip via PayPal", "disc": "Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Charities, NGOs, aid agencies, crowdfunding sites, payment apps and brands appear only because scammers impersonate them; they are not accused of anything. Not legal advice. If you already gave card details, call your bank right away to block the card and dispute the charge. If you sent a Bizum or a transfer, call your bank at once and ask them to try to recall it; these payments are usually instant and hard to reverse. Keep screenshots and report it to the police. In Spain you can also call INCIBE’s free helpline on 017.", "qrm": "QR code checker", "qrf": "QR checker", "trvm": "Travel / booking checker", "trvf": "Travel checker", "lotm": "Lottery / prize checker", "lotf": "Lottery checker", "moresh": "Fake shop checker", "moret": "Ticket scam checker", "morer2": "Romance scam checker", "morei": "Investment scam checker", "morec": "Scam call checker", "mores2": "SMS / WhatsApp checker", "morem": "Marketplace scam checker", "morer": "Rental listing checker", "morerec": "Crypto recovery checker", "morep": "Phishing / invoice checker", "morej": "Job offer checker", "moreg": "Giveaway / airdrop checker", "moresig": "Signal / VIP group checker", "mores": "900 Shorts guide (19€)", "fd": "Scam-Clip Detector", "fsh": "Shop checker", "ftk": "Ticket checker", "fro": "Romance checker", "fi": "Investment checker", "fc": "Call checker", "fs": "SMS checker", "fm": "Marketplace checker", "fr": "Rental checker", "frec": "Recovery checker", "fpish": "Phishing checker", "fj": "Job offer checker", "fg": "Giveaway checker", "fp": "Scam-Roast Script Pack", "ft": "Tip jar"},
+ es:{"brand": "Comprobador de donaciones", "navd": "Detector de estafas", "navr": "QR", "navs": "SMS", "h1": "¿Te piden <em>donar?</em>", "sub": "Pega el llamamiento y di cómo te llegó: un WhatsApp reenviado tras una inundación o un incendio, una publicación sobre un niño enfermo que necesita una operación fuera, una llamada de una “ONG” que te agradece donaciones pasadas, un email de una agencia de ayuda, o alguien que pide en la calle o llama a tu puerta. En un segundo tienes una nota de banderas rojas y cómo donar con seguridad, para que tu dinero llegue a quien tiene que llegar.", "h2": "Comprueba una petición de donativo", "hint": "Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples: una nota baja no demuestra que el llamamiento sea real. La forma segura de donar es siempre la misma: abre tú la web o la app oficial de la ONG y dona allí, a una cuenta a nombre de la propia ONG.", "l1": "Pega el llamamiento, el mensaje o lo que te dijo quien llamó o pedía", "l2": "Cómo te llegó (opcional)", "go": "Comprobar", "e0": "Ejemplo: inundación, Bizum a un número", "e1": "Ejemplo: niño enfermo, PayPal y cripto", "e2": "Ejemplo: llamada de “ONG” pide tarjeta", "e3": "Ejemplo: en la calle, solo efectivo", "e4": "Ejemplo: donativo en la web oficial", "of": "/ 100 nota de estafa", "todoh": "Qué hacer antes de donar", "c1h": "Paga a la ONG, nunca a una persona", "c1p": "Las ONG reales reciben donativos en su propia web, con tarjeta, por transferencia a una cuenta a nombre de la entidad o, en España, con la opción “Donar” de Bizum y el código de 5 cifras de la ONG. Un Bizum a “Laura, coordinadora” es un regalo para Laura.", "c2h": "Compruébalo en dos minutos", "c2p": "Escribe tú la dirección de la ONG, busca su nombre legal completo y su CIF, y búscala en el registro oficial de asociaciones o de fundaciones. Sin nombre, sin CIF y sin web: sin donativo.", "c3h": "Las catástrofes atraen a los falsos", "c3p": "Tras una DANA, un incendio, una guerra o la historia viral de un niño enfermo, los llamamientos falsos aparecen en horas. Dona a organizaciones que ya trabajan allí, por sus propios canales, no por un mensaje reenviado, un comentario o una cuenta recién creada.", "ctah": "¿Quieres hacer un roast de esto en vídeo?", "ctap": "El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) sobre las estafas más comunes. Paga lo que quieras, desde 5 €.", "ctab": "Ver el pack de guiones", "tiph": "Bote de propinas", "tipp": "Este comprobador es gratis y seguirá siéndolo. Si evitó que tu donativo acabara en un llamamiento falso, puedes dejar una propina.", "tipb": "Propina por PayPal", "disc": "Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. Las ONG, asociaciones, agencias de ayuda, webs de micromecenazgo, apps de pago y marcas aparecen solo porque los estafadores se hacen pasar por ellas; no se las acusa de nada. No es asesoramiento legal. Si ya diste los datos de tu tarjeta, llama ya a tu banco para bloquearla y reclamar el cargo. Si enviaste un Bizum o una transferencia, llama enseguida a tu banco y pide que intenten recuperarlo; estos pagos suelen ser inmediatos y difíciles de revertir. Guarda capturas y denúncialo a la policía. También puedes llamar gratis al 017, la línea de ayuda en ciberseguridad de INCIBE.", "qrm": "Comprobador de códigos QR", "qrf": "Comprobador de QR", "trvm": "Comprobador de viajes y reservas", "trvf": "Comprobador de viajes", "lotm": "Comprobador de premios y loterías", "lotf": "Comprobador de premios", "moresh": "Comprobador de tiendas online", "moret": "Comprobador de entradas", "morer2": "Comprobador de romances", "morei": "Comprobador de inversiones", "morec": "Comprobador de llamadas", "mores2": "Comprobador de SMS / WhatsApp", "morem": "Comprobador de segunda mano", "morer": "Comprobador de alquileres", "morerec": "Comprobador de recuperación de cripto", "morep": "Comprobador de phishing / facturas", "morej": "Comprobador de ofertas de trabajo", "moreg": "Comprobador de sorteos / airdrops", "moresig": "Comprobador de grupos VIP / señales", "mores": "Guía de 900 Shorts (19 €)", "fd": "Detector de estafas", "fsh": "Comprobador de tiendas", "ftk": "Comprobador de entradas", "fro": "Comprobador de romances", "fi": "Comprobador de inversiones", "fc": "Comprobador de llamadas", "fs": "Comprobador de SMS", "fm": "Comprobador de segunda mano", "fr": "Comprobador de alquileres", "frec": "Comprobador de recuperación", "fpish": "Comprobador de phishing", "fj": "Comprobador de ofertas", "fg": "Comprobador de sorteos", "fp": "Pack de guiones Scam-Roast", "ft": "Bote de propinas"}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|won'?t|will not|didn'?t|did not|don'?t|do not|hasn'?t|has not|no need to|nunca|jam[aá]s|no me|no te|no ha|no hace falta|sin)[^.!?\n]{0,30}$/i.test(t.slice(Math.max(0,idx-40),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'person',w:24,neg:true,en:'Asks you to pay a person, not the charity: Bizum to a mobile number, PayPal friends and family, a personal account or someone’s name',es:'Te pide pagar a una persona, no a la ONG: Bizum a un móvil, PayPal amigos y familiares, una cuenta personal o a nombre de alguien',
+  wen:'This is the single clearest sign. Real charities receive money into accounts in the charity’s own name, on their website, or in Spain through Bizum’s Donate option with a 5-digit NGO code. Money sent to a private mobile number or a personal PayPal goes to that person.',wes:'Es la señal más clara. Las ONG reales reciben el dinero en cuentas a nombre de la propia entidad, en su web o, en España, con la opción Donar de Bizum y un código de ONG de 5 cifras. El dinero enviado a un móvil particular o a un PayPal personal se lo queda esa persona.',
+  re:[/(?:bizum|send|transfer|pay|donat\w*)[^.\n]{0,30}\+?\d[\d ]{8,}|paypal (?:friends|f&f|family)|friends (?:and|&) family|(?:to|into) (?:my|his|her|a|our) (?:personal|own|private) (?:account|iban|paypal|revolut|bank)|personal (?:account|iban|paypal|number|bizum)|(?:in|under) (?:my|his|her|the coordinator'?s|a volunteer'?s) name/i,
+   /(?:bizum|env[ií]a|manda|transfier|ingres|don)\w*[^.\n]{0,30}\+?\d[\d ]{8,}|paypal (?:amigos|familia)|amigos y familiares|(?:a|en) (?:mi|su|nuestra) (?:cuenta|iban|paypal|revolut) (?:personal|particular|privada)|cuenta (?:personal|particular|privada)|n[uú]mero (?:personal|particular)|a nombre de (?:un particular|una persona|mi |su |la coordinadora|el coordinador|un voluntario|una voluntaria)/i]},
+ {id:'crypto',w:22,neg:true,en:'Wants the donation in crypto, gift cards, Western Union or cash picked up by a courier',es:'Quiere el donativo en cripto, tarjetas regalo, Western Union o en efectivo que recoge un mensajero',
+  wen:'Crypto, gift cards and money transfers cannot be traced or reversed, which is why scammers ask for them. A real charity that accepts crypto does it on its own website, never by a wallet address pasted into a chat.',wes:'La cripto, las tarjetas regalo y los envíos de dinero no se pueden rastrear ni devolver, por eso los piden los estafadores. Una ONG real que acepta cripto lo hace en su propia web, nunca con una dirección de cartera pegada en un chat.',
+  re:[/\b(?:usdt|bitcoin|btc|eth|ethereum|crypto|cryptocurrency|wallet address)\b|gift ?cards?|western union|moneygram|(?:steam|amazon|google play|apple|itunes) cards?|courier (?:will )?(?:collect|pick up|come)/i,
+   /\b(?:usdt|bitcoin|btc|eth|ethereum|cripto|criptomonedas?|direcci[oó]n de (?:la )?cartera)\b|tarjetas? regalo|western union|moneygram|tarjetas? (?:de )?(?:steam|amazon|google play|apple|itunes)|mensajero (?:pasar[aá]|recoger[aá]|vendr[aá])/i]},
+ {id:'card',w:20,neg:true,en:'Asks for your card number, expiry, CVV, a code sent to your phone or your bank login in a call, chat or form',es:'Te pide el número de tarjeta, la caducidad, el CVV, un código que te llega al móvil o las claves del banco por llamada, chat o formulario',
+  wen:'No charity needs the code your bank texts you, and none phones you to “renew” a donation by reading your card aloud. With those details they can take far more than your donation.',wes:'Ninguna ONG necesita el código que te manda el banco, y ninguna te llama para “renovar” un donativo pidiéndote que le leas la tarjeta. Con esos datos pueden quitarte mucho más que tu donativo.',
+  re:[/(?:card|credit card|debit card) (?:number|details|expiry|data|info)|\bcvv\b|\bcvc\b|expiry date|(?:code|pin|otp) (?:they|we|that|you|the bank) (?:just )?(?:texted|sent|received)|(?:read|give|tell) (?:me|us|them) (?:the )?(?:code|pin)|(?:online )?banking (?:password|login)|bank (?:login|password)/i,
+   /(?:n[uú]mero|datos) de (?:la |tu |su |mi )?tarjeta|\bcvv\b|\bcvc\b|fecha de caducidad|c[oó]digo (?:que )?(?:te |le |me )?(?:acaba de llegar|lleg[oó]|enviamos|mandamos|recib\w*)|(?:d[ií]me|dame|l[eé]eme|dinos|leerles?) (?:el )?(?:c[oó]digo|pin)|claves? (?:del banco|de la banca|de acceso)/i]},
+ {id:'perk',w:14,neg:true,en:'Promises something back: double your money, a prize draw for donors, an instant cash tax refund, or a fee to release your receipt',es:'Promete algo a cambio: el doble de tu dinero, un sorteo para donantes, una devolución de Hacienda inmediata en efectivo, o una tasa para emitir tu recibo',
+  wen:'Donations are gifts. A tax deduction comes later through your tax return, from a registered entity. Any promise of money back now, a prize or a fee to get your certificate is a trick.',wes:'Un donativo es un regalo. La deducción fiscal llega después, en la declaración de la renta, y solo si la entidad está registrada. Cualquier promesa de dinero de vuelta ya, un premio o una tasa para recibir el certificado es un truco.',
+  re:[/(?:get|receive) (?:double|2x|twice|it back|your money back)|double (?:your|it back)|prize draw|win (?:a|an) (?:iphone|car|trip|prize)|(?:tax|80%) (?:refund|back) (?:in cash|today|immediately|instantly|now)|(?:fee|tax) to (?:release|get|send|issue) (?:your |the )?(?:certificate|receipt|refund)/i,
+   /(?:recib\w*|te devolvemos|te devuelven|consigue) (?:el doble|el triple|tu dinero|lo donado)|sorteo (?:de|entre) (?:los )?donantes|(?:gana|ganar|ganar[aá]s) un (?:iphone|coche|viaje|premio)|devoluci[oó]n (?:de hacienda )?(?:inmediata|en efectivo|hoy)|(?:tasa|comisi[oó]n) para (?:recibir|emitir|liberar) (?:el |tu )?(?:certificado|recibo|reembolso)/i]},
+ {id:'unknown',w:16,en:'Cannot be checked: no legal name, no tax or charity number, no website, not registered, or the person will not say who they are',es:'No se puede comprobar: sin nombre legal, sin CIF ni número de registro, sin web, no registrada, o la persona no dice quién es',
+  wen:'A real charity is easy to find: legal name, tax number, website, and an entry in an official register. If you cannot find it in two minutes, keep your money for one you can.',wes:'Una ONG real es fácil de encontrar: nombre legal, CIF, web y una entrada en un registro oficial. Si en dos minutos no la encuentras, guarda tu dinero para una que sí puedas comprobar.',
+  re:[/(?:not|isn'?t|aren'?t|we'?re not) (?:yet )?registered|no (?:charity|registration|company|tax) (?:number|id)|can'?t find (?:them|it|the charity|their website|any website|anything)|no (?:website|web page|official page)|(?:private|small|new) (?:foundation|association|group)|won'?t (?:say|give|tell|show)[^.\n]{0,25}(?:name|number|details|address|id)|(?:refused|declined) to (?:give|show)|never heard of|unknown (?:ngo|charity|organi[sz]ation)|no (?:id|badge|identification|lanyard)/i,
+   /no (?:est[aá]|estamos|est[aá]n|son|somos) (?:a[uú]n |todav[ií]a )?registrad|sin (?:cif|n[uú]mero de registro|registro|web|p[aá]gina)|no (?:tiene|tienen) (?:cif|web|p[aá]gina|registro)|no (?:la |lo )?(?:encuentro|aparece|sale)[^.\n]{0,25}(?:en google|en internet|la web|su web|registro)|no (?:quiere|quiso|quieren) (?:dar|decir|ense[nñ]ar)|(?:ong|asociaci[oó]n|fundaci[oó]n) que no conozco|asociaci[oó]n (?:peque[nñ]a|privada|nueva)|sin (?:acreditaci[oó]n|identificaci[oó]n|carn[eé]|placa)/i]},
+ {id:'link',w:14,en:'Odd web address: lookalike charity name, a short link, a raw IP or a cheap ending like .top, .xyz or .site',es:'Dirección web rara: nombre de ONG imitado, enlace acortado, una IP o una terminación barata como .top, .xyz o .site',
+  wen:'Cloned donation pages copy the logo and photos of a real charity and live on an address like “cruzroja-donar.top” or a short link. Type the charity’s real address yourself instead.',wes:'Las páginas de donación clonadas copian el logo y las fotos de una ONG real y viven en direcciones como “cruzroja-donar.top” o un enlace acortado. Escribe tú la dirección real de la ONG.',
+  re:[/\b[a-z0-9-]+\.(?:top|xyz|site|online|shop|live|click|icu|cfd|sbs|vip|buzz|rest|cyou|lat|info|biz|support|help)\b|\b(?:bit\.ly|tinyurl\.com|cutt\.ly|is\.gd|t\.ly|rb\.gy|shorturl\.at|tiny\.cc|ow\.ly|linktr\.ee)\b|https?:\/\/\d{1,3}(?:\.\d{1,3}){3}|\b[a-z0-9]+-(?:donar|donate|donacion|donaciones|donation|ayuda|help|relief|ong|charity|aid|emergencia|emergency|solidario|solidaria)[a-z0-9-]*\.[a-z]{2,8}\b|\b(?:donar|donate|ayuda|help|relief|cruzroja|cruz-roja|redcross|unicef|caritas|acnur|unhcr|msf|savethechildren|oxfam|gofundme|gofund)-[a-z0-9-]+\.[a-z]{2,8}\b/i]},
+ {id:'collector',w:12,en:'A collector in the street or at your door with no badge, an unsealed box, cash only, or card details on paper',es:'Alguien que pide en la calle o en tu puerta sin acreditación, con una hucha sin precintar, solo en efectivo, o apuntando la tarjeta en un papel',
+  wen:'Real street fundraisers wear an ID badge with the charity’s name and usually sign you up on a tablet for a direct debit to the charity’s own account. You can always say no and give later on the website.',wes:'Los captadores reales llevan una acreditación con el nombre de la ONG y suelen darte de alta en una tableta con una domiciliación a la cuenta de la propia entidad. Siempre puedes decir que no y donar después en su web.',
+  re:[/(?:in|on) the street|door.to.door|knocked on|at my door|collector|collection (?:box|tin|bucket)|clipboard|tabard|\bvest\b|supermarket (?:entrance|door)|outside the (?:supermarket|station|church)|cash only|only (?:in )?cash|(?:card|number) on (?:a )?(?:paper|sheet|form)/i,
+   /en la calle|puerta a puerta|llam\w* a (?:mi|la) puerta|hucha|chaleco|\bpeto\b|carpeta|a la (?:salida|puerta) del (?:s[uú]per|supermercado|metro|mercado)|solo (?:en )?efectivo|solo (?:aceptan|acepta|cogen|coge) (?:efectivo|dinero|billetes)|tarjeta en un papel/i]},
+ {id:'channel',w:10,en:'Came out of nowhere: a forwarded chain, a WhatsApp or Telegram group, a DM or comment, a brand-new account, a cold call or a text',es:'Llegó sin buscarlo: una cadena reenviada, un grupo de WhatsApp o Telegram, un mensaje privado o comentario, una cuenta recién creada, una llamada o un SMS',
+  wen:'Fake appeals spread through forwards and new accounts because nobody checks who started them. Hearing about a cause there is fine; donate only after you find the charity yourself.',wes:'Los llamamientos falsos se mueven por reenvíos y cuentas nuevas porque nadie comprueba quién los empezó. Enterarte de una causa así está bien; dona solo después de encontrar tú a la ONG.',
+  re:[/forward(?:ed)?|(?:whatsapp|telegram) (?:group|chain|message)|(?:dm|message) me (?:to|for)|(?:instagram|tiktok|facebook|twitter) (?:account|post|page|story|dm|comment|reel)|account (?:created|made|opened) (?:\d+|two|a few|last) (?:days?|weeks?)|cold call|(?:called|rang) me|phone call|\bsms\b|text message/i,
+   /reenv[ií]a|reenviado|(?:grupo|cadena|mensaje) de (?:whatsapp|telegram)|(?:escr[ií]be(?:me|nos)?|habla(?:me|nos)?) (?:por|al) (?:privado|md|dm)|(?:cuenta|publicaci[oó]n|perfil|historia|comentario) (?:de|en) (?:instagram|tiktok|facebook|twitter)|(?:creada|abierta|hecha) hace (?:\d+|dos|unos|pocos) (?:d[ií]as|semanas)|me (?:llam[oó]|llamaron|llaman)|llamada|\bsms\b/i]},
+ {id:'rush',w:10,en:'Pressure or guilt: “today”, “in the next hours”, “every minute counts”, “no time to check”, “they will die”',es:'Prisa o culpa: “hoy”, “en las próximas horas”, “cada minuto cuenta”, “no hay tiempo”, “van a morir”',
+  wen:'Real emergencies need help for months, and real charities are happy for you to check first. Pressure is there to stop you from looking them up.',wes:'Las emergencias reales necesitan ayuda durante meses, y las ONG reales no tienen problema en que compruebes antes. La prisa está para que no las busques.',
+  re:[/\btoday\b|today only|(?:within|in the next) (?:\d+|one|two|24|48) ?(?:hours?|minutes?|h)\b|urgent|urgently|immediately|right now|\basap\b|tonight|every (?:minute|hour|second|euro|day) counts|(?:no|don'?t have) time to (?:check|verify|think)|(?:don'?t|do not) tell|before it'?s too late|will die/i,
+   /\bhoy\b|solo hoy|(?:en|dentro de|en las pr[oó]ximas) (?:\d+|una|dos|24|48) ?(?:horas?|minutos?|h)\b|urgente|urgencia|inmediatamente|ahora mismo|esta noche|cada (?:minuto|hora|d[ií]a|segundo|euro) cuenta|no (?:hay|tenemos) tiempo|antes de que sea tarde|morir[aá]n?|va a morir/i]},
+ {id:'cause',w:8,en:'Tied to a fresh disaster or heartbreak: floods, fires, earthquakes, war, refugees, a sick child or surgery abroad',es:'Ligado a una catástrofe reciente o a un drama: inundaciones, DANA, incendios, terremotos, guerra, refugiados, un niño enfermo o una operación fuera',
+  wen:'The cause is often real; the collector is not. After every disaster, fake appeals copy real photos within hours. Give through organisations already working there.',wes:'La causa suele ser real; quien pide, no. Tras cada catástrofe, los llamamientos falsos copian fotos reales en cuestión de horas. Dona a organizaciones que ya trabajan allí.',
+  re:[/flood|\bdana\b|earthquake|hurricane|wildfire|\bfires?\b|tsunami|\bwar\b|refugees?|\bgaza\b|ukraine|sudan|syria|lebanon|lost everything|(?:sick|ill|dying) (?:child|boy|girl|baby|son|daughter|mother|father)|(?:operation|surgery|treatment) (?:abroad|in the us|in america|in germany)|cancer|orphan/i,
+   /inundaci|riada|\bdana\b|terremoto|sismo|hurac[aá]n|incendio|guerra|refugiad|\bgaza\b|ucrania|sud[aá]n|siria|l[ií]bano|lo (?:han|hemos) perdido todo|lo perdieron todo|(?:ni[nñ]o|ni[nñ]a|beb[eé]|hijo|hija|madre|padre) enferm|operaci[oó]n (?:en|fuera)|tratamiento (?:en|fuera)|c[aá]ncer|hu[eé]rfan/i]},
+ {id:'brand',w:6,en:'Uses a trusted name: Red Cross, Cáritas, UNICEF, Doctors Without Borders, UNHCR, Save the Children, Oxfam, GoFundMe',es:'Usa un nombre de confianza: Cruz Roja, Cáritas, UNICEF, Médicos Sin Fronteras, ACNUR, Save the Children, Oxfam, GoFundMe',
+  wen:'Scammers borrow names you already trust. The name tells you nothing; who gets the money and how tells you everything.',wes:'Los estafadores usan nombres en los que ya confías. El nombre no dice nada; quién recibe el dinero y cómo lo dice todo.',
+  re:[/\b(?:red cross|cruz roja|c[aá]ritas|unicef|m[eé]dicos sin fronteras|doctors without borders|\bmsf\b|unhcr|acnur|save the children|oxfam|intermon|wwf|greenpeace|amnesty|amnist[ií]a|world vision|aldeas infantiles|manos unidas|ayuda en acci[oó]n|banco de alimentos|food bank|gofundme|migranodearena|ong|ngo|charity)\b/i]}
+];
+function analyze(text,url){
+  var t=(text||'')+'\n'+(url||''),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  var legit=/(?:official (?:website|site|app)[^.\n]{0,30}(?:i (?:typed|opened|went to)|myself)|i (?:typed|opened|went to) (?:their|the) (?:official )?(?:website|site|app|address) myself|(?:checked|verified|found) (?:the |its |their )?(?:charity number|registration|register|cif|tax number)|tax (?:receipt|certificate) (?:arrived|came)|bizum(?:'s)? (?:donate|donation|ngo|charity) (?:option|code|button)|direct debit (?:to|in the name of) the charity|web oficial que (?:escrib[ií]|abr[ií]) yo|(?:escrib[ií]|abr[ií]) yo (?:la direcci[oó]n|la web|la app)|desde (?:su|la) (?:web|app) oficial|c[oó]digo (?:de )?bizum (?:para|de) (?:ong|donaciones)|opci[oó]n (?:de )?donar (?:de|en) bizum|certificado (?:para|de) hacienda|(?:comprob[eé]|verifiqu[eé]|mir[eé]) (?:el |su )?(?:cif|registro))/i.test(t);
+  if(n>=4)score+=8;
+  if(on('card')&&(on('brand')||on('channel')||on('cause')))score=Math.max(score,80);
+  if(on('person')&&(on('cause')||on('channel')||on('brand')||on('rush')))score=Math.max(score,78);
+  if(on('crypto'))score=Math.max(score,75);
+  if(on('link')&&(on('brand')||on('cause')||on('rush')))score=Math.max(score,72);
+  if(on('collector')&&(on('card')||on('unknown')))score=Math.max(score,72);
+  if(on('perk'))score=Math.max(score,70);
+  if(on('card'))score=Math.max(score,62);
+  if(on('unknown')&&(on('cause')||on('channel')||on('rush')))score=Math.max(score,60);
+  if(on('person'))score=Math.max(score,55);
+  if(on('link'))score=Math.max(score,40);
+  if(on('unknown'))score=Math.max(score,35);
+  if(on('collector'))score=Math.max(score,30);
+  if(legit&&!on('person')&&!on('crypto')&&!on('card')&&!on('perk')&&!on('link')&&!on('unknown'))score=Math.min(score,10);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Donativo falso casi seguro','Encaja con un guion conocido: un llamamiento que pide pagar a una persona, en cripto o con los datos de tu tarjeta, o una ONG que no se puede comprobar. No pagues. Si quieres ayudar a esa causa, busca tú una ONG real y dona en su web.']:['Almost certainly a fake appeal','This matches a known script: an appeal that wants money sent to a person, in crypto or with your card details, or a charity that cannot be checked. Do not pay. If you want to help the cause, find a real charity yourself and give on its website.'];
+  if(s>=40)return es?['Muchas banderas rojas','Antes de dar nada, busca tú la ONG, comprueba su nombre legal y su CIF, y dona solo desde su web oficial o su app.']:['Big red flags','Before giving anything, look the charity up yourself, check its legal name and tax number, and donate only through its official website or app.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. Comprueba quién recibe el dinero y dona por los canales oficiales de la ONG, no por el enlace o el número que te pasaron.']:['Kinda sus','Some classic signals. Check who actually receives the money and give through the charity’s official channels, not the link or number you were sent.'];
+  return es?['Pocas banderas','No salta casi nada. Aun así, dona siempre desde la web o la app oficial de la ONG, a una cuenta a su nombre, y guarda el recibo.']:['Few flags','Not much trips the rules. Still, always give through the charity’s official website or app, to an account in its own name, and keep the receipt.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  L.push(es?'No uses el enlace, el número ni la cuenta que te pasaron. Escribe tú la dirección de la ONG o abre su app oficial y dona allí.':'Do not use the link, number or account you were sent. Type the charity’s address yourself or open its official app and give there.');
+  if(on('person'))L.push(es?'Dona solo a cuentas a nombre de la propia ONG. Con Bizum, usa la opción Donar y el código de 5 cifras que la ONG publica en su web, nunca un móvil particular.':'Only give to accounts in the charity’s own name. In Spain, use Bizum’s Donate option with the 5-digit code the charity publishes on its website, never a private mobile number.');
+  if(on('unknown')||on('cause'))L.push(es?'Busca el nombre legal y el CIF de la entidad y compruébalo en el registro oficial de asociaciones o de fundaciones. Si no aparece, no dones.':'Find the organisation’s legal name and tax number and check it in the official register of charities, associations or foundations. If it is not there, do not give.');
+  if(on('card'))L.push(es?'Cuelga. Ninguna ONG te pide el código que te manda el banco ni que leas tu tarjeta por teléfono. Si quieres seguir donando, llama tú al número de su web.':'Hang up. No charity asks for the code your bank texts you or for your card read aloud. If you want to keep donating, call the number on its website yourself.');
+  if(on('crypto'))L.push(es?'No dones en cripto, tarjetas regalo ni envíos de dinero por un chat. No se puede recuperar.':'Do not donate in crypto, gift cards or money transfers through a chat. It cannot be recovered.');
+  if(on('collector'))L.push(es?'Pide ver la acreditación y el nombre de la ONG. Puedes decir que no y donar luego en su web. No apuntes la tarjeta en un papel ni des efectivo a quien no se identifica.':'Ask to see the badge and the charity’s name. You can say no and give later on its website. Never write your card on paper or hand cash to someone who will not identify themselves.');
+  L.push(es?'Si ya pagaste, llama ya a tu banco para bloquear la tarjeta o intentar recuperar el Bizum o la transferencia. Guarda capturas y denúncialo. Dudas: 017 de INCIBE.':'If you already paid, call your bank now to block the card or try to recall the Bizum or transfer. Keep screenshots and report it. In Spain, INCIBE’s 017 helpline can advise.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'URGENT: families have lost everything in the floods. Red Cross volunteers need help TODAY. Send a Bizum to 612 345 678 (Laura, coordinator). Every euro counts, please forward to all your groups.',u:'WhatsApp group, forwarded many times'},
+ {t:'Mi hijo Hugo necesita una operación en EE. UU. que cuesta 250.000 €. Donad por PayPal amigos y familiares a hugo.ayuda@gmail.com o en USDT. No tenemos tiempo, cada día cuenta.',u:'Cuenta de Instagram creada hace 2 semanas'},
+ {t:'A man called saying he was from UNICEF, thanked me for my past donations and asked for my card number, the expiry date and the code they just texted me so he could renew my monthly donation.',u:'Phone call from a hidden number'},
+ {t:'En la calle un chico con chaleco de una ONG que no conozco, sin acreditación, pide donativos solo en efectivo o que apunte mi número de tarjeta en un papel.',u:'A la salida del supermercado'},
+ {t:'Doné a Cáritas desde su web oficial, que escribí yo, y con el código de Bizum para ONG de 5 cifras que aparece en esa misma web. Me llegó el certificado para Hacienda.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
