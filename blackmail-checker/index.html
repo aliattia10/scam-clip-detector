@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blackmail Email Checker: “I hacked your camera”, Bitcoin sextortion, fake Europol and police summons (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Got an email saying someone hacked your camera, knows your password and wants Bitcoin, or a “summons” from Europol or the police asking you to reply or pay a fine? Paste it and get a free rule-based red-flag score and what to do instead of paying. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/blackmail-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="Got a blackmail email? Free sextortion and fake police summons checker">
+<meta property="og:description" content="Paste the email. Get a red-flag score for “I hacked your camera” sextortion, Bitcoin demands, quoted old passwords, fake Europol and police summons, and pay-to-close-the-case threats.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/blackmail-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/blackmail-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blackmail email checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for sextortion emails, Bitcoin blackmail and fake police summons, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/blackmail-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Blackmail Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/loan-checker/" data-i18n="navr">Loans</a>
+      <a class="hide-m" href="/sms-checker/" data-i18n="navs">SMS</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">Got a <em>blackmail email?</em></h1>
+    <p class="sub" data-i18n="sub">Paste the email or message: “I hacked your camera and recorded you”, “your password is…, pay in Bitcoin or I send the video to your contacts”, a “summons” from Europol, the Policía Nacional or a court accusing you of a crime and asking you to reply or pay, or a stranger threatening to share photos from a video call. In one second you get a red-flag score and what to do instead of paying.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a blackmail or threat message</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere, so you can paste it without anyone seeing. It is a rule-based awareness tool and can be wrong both ways. The safe rule is always the same: do not pay and do not reply. Mass blackmail emails go to millions of people at once, and real police and courts never email accusations asking you to pay or write back to a Gmail address.</p>
+    <label for="txt" data-i18n="l1">Paste the email or message</label>
+    <textarea id="txt" placeholder="e.g. I hacked your device and recorded you through your camera. Your password is ****. Send 1,200€ in Bitcoin within 48 hours or the video goes to all your contacts."></textarea>
+    <label for="url" data-i18n="l2">Sender and how it reached you (optional)</label>
+    <input type="text" id="url" placeholder="e.g. email from a Gmail address, PDF attached, Instagram DM" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: “I hacked your camera”, Bitcoin</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: ES Europol summons</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: ES pay a fine to close the case</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: video call, pay or I share</button>
+      <button class="chip" onclick="ex(4)" data-i18n="e4">Example: ES certified letter I checked myself</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do instead of paying</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">There is no video</b><p data-i18n="c1p">The “I hacked your camera” emails are sent to millions of addresses at once. The password they quote comes from an old data leak of some website, not from your device. Change it wherever you still use it and delete the email.</p></div>
+    <div class="card"><b data-i18n="c2h">Police do not email you to pay</b><p data-i18n="c2p">Europol, the Policía Nacional, the Guardia Civil and courts do not send accusations by email from Gmail or Outlook, and never ask you to “justify yourself” by reply or pay a fine to close a case. If you are worried, call 091 or 062 yourself.</p></div>
+    <div class="card"><b data-i18n="c3h">If it is real, paying never ends it</b><p data-i18n="c3p">If someone really has photos or a recording of you, paying only proves you will pay again. Stop replying, keep screenshots, report the account and go to the police. Adults can use StopNCII.org to help block the images on big platforms; under 18s can use Take It Down and should tell an adult they trust.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it helped you sleep tonight instead of paying a blackmailer, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/loan-checker/" data-i18n="lnm">Loan scam checker</a>
+    <a href="/charity-checker/" data-i18n="chm">Charity / donation checker</a>
+    <a href="/qr-checker/" data-i18n="qrm">QR code checker</a>
+    <a href="/travel-checker/" data-i18n="trvm">Travel / booking checker</a>
+    <a href="/lottery-checker/" data-i18n="lotm">Lottery / prize checker</a>
+    <a href="/shop-checker/" data-i18n="moresh">Fake shop checker</a>
+    <a href="/ticket-checker/" data-i18n="moret">Ticket scam checker</a>
+    <a href="/marketplace-checker/" data-i18n="morem">Marketplace scam checker</a>
+    <a href="/romance-checker/" data-i18n="morer2">Romance scam checker</a>
+    <a href="/investment-checker/" data-i18n="morei">Investment scam checker</a>
+    <a href="/call-checker/" data-i18n="morec">Scam call checker</a>
+    <a href="/sms-checker/" data-i18n="mores2">SMS / WhatsApp checker</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/loan-checker/" data-i18n="lnf">Loan checker</a> · <a href="/charity-checker/" data-i18n="chf">Charity checker</a> · <a href="/qr-checker/" data-i18n="qrf">QR checker</a> · <a href="/travel-checker/" data-i18n="trvf">Travel checker</a> · <a href="/lottery-checker/" data-i18n="lotf">Lottery checker</a> · <a href="/shop-checker/" data-i18n="fsh">Shop checker</a> · <a href="/ticket-checker/" data-i18n="ftk">Ticket checker</a> · <a href="/marketplace-checker/" data-i18n="fm">Marketplace checker</a> · <a href="/romance-checker/" data-i18n="fro">Romance checker</a> · <a href="/investment-checker/" data-i18n="fi">Investment checker</a> · <a href="/call-checker/" data-i18n="fc">Call checker</a> · <a href="/sms-checker/" data-i18n="fs">SMS checker</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Police forces, courts, agencies and brands appear only because scammers impersonate them; they are not accused of anything. Not legal advice. If you already paid, keep every message and payment record and report it to the police; ask your bank or exchange to try to stop the payment. If you are in danger or someone is threatening you in person, call 112. If you are under 18 and someone is threatening to share images of you, tell an adult you trust; it is not your fault. In Spain you can also call INCIBE’s free helpline on 017.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{"brand": "Blackmail Checker", "navd": "Scam-Clip Detector", "navr": "Loans", "navs": "SMS", "h1": "Got a <em>blackmail email?</em>", "sub": "Paste the email or message: “I hacked your camera and recorded you”, “your password is…, pay in Bitcoin or I send the video to your contacts”, a “summons” from Europol, the Policía Nacional or a court accusing you of a crime and asking you to reply or pay, or a stranger threatening to share photos from a video call. In one second you get a red-flag score and what to do instead of paying.", "h2": "Check a blackmail or threat message", "hint": "Runs 100% in your browser. Nothing is sent anywhere, so you can paste it without anyone seeing. It is a rule-based awareness tool and can be wrong both ways. The safe rule is always the same: do not pay and do not reply. Mass blackmail emails go to millions of people at once, and real police and courts never email accusations asking you to pay or write back to a Gmail address.", "l1": "Paste the email or message", "l2": "Sender and how it reached you (optional)", "go": "Check it", "e0": "Example: “I hacked your camera”, Bitcoin", "e1": "Example: ES Europol summons", "e2": "Example: ES pay a fine to close the case", "e3": "Example: video call, pay or I share", "e4": "Example: ES certified letter I checked myself", "of": "/ 100 scam score", "todoh": "What to do instead of paying", "c1h": "There is no video", "c1p": "The “I hacked your camera” emails are sent to millions of addresses at once. The password they quote comes from an old data leak of some website, not from your device. Change it wherever you still use it and delete the email.", "c2h": "Police do not email you to pay", "c2p": "Europol, the Policía Nacional, the Guardia Civil and courts do not send accusations by email from Gmail or Outlook, and never ask you to “justify yourself” by reply or pay a fine to close a case. If you are worried, call 091 or 062 yourself.", "c3h": "If it is real, paying never ends it", "c3p": "If someone really has photos or a recording of you, paying only proves you will pay again. Stop replying, keep screenshots, report the account and go to the police. Adults can use StopNCII.org to help block the images on big platforms; under 18s can use Take It Down and should tell an adult they trust.", "ctah": "Want to roast these on camera?", "ctap": "The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.", "ctab": "See the Script Pack", "tiph": "Tip jar", "tipp": "This checker is free and stays free. If it helped you sleep tonight instead of paying a blackmailer, you can tip.", "tipb": "Tip via PayPal", "disc": "Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Police forces, courts, agencies and brands appear only because scammers impersonate them; they are not accused of anything. Not legal advice. If you already paid, keep every message and payment record and report it to the police; ask your bank or exchange to try to stop the payment. If you are in danger or someone is threatening you in person, call 112. If you are under 18 and someone is threatening to share images of you, tell an adult you trust; it is not your fault. In Spain you can also call INCIBE’s free helpline on 017.", "lnm": "Loan scam checker", "lnf": "Loan checker", "qrm": "QR code checker", "qrf": "QR checker", "trvm": "Travel / booking checker", "trvf": "Travel checker", "lotm": "Lottery / prize checker", "lotf": "Lottery checker", "moresh": "Fake shop checker", "moret": "Ticket scam checker", "morer2": "Romance scam checker", "morei": "Investment scam checker", "morec": "Scam call checker", "mores2": "SMS / WhatsApp checker", "morem": "Marketplace scam checker", "morer": "Rental listing checker", "morerec": "Crypto recovery checker", "morep": "Phishing / invoice checker", "morej": "Job offer checker", "moreg": "Giveaway / airdrop checker", "moresig": "Signal / VIP group checker", "mores": "900 Shorts guide (19€)", "fsh": "Shop checker", "ftk": "Ticket checker", "fro": "Romance checker", "fi": "Investment checker", "fc": "Call checker", "fs": "SMS checker", "fm": "Marketplace checker", "fr": "Rental checker", "frec": "Recovery checker", "fpish": "Phishing checker", "fj": "Job offer checker", "fg": "Giveaway checker", "fp": "Scam-Roast Script Pack", "ft": "Tip jar", "fd": "Scam-Clip Detector", "chm": "Charity / donation checker", "chf": "Charity checker"},
+ es:{"brand": "Comprobador de chantajes", "navd": "Detector de estafas", "navr": "Préstamos", "navs": "SMS", "h1": "¿Te ha llegado un <em>email de chantaje?</em>", "sub": "Pega el email o el mensaje: “he hackeado tu cámara y te he grabado”, “tu contraseña es…, paga en Bitcoin o envío el vídeo a tus contactos”, una “citación” de Europol, la Policía Nacional o un juzgado que te acusa de un delito y te pide responder o pagar, o un desconocido que amenaza con difundir fotos de una videollamada. En un segundo tienes una nota de banderas rojas y qué hacer en vez de pagar.", "h2": "Comprueba un mensaje de chantaje o amenaza", "hint": "Funciona 100% en tu navegador. No se envía nada a ningún sitio, así que puedes pegarlo sin que nadie lo vea. Es una herramienta de concienciación con reglas simples y puede fallar en ambos sentidos. La regla segura es siempre la misma: no pagues y no respondas. Los emails de chantaje masivos llegan a millones de personas a la vez, y la policía y los juzgados de verdad nunca envían acusaciones por email pidiendo pagar o responder a una dirección de Gmail.", "l1": "Pega el email o el mensaje", "l2": "Remitente y cómo te llegó (opcional)", "go": "Comprobar", "e0": "Ejemplo: “he hackeado tu cámara”, Bitcoin", "e1": "Ejemplo: citación de Europol", "e2": "Ejemplo: pagar multa para cerrar el caso", "e3": "Ejemplo: videollamada, paga o lo difundo", "e4": "Ejemplo: carta certificada que comprobé", "of": "/ 100 nota de estafa", "todoh": "Qué hacer en vez de pagar", "c1h": "No hay ningún vídeo", "c1p": "Los emails de “he hackeado tu cámara” se envían a millones de direcciones a la vez. La contraseña que citan sale de una filtración antigua de alguna web, no de tu dispositivo. Cámbiala donde la sigas usando y borra el email.", "c2h": "La policía no te escribe para cobrarte", "c2p": "Europol, la Policía Nacional, la Guardia Civil y los juzgados no envían acusaciones por email desde Gmail u Outlook, y nunca te piden “justificarte” respondiendo ni pagar una multa para cerrar un caso. Si te preocupa, llama tú al 091 o al 062.", "c3h": "Si es real, pagar nunca lo termina", "c3p": "Si alguien de verdad tiene fotos o una grabación tuya, pagar solo demuestra que volverás a pagar. Deja de responder, guarda capturas, denuncia la cuenta y ve a la policía. Los adultos pueden usar StopNCII.org para ayudar a bloquear las imágenes en las grandes plataformas; los menores pueden usar Take It Down y deberían contárselo a un adulto de confianza.", "ctah": "¿Quieres hacer un roast de esto en vídeo?", "ctap": "El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) sobre las estafas más comunes. Paga lo que quieras, desde 5 €.", "ctab": "Ver el pack de guiones", "tiph": "Bote de propinas", "tipp": "Este comprobador es gratis y seguirá siéndolo. Si te ayudó a dormir tranquilo en vez de pagar a un chantajista, puedes dejar una propina.", "tipb": "Propina por PayPal", "disc": "Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. Los cuerpos de policía, juzgados, agencias y marcas aparecen solo porque los estafadores se hacen pasar por ellos; no se les acusa de nada. No es asesoramiento legal. Si ya pagaste, guarda todos los mensajes y justificantes y denúncialo a la policía; pide a tu banco o exchange que intenten parar el pago. Si estás en peligro o alguien te amenaza en persona, llama al 112. Si eres menor y alguien amenaza con difundir imágenes tuyas, cuéntaselo a un adulto de confianza; no es culpa tuya. También puedes llamar gratis al 017, la línea de ayuda en ciberseguridad de INCIBE.", "lnm": "Comprobador de préstamos", "lnf": "Comprobador de préstamos", "qrm": "Comprobador de códigos QR", "qrf": "Comprobador de QR", "trvm": "Comprobador de viajes y reservas", "trvf": "Comprobador de viajes", "lotm": "Comprobador de premios y loterías", "lotf": "Comprobador de premios", "moresh": "Comprobador de tiendas online", "moret": "Comprobador de entradas", "morer2": "Comprobador de romances", "morei": "Comprobador de inversiones", "morec": "Comprobador de llamadas", "mores2": "Comprobador de SMS / WhatsApp", "morem": "Comprobador de segunda mano", "morer": "Comprobador de alquileres", "morerec": "Comprobador de recuperación de cripto", "morep": "Comprobador de phishing / facturas", "morej": "Comprobador de ofertas de trabajo", "moreg": "Comprobador de sorteos / airdrops", "moresig": "Comprobador de grupos VIP / señales", "mores": "Guía de 900 Shorts (19 €)", "fsh": "Comprobador de tiendas", "ftk": "Comprobador de entradas", "fro": "Comprobador de romances", "fi": "Comprobador de inversiones", "fc": "Comprobador de llamadas", "fs": "Comprobador de SMS", "fm": "Comprobador de segunda mano", "fr": "Comprobador de alquileres", "frec": "Comprobador de recuperación", "fpish": "Comprobador de phishing", "fj": "Comprobador de ofertas", "fg": "Comprobador de sorteos", "fp": "Pack de guiones Scam-Roast", "ft": "Bote de propinas", "fd": "Detector de estafas", "chm": "Comprobador de donaciones", "chf": "Comprobador de donaciones"}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|won'?t|will not|didn'?t|did not|don'?t|do not|hasn'?t|has not|no need to|without|\bno\b|nunca|jam[aá]s|no me|no te|no ha|no hace falta|\bsin\b|\bni\b)[^.!?\n]{0,30}$/i.test(t.slice(Math.max(0,idx-40),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'hacked',w:20,neg:true,en:'Claims to have hacked your device, email or camera, installed a trojan or spyware, or recorded you through your webcam',es:'Dice que ha hackeado tu dispositivo, tu correo o tu cámara, que te instaló un troyano o software espía, o que te grabó con la webcam',
+  wen:'This is the classic mass “sextortion” email. The same text goes to millions of addresses; nobody installed anything and there is no recording. It works only if you panic.',wes:'Es el email de “sextorsión” masivo de siempre. El mismo texto llega a millones de direcciones; nadie instaló nada y no hay ninguna grabación. Solo funciona si te entra el pánico.',
+  re:[/(?:hacked|infected|compromised|got access to|gained access to|have (?:full |complete |remote )?(?:access|control) (?:to|of|over)) (?:your|ur|all your) (?:devices?|computer|phone|pc|laptop|e-?mail|accounts?|system|camera|webcam|router|contacts)|(?:installed|planted|put|injected) (?:a |my |special )?(?:trojan|malware|virus|spyware|rat|software|program|keylogger)|(?:recorded|filmed|captured|watched) you (?:with|through|via|using|from) (?:your )?(?:own )?(?:camera|webcam|cam)|(?:turned on|activated|accessed|took control of) your (?:camera|webcam)|\btrojan\b|keylogger|spyware/i,
+   /(?:hacke\w*|infect\w*|acced\w* a|tengo acceso (?:total |completo |remoto )?a|tengo (?:el )?control (?:total )?de) (?:tu|su|tus|sus|todos tus|todos sus) (?:dispositivos?|ordenador|m[oó]vil|tel[eé]fono|pc|port[aá]til|correo|cuentas?|sistema|c[aá]mara|webcam|router|contactos)|(?:instal\w*|introduj\w*|met\w*|infiltr\w*) (?:un |mi |el )?(?:troyano|malware|virus|software esp[ií]a|programa|keylogger)|(?:te |le )?(?:grab\w*|film\w*) (?:con|a trav[eé]s de|mediante|desde) (?:tu |su )?(?:propia )?(?:c[aá]mara|webcam)|(?:activ\w*|encend\w*) (?:tu |su )?(?:c[aá]mara|webcam)|troyano|keylogger|software esp[ií]a/i]},
+ {id:'shame',w:18,neg:true,en:'Threatens to send a video, photos or your browsing history to your contacts, family, colleagues or followers',es:'Amenaza con enviar un vídeo, fotos o tu historial de navegación a tus contactos, familia, compañeros o seguidores',
+  wen:'Shame is the whole weapon. The “video of you on adult sites” does not exist in the mass emails. Even when someone really has images, paying does not delete them; it only proves you will pay again.',wes:'La vergüenza es toda el arma. El “vídeo tuyo en webs para adultos” no existe en los emails masivos. Y aunque alguien tenga imágenes de verdad, pagar no las borra; solo demuestra que volverás a pagar.',
+  re:[/(?:send|share|forward|leak|publish|post|upload|release|distribute|expose)[^.\n]{0,40}(?:to |with |on )?(?:all )?(?:of )?(?:your |ur )?(?:contacts|family|friends|relatives|colleagues|co-?workers|followers|boss|employer|wife|husband|partner|social media|everyone)|(?:adult|porn|xxx|sex) ?(?:sites?|websites?|videos?|content|pages?)|masturbat\w*|intimate (?:video|images?|photos?|moments)|(?:compromising|embarrassing|explicit|private) (?:video|images?|photos?|material|recording)|browsing history/i,
+   /(?:enviar|env[ií]o|mandar|mandar[eé]|enviar[eé]|reenviar|difundir|difundir[eé]|publicar|publicar[eé]|compartir|filtrar|subir)\w*[^.\n]{0,40}(?:a )?(?:todos )?(?:tus |sus )?(?:contactos|familia(?:res)?|amigos|compa[nñ]eros|seguidores|jefe|empresa|pareja|mujer|marido|redes sociales|todo el mundo)|(?:p[aá]ginas?|sitios?|webs?|v[ií]deos?) (?:para adultos|porno\w*|xxx)|porno(?!graf[ií]a infantil)\w*|masturb\w*|v[ií]deo [ií]ntimo|(?:im[aá]genes|fotos|v[ií]deos?|grabaci[oó]n) (?:[ií]ntim\w*|comprometid\w*|expl[ií]cit\w*|privad\w*)|historial de navegaci[oó]n/i]},
+ {id:'crypto',w:22,neg:true,en:'Demands payment in Bitcoin or other crypto, to a wallet address, or in gift cards or money transfers',es:'Exige el pago en Bitcoin u otra cripto, a una dirección de monedero, o en tarjetas regalo o envíos de dinero',
+  wen:'Crypto, gift cards and money transfers cannot be reversed and do not need a name, which is exactly why blackmailers want them. Paying does not buy silence; it puts you on a list of people who pay.',wes:'La cripto, las tarjetas regalo y los envíos de dinero no se pueden revertir y no piden nombre, justo por eso los quieren los chantajistas. Pagar no compra silencio; te mete en una lista de gente que paga.',
+  re:[/\b(?:bitcoins?|btc|ethereum|eth|usdt|tether|litecoin|ltc|monero|xmr|crypto(?:currency)?)\b|\b(?:bc1|[13])[a-zA-HJ-NP-Z0-9]{25,62}\b|\b0x[a-fA-F0-9]{40}\b|(?:wallet|btc) address|gift ?cards?|paysafecard|(?:steam|amazon|google play|apple|itunes) ?cards?|western union|moneygram/i,
+   /\b(?:bitcoins?|btc|ethereum|eth|usdt|tether|litecoin|monero|cripto|criptomonedas?)\b|(?:direcci[oó]n|monedero|cartera|wallet) (?:de )?(?:bitcoin|btc|cripto)|tarjetas? regalo|paysafecard|tarjetas? (?:de )?(?:steam|amazon|google play|apple|itunes)|western union|moneygram/i]},
+ {id:'police',w:22,en:'A “summons” or accusation from the police, Europol, a court or a prosecutor: child abuse material, pedophilia, exhibitionism, an open case or an arrest warrant',es:'Una “citación” o acusación de la policía, Europol, un juzgado o la fiscalía: pornografía infantil, pedofilia, exhibicionismo, un caso abierto o una orden de detención',
+  wen:'This is the fake police summons scam. Real police and courts do not send accusations by email, from free addresses or as a PDF asking you to reply. The terrible accusation is chosen so you are too ashamed to ask anyone.',wes:'Es la estafa de la falsa citación policial. La policía y los juzgados de verdad no envían acusaciones por email, desde direcciones gratuitas ni en un PDF pidiéndote que respondas. La acusación es tan horrible para que te dé vergüenza preguntar a nadie.',
+  re:[/\b(?:summons|subpoena|court order|arrest warrant|warrant (?:for|of) (?:your )?arrest|criminal (?:case|proceedings|complaint|charges?|investigation)|(?:you|he|she) (?:are|have been|were|is) (?:being )?(?:accused|charged|investigated|under investigation|prosecuted|reported)|child (?:pornography|abuse material|sexual abuse)|p(?:a)?edophil\w*|cyber ?pornography|exhibitionism|sex trafficking|legal proceedings (?:against|will))\b/i,
+   /citaci[oó]n|requerimiento (?:judicial|policial)|orden (?:de detenci[oó]n|de arresto|judicial|de b[uú]squeda)|(?:diligencias|procedimiento|denuncia|causa|expediente) (?:penal|judicial|abiert\w*)|(?:ha sido|has sido|est[aá] siendo|est[aá]s siendo|queda|quedas) (?:acusad\w*|investigad\w*|imputad\w*|denunciad\w*|procesad\w*)|pornograf[ií]a infantil|pedofil\w*|pederast\w*|ciberpornograf[ií]a|exhibicionismo|abuso sexual (?:de|a) menores|tr[aá]fico sexual/i]},
+ {id:'settle',w:18,neg:true,en:'Wants you to pay a fine or settlement, or to reply with your “justification” within a deadline, to close the case or avoid arrest or publication',es:'Te pide pagar una multa o un acuerdo, o responder con tus “justificaciones” en un plazo, para cerrar el caso o evitar la detención o la publicación',
+  wen:'No police force or court lets you pay by email to make a criminal case disappear. Anyone who replies gets a second email with a “fine” to pay by transfer or crypto, and then another.',wes:'Ningún cuerpo de policía ni juzgado te deja pagar por email para que desaparezca un caso penal. Quien responde recibe un segundo email con una “multa” que pagar por transferencia o cripto, y luego otra.',
+  re:[/(?:pay|send|transfer|deposit)[^.\n]{0,40}\b(?:fine|penalty|settlement|bail|amount)\b|\b(?:fine|penalty|settlement|bail) of [^.\n]{0,15}\d|to (?:close|drop|stop|cancel|withdraw|settle|archive) (?:the |this |your )?(?:case|file|proceedings|charges|investigation|prosecution|complaint)|(?:avoid|prevent) (?:your )?(?:arrest|prosecution|being arrested|prison|jail|publication|the video being)|(?:reply|respond|write back|send (?:us )?your (?:justifications?|explanations?|defen[cs]e))[^.\n]{0,50}(?:within|in) (?:the next )?\d+ ?(?:hours?|days?|h)\b/i,
+   /(?:pag\w*|abon\w*|ingres\w*|transfer\w*|env[ií]\w*)[^.\n]{0,40}(?:multa|sanci[oó]n|fianza|importe|cantidad)|(?:multa|sanci[oó]n|fianza) de [^.\n]{0,15}\d|para (?:cerrar|archivar|retirar|anular|parar|detener|cancelar|evitar) (?:el |la |su |tu |este |esta )?(?:caso|expediente|procedimiento|denuncia|investigaci[oó]n|causa|diligencias|detenci[oó]n|publicaci[oó]n)|(?:evitar|impedir) (?:la detenci[oó]n|el arresto|ser detenid\w*|la c[aá]rcel|prisi[oó]n|la publicaci[oó]n)|(?:responda|responder|responde|conteste|contestar|contesta|env[ií]e sus justificaciones|enviar sus justificaciones|justif[ií]que\w*)[^.\n]{0,50}(?:en|dentro de|plazo de) (?:las pr[oó]ximas |un plazo de )?\d+ ?(?:horas?|d[ií]as?|h)\b/i]},
+ {id:'realpics',w:16,en:'Mentions a real video call, chat or photos you sent: “we video called and I recorded you”, “you sent me your photos”',es:'Habla de una videollamada, un chat o fotos que enviaste de verdad: “hicimos una videollamada y te grabé”, “me mandaste tus fotos”',
+  wen:'This may be real sextortion, often after a fake profile flirted with you. It is a crime against you, not something you did wrong. Do not pay or send more: stop replying, keep screenshots, report the account and go to the police. Adults can use StopNCII.org; under 18s can use Take It Down and should tell an adult they trust.',wes:'Puede ser sextorsión real, a menudo después de que un perfil falso ligara contigo. Es un delito contra ti, no algo que hicieras mal. No pagues ni envíes nada más: deja de responder, guarda capturas, denuncia la cuenta y ve a la policía. Los adultos pueden usar StopNCII.org; los menores pueden usar Take It Down y deberían contárselo a un adulto de confianza.',
+  re:[/(?:we|you and i) (?:had (?:a )?|did (?:a )?)?video ?call\w*|(?:recorded|screen ?recorded|screenshotted|saved) (?:our|the|your) (?:video ?call|call|chat|facetime|skype|cam)|you sent (?:me )?(?:your |those |the )?(?:nudes?|photos?|pics?|videos?)|(?:your|those) nudes|i have (?:your|those|the) (?:nudes?|photos?|pics?|video)/i,
+   /(?:hicimos|tuvimos) (?:una )?videollamada|(?:grab\w*|captur\w*|guard\w*) (?:la|nuestra|tu) (?:videollamada|llamada|conversaci[oó]n)|me (?:mandaste|enviaste|pasaste) (?:tus |las |esas )?(?:fotos|v[ií]deos?|desnudos)|(?:tus|esas) fotos (?:desnud\w*|[ií]ntimas)|tengo (?:tus|las|esas) fotos/i]},
+ {id:'password',w:10,en:'Quotes one of your passwords, or says it knows it',es:'Cita una de tus contraseñas, o dice que la conoce',
+  wen:'The password comes from an old data leak of some website you signed up to years ago. It proves the scammer bought a list, not that they are in your device. Change it anywhere you still use it and turn on two-step verification.',wes:'La contraseña sale de una filtración antigua de alguna web en la que te registraste hace años. Demuestra que el estafador compró una lista, no que esté dentro de tu dispositivo. Cámbiala donde la sigas usando y activa la verificación en dos pasos.',
+  re:[/(?:your|ur) password (?:is|was)|i know (?:your|one of your) passwords?|(?:password|pass|pwd)\s*[:=]\s*\S+|this is (?:your|one of your) (?:old )?passwords?/i,
+   /(?:tu|su) contrase[nñ]a (?:es|era)|(?:s[eé]|conozco) (?:tu|su|una de tus|una de sus) contrase[nñ]as?|(?:contrase[nñ]a|clave)\s*[:=]\s*\S+/i]},
+ {id:'spoof',w:8,en:'Says it was sent from your own email address or account',es:'Dice que te escribe desde tu propia dirección de correo o tu cuenta',
+  wen:'Showing your own address as the sender is an old trick called spoofing. It takes no access to your account at all. Your email provider usually marks these as failing its checks.',wes:'Poner tu propia dirección como remitente es un truco antiguo llamado suplantación (spoofing). No necesita ningún acceso a tu cuenta. Tu proveedor de correo suele marcar que no pasa sus comprobaciones.',
+  re:[/(?:sent|sending|writing|wrote)[^.\n]{0,25}from your (?:own )?(?:e-?mail|account|address|mailbox)|(?:from|in) your own (?:e-?mail|account|mailbox|address)/i,
+   /(?:escribo|env[ií]o|envi[eé]|he enviado|mando|mand[eé])[^.\n]{0,30}desde (?:tu|su) (?:propi[oa] )?(?:correo|cuenta|email|direcci[oó]n)|desde (?:tu|su) propi[oa] (?:correo|cuenta|email|direcci[oó]n)/i]},
+ {id:'deadline',w:8,en:'Deadline and secrecy: “48 hours”, “I will know when you open this”, “do not reply”, “do not go to the police”, “cannot be traced”',es:'Plazo y secreto: “48 horas”, “sabré cuándo lo abres”, “no respondas”, “no acudas a la policía”, “no se puede rastrear”',
+  wen:'The countdown and the “I can see when you read this” line are there so you pay before you calm down or tell anyone. Nothing happens when the deadline passes.',wes:'La cuenta atrás y lo de “sé cuándo lo lees” están para que pagues antes de calmarte o contárselo a alguien. No pasa nada cuando termina el plazo.',
+  re:[/(?:within|you have|in the next) (?:the next )?(?:\d+|one|two|three|24|48|72) ?(?:hours?|days?|h)\b|(?:pixel|tracker|tracking)[^.\n]{0,40}(?:read|open)|i (?:will|'ll)? ?(?:know|see) (?:when|that|once|the moment) you (?:read|open)|(?:don'?t|do not) (?:try to )?(?:reply|answer|respond|contact the police|go to the police|tell anyone)|cannot be traced|untraceable|last (?:chance|warning)/i,
+   /(?:dentro de|tienes|tiene|dispones de|dispone de|plazo de|en las pr[oó]ximas) (?:las pr[oó]ximas )?(?:\d+|una|dos|tres|24|48|72) ?(?:horas?|d[ií]as?|h)\b|(?:p[ií]xel|rastreador)[^.\n]{0,40}(?:le[ií]d|abiert|abr)|(?:sabr[eé]|s[eé]|ver[eé]) (?:cu[aá]ndo|que|en cuanto) (?:lo |has |hayas )?(?:le[ií]\w*|abr\w*|abiert\w*)|no (?:intentes |intente )?(?:responder|contestar|acudir a la polic[ií]a|ir a la polic[ií]a|dec[ií]rselo a nadie|contarlo|avisar a la polic[ií]a)|no (?:se puede|puede ser) rastrea\w*|imposible de rastrear|[uú]ltim[ao] (?:oportunidad|aviso)/i]},
+ {id:'chan',w:8,en:'Arrives from a free email address (Gmail, Outlook, Hotmail, Proton), as a PDF attachment, or in a social media DM',es:'Llega desde un correo gratuito (Gmail, Outlook, Hotmail, Proton), como un PDF adjunto o por mensaje privado en redes',
+  wen:'Police forces and courts write from their own official domains and by certified mail, not from free mailboxes. A scanned “official” PDF with logos and stamps is easy to fake.',wes:'La policía y los juzgados escriben desde sus dominios oficiales y por correo certificado, no desde buzones gratuitos. Un PDF “oficial” escaneado con logos y sellos es fácil de falsificar.',
+  re:[/@(?:gmail|googlemail|outlook|hotmail|live|yahoo|proton(?:mail)?|gmx|mail|aol|yandex|zoho)\.\w+|\b(?:gmail|outlook|hotmail|yahoo|protonmail|proton|gmx) (?:account|address|email)|(?:attached|attachment)\b|\bpdf\b|\b(?:instagram|snapchat|tiktok|whatsapp|telegram|facebook|messenger|discord)\b|\bdm\b|direct message/i,
+   /@(?:gmail|outlook|hotmail|live|yahoo|proton(?:mail)?|gmx|yandex)\.\w+|(?:correo|cuenta|direcci[oó]n) (?:de )?(?:gmail|outlook|hotmail|yahoo|proton)|\badjunt\w*|\bpdf\b|\b(?:instagram|snapchat|tiktok|whatsapp|telegram|facebook|messenger|discord)\b|mensaje (?:privado|directo)|\bmd\b/i]},
+ {id:'brand',w:6,en:'Uses a frightening official name: Europol, Interpol, Policía Nacional, Guardia Civil, Mossos, the FBI, a court, a prosecutor or a ministry',es:'Usa un nombre oficial que asusta: Europol, Interpol, Policía Nacional, Guardia Civil, Mossos, el FBI, un juzgado, la fiscalía o un ministerio',
+  wen:'Scammers borrow these names, logos and even real officials’ signatures because they scare people into acting fast. The name tells you nothing; asking you to reply or pay by email tells you everything.',wes:'Los estafadores usan estos nombres, logos e incluso firmas de cargos reales porque asustan y hacen actuar rápido. El nombre no dice nada; que te pidan responder o pagar por email lo dice todo.',
+  re:[/\b(?:europol|interpol|polic[ií]a nacional|guardia civil|mossos|ertzaintza|\bfbi\b|cnp|ministerio del interior|ministry of (?:the )?interior|fiscal[ií]a|prosecutor|juzgado|tribunal|audiencia nacional|court of|gendarmerie|police nationale|catherine de bolle|brigada (?:de )?(?:protecci[oó]n|investigaci[oó]n)|cybercrime (?:unit|division|police)|unidad de delitos telem[aá]ticos|brigada central de investigaci[oó]n tecnol[oó]gica)\b/i]}
+];
+function analyze(text,url){
+  var t=(text||'')+'\n'+(url||''),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  var legit=/(?:correo certificado|carta certificada|burofax|sede electr[oó]nica|carpeta ciudadana|\bdeh[uú]\b|lexnet|registered (?:letter|mail)|certified (?:letter|mail)|(?:i|we) (?:called|phoned|rang) (?:the )?(?:police|091|062|court)(?: station)? (?:myself|ourselves)|(?:llam[eé]|fui) yo (?:a la polic[ií]a|al 091|al 062|al juzgado|a la comisar[ií]a)|(?:la |lo )?(?:consult[eé]|comprob[eé]|mir[eé]) yo (?:en|la|el))/i.test(t);
+  if(n>=4)score+=8;
+  if(on('police')&&on('settle'))score=Math.max(score,88);
+  if(on('hacked')&&(on('crypto')||on('shame')))score=Math.max(score,86);
+  if(on('realpics')&&(on('shame')||on('crypto')||on('settle')))score=Math.max(score,85);
+  if(on('crypto')&&(on('shame')||on('deadline')||on('password')||on('police')))score=Math.max(score,80);
+  if(on('police')&&(on('chan')||on('brand')||on('deadline')))score=Math.max(score,78);
+  if(on('hacked'))score=Math.max(score,65);
+  if(on('police'))score=Math.max(score,60);
+  if(on('realpics'))score=Math.max(score,60);
+  if(on('shame'))score=Math.max(score,55);
+  if(on('crypto'))score=Math.max(score,50);
+  if(on('settle'))score=Math.max(score,50);
+  if(on('password'))score=Math.max(score,30);
+  if(on('spoof'))score=Math.max(score,30);
+  if(legit&&!on('hacked')&&!on('shame')&&!on('crypto')&&!on('settle')&&!on('realpics')&&!on('chan'))score=Math.min(score,10);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Chantaje o estafa casi seguro','Encaja con un guion conocido de chantaje o de falsa citación policial. Estos mensajes se envían a miles o millones de personas: no hay vídeo ni caso real. No pagues, no respondas y márcalo como spam. Si alguien tiene de verdad imágenes tuyas, pagar nunca lo para: deja de responder, guarda pruebas y denúncialo.']:['Almost certainly blackmail or a scam','This matches a known blackmail or fake police summons script. These messages go to thousands or millions of people: there is no video and no real case. Do not pay, do not reply and mark it as spam. If someone really does have images of you, paying never makes it stop: stop replying, keep evidence and report it.'];
+  if(s>=40)return es?['Muchas banderas rojas','Tiene rasgos típicos de chantaje. No pagues ni respondas. Si menciona a la policía o un juzgado, llama tú al 091 o al 062 para preguntar, sin usar ningún dato del mensaje.']:['Big red flags','It has the usual signs of blackmail. Do not pay or reply. If it names the police or a court, call them yourself on a number you look up, not one from the message.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. No respondas todavía y no pagues nada. Comprueba por tu cuenta quién lo envía.']:['Kinda sus','Some classic signals. Do not reply yet and do not pay anything. Check for yourself who really sent it.'];
+  return es?['Pocas banderas','No salta casi nada. Aun así, una notificación oficial real llega por correo certificado o por tu sede electrónica, y nunca te pide pagar por email.']:['Few flags','Not much trips the rules. Still, a real official notice arrives by certified mail or through the government’s own website, and never asks you to pay by email.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  L.push(es?'No pagues y no respondas. Responder confirma que tu dirección funciona y trae más mensajes; pagar te mete en la lista de gente que paga.':'Do not pay and do not reply. Replying confirms your address works and brings more messages; paying puts you on the list of people who pay.');
+  if(on('password'))L.push(es?'Cambia esa contraseña en todas las webs donde la sigas usando y activa la verificación en dos pasos. Puedes ver en qué filtraciones aparece tu email en haveibeenpwned.com.':'Change that password on every site where you still use it and turn on two-step verification. You can see which leaks your email appears in at haveibeenpwned.com.');
+  if(on('hacked')||on('spoof'))L.push(es?'Respira: el mismo texto lo reciben millones de personas y no hay grabación. Mantén tu sistema y tu antivirus actualizados y, si te deja más tranquilo, tapa la webcam.':'Breathe: millions of people get the same text and there is no recording. Keep your system and antivirus updated and, if it helps you feel better, cover your webcam.');
+  if(on('police')||on('settle'))L.push(es?'La policía y los juzgados no te acusan por email ni te cobran multas para cerrar casos. Las notificaciones reales llegan por correo certificado o por tu sede electrónica (DEHú, Carpeta Ciudadana). Si te preocupa, llama tú al 091 (Policía Nacional) o al 062 (Guardia Civil).':'Police and courts do not accuse you by email or charge fines to close cases. Real notices arrive by certified mail or through official government websites. If you are worried, call the police yourself on a number you look up (in Spain, 091 Policía Nacional or 062 Guardia Civil).');
+  if(on('realpics'))L.push(es?'Si de verdad enviaste fotos o hubo una videollamada: no pagues ni envíes nada más, guarda capturas del perfil y los mensajes, bloquea y denuncia la cuenta en la plataforma y ve a la policía. StopNCII.org ayuda a adultos a bloquear las imágenes en grandes redes; si eres menor, usa Take It Down y cuéntaselo a un adulto de confianza. No es culpa tuya.':'If you really did send photos or have a video call: do not pay or send anything more, screenshot the profile and messages, block and report the account on the platform and go to the police. StopNCII.org helps adults block the images on big platforms; if you are under 18, use Take It Down and tell an adult you trust. It is not your fault.');
+  if(on('crypto'))L.push(es?'Nunca envíes cripto, tarjetas regalo ni envíos de dinero por una amenaza. Si ya pagaste, guarda la dirección del monedero y los justificantes y denúncialo.':'Never send crypto, gift cards or money transfers because of a threat. If you already paid, keep the wallet address and receipts and report it.');
+  L.push(es?'Márcalo como spam o phishing, guarda una copia si quieres denunciarlo y bórralo. Dudas o si ya pagaste: 017 de INCIBE, o denuncia en la policía.':'Mark it as spam or phishing, keep a copy if you want to report it, then delete it. If you have doubts or already paid, report it to the police; in Spain, INCIBE’s 017 helpline can advise.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Hello. I hacked your device with a trojan when you visited adult websites and recorded you through your webcam. Your password is sunflower88. Send 1,450€ in Bitcoin to bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh within 48 hours or I will send the video to all your contacts. I sent this from your own email. Do not reply, I will know when you open this.',u:'Email'},
+ {t:'CITACIÓN. Europol y la Policía Nacional le informan de que ha sido acusado de pornografía infantil y exhibicionismo tras la vigilancia de su dirección IP. Responda a este correo con sus justificaciones en un plazo de 72 horas; de lo contrario se emitirá una orden de detención. Firmado: Catherine De Bolle.',u:'Email desde brigada.policia.cnp@gmail.com con un PDF adjunto'},
+ {t:'Juzgado de Instrucción. Para archivar el expediente penal abierto contra usted debe abonar una multa de 2.600 € por transferencia en 48 horas y así evitar la detención y la publicación de su nombre en la prensa.',u:'Correo de Outlook'},
+ {t:'We had a video call last night and I recorded you. Pay me 500€ in Amazon gift cards or I send the video to your family and all your followers. You have 24 hours.',u:'Instagram DM from a new profile'},
+ {t:'Me llegó por correo certificado una notificación del juzgado y la consulté yo en la sede electrónica con mi certificado. Es una citación como testigo por un accidente de tráfico.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
