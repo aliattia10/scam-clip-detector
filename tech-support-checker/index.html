@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Support Scam Checker: fake virus pop-ups, “Microsoft” calls, AnyDesk, fake Norton renewals, refund tricks (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Got a pop-up saying your computer is infected, a call from “Microsoft” about errors, a Norton or PayPal renewal you never ordered, or a request to install AnyDesk? Paste it and get a free rule-based red-flag score and what to do right now to protect your computer and your bank. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/tech-support-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="“Your computer is infected, call this number”? Free tech support scam checker">
+<meta property="og:description" content="Paste the pop-up, call or email. Get a red-flag score for fake virus alarms with phone numbers, “Microsoft technical department” calls, AnyDesk and TeamViewer requests, fake Norton renewals, refund-with-an-extra-zero tricks and safe account demands.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/tech-support-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/tech-support-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tech support scam checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for fake virus pop-ups, “Microsoft” support calls, remote access requests, fake renewal invoices and refund tricks, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/tech-support-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Tech Support Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/account-checker/" data-i18n="navr">Accounts</a>
+      <a class="hide-m" href="/call-checker/" data-i18n="navs">Calls</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">“Your computer is <em>infected.</em> Call this number.”</h1>
+    <p class="sub" data-i18n="sub">Paste the pop-up, the call or the email: a full-screen “Windows Defender” alarm with a phone number, a “Microsoft technical department” call about errors from your computer, a Norton or PayPal renewal for 399 you never ordered, a “refund” that came with an extra zero, or a request to install AnyDesk. In one second you get a red-flag score and what to do right now to protect your computer and your bank.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a virus warning, a support call or a renewal invoice</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool and can be wrong both ways. The safe rule never changes: nobody who contacted you first, by pop-up, call or email, should connect to your computer or see your bank.</p>
+    <label for="txt" data-i18n="l1">Paste the warning, email or what the caller said</label>
+    <textarea id="txt" placeholder="e.g. Windows Defender alert: your PC is infected. Do not close this window. Call Microsoft support now: +1 888 555 0199"></textarea>
+    <label for="url" data-i18n="l2">Where it came from (optional)</label>
+    <input type="text" id="url" placeholder="e.g. full-screen browser pop-up, phone call, email from a Gmail address" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: ES Windows alarm with a number</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: “Microsoft” call, install AnyDesk</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: Norton renewal for $399</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: ES refund with an extra zero</button>
+      <button class="chip" onclick="ex(4)" data-i18n="e4">Example: internet provider, safe account</button>
+      <button class="chip" onclick="ex(5)" data-i18n="e5">Example: a repair I booked myself</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do right now</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">Real warnings have no phone number</b><p data-i18n="c1p">Windows Security, macOS and real antivirus apps show alerts inside the program, never a number to call. A browser page that beeps, talks or will not close is just a web page. Close the browser and it is gone.</p></div>
+    <div class="card"><b data-i18n="c2h">Microsoft does not call you</b><p data-i18n="c2p">Microsoft, Apple, Amazon and your internet provider do not watch your computer and do not phone you about errors, hacked IPs or expired licences. An unexpected technical call is the scam.</p></div>
+    <div class="card"><b data-i18n="c3h">Remote access plus your bank equals theft</b><p data-i18n="c3p">Once they control your screen they open your online banking, fake a refund with an extra zero and ask you to send back the difference in gift cards or crypto. Never open your bank while anyone is connected.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it stopped a fake technician today, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/tech-support-checker/" data-i18n="tsm">Tech support / virus pop-up checker</a>
+    <a href="/account-checker/" data-i18n="acm">Account / code checker</a>
+    <a href="/blackmail-checker/" data-i18n="bmm">Blackmail email checker</a>
+    <a href="/loan-checker/" data-i18n="lnm">Loan scam checker</a>
+    <a href="/charity-checker/" data-i18n="chm">Charity / donation checker</a>
+    <a href="/qr-checker/" data-i18n="qrm">QR code checker</a>
+    <a href="/travel-checker/" data-i18n="trvm">Travel / booking checker</a>
+    <a href="/lottery-checker/" data-i18n="lotm">Lottery / prize checker</a>
+    <a href="/shop-checker/" data-i18n="moresh">Fake shop checker</a>
+    <a href="/ticket-checker/" data-i18n="moret">Ticket scam checker</a>
+    <a href="/marketplace-checker/" data-i18n="morem">Marketplace scam checker</a>
+    <a href="/romance-checker/" data-i18n="morer2">Romance scam checker</a>
+    <a href="/investment-checker/" data-i18n="morei">Investment scam checker</a>
+    <a href="/call-checker/" data-i18n="morec">Scam call checker</a>
+    <a href="/sms-checker/" data-i18n="mores2">SMS / WhatsApp checker</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/tech-support-checker/" data-i18n="tsf">Tech support checker</a> · <a href="/account-checker/" data-i18n="acf">Account checker</a> · <a href="/blackmail-checker/" data-i18n="bmf">Blackmail checker</a> · <a href="/loan-checker/" data-i18n="lnf">Loan checker</a> · <a href="/charity-checker/" data-i18n="chf">Charity checker</a> · <a href="/qr-checker/" data-i18n="qrf">QR checker</a> · <a href="/travel-checker/" data-i18n="trvf">Travel checker</a> · <a href="/lottery-checker/" data-i18n="lotf">Lottery checker</a> · <a href="/shop-checker/" data-i18n="fsh">Shop checker</a> · <a href="/ticket-checker/" data-i18n="ftk">Ticket checker</a> · <a href="/marketplace-checker/" data-i18n="fm">Marketplace checker</a> · <a href="/romance-checker/" data-i18n="fro">Romance checker</a> · <a href="/investment-checker/" data-i18n="fi">Investment checker</a> · <a href="/call-checker/" data-i18n="fc">Call checker</a> · <a href="/sms-checker/" data-i18n="fs">SMS checker</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Microsoft, Apple, antivirus brands, PayPal, Amazon and internet providers appear only because scammers impersonate them; they are not accused of anything. Not legal or technical advice. If someone connected to your computer, disconnect it from the internet, uninstall the remote app and change your passwords from another device. If money left your account, call your bank at once and report it to the police. In Spain you can also call INCIBE’s free helpline on 017.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{"brand": "Tech Support Checker", "navd": "Scam-Clip Detector", "navr": "Accounts", "navs": "Calls", "h1": "“Your computer is <em>infected.</em> Call this number.”", "sub": "Paste the pop-up, the call or the email: a full-screen “Windows Defender” alarm with a phone number, a “Microsoft technical department” call about errors from your computer, a Norton or PayPal renewal for 399 you never ordered, a “refund” that came with an extra zero, or a request to install AnyDesk. In one second you get a red-flag score and what to do right now to protect your computer and your bank.", "h2": "Check a virus warning, a support call or a renewal invoice", "hint": "Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool and can be wrong both ways. The safe rule never changes: nobody who contacted you first, by pop-up, call or email, should connect to your computer or see your bank.", "l1": "Paste the warning, email or what the caller said", "l2": "Where it came from (optional)", "go": "Check it", "e0": "Example: ES Windows alarm with a number", "e1": "Example: “Microsoft” call, install AnyDesk", "e2": "Example: Norton renewal for $399", "e3": "Example: ES refund with an extra zero", "e4": "Example: internet provider, safe account", "e5": "Example: a repair I booked myself", "of": "/ 100 scam score", "todoh": "What to do right now", "c1h": "Real warnings have no phone number", "c1p": "Windows Security, macOS and real antivirus apps show alerts inside the program, never a number to call. A browser page that beeps, talks or will not close is just a web page. Close the browser and it is gone.", "c2h": "Microsoft does not call you", "c2p": "Microsoft, Apple, Amazon and your internet provider do not watch your computer and do not phone you about errors, hacked IPs or expired licences. An unexpected technical call is the scam.", "c3h": "Remote access plus your bank equals theft", "c3p": "Once they control your screen they open your online banking, fake a refund with an extra zero and ask you to send back the difference in gift cards or crypto. Never open your bank while anyone is connected.", "tipp": "This checker is free and stays free. If it stopped a fake technician today, you can tip.", "disc": "Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Microsoft, Apple, antivirus brands, PayPal, Amazon and internet providers appear only because scammers impersonate them; they are not accused of anything. Not legal or technical advice. If someone connected to your computer, disconnect it from the internet, uninstall the remote app and change your passwords from another device. If money left your account, call your bank at once and report it to the police. In Spain you can also call INCIBE’s free helpline on 017.", "acm": "Account / code checker", "acf": "Account checker", "tsm": "Tech support / virus pop-up checker", "tsf": "Tech support checker", "ctah": "Want to roast these on camera?", "ctap": "The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.", "ctab": "See the Script Pack", "tiph": "Tip jar", "tipb": "Tip via PayPal", "bmm": "Blackmail email checker", "bmf": "Blackmail checker", "lnm": "Loan scam checker", "lnf": "Loan checker", "qrm": "QR code checker", "qrf": "QR checker", "trvm": "Travel / booking checker", "trvf": "Travel checker", "lotm": "Lottery / prize checker", "lotf": "Lottery checker", "moresh": "Fake shop checker", "moret": "Ticket scam checker", "morer2": "Romance scam checker", "morei": "Investment scam checker", "morec": "Scam call checker", "mores2": "SMS / WhatsApp checker", "morem": "Marketplace scam checker", "morer": "Rental listing checker", "morerec": "Crypto recovery checker", "morep": "Phishing / invoice checker", "morej": "Job offer checker", "moreg": "Giveaway / airdrop checker", "moresig": "Signal / VIP group checker", "mores": "900 Shorts guide (19€)", "fsh": "Shop checker", "ftk": "Ticket checker", "fro": "Romance checker", "fi": "Investment checker", "fc": "Call checker", "fs": "SMS checker", "fm": "Marketplace checker", "fr": "Rental checker", "frec": "Recovery checker", "fpish": "Phishing checker", "fj": "Job offer checker", "fg": "Giveaway checker", "fp": "Scam-Roast Script Pack", "ft": "Tip jar", "fd": "Scam-Clip Detector", "chm": "Charity / donation checker", "chf": "Charity checker"},
+ es:{"brand": "Comprobador de falso soporte técnico", "navd": "Detector de estafas", "navr": "Cuentas", "navs": "Llamadas", "h1": "“Su ordenador está <em>infectado.</em> Llame a este número.”", "sub": "Pega la ventana, la llamada o el email: una alarma a pantalla completa de “Windows Defender” con un teléfono, una llamada del “departamento técnico de Microsoft” por errores de tu ordenador, una renovación de Norton o PayPal de 399 que nunca pediste, un “reembolso” con un cero de más, o que te pidan instalar AnyDesk. En un segundo tienes una nota de banderas rojas y qué hacer ahora mismo para proteger tu ordenador y tu banco.", "h2": "Comprueba un aviso de virus, una llamada de soporte o una factura de renovación", "hint": "Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples y puede fallar en ambos sentidos. La regla segura no cambia: nadie que te haya contactado primero, por una ventana, una llamada o un email, debe conectarse a tu ordenador ni ver tu banco.", "l1": "Pega el aviso, el email o lo que te dijo quien llamó", "l2": "De dónde vino (opcional)", "go": "Comprobar", "e0": "Ejemplo: alarma de Windows con teléfono", "e1": "Ejemplo: llamada de “Microsoft” y AnyDesk", "e2": "Ejemplo: renovación de Norton de 399 $", "e3": "Ejemplo: reembolso con un cero de más", "e4": "Ejemplo: tu compañía de internet y cuenta segura", "e5": "Ejemplo: una reparación que pedí yo", "of": "/ 100 nota de estafa", "todoh": "Qué hacer ahora mismo", "c1h": "Los avisos reales no tienen teléfono", "c1p": "Seguridad de Windows, macOS y los antivirus de verdad muestran las alertas dentro del programa, nunca un número al que llamar. Una página del navegador que pita, habla o no se deja cerrar es solo una web. Cierra el navegador y desaparece.", "c2h": "Microsoft no te llama", "c2p": "Microsoft, Apple, Amazon y tu compañía de internet no vigilan tu ordenador ni te llaman por errores, IPs hackeadas o licencias caducadas. Una llamada técnica inesperada es la estafa.", "c3h": "Acceso remoto más tu banco es un robo", "c3p": "Cuando controlan tu pantalla abren tu banca online, fingen un reembolso con un cero de más y te piden devolver la diferencia en tarjetas regalo o cripto. No abras nunca tu banco mientras alguien está conectado.", "tipp": "Este comprobador es gratis y seguirá siéndolo. Si hoy frenó a un falso técnico, puedes dejar una propina.", "disc": "Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. Microsoft, Apple, las marcas de antivirus, PayPal, Amazon y las compañías de internet aparecen solo porque los estafadores se hacen pasar por ellos; no se les acusa de nada. No es asesoramiento legal ni técnico. Si alguien se conectó a tu ordenador, desconéctalo de internet, desinstala la app remota y cambia tus contraseñas desde otro dispositivo. Si salió dinero de tu cuenta, llama ya a tu banco y denúncialo a la policía. También puedes llamar gratis al 017, la línea de ayuda en ciberseguridad de INCIBE.", "acm": "Comprobador de cuentas y códigos", "acf": "Comprobador de cuentas", "tsm": "Comprobador de falso soporte técnico", "tsf": "Comprobador de soporte técnico", "ctah": "¿Quieres hacer un roast de esto en vídeo?", "ctap": "El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) sobre las estafas más comunes. Paga lo que quieras, desde 5 €.", "ctab": "Ver el pack de guiones", "tiph": "Bote de propinas", "tipb": "Propina por PayPal", "bmm": "Comprobador de chantajes", "bmf": "Comprobador de chantajes", "lnm": "Comprobador de préstamos", "lnf": "Comprobador de préstamos", "qrm": "Comprobador de códigos QR", "qrf": "Comprobador de QR", "trvm": "Comprobador de viajes y reservas", "trvf": "Comprobador de viajes", "lotm": "Comprobador de premios y loterías", "lotf": "Comprobador de premios", "moresh": "Comprobador de tiendas online", "moret": "Comprobador de entradas", "morer2": "Comprobador de romances", "morei": "Comprobador de inversiones", "morec": "Comprobador de llamadas", "mores2": "Comprobador de SMS / WhatsApp", "morem": "Comprobador de segunda mano", "morer": "Comprobador de alquileres", "morerec": "Comprobador de recuperación de cripto", "morep": "Comprobador de phishing / facturas", "morej": "Comprobador de ofertas de trabajo", "moreg": "Comprobador de sorteos / airdrops", "moresig": "Comprobador de grupos VIP / señales", "mores": "Guía de 900 Shorts (19 €)", "fsh": "Comprobador de tiendas", "ftk": "Comprobador de entradas", "fro": "Comprobador de romances", "fi": "Comprobador de inversiones", "fc": "Comprobador de llamadas", "fs": "Comprobador de SMS", "fm": "Comprobador de segunda mano", "fr": "Comprobador de alquileres", "frec": "Comprobador de recuperación", "fpish": "Comprobador de phishing", "fj": "Comprobador de ofertas", "fg": "Comprobador de sorteos", "fp": "Pack de guiones Scam-Roast", "ft": "Bote de propinas", "fd": "Detector de estafas", "chm": "Comprobador de donaciones", "chf": "Comprobador de donaciones"}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|won'?t|will not|didn'?t|did not|don'?t|do not|hasn'?t|has not|no need to|without|\bno\b|nunca|jam[aá]s|no me|no te|no ha|no hace falta|\bsin\b|\bni\b)[^.!?\n]{0,30}$/i.test(t.slice(Math.max(0,idx-40),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'popup',w:20,neg:true,en:'A pop-up or full-screen warning says your computer or phone is infected, hacked, locked or blocked, often with an error code, an alarm or a voice',es:'Una ventana o aviso a pantalla completa dice que tu ordenador o móvil está infectado, hackeado, bloqueado o en riesgo, a menudo con un código de error, una alarma o una voz',
+  wen:'Real virus warnings come from the antivirus already installed on your device and never show a phone number. A browser page that beeps, talks, goes full screen or will not close is a web page pretending to be Windows or Apple. Closing the browser ends it.',wes:'Los avisos de virus reales vienen del antivirus que ya tienes instalado y nunca muestran un teléfono. Una página del navegador que pita, habla, se pone a pantalla completa o no se deja cerrar es una web que se hace pasar por Windows o Apple. Cerrar el navegador lo acaba.',
+  re:[/(?:computer|pc|laptop|mac|device|phone|iphone|browser|system|windows)[^.!?\n]{0,30}(?:is |has been |was |may be |might be )?(?:infected|hacked|compromised|locked|blocked|at risk|disabled|suspended)|(?:virus|trojan|malware|spyware|pornographic spyware|zeus|ransomware)[^.!?\n]{0,30}(?:detected|found|alert|warning|infection)|(?:security|virus|firewall|defender|microsoft|windows|apple|mac) (?:alert|warning|error)|error (?:code|#) ?#?\s?0x[0-9a-f]+|(?:do not|don'?t) (?:close|restart|shut down|turn off) (?:this|your)|access to this pc has been blocked|your (?:ip|personal data|bank details|photos)[^.!?\n]{0,25}(?:stolen|exposed|leaked|at risk)/i,
+   /(?:ordenador|pc|port[aá]til|mac|equipo|dispositivo|m[oó]vil|tel[eé]fono|navegador|sistema|windows)[^.!?\n]{0,30}(?:est[aá] |ha sido |fue |puede estar |podr[ií]a estar )?(?:infectad\w*|hackead\w*|comprometid\w*|bloquead\w*|en riesgo|desactivad\w*|suspendid\w*)|(?:virus|troyano|malware|spyware|programa esp[ií]a|ransomware)[^.!?\n]{0,30}(?:detectad\w*|encontrad\w*|alerta|aviso|infecci[oó]n)|(?:alerta|aviso|error) (?:de seguridad|de virus|de windows|de microsoft|de apple|del sistema|de firewall)|c[oó]digo de error ?#?\s?0x[0-9a-f]+|no (?:cierre|cierres|reinicie|reinicies|apague|apagues) (?:esta|el|su|tu)|el acceso a este (?:pc|equipo) ha sido bloqueado|(?:tus|sus) (?:datos|fotos|contrase[nñ]as|datos bancarios)[^.!?\n]{0,25}(?:robad\w*|expuest\w*|en riesgo)/i]},
+ {id:'phone',w:16,en:'Tells you to call a phone number for “Microsoft”, “Apple”, “Windows”, “technical support” or a billing department',es:'Te dice que llames a un teléfono de “Microsoft”, “Apple”, “Windows”, “soporte técnico” o un departamento de facturación',
+  wen:'Microsoft and Apple never put a phone number in an error message or ask you to call them about a virus. The number goes straight to a call centre that is paid to get into your computer and your bank.',wes:'Microsoft y Apple nunca ponen un teléfono en un mensaje de error ni te piden que les llames por un virus. Ese número va directo a un centro de llamadas que cobra por entrar en tu ordenador y en tu banco.',
+  re:[/(?:call|phone|ring|contact|dial)[^.!?\n]{0,40}(?:support|helpline|help desk|technician|microsoft|apple|windows|technical|tech|billing|toll[- ]free|this number|the number|us at|immediately|\+?\d[\d\s().-]{7,})|toll[- ]free|(?:support|helpline|help desk|billing)[^.!?\n]{0,20}\+?\d[\d\s().-]{7,}/i,
+   /(?:llam[ae]\w*|llam[eé]nos|contact[ae]\w*|marque|marca)[^.!?\n]{0,40}(?:soporte|asistencia|t[eé]cnico|microsoft|apple|windows|facturaci[oó]n|gratuito|este n[uú]mero|al n[uú]mero|inmediatamente|\+?\d[\d\s().-]{7,})|(?:n[uú]mero|tel[eé]fono) gratuito|(?:soporte|asistencia|atenci[oó]n al cliente)[^.!?\n]{0,20}\+?\d[\d\s().-]{7,}|\b90[0-2][\s.]?\d{3}[\s.]?\d{3}\b/i]},
+ {id:'remote',w:22,neg:true,en:'Asks you to install or open a remote access app (AnyDesk, TeamViewer, UltraViewer, QuickSupport, RustDesk, Quick Assist) or to read out an ID so they can “connect”',es:'Te pide instalar o abrir una app de acceso remoto (AnyDesk, TeamViewer, UltraViewer, QuickSupport, RustDesk, Asistencia rápida) o leer un ID para que “se conecten”',
+  wen:'Remote access lets the caller see and control your screen, open your online banking, install hidden tools and lock you out. Nobody who contacted you first should ever get it.',wes:'El acceso remoto deja que quien llama vea y controle tu pantalla, abra tu banca online, instale programas ocultos y te deje fuera. Nadie que te haya contactado primero debería tenerlo nunca.',
+  re:[/anydesk|teamviewer|ultraviewer|quicksupport|rustdesk|supremo|logmein|screenconnect|connectwise|splashtop|quick assist|remote (?:access|desktop|support|control|session)|(?:connect|access|get) (?:to |into )?your (?:computer|pc|laptop|screen|device)|(?:read|give|tell) (?:me |us )?(?:the |your )?(?:9|nine|ten|10)?[- ]?digit (?:id|code|number) on (?:your |the )?screen|share your screen/i,
+   /anydesk|teamviewer|ultraviewer|quicksupport|rustdesk|supremo|asistencia r[aá]pida|acceso remoto|escritorio remoto|control remoto|(?:conectar(?:me|nos|se)?|acceder|entrar) (?:a |en )?(?:tu|su) (?:ordenador|pc|port[aá]til|pantalla|equipo|dispositivo|m[oó]vil)|(?:l[eé]a\w*|d[ií]ga\w*|d[ií]me|dame|d[eé]me) (?:me |nos )?(?:el |su |tu )?(?:id|c[oó]digo|n[uú]mero) (?:que (?:sale|aparece) )?en (?:la |su |tu )?pantalla|comparte (?:tu|su) pantalla|compartir pantalla/i]},
+ {id:'invoice',w:14,neg:true,en:'An invoice or “auto-renewal” you do not recognise (Norton, McAfee, Geek Squad, Windows, PayPal, Amazon) with a large charge and a number to call to cancel',es:'Una factura o “renovación automática” que no reconoces (Norton, McAfee, Geek Squad, Windows, PayPal, Amazon) con un cargo alto y un teléfono para cancelar',
+  wen:'Fake renewal invoices are designed to make you call in a panic. The “refund agent” then asks for remote access to process the refund. Check your real account by opening the app or site yourself; you will see no such charge.',wes:'Las falsas facturas de renovación están hechas para que llames con prisa. El “agente de reembolsos” te pide entonces acceso remoto para tramitar la devolución. Mira tu cuenta real abriendo tú la app o la web: no verás ese cargo.',
+  re:[/(?:norton|mcafee|geek squad|avast|kaspersky|windows defender|microsoft 365|best buy|paypal|amazon|apple|icloud)[^.!?\n]{0,60}(?:invoice|renew\w*|subscription|charged|charge|order|receipt|membership|plan)|(?:auto[- ]?renew\w*|renewal|subscription|membership|order)[^.!?\n]{0,50}(?:\$|€|usd|eur)\s?\d{2,}|(?:been|was|will be) (?:charged|debited|billed)[^.!?\n]{0,25}(?:\$|€|usd|eur)?\s?\d{2,}|(?:to )?cancel[^.!?\n]{0,30}(?:call|contact|phone)|if you did not (?:authori[sz]e|make|order|request) (?:this|it)/i,
+   /(?:norton|mcafee|geek squad|avast|kaspersky|windows defender|microsoft 365|paypal|amazon|apple|icloud)[^.!?\n]{0,60}(?:factura|renovaci[oó]n|renovad\w*|suscripci[oó]n|cargo|cobr\w*|pedido|recibo|membres[ií]a|plan)|(?:renovaci[oó]n|suscripci[oó]n|pedido|membres[ií]a)[^.!?\n]{0,50}(?:€|eur|\$)?\s?\d{2,}\s?(?:€|eur|euros)?|(?:se (?:le|te) (?:ha cobrado|cobrar[aá]|ha cargado|cargar[aá])|hemos cobrado|cargo de)[^.!?\n]{0,25}\d{2,}|(?:para )?cancelar[^.!?\n]{0,30}(?:llam\w*|contact\w*|tel[eé]fono)|si no (?:ha|has) (?:autorizado|realizado|solicitado) (?:este|esta|esto)/i]},
+ {id:'refund',w:18,neg:true,en:'Refund trick: “we refunded you too much by mistake”, type the amount yourself, send back the difference, or pay to get a refund',es:'Truco del reembolso: “te hemos devuelto de más por error”, escribe tú la cantidad, devuelve la diferencia, o paga para recibir un reembolso',
+  wen:'In the refund trick the scammer, already inside your computer, moves your own money between your accounts or edits the web page so it looks like you got too much. Then they cry and ask you to send back the “extra” by gift cards, crypto or a transfer. No refund ever works like this.',wes:'En el truco del reembolso el estafador, ya dentro de tu ordenador, mueve tu propio dinero entre tus cuentas o edita la página para que parezca que te devolvieron de más. Luego llora y te pide que devuelvas lo “sobrante” con tarjetas regalo, cripto o una transferencia. Ningún reembolso funciona así.',
+  re:[/refund(?:ed)? (?:you )?(?:too much|more than|extra|by mistake)|(?:extra|additional) zero|(?:typed|entered|sent|put) (?:in )?(?:\$|€)?\d[\d,.]* instead of|send (?:back )?the (?:difference|extra|rest|excess)|(?:pay|send|buy)[^.!?\n]{0,30}(?:to (?:get|process|receive|release) (?:your |the )?refund)|(?:type|enter) the (?:refund )?amount (?:yourself|in the (?:box|field))|process (?:your |the )?refund/i,
+   /(?:reembols\w*|devuelto|devoluci[oó]n|ingresad\w*)[^.!?\n]{0,30}(?:de m[aá]s|por error|un cero de m[aá]s|demasiado)|un cero de m[aá]s|devuelv\w* (?:la |lo )?(?:diferencia|sobrante|que sobra|de m[aá]s)|(?:paga\w*|env[ií]a\w*|compra\w*)[^.!?\n]{0,30}para (?:recibir|tramitar|liberar|cobrar) (?:el |su |tu )?reembolso|(?:escriba|escribe|introduzca|introduce) (?:usted |t[uú] )?(?:la )?cantidad|tramitar (?:el |su |tu )?reembolso/i]},
+ {id:'bank',w:18,neg:true,en:'Asks you to open your online banking, read out card details or bank codes, or move money to a “safe account” while they are connected',es:'Te pide abrir la banca online, leer los datos de la tarjeta o códigos del banco, o mover dinero a una “cuenta segura” mientras están conectados',
+  wen:'No technician needs to see your bank. Once your banking is open on a screen they control, they can make transfers and ask you to read the confirmation code as if it were part of the repair. A “safe account” is always the scammer’s account.',wes:'Ningún técnico necesita ver tu banco. Con tu banca abierta en una pantalla que ellos controlan pueden hacer transferencias y pedirte que leas el código de confirmación como si fuera parte de la reparación. Una “cuenta segura” siempre es la cuenta del estafador.',
+  re:[/(?:open|log ?in(?:to)?|sign ?in(?:to)?|access) (?:to )?your (?:online )?(?:bank|banking|bank account|paypal)|(?:card|credit card|debit card) (?:number|details|cvv|expiry)|(?:read|tell|give)[^.!?\n]{0,25}(?:code|otp|pin)[^.!?\n]{0,25}(?:bank|sms|text)|safe (?:account|wallet)|(?:secure|protect) your (?:money|savings|funds)|(?:your )?bank (?:is involved|employee|is compromised|account (?:is|has been) (?:hacked|compromised))/i,
+   /(?:abr\w*|entr\w*|acced\w*|inici\w* sesi[oó]n) (?:en |a )?(?:su|tu) (?:banca|banco|cuenta bancaria|paypal)|banca online|(?:n[uú]mero|datos|cvv|caducidad) de (?:la |su |tu )?tarjeta|(?:l[eé]a\w*|d[ií]ga\w*|d[ií]me|dame|d[eé]me)[^.!?\n]{0,25}(?:c[oó]digo|clave|pin)[^.!?\n]{0,25}(?:banco|sms)|cuenta segura|(?:proteger|asegurar|poner a salvo) (?:su|tu) dinero|(?:empleado|trabajador) del banco (?:est[aá] implicado|es c[oó]mplice)|(?:su|tu) (?:banco|cuenta) (?:est[aá]|ha sido) (?:hackead\w*|comprometid\w*)/i]},
+ {id:'pay',w:18,neg:true,en:'Wants payment for “support”, a “licence”, a “security plan” or a “refund” by gift cards, Bitcoin or a crypto ATM, Bizum, Western Union or a transfer to a person',es:'Quiere un pago por “soporte”, una “licencia”, un “plan de seguridad” o un “reembolso” con tarjetas regalo, Bitcoin o un cajero de cripto, Bizum, Western Union o transferencia a una persona',
+  wen:'Microsoft, Apple and real repair shops never take gift cards, crypto or a Bizum to a personal number. Those methods are chosen because the money cannot be recovered.',wes:'Microsoft, Apple y las tiendas de reparación de verdad nunca aceptan tarjetas regalo, cripto ni un Bizum a un número personal. Se eligen esos métodos porque el dinero no se puede recuperar.',
+  re:[/gift ?cards?|google play cards?|apple (?:gift )?cards?|itunes cards?|steam cards?|amazon cards?|bitcoin|crypto(?:currency)? (?:atm|machine)|btc|usdt|western union|moneygram|(?:wire|transfer) (?:the money )?to (?:a |my |our )?(?:colleague|agent|technician|personal)|(?:lifetime|security|protection|firewall) (?:plan|licen[cs]e|package|subscription)[^.!?\n]{0,30}(?:\$|€)?\d{2,}/i,
+   /tarjetas? (?:regalo|de google play|de apple|de itunes|de steam|de amazon|paysafecard)|paysafecard|bitcoin|cajero (?:de )?(?:bitcoin|cripto)|criptomonedas?|western union|moneygram|bizum (?:al|a un|a este) (?:n[uú]mero|m[oó]vil)|transferencia (?:a (?:un|mi|nuestro) (?:compa[nñ]ero|agente|t[eé]cnico)|a nombre de)|(?:plan|licencia|paquete|suscripci[oó]n) (?:de seguridad|de protecci[oó]n|vitalici\w*|de por vida)[^.!?\n]{0,30}\d{2,}/i]},
+ {id:'cold',w:14,neg:true,en:'They contacted you first: a call or message from “Microsoft”, “Windows”, “Apple”, “Amazon”, your internet provider or a “technical department” saying your device is sending errors or your IP is hacked',es:'Te contactaron ellos primero: una llamada o mensaje de “Microsoft”, “Windows”, “Apple”, “Amazon”, tu compañía de internet o un “departamento técnico” diciendo que tu equipo envía errores o tu IP está hackeada',
+  wen:'Microsoft, Apple and Amazon do not monitor your computer and do not call you about errors. Your internet provider will not ask to connect to your PC. An unexpected technical call is the scam itself.',wes:'Microsoft, Apple y Amazon no vigilan tu ordenador ni te llaman por errores. Tu compañía de internet no te pedirá conectarse a tu PC. Una llamada técnica inesperada es la estafa en sí.',
+  re:[/(?:calling|call|message|this is|i am|i'?m|we are) (?:you )?(?:from )?(?:microsoft|windows|apple|amazon|google|your (?:internet|broadband|wifi) (?:provider|company)|the technical (?:department|team)|tech(?:nical)? support)|(?:we|microsoft|windows) (?:have )?(?:detected|noticed|received)[^.!?\n]{0,40}(?:errors?|virus|hack|problem|suspicious)[^.!?\n]{0,30}(?:your|from) (?:computer|pc|device|ip|router|network)|your (?:ip|ip address|router|wifi|internet) (?:is |has been |was )?(?:hacked|compromised|used|being used)|(?:windows|microsoft) licen[cs]e (?:has )?expired/i,
+   /(?:(?:le|te) )?(?:llamamos|llamo|escribimos|somos|soy) (?:de |del )?(?:microsoft|windows|apple|amazon|google|(?:su|tu) (?:compa[nñ][ií]a|operador|proveedor) de (?:internet|fibra|wifi)|(?:el )?departamento t[eé]cnico|soporte t[eé]cnico|servicio t[eé]cnico)|(?:hemos|ha) (?:detectado|recibido|notado)[^.!?\n]{0,40}(?:errores?|virus|hackeo|problema|actividad sospechosa)[^.!?\n]{0,30}(?:su|tu|desde (?:su|tu)) (?:ordenador|pc|equipo|dispositivo|ip|router|red)|(?:su|tu) (?:ip|direcci[oó]n ip|router|wifi|internet) (?:est[aá] |ha sido )?(?:hackead\w*|comprometid\w*|siendo usad\w*)|licencia de (?:windows|microsoft) (?:ha )?caducad\w*/i]},
+ {id:'secret',w:10,en:'Secrecy or isolation: “do not tell the bank”, “do not hang up”, “the bank staff are involved”, “do not turn off the computer”',es:'Secreto o aislamiento: “no se lo diga al banco”, “no cuelgue”, “los empleados del banco están implicados”, “no apague el ordenador”',
+  wen:'Scammers keep you on the line and away from your bank or family because one call to them would end it. Anyone who asks you to lie to your bank is the person stealing from you.',wes:'Los estafadores te mantienen al teléfono y lejos de tu banco o tu familia porque una sola llamada a ellos lo acabaría. Quien te pide que mientas a tu banco es quien te está robando.',
+  re:[/(?:do not|don'?t|never) (?:tell|inform|call|contact) (?:the |your )?(?:bank|family|anyone|police|staff)|(?:do not|don'?t) hang up|stay on the (?:line|phone)|(?:if the bank asks|tell the bank)[^.!?\n]{0,40}(?:it'?s|it is|say)|(?:do not|don'?t) (?:turn off|switch off|shut down|unplug)/i,
+   /no (?:se lo |le |lo )?(?:diga|digas|cuente|cuentes|comente|comentes) (?:a |al )?(?:nadie|banco|su familia|tu familia|la polic[ií]a)|no (?:cuelgue|cuelgues)|(?:si (?:el banco|le) pregunta\w*|d[ií]gale al banco)[^.!?\n]{0,40}(?:diga|es para|que es)|no (?:apague|apagues|desenchufe|desenchufes|desconecte|desconectes)/i]},
+ {id:'urgent',w:6,en:'Pressure: “immediately”, “within 5 minutes”, “your data will be deleted”, “final warning”',es:'Prisas: “inmediatamente”, “en 5 minutos”, “se borrarán tus datos”, “último aviso”',
+  wen:'A countdown or alarm is there to stop you from thinking or asking someone. Real problems on your computer can wait for you to switch it off and ask a person you trust.',wes:'Una cuenta atrás o una alarma están para que no pienses ni preguntes a nadie. Un problema real en tu ordenador puede esperar a que lo apagues y preguntes a alguien de confianza.',
+  re:[/\burgent(?:ly)?\b|right now|immediately|within (?:the next )?\d+ ?(?:hours?|minutes?|h|min)\b|final (?:warning|notice)|(?:will be|are being) (?:deleted|erased|wiped)|asap/i,
+   /urgente|ahora mismo|inmediatamente|en (?:los pr[oó]ximos )?\d+ ?(?:horas?|minutos?|h|min)\b|[uú]ltimo aviso|se (?:borrar[aá]n|eliminar[aá]n)|ser[aá]n (?:borrad\w*|eliminad\w*)|cuanto antes/i]}
+];
+function stripOfficial(t){return t;}
+function analyze(text,url){
+  var raw=(text||'')+'\n'+(url||''),t=raw,hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  if(n>=4)score+=8;
+  if(on('popup')&&on('phone'))score=Math.max(score,90);
+  if(on('remote')&&(on('cold')||on('popup')||on('refund')||on('invoice')||on('bank')))score=Math.max(score,90);
+  if(on('refund')&&(on('remote')||on('bank')||on('pay')))score=Math.max(score,92);
+  if(on('invoice')&&on('phone'))score=Math.max(score,85);
+  if(on('pay')&&(on('cold')||on('popup')||on('remote')||on('refund')))score=Math.max(score,90);
+  if(on('bank')&&(on('cold')||on('remote')||on('popup')))score=Math.max(score,90);
+  if(on('bank'))score=Math.max(score,70);
+  if(on('remote'))score=Math.max(score,60);
+  if(on('popup'))score=Math.max(score,60);
+  if(on('cold'))score=Math.max(score,60);
+  if(on('refund'))score=Math.max(score,55);
+  if(on('invoice'))score=Math.max(score,50);
+  if(on('pay'))score=Math.max(score,50);
+  if(on('secret'))score=Math.max(score,40);
+  var legit=/(?:i|I) (?:booked|took|brought|called)[^.!?\n]{0,40}(?:repair shop|apple store|genius bar|the number on (?:apple|microsoft)\.com|my usual technician)|(?:llev[eé]|ped[ií] cita|llam[eé])[^.!?\n]{0,40}(?:tienda de reparaci[oó]n|apple store|mi t[eé]cnico de siempre|el n[uú]mero de la web oficial)/i.test(raw);
+  if(legit&&!on('popup')&&!on('cold')&&!on('refund')&&!on('pay')&&!on('bank')&&!on('secret'))score=Math.min(score,15);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Estafa del falso soporte técnico casi segura','Encaja con un guion conocido para meterse en tu ordenador y en tu banco. No llames al número, no instales nada, no abras tu banca y no pagues. Si ya les diste acceso, mira abajo qué hacer ahora mismo: los primeros minutos cuentan.']:['Almost certainly a tech support scam','This matches a known script for getting into your computer and your bank. Do not call the number, do not install anything, do not open your banking and do not pay. If you already gave them access, see the steps below now: the first minutes count.'];
+  if(s>=40)return es?['Muchas banderas rojas','Tiene rasgos típicos del falso soporte técnico. Cuelga o cierra la ventana y compruébalo tú por tu cuenta, abriendo la web oficial o llamando al número que tú ya conoces.']:['Big red flags','It has the usual signs of a tech support scam. Hang up or close the window, and check it yourself by opening the official site or calling a number you already know.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. No des acceso ni pagues nada todavía y pregunta a alguien de confianza.']:['Kinda sus','Some classic signals. Do not give access or pay anything yet, and ask someone you trust.'];
+  return es?['Pocas banderas','No salta casi nada. Aun así, la regla de oro no cambia: nadie que te contacte primero debe conectarse a tu ordenador ni ver tu banco.']:['Few flags','Not much trips the rules. The golden rule still applies: nobody who contacts you first should connect to your computer or see your bank.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  L.push(es?'No llames al número y cuelga si te llamaron ellos. Microsoft, Apple, Amazon y tu compañía de internet no llaman por virus ni ponen teléfonos en los avisos de error.':'Do not call the number, and hang up if they called you. Microsoft, Apple, Amazon and your internet provider do not call about viruses or put phone numbers in error warnings.');
+  if(on('popup'))L.push(es?'Para cerrar una ventana que no se deja cerrar: en Windows pulsa Ctrl+Mayús+Esc, elige el navegador y “Finalizar tarea”; en Mac pulsa Cmd+Opción+Esc y fuerza la salida. Si no responde, mantén pulsado el botón de encendido. Al volver a abrir el navegador, no restaures las pestañas.':'To close a window that will not close: on Windows press Ctrl+Shift+Esc, pick the browser and choose End task; on a Mac press Cmd+Option+Esc and force quit. If nothing responds, hold the power button. When you reopen the browser, do not restore the tabs.');
+  if(on('remote'))L.push(es?'Si ya se conectaron: desconecta internet (quita el wifi o el cable), desinstala AnyDesk, TeamViewer o la app que te pidieron, y pasa un análisis completo con el antivirus que ya tienes (Seguridad de Windows en un PC). Desde otro dispositivo, cambia las contraseñas del correo y del banco. Si dudas, llévalo a una tienda de reparación de confianza.':'If they already connected: cut the internet (turn off wifi or pull the cable), uninstall AnyDesk, TeamViewer or whatever app they had you install, and run a full scan with the antivirus you already have (Windows Security on a PC). From another device, change your email and bank passwords. If in doubt, take it to a repair shop you trust.');
+  if(on('bank')||on('refund')||on('pay'))L.push(es?'Llama ya a tu banco al número que viene en tu tarjeta o en la app, no al que te dieron. Pide bloquear la tarjeta y frenar transferencias recientes. Si pagaste con tarjetas regalo, llama a la empresa de la tarjeta con los códigos y el ticket: a veces aún pueden congelarlas.':'Call your bank now on the number on your card or in its app, not one they gave you. Ask them to block the card and stop recent transfers. If you paid with gift cards, call the card company with the codes and the receipt: they can sometimes still freeze them.');
+  if(on('invoice'))L.push(es?'Para comprobar un cargo, abre tú la app o la web de PayPal, Amazon, Norton o tu banco escribiendo la dirección. Si no aparece ahí, la factura es falsa: bórrala sin llamar ni pulsar enlaces.':'To check a charge, open the PayPal, Amazon, Norton or bank app or site yourself by typing the address. If it is not there, the invoice is fake: delete it without calling or clicking.');
+  if(on('secret'))L.push(es?'Cuéntaselo hoy a tu banco y a alguien de tu familia. Quien te pide que no se lo digas a nadie es quien te está robando.':'Tell your bank and someone in your family today. Whoever asks you to keep it secret is the one stealing from you.');
+  L.push(es?'Si perdiste dinero o diste acceso, denúncialo a la policía. Para dudas, llama gratis al 017, la línea de ayuda en ciberseguridad de INCIBE.':'If you lost money or gave access, report it to the police. In Spain, INCIBE’s free 017 helpline can advise.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Alerta de seguridad de Windows: su ordenador está infectado con un troyano y el acceso a este PC ha sido bloqueado. Código de error #0x268d3. No cierre esta ventana y llame inmediatamente al soporte técnico de Microsoft: 900 123 456',u:'Ventana a pantalla completa en el navegador, con alarma'},
+ {t:'Hello, this is Microsoft technical department. We have detected errors coming from your computer and your IP address has been hacked. Please install AnyDesk and read me the 9-digit ID on your screen so I can fix it right now.',u:'Phone call from an unknown number'},
+ {t:'Your Norton 360 subscription has been auto-renewed. You have been charged $399.99. If you did not authorize this, call our billing team within 24 hours to cancel: +1 (808) 555-0147',u:'Email from a Gmail address'},
+ {t:'El técnico me dijo que me había devuelto 4.000 € en vez de 400 por error, que había puesto un cero de más. Me pidió que devolviera la diferencia comprando tarjetas regalo de Google Play y que no se lo dijera al banco.',u:'Llamada después de abrir AnyDesk'},
+ {t:'We are calling from your internet provider. Your router is being used by hackers. To secure your money, log in to your online banking while I am connected and move your savings to a safe account. Do not hang up.',u:'Phone call'},
+ {t:'I booked a repair at the Apple Store myself for my cracked screen and they gave me a printed quote.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+
+
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
