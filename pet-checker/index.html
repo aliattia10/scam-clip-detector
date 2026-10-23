@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pet Scam Checker: puppy and kitten sale scams, fake pet transport fees, “we found your dog” rewards (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Found a cheap puppy online, a seller who is abroad, a pet courier asking for crate or insurance fees, or a stranger who found your lost dog and wants money first? Paste it and get a free rule-based red-flag score and what to do before you pay. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/pet-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="A puppy for 150€, shipped to your door? Free pet scam checker">
+<meta property="og:description" content="Paste the ad or the seller’s messages. Get a red-flag score for free or too-cheap puppies, sellers who cannot meet, deposits before a visit, fake pet transport fees, missing microchips and fake “we found your pet” rewards.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/pet-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/pet-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pet and puppy scam checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for puppy and kitten sale scams, fake pet transport fees and fake lost-pet finders, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/pet-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Pet Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/marketplace-checker/" data-i18n="navr">Marketplace</a>
+      <a class="hide-m" href="/sms-checker/" data-i18n="navs">SMS</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">A puppy for 150€, <em>shipped to your door?</em></h1>
+    <p class="sub" data-i18n="sub">Paste the ad or the seller’s messages: a French bulldog or Yorkshire puppy “free to a good home, you only pay transport”, a seller who moved abroad and cannot meet, a “pet transport agency” that now wants money for a crate, insurance or a vaccine, or someone who “found your lost dog” and wants a reward first. In one second you get a red-flag score and what to do before you send any money.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a puppy or kitten ad, a seller chat or a “we found your pet” message</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool and can be wrong both ways. The safe rule never changes: see the animal in person, with its mother if it is a puppy or kitten, before you pay anything.</p>
+    <label for="txt" data-i18n="l1">Paste the ad, the seller’s messages or the courier email</label>
+    <textarea id="txt" placeholder="e.g. French bulldog puppy free to a good home, you only pay 180€ transport. We moved abroad so we will ship him to you."></textarea>
+    <label for="url" data-i18n="l2">Where you found it (optional)</label>
+    <input type="text" id="url" placeholder="e.g. Facebook ad, Milanuncios, WhatsApp, email from a pet transport company" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: ES free puppy, pay transport</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: seller abroad, deposit by Western Union</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: pet courier wants a crate and insurance</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: ES puppy stuck at the airport</button>
+      <button class="chip" onclick="ex(4)" data-i18n="e4">Example: “I found your lost dog”</button>
+      <button class="chip" onclick="ex(5)" data-i18n="e5">Example: I visited the breeder</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do before you pay</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">No visit, no deal</b><p data-i18n="c1p">Most pet scams have no animal at all: the photos are copied from real breeders. A seller who cannot show the puppy with its mother, live or on a video call where you choose what they film, does not have it.</p></div>
+    <div class="card"><b data-i18n="c2h">The fees never stop</b><p data-i18n="c2p">After the first payment comes the crate, the insurance, the vaccine, the quarantine, the customs and the “refundable” deposit. Each one is a new story to get more money. Real breeders do not run a courier company that charges you by the stage.</p></div>
+    <div class="card"><b data-i18n="c3h">Ask for the chip and the register</b><p data-i18n="c3p">In Spain dogs, cats and ferrets must be microchipped and registered before they change hands, and breeders must be registered. Ask for the microchip number and the breeder registration number before you pay, and check them. A scammer will have an excuse.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it saved you from a puppy that never existed, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/pet-checker/" data-i18n="petm">Pet / puppy sale checker</a>
+    <a href="/tech-support-checker/" data-i18n="tsm">Tech support / virus pop-up checker</a>
+    <a href="/account-checker/" data-i18n="acm">Account / code checker</a>
+    <a href="/blackmail-checker/" data-i18n="bmm">Blackmail email checker</a>
+    <a href="/loan-checker/" data-i18n="lnm">Loan scam checker</a>
+    <a href="/charity-checker/" data-i18n="chm">Charity / donation checker</a>
+    <a href="/qr-checker/" data-i18n="qrm">QR code checker</a>
+    <a href="/travel-checker/" data-i18n="trvm">Travel / booking checker</a>
+    <a href="/lottery-checker/" data-i18n="lotm">Lottery / prize checker</a>
+    <a href="/shop-checker/" data-i18n="moresh">Fake shop checker</a>
+    <a href="/ticket-checker/" data-i18n="moret">Ticket scam checker</a>
+    <a href="/marketplace-checker/" data-i18n="morem">Marketplace scam checker</a>
+    <a href="/romance-checker/" data-i18n="morer2">Romance scam checker</a>
+    <a href="/investment-checker/" data-i18n="morei">Investment scam checker</a>
+    <a href="/call-checker/" data-i18n="morec">Scam call checker</a>
+    <a href="/sms-checker/" data-i18n="mores2">SMS / WhatsApp checker</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/pet-checker/" data-i18n="petf">Pet checker</a> · <a href="/tech-support-checker/" data-i18n="tsf">Tech support checker</a> · <a href="/account-checker/" data-i18n="acf">Account checker</a> · <a href="/blackmail-checker/" data-i18n="bmf">Blackmail checker</a> · <a href="/loan-checker/" data-i18n="lnf">Loan checker</a> · <a href="/charity-checker/" data-i18n="chf">Charity checker</a> · <a href="/qr-checker/" data-i18n="qrf">QR checker</a> · <a href="/travel-checker/" data-i18n="trvf">Travel checker</a> · <a href="/lottery-checker/" data-i18n="lotf">Lottery checker</a> · <a href="/shop-checker/" data-i18n="fsh">Shop checker</a> · <a href="/ticket-checker/" data-i18n="ftk">Ticket checker</a> · <a href="/marketplace-checker/" data-i18n="fm">Marketplace checker</a> · <a href="/romance-checker/" data-i18n="fro">Romance checker</a> · <a href="/investment-checker/" data-i18n="fi">Investment checker</a> · <a href="/call-checker/" data-i18n="fc">Call checker</a> · <a href="/sms-checker/" data-i18n="fs">SMS checker</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Breeders, shelters, classifieds sites, couriers and airlines appear only because scammers impersonate them; they are not accused of anything. Not legal or veterinary advice. If you already paid, call your bank right away to block the card and ask to recall the transfer, report the ad to the site, keep every message, photo and receipt, and report it to the police. In Spain you can also call INCIBE’s free helpline on 017.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{"acm": "Account / code checker", "acf": "Account checker", "tsm": "Tech support / virus pop-up checker", "tsf": "Tech support checker", "ctah": "Want to roast these on camera?", "ctap": "The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.", "ctab": "See the Script Pack", "tiph": "Tip jar", "tipb": "Tip via PayPal", "bmm": "Blackmail email checker", "bmf": "Blackmail checker", "lnm": "Loan scam checker", "lnf": "Loan checker", "qrm": "QR code checker", "qrf": "QR checker", "trvm": "Travel / booking checker", "trvf": "Travel checker", "lotm": "Lottery / prize checker", "lotf": "Lottery checker", "moresh": "Fake shop checker", "moret": "Ticket scam checker", "morer2": "Romance scam checker", "morei": "Investment scam checker", "morec": "Scam call checker", "mores2": "SMS / WhatsApp checker", "morem": "Marketplace scam checker", "morer": "Rental listing checker", "morerec": "Crypto recovery checker", "morep": "Phishing / invoice checker", "morej": "Job offer checker", "moreg": "Giveaway / airdrop checker", "moresig": "Signal / VIP group checker", "mores": "900 Shorts guide (19€)", "fsh": "Shop checker", "ftk": "Ticket checker", "fro": "Romance checker", "fi": "Investment checker", "fc": "Call checker", "fs": "SMS checker", "fm": "Marketplace checker", "fr": "Rental checker", "frec": "Recovery checker", "fpish": "Phishing checker", "fj": "Job offer checker", "fg": "Giveaway checker", "fp": "Scam-Roast Script Pack", "ft": "Tip jar", "fd": "Scam-Clip Detector", "chm": "Charity / donation checker", "chf": "Charity checker", "petm": "Pet / puppy sale checker", "petf": "Pet checker", "brand": "Pet Checker", "navd": "Scam-Clip Detector", "navr": "Marketplace", "navs": "SMS", "h1": "A puppy for 150€, <em>shipped to your door?</em>", "sub": "Paste the ad or the seller’s messages: a French bulldog or Yorkshire puppy “free to a good home, you only pay transport”, a seller who moved abroad and cannot meet, a “pet transport agency” that now wants money for a crate, insurance or a vaccine, or someone who “found your lost dog” and wants a reward first. In one second you get a red-flag score and what to do before you send any money.", "h2": "Check a puppy or kitten ad, a seller chat or a “we found your pet” message", "hint": "Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool and can be wrong both ways. The safe rule never changes: see the animal in person, with its mother if it is a puppy or kitten, before you pay anything.", "l1": "Paste the ad, the seller’s messages or the courier email", "l2": "Where you found it (optional)", "go": "Check it", "e0": "Example: ES free puppy, pay transport", "e1": "Example: seller abroad, deposit by Western Union", "e2": "Example: pet courier wants a crate and insurance", "e3": "Example: ES puppy stuck at the airport", "e4": "Example: “I found your lost dog”", "e5": "Example: I visited the breeder", "of": "/ 100 scam score", "todoh": "What to do before you pay", "c1h": "No visit, no deal", "c1p": "Most pet scams have no animal at all: the photos are copied from real breeders. A seller who cannot show the puppy with its mother, live or on a video call where you choose what they film, does not have it.", "c2h": "The fees never stop", "c2p": "After the first payment comes the crate, the insurance, the vaccine, the quarantine, the customs and the “refundable” deposit. Each one is a new story to get more money. Real breeders do not run a courier company that charges you by the stage.", "c3h": "Ask for the chip and the register", "c3p": "In Spain dogs, cats and ferrets must be microchipped and registered before they change hands, and breeders must be registered. Ask for the microchip number and the breeder registration number before you pay, and check them. A scammer will have an excuse.", "tipp": "This checker is free and stays free. If it saved you from a puppy that never existed, you can tip.", "disc": "Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Breeders, shelters, classifieds sites, couriers and airlines appear only because scammers impersonate them; they are not accused of anything. Not legal or veterinary advice. If you already paid, call your bank right away to block the card and ask to recall the transfer, report the ad to the site, keep every message, photo and receipt, and report it to the police. In Spain you can also call INCIBE’s free helpline on 017."},
+ es:{"acm": "Comprobador de cuentas y códigos", "acf": "Comprobador de cuentas", "tsm": "Comprobador de falso soporte técnico", "tsf": "Comprobador de soporte técnico", "ctah": "¿Quieres hacer un roast de esto en vídeo?", "ctap": "El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) sobre las estafas más comunes. Paga lo que quieras, desde 5 €.", "ctab": "Ver el pack de guiones", "tiph": "Bote de propinas", "tipb": "Propina por PayPal", "bmm": "Comprobador de chantajes", "bmf": "Comprobador de chantajes", "lnm": "Comprobador de préstamos", "lnf": "Comprobador de préstamos", "qrm": "Comprobador de códigos QR", "qrf": "Comprobador de QR", "trvm": "Comprobador de viajes y reservas", "trvf": "Comprobador de viajes", "lotm": "Comprobador de premios y loterías", "lotf": "Comprobador de premios", "moresh": "Comprobador de tiendas online", "moret": "Comprobador de entradas", "morer2": "Comprobador de romances", "morei": "Comprobador de inversiones", "morec": "Comprobador de llamadas", "mores2": "Comprobador de SMS / WhatsApp", "morem": "Comprobador de segunda mano", "morer": "Comprobador de alquileres", "morerec": "Comprobador de recuperación de cripto", "morep": "Comprobador de phishing / facturas", "morej": "Comprobador de ofertas de trabajo", "moreg": "Comprobador de sorteos / airdrops", "moresig": "Comprobador de grupos VIP / señales", "mores": "Guía de 900 Shorts (19 €)", "fsh": "Comprobador de tiendas", "ftk": "Comprobador de entradas", "fro": "Comprobador de romances", "fi": "Comprobador de inversiones", "fc": "Comprobador de llamadas", "fs": "Comprobador de SMS", "fm": "Comprobador de segunda mano", "fr": "Comprobador de alquileres", "frec": "Comprobador de recuperación", "fpish": "Comprobador de phishing", "fj": "Comprobador de ofertas", "fg": "Comprobador de sorteos", "fp": "Pack de guiones Scam-Roast", "ft": "Bote de propinas", "fd": "Detector de estafas", "chm": "Comprobador de donaciones", "chf": "Comprobador de donaciones", "petm": "Comprobador de venta de mascotas", "petf": "Comprobador de mascotas", "brand": "Comprobador de mascotas", "navd": "Detector de estafas", "navr": "Segunda mano", "navs": "SMS", "h1": "¿Un cachorro por 150 €, <em>enviado a tu casa?</em>", "sub": "Pega el anuncio o los mensajes del vendedor: un cachorro de bulldog francés o yorkshire “se regala a buena familia, solo pagas el transporte”, un vendedor que se mudó al extranjero y no puede quedar, una “agencia de transporte de mascotas” que ahora quiere dinero por la jaula, el seguro o una vacuna, o alguien que “ha encontrado a tu perro perdido” y pide la recompensa antes. En un segundo tienes una nota de banderas rojas y qué hacer antes de enviar dinero.", "h2": "Comprueba un anuncio de cachorro o gatito, un chat con el vendedor o un “hemos encontrado a tu mascota”", "hint": "Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples y puede fallar en ambos sentidos. La regla segura no cambia: ve al animal en persona, con su madre si es un cachorro o un gatito, antes de pagar nada.", "l1": "Pega el anuncio, los mensajes del vendedor o el email del transportista", "l2": "Dónde lo encontraste (opcional)", "go": "Comprobar", "e0": "Ejemplo: cachorro gratis, pagas el transporte", "e1": "Ejemplo: vendedor en el extranjero y señal por Western Union", "e2": "Ejemplo: el transportista pide jaula y seguro", "e3": "Ejemplo: cachorro retenido en el aeropuerto", "e4": "Ejemplo: “he encontrado a tu perro”", "e5": "Ejemplo: visité al criador", "of": "/ 100 nota de estafa", "todoh": "Qué hacer antes de pagar", "c1h": "Sin visita no hay trato", "c1p": "La mayoría de estas estafas no tienen animal: las fotos están copiadas de criadores reales. Un vendedor que no puede enseñarte el cachorro con su madre, en persona o en una videollamada en la que tú decides qué graba, no lo tiene.", "c2h": "Los gastos no se acaban nunca", "c2p": "Tras el primer pago llegan la jaula, el seguro, la vacuna, la cuarentena, la aduana y la fianza “reembolsable”. Cada una es una historia nueva para sacarte más dinero. Los criadores reales no tienen una empresa de transporte que te cobra por etapas.", "c3h": "Pide el microchip y el registro", "c3p": "En España perros, gatos y hurones deben llevar microchip y estar registrados antes de cambiar de dueño, y los criadores deben estar inscritos. Pide el número de microchip y el número de registro del criador antes de pagar, y compruébalos. Un estafador tendrá una excusa.", "tipp": "Este comprobador es gratis y seguirá siéndolo. Si hoy te libró de un cachorro que no existía, puedes dejar una propina.", "disc": "Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. Criadores, protectoras, webs de anuncios, transportistas y aerolíneas aparecen solo porque los estafadores se hacen pasar por ellos; no se les acusa de nada. No es asesoramiento legal ni veterinario. Si ya pagaste, llama ya a tu banco para bloquear la tarjeta y pedir que recuperen la transferencia, denuncia el anuncio en la web, guarda todos los mensajes, fotos y justificantes, y denúncialo a la policía. También puedes llamar gratis al 017, la línea de ayuda en ciberseguridad de INCIBE."}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|won'?t|will not|didn'?t|did not|don'?t|do not|hasn'?t|has not|no need to|without|\bno\b|nunca|jam[aá]s|no me|no te|no ha|no hace falta|\bsin\b|\bni\b)[^.!?\n]{0,30}$/i.test(t.slice(Math.max(0,idx-40),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'free',w:16,en:'The price is too good: a pedigree puppy or kitten “free to a good home”, “you only pay transport or vaccines”, or far below the usual price',es:'El precio es demasiado bueno: un cachorro o gatito de raza “se regala a buena familia”, “solo pagas el transporte o las vacunas”, o muy por debajo del precio normal',
+  wen:'Bulldogs, yorkies, pomeranians, sphynx and ragdoll kittens are the favourite bait because people expect to pay a lot. “Free, just pay shipping” is the classic opening: the shipping is the scam.',wes:'Bulldogs, yorkshires, pomeranias, gatos sphynx y ragdoll son el cebo favorito porque la gente espera pagar mucho. “Gratis, solo paga el envío” es la apertura clásica: el envío es la estafa.',
+  re:[/free to (?:a )?good (?:home|family)|(?:free|for adoption|adopt)[^.!?\n]{0,40}(?:just|only) (?:pay|cover)[^.!?\n]{0,25}(?:shipping|transport|delivery|vaccin\w*|papers|fees?)|(?:just|only) (?:pay|cover) (?:the )?(?:shipping|transport|delivery|flight)|(?:puppy|puppies|kitten|dog|cat|bulldog|frenchie|yorkie|pomeranian|chihuahua|husky|teacup|sphynx|ragdoll|maine coon)[^.!?\n]{0,40}(?:for |only |just )?(?:€|\$|£)\s?\d{2,3}\b|(?:puppy|puppies|kitten|dog|cat|bulldog|frenchie|yorkie|pomeranian|chihuahua|husky|teacup|sphynx|ragdoll|maine coon)[^.!?\n]{0,40}\b\d{2,3}\s?(?:€|eur|euros|\$|£)/i,
+   /(?:se )?regal[ao]\w* a (?:una )?buena (?:familia|casa)|(?:gratis|regalo|en adopci[oó]n|adopci[oó]n gratuita)[^.!?\n]{0,40}(?:solo|s[oó]lamente) (?:pag\w*|cubr\w*)[^.!?\n]{0,25}(?:env[ií]o|transporte|portes|vacunas?|papeles|gastos)|(?:solo|s[oó]lamente) (?:pag\w*|cubr\w*) (?:el |los |las )?(?:env[ií]o|transporte|portes|gastos de (?:env[ií]o|transporte)|vuelo)|(?:cachorr\w*|gatit\w*|perr\w*|gat[oa]s?|bulldog|yorkshire|yorki|pomerania|chihuahua|husky|toy|sphynx|ragdoll|maine coon)[^.!?\n]{0,40}\b\d{2,3}\s?(?:€|eur|euros)|(?:cachorr\w*|gatit\w*|perr\w*|bulldog|yorkshire|pomerania|chihuahua|husky)[^.!?\n]{0,40}(?:€|eur)\s?\d{2,3}\b/i]},
+ {id:'away',w:16,neg:true,en:'You cannot see the animal: the seller is abroad or “just moved”, works on an oil rig or is a missionary, will not meet, or will not do a live video call',es:'No puedes ver al animal: el vendedor está en el extranjero o “se acaba de mudar”, trabaja en una plataforma o es misionero, no puede quedar o no hace videollamada en directo',
+  wen:'A real seller lets you visit and see the puppy with its mother. Being abroad, travelling for work or too busy for a video call is the excuse that hides that there is no animal.',wes:'Un vendedor real te deja ir a verlo con su madre. Estar en el extranjero, de viaje por trabajo o demasiado ocupado para una videollamada es la excusa que tapa que no hay animal.',
+  re:[/(?:i|we) (?:have |had )?(?:just )?(?:moved|relocated|been transferred|am working|are working|work|live|am living|are living) (?:to |in |on |abroad|overseas|offshore)|(?:missionary|oil rig|offshore|military|deployed|army|navy)|(?:can'?t|cannot|can not|unable to|not able to|won'?t be able to) (?:meet|visit|come|see|show|video ?call|facetime|do a (?:video )?call)|no (?:visits?|pick[- ]?ups?|collection)|(?:only|just) (?:by )?(?:delivery|shipping|email|whatsapp|text)|(?:we|i) (?:will )?(?:ship|deliver|send) (?:the )?(?:puppy|kitten|dog|cat|baby|him|her|it) to (?:you|your)/i,
+   /(?:me |nos )?(?:acabo de mudar|acabamos de mudar|he mudado|hemos mudado|mud[eé]|trasladad\w*|vivo en el extranjero|vivimos en el extranjero|trabajo en el extranjero|estoy (?:en|trabajando en) (?:el )?(?:extranjero|reino unido|londres|francia|alemania|camer[uú]n|nigeria))|misioner\w*|plataforma petrol\w*|(?:no (?:puedo|podemos|me es posible)|imposible) (?:quedar|ver(?:nos)?|ense[nñ]ar\w*|hacer (?:una )?videollamada|que (?:venga|vengas|lo veas|la veas))|no (?:se admiten )?visitas|(?:solo|s[oó]lo) (?:por |con )?(?:env[ií]o|email|correo|whatsapp)|(?:te|se lo|os) (?:lo |la )?(?:enviamos|env[ií]o|mandamos|mando) a (?:tu|su|vuestra) (?:casa|domicilio|ciudad)/i]},
+ {id:'deposit',w:18,neg:true,en:'Asks for a deposit, reservation or “holding fee” before you have seen the animal',es:'Pide una señal, reserva o “fianza” antes de que hayas visto al animal',
+  wen:'Paying to “reserve” a puppy you have not seen is how the first payment is taken. Other families are “very interested” so you send it fast. Without a visit you are reserving a photo.',wes:'Pagar para “reservar” un cachorro que no has visto es como se cobra el primer pago. Siempre hay otras familias “muy interesadas” para que lo mandes rápido. Sin visita estás reservando una foto.',
+  re:[/(?:deposit|reservation (?:fee|payment)|holding fee|down ?payment|to (?:reserve|hold|secure) (?:the |your |him|her|it))[^.!?\n]{0,50}|(?:pay|send|transfer)[^.!?\n]{0,30}(?:before|first|in advance|upfront|up front)/i,
+   /(?:se[nñ]al|reserva\w*|fianza|dep[oó]sito|adelanto|anticipo|pago a cuenta)[^.!?\n]{0,40}(?:\d|bizum|transferencia|pagar|pago|env[ií]a|manda)|para (?:reservar|apartar|guardar)(?:lo|la|te|telo|tela)?\b|(?:paga\w*|env[ií]a\w*|manda\w*|transfier\w*|haz (?:un|el) bizum)[^.!?\n]{0,30}(?:antes|primero|por adelantado|de antemano|ya)/i]},
+ {id:'fees',w:18,neg:true,en:'A “pet transport agency”, airline or courier asks for more money: crate, insurance, vaccine, quarantine, customs, permit, a refundable deposit, or the animal is “stuck at the airport”',es:'Una “agencia de transporte de mascotas”, aerolínea o mensajería pide más dinero: jaula, seguro, vacuna, cuarentena, aduana, permiso, una fianza “reembolsable”, o el animal está “retenido en el aeropuerto”',
+  wen:'The courier is part of the same gang, usually with a professional-looking website created days ago. Each fee comes with a deadline and a threat that the animal will suffer or be seized. Real transport is quoted once, in full, by a company you chose.',wes:'El transportista es parte de la misma banda, normalmente con una web de aspecto profesional creada hace días. Cada gasto llega con un plazo y la amenaza de que el animal sufrirá o será requisado. Un transporte real se presupuesta una vez y completo, por una empresa que eliges tú.',
+  re:[/(?:pet|animal|puppy) (?:transport|shipping|delivery|travel|relocation|courier)(?: agency| company| service)?|(?:crate|cage|kennel|insurance|vaccin\w*|quarantine|customs|clearance|permit|certificate|anti[- ]?stress|feeding|temperature controlled)[^.!?\n]{0,40}(?:fee|cost|charge|pay|€|\$|£)|(?:refundable|refunded) (?:deposit|fee|on delivery|after delivery)|(?:stuck|held|detained|seized|waiting) (?:at|in) (?:the )?(?:airport|customs|border|transit)|(?:airline|flight|cargo) (?:fee|charge|requires|demands)/i,
+   /(?:agencia|empresa|servicio) de (?:transporte|env[ií]o|viaje)s? de (?:mascotas|animales|cachorros)|transporte de mascotas|(?:jaula|transport[ií]n|seguro|vacuna\w*|cuarentena|aduana|despacho|permiso|certificado|anti ?estr[eé]s|climatizad\w*)[^.!?\n]{0,40}(?:pagar|pago|cuesta|coste|cobr\w*|tasa|€|euros)|(?:fianza|dep[oó]sito|pago) (?:reembolsable|que se (?:te |le )?devuelve|que se (?:te |le )?devolver[aá])|(?:retenid\w*|parad\w*|bloquead\w*|esperando) (?:en|por) (?:el )?(?:aeropuerto|aduana|frontera|tr[aá]nsito)|(?:la )?aerol[ií]nea (?:exige|pide|cobra|requiere)/i]},
+ {id:'pay',w:16,neg:true,en:'Wants payment by Western Union, MoneyGram, gift cards, crypto, Bizum to a personal number, PayPal “friends and family” or a transfer to someone else’s name',es:'Quiere el pago por Western Union, MoneyGram, tarjetas regalo, cripto, Bizum a un número personal, PayPal “amigos y familiares” o una transferencia a nombre de otra persona',
+  wen:'These methods are chosen because the money cannot be reclaimed once you realise the animal does not exist. A courier that only takes gift cards or Western Union is not a courier.',wes:'Se eligen esos métodos porque el dinero no se puede reclamar cuando te das cuenta de que el animal no existe. Una empresa de transporte que solo acepta tarjetas regalo o Western Union no es una empresa de transporte.',
+  re:[/western union|moneygram|ria money|gift ?cards?|google play cards?|apple (?:gift )?cards?|steam cards?|amazon cards?|bitcoin|btc|usdt|crypto|(?:paypal )?friends (?:and|&) family|send (?:it )?as (?:a )?gift|(?:transfer|payment|send it) to (?:my )?(?:wife|husband|son|daughter|cousin|agent|colleague|brother|sister)|in (?:my|the) (?:wife'?s|husband'?s|agent'?s|cousin'?s) name/i,
+   /western union|moneygram|\bria money\b|tarjetas? (?:regalo|de google play|de apple|de itunes|de steam|de amazon)|paysafecard|bitcoin|cripto\w*|usdt|amigos y familiares?|(?:bizum|transferencia|pago) (?:a|al) (?:mi |su )?(?:mujer|marido|esposa|hijo|hija|primo|prima|hermano|hermana|agente|compa[nñ]ero|socio)|a nombre de (?:mi|su|otra persona|un familiar)|bizum (?:al|a este|a un) (?:n[uú]mero|m[oó]vil)/i]},
+ {id:'docs',w:12,neg:true,en:'Vague or missing papers: no microchip number, “the passport and pedigree will come with the puppy”, papers you must pay extra for, or a puppy younger than 8 weeks',es:'Papeles vagos o ausentes: sin número de microchip, “el pasaporte y el pedigrí van con el cachorro”, papeles que tienes que pagar aparte, o un cachorro de menos de 8 semanas',
+  wen:'A real seller can give you the microchip number and the breeder registration number before you pay, and you can check them. Papers that only exist after the money arrives, or that cost extra, are part of the script.',wes:'Un vendedor real puede darte el número de microchip y el número de registro del criador antes de pagar, y puedes comprobarlos. Los papeles que solo existen cuando llega el dinero, o que se pagan aparte, son parte del guion.',
+  re:[/(?:no|without) (?:microchip|chip|papers|pedigree|passport|vet records?)|(?:papers|pedigree|passport|microchip|vet (?:records?|certificate)|health certificate)[^.!?\n]{0,40}(?:will (?:come|be sent|arrive)|with the (?:puppy|kitten|delivery)|after (?:payment|delivery)|extra|cost|fee)|\b[1-7] weeks? old/i,
+   /(?:sin|no tiene|no lleva) (?:microchip|chip|papeles|pedigr[ií]|pasaporte|cartilla)|(?:papeles|pedigr[ií]|pasaporte|microchip|chip|cartilla|certificado veterinario|certificado de salud)[^.!?\n]{0,40}(?:van con|vienen con|llegan con|se env[ií]an|te los mando|despu[eé]s del pago|cuando (?:pagues|llegue)|aparte|se pagan|cuestan|tasa)|\b[1-7] semanas/i]},
+ {id:'found',w:18,neg:true,en:'“We found your lost pet”: a stranger wants a reward, vet or transport money first, or asks you to read out a code sent to your phone “to verify you are the owner”',es:'“Hemos encontrado a tu mascota perdida”: un desconocido quiere la recompensa, el veterinario o el transporte por adelantado, o te pide un código que te llega al móvil “para verificar que eres el dueño”',
+  wen:'People who post lost-pet notices with their phone number are targeted within hours. A real finder sends a fresh photo or video and meets you in a public place or at a vet. Nobody needs your money or a code before you see your animal.',wes:'Quien publica un cartel de mascota perdida con su teléfono recibe estos mensajes en horas. Quien la encontró de verdad manda una foto o vídeo nuevo y queda contigo en un sitio público o en un veterinario. Nadie necesita tu dinero ni un código antes de que veas a tu animal.',
+  re:[/(?:found|have|got|picked up|rescued) your (?:lost |missing )?(?:dog|cat|pet|puppy|kitten)|(?:reward|vet bill|vet fees|transport|gas money|fuel)[^.!?\n]{0,30}(?:first|before|in advance|upfront)|(?:read|send|tell|give) (?:me )?(?:the |a )?(?:\d[- ]?digit )?code[^.!?\n]{0,40}(?:verify|confirm|prove)[^.!?\n]{0,20}owner|(?:prove|verify|confirm) (?:you are|you'?re) the owner/i,
+   /(?:he|hemos) (?:encontrado|recogido|rescatado) a (?:tu|su) (?:perr\w*|gat\w*|mascota|cachorr\w*)|(?:tengo|tenemos) a (?:tu|su) (?:perr\w*|gat\w*|mascota)|(?:recompensa|veterinario|gastos|transporte|gasolina)[^.!?\n]{0,30}(?:antes|primero|por adelantado)|(?:c[oó]digo)[^.!?\n]{0,40}(?:verificar|confirmar|comprobar|demostrar)[^.!?\n]{0,25}(?:due[nñ]o|due[nñ]a|propietari\w*)|(?:demuestr\w*|verific\w*|comprob\w*) que (?:eres|es) (?:el |la )?(?:due[nñ]o|due[nñ]a|propietari\w*)/i]},
+ {id:'urgent',w:8,en:'Pressure or guilt: “other families are waiting”, “pay today”, “the puppy is crying in the crate”, “you will be reported for animal abandonment”',es:'Prisas o culpa: “hay otras familias esperando”, “paga hoy”, “el cachorro está llorando en la jaula”, “te denunciarán por abandono animal”',
+  wen:'Urgency and guilt stop you from asking a friend or a vet. Threats of police, animal cruelty charges or legal action if you stop paying are invented to get one more payment.',wes:'Las prisas y la culpa evitan que preguntes a un amigo o a un veterinario. Las amenazas de policía, maltrato animal o demandas si dejas de pagar se inventan para sacar un pago más.',
+  re:[/other (?:families|people|buyers) (?:are )?(?:interested|waiting|asking)|(?:pay|send it) (?:today|now|right now|immediately|within)|within \d+ ?(?:hours?|h|minutes?)|(?:crying|starving|suffering|cold|scared|will die|put down|euthani[sz]\w*)|(?:reported|charged|sued|police|legal action)[^.!?\n]{0,40}(?:abandon\w*|cruelty|neglect|if you (?:do not|don'?t) pay)|last chance|urgent(?:ly)?/i,
+   /(?:otras|m[aá]s) (?:familias|personas|compradores) (?:interesad\w*|esperando|preguntando)|(?:paga\w*|env[ií]a\w*|manda\w*)[^.!?\n]{0,15}(?:hoy|ya|ahora|inmediatamente)|en \d+ ?(?:horas?|h|minutos?)\b|(?:llorando|sin comer|sufriendo|pasando fr[ií]o|asustad\w*|morir[aá]|sacrificar\w*|eutanasia)|(?:denuncia\w*|polic[ií]a|demanda\w*|juicio)[^.!?\n]{0,40}(?:abandono|maltrato|si no (?:pagas|paga))|[uú]ltima oportunidad|urgente/i]}
+];
+function stripOfficial(t){return t;}
+function analyze(text,url){
+  var raw=(text||'')+'\n'+(url||''),t=raw,hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  if(n>=4)score+=8;
+  if(on('fees')&&(on('away')||on('deposit')||on('pay')||on('free')))score=Math.max(score,92);
+  if(on('free')&&(on('away')||on('deposit')||on('pay')))score=Math.max(score,88);
+  if(on('away')&&(on('deposit')||on('pay')))score=Math.max(score,88);
+  if(on('found')&&(on('pay')||on('urgent')||on('deposit')))score=Math.max(score,90);
+  if(on('pay')&&on('deposit'))score=Math.max(score,85);
+  if(on('fees')&&on('urgent'))score=Math.max(score,90);
+  if(on('found')&&/(?:code|c[oó]digo|€|\$|£|reward|recompensa|vet (?:bill|fees?)|(?:pagar|gastos de)l? veterinario|para el veterinario|gasolina|gas money|bizum|send (?:me )?money|env[ií]a\w* dinero)/i.test(raw))score=Math.max(score,90);
+  if(on('fees'))score=Math.max(score,70);
+  if(on('found'))score=Math.max(score,30);
+  if(on('away'))score=Math.max(score,55);
+  if(on('pay'))score=Math.max(score,55);
+  if(on('free'))score=Math.max(score,45);
+  if(on('deposit'))score=Math.max(score,40);
+  var legit=/(?:i|we) (?:visited|went to|met|saw)[^.!?\n]{0,50}(?:breeder|shelter|rescue|kennel|the mother|with (?:its|his|her) mother|in person)|(?:visit[eé]|visitamos|fui|fuimos|vi|vimos|conoc[ií]|conocimos)[^.!?\n]{0,50}(?:criador\w*|protectora|refugio|perrera|a la madre|con su madre|en persona)/i.test(raw);
+  if(legit&&!on('away')&&!on('fees')&&!on('pay')&&!on('found')&&!on('free'))score=Math.min(score,15);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Estafa de mascotas casi segura','Encaja con un guion conocido de cachorros o gatitos que no existen, o de falsos rescatadores. No pagues nada más, no mandes códigos y no discutas con el “transportista”: corta el contacto. Si ya pagaste, mira abajo qué hacer ahora mismo.']:['Almost certainly a pet scam','This matches a known script for puppies or kittens that do not exist, or for fake finders. Do not pay anything more, do not send any code and do not argue with the “courier”: stop replying. If you already paid, see the steps below now.'];
+  if(s>=40)return es?['Muchas banderas rojas','Tiene rasgos típicos de las estafas de mascotas. No pagues hasta ver al animal en persona y comprobar el microchip y el registro del criador.']:['Big red flags','It has the usual signs of a pet scam. Do not pay until you have seen the animal in person and checked the microchip and the breeder registration.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. No mandes señal ni datos todavía y pide una visita o una videollamada en directo.']:['Kinda sus','Some classic signals. Do not send a deposit or details yet, and ask for a visit or a live video call.'];
+  return es?['Pocas banderas','No salta casi nada. Aun así, la regla de oro no cambia: ve al animal en persona, con su madre si es un cachorro, antes de pagar.']:['Few flags','Not much trips the rules. The golden rule still applies: see the animal in person, with its mother if it is a puppy, before you pay.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  L.push(es?'No pagues ninguna señal, envío ni gasto hasta ver al animal en persona o en una videollamada en directo en la que tú pides lo que graban (por ejemplo, el cachorro junto a una hoja con tu nombre y la fecha de hoy).':'Do not pay any deposit, shipping or fee until you have seen the animal in person or on a live video call where you ask what they film (for example, the puppy next to a sheet with your name and today’s date).');
+  if(on('free')||on('away')||on('docs'))L.push(es?'Busca las fotos del anuncio en Google Imágenes o Google Lens: si salen en webs de otros criadores o en otros países, son robadas. Pide el número de microchip y el número de registro del criador y compruébalos (en España, el microchip se puede consultar en el REIAC o en el registro de tu comunidad).':'Search the ad photos with Google Images or Google Lens: if they appear on other breeders’ sites or in other countries, they are stolen. Ask for the microchip number and the breeder registration number and check them (in Spain the microchip can be looked up on REIAC or your region’s register).');
+  if(on('fees'))L.push(es?'No pagues al “transportista”: no hay animal en el aeropuerto. Busca la web de la empresa en un buscador de dominios (who.is) y mira cuándo se creó; casi siempre es de hace pocas semanas. Si alguien amenaza con denunciarte por abandono, ignóralo: es parte del guion.':'Do not pay the “courier”: there is no animal at the airport. Look up the company website on a domain lookup (who.is) and check when it was created; it is usually a few weeks old. If anyone threatens to report you for abandonment, ignore it: it is part of the script.');
+  if(on('found'))L.push(es?'Pide una foto o vídeo nuevo de tu mascota con algo que tú elijas, y queda solo en un sitio público o en una clínica veterinaria. No mandes dinero por adelantado ni leas ningún código que te llegue por SMS o WhatsApp: con él te roban la cuenta.':'Ask for a fresh photo or video of your pet with something you choose, and meet only in a public place or at a vet clinic. Do not send money in advance and do not read out any code that arrives by SMS or WhatsApp: it is used to take over your account.');
+  if(on('pay')||on('deposit'))L.push(es?'Si ya pagaste, llama ya a tu banco al número de tu tarjeta o de la app y pide bloquear la tarjeta y recuperar la transferencia o el Bizum. Si pagaste con tarjetas regalo, llama a la empresa de la tarjeta con los códigos y el ticket.':'If you already paid, call your bank now on the number on your card or in its app and ask them to block the card and recall the transfer or Bizum. If you paid with gift cards, call the card company with the codes and the receipt.');
+  L.push(es?'Denuncia el anuncio en la web donde lo viste, guarda todos los mensajes, fotos y justificantes, y si perdiste dinero denúncialo a la policía. Para dudas, llama gratis al 017 de INCIBE. Si quieres un animal, una protectora o un criador registrado al que puedas visitar es el camino seguro.':'Report the ad on the site where you saw it, keep every message, photo and receipt, and if you lost money report it to the police. In Spain, INCIBE’s free 017 helpline can advise. If you want a pet, a shelter or a registered breeder you can visit is the safe route.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Se regalan cachorros de bulldog francés a buena familia, solo pagas el transporte, 180 €. Nos hemos mudado a Londres y no podemos quedar, te lo enviamos a tu casa. Haz un bizum a mi mujer para reservarlo, hay otras familias interesadas.',u:'Anuncio en Facebook, contacto por WhatsApp'},
+ {t:'Hello, my husband and I are missionaries working in Cameroon now, so we cannot meet. Our yorkie puppy Bella is 300€ including vaccines. Please send a deposit by Western Union to reserve her, and we will ship her to your home.',u:'Email after an online ad'},
+ {t:'Dear customer, this is Pet Safe Transport Agency. Your puppy is ready but the airline requires a temperature controlled crate and insurance: 450€ refundable deposit on delivery. Please pay within 2 hours by Google Play gift cards.',u:'Email from a courier website'},
+ {t:'Le informamos de que el cachorro está retenido en el aeropuerto de Madrid por la aduana. Tiene que pagar 380 € de cuarentena y certificado de salud antes de las 18:00 o el animal será sacrificado y le denunciarán por abandono.',u:'Email de una supuesta agencia de transporte de mascotas'},
+ {t:'Hi, I found your lost dog near the park. He is safe with me. Before I bring him I need 100€ for the vet first, and please send me the 6-digit code I just sent to your phone to verify you are the owner.',u:'WhatsApp from an unknown number after posting a lost dog notice'},
+ {t:'We visited the breeder at home, saw the puppy with its mother and got the microchip number and the breeder registration number before paying.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+
+
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
