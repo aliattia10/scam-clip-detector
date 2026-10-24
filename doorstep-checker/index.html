@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doorstep Scam Checker: fake gas inspections, door-to-door energy sellers, 24h locksmiths, rogue roofers (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="Someone at the door for a “mandatory gas inspection”, an energy seller asking for your bill and IBAN, a locksmith with no price, or a stranger who saw loose tiles on your roof? Paste it and get a free rule-based red-flag score and what to do before you open or pay. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/doorstep-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="“I’m here for the gas inspection.” Did you book it? Free doorstep scam checker">
+<meta property="og:description" content="Paste what the visitor said or the leaflet in your building. Get a red-flag score for fake gas and meter inspections, parts sold at the door, energy sellers asking for your bill and IBAN, cash-only technicians, rogue roofers, 24h locksmiths and distraction thefts.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/doorstep-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/doorstep-checker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Doorstep and fake technician scam checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for fake gas inspections, door-to-door energy sellers, rogue traders and 24h locksmith overcharges, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/doorstep-checker/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Doorstep Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/call-checker/" data-i18n="navr">Calls</a>
+      <a class="hide-m" href="/sms-checker/" data-i18n="navs">SMS</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">“I’m here for the gas inspection.” <em>Did you book it?</em></h1>
+    <p class="sub" data-i18n="sub">Paste what the visitor said, the leaflet in your building or the call that announced the visit: a “mandatory gas inspection” that ends with a new hose and a 180€ bill in cash, an energy seller who wants to see your bill and your bank details to “lower your tariff”, a 24-hour locksmith whose price triples after the door is open, or a stranger who “noticed loose tiles on your roof”. In one second you get a red-flag score and what to do before you open the door or pay.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a doorstep visit, a building leaflet, a technician’s bill or a call that announces a visit</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool and can be wrong both ways. The safe rule never changes: you do not have to let anyone in. Close the door and call the company yourself on the number printed on your own bill.</p>
+    <label for="txt" data-i18n="l1">Paste what they said, the leaflet, the message or the bill</label>
+    <textarea id="txt" placeholder="e.g. We come from the gas company for the mandatory inspection. Your hose is expired and must be replaced today, 150€ in cash."></textarea>
+    <label for="url" data-i18n="l2">How it reached you (optional)</label>
+    <input type="text" id="url" placeholder="e.g. at the door, leaflet in the lobby, phone call, online ad" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: ES mandatory gas inspection at the door</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: energy seller wants your bill and IBAN</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: ES leaflet in the building lobby</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: 24h locksmith triples the price</button>
+      <button class="chip" onclick="ex(4)" data-i18n="e4">Example: loose tiles on your roof</button>
+      <button class="chip" onclick="ex(5)" data-i18n="e5">Example: I booked the visit myself</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do before you open or pay</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">Real visits are announced</b><p data-i18n="c1p">Regulated gas inspections and meter work are announced in advance by the distributor, by letter or on your bill, with a date and a way to check it. Nobody needs to “pass by today” without notice, and you can always say no and book it yourself.</p></div>
+    <div class="card"><b data-i18n="c2h">Nobody sells at the door for the gas company</b><p data-i18n="c2p">The scam is not the inspection, it is the sale: a hose, a regulator or a gas detector at five times the price, paid on the spot, with a threat to cut your supply or fine you. No law forces you to buy a part from someone who knocks on your door.</p></div>
+    <div class="card"><b data-i18n="c3h">Your bill and your IBAN stay inside</b><p data-i18n="c3p">An energy seller who asks to see your bill, photographs the CUPS code or gets you to sign on a tablet can switch your contract without you noticing. If you signed at home, Spanish law gives you 14 days to withdraw from a contract made outside a shop.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it kept a fake technician out of your home, or your parents’ home, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/doorstep-checker/" data-i18n="dsm">Doorstep / fake technician checker</a>
+    <a href="/pet-checker/" data-i18n="petm">Pet / puppy sale checker</a>
+    <a href="/tech-support-checker/" data-i18n="tsm">Tech support / virus pop-up checker</a>
+    <a href="/account-checker/" data-i18n="acm">Account / code checker</a>
+    <a href="/blackmail-checker/" data-i18n="bmm">Blackmail email checker</a>
+    <a href="/loan-checker/" data-i18n="lnm">Loan scam checker</a>
+    <a href="/charity-checker/" data-i18n="chm">Charity / donation checker</a>
+    <a href="/qr-checker/" data-i18n="qrm">QR code checker</a>
+    <a href="/travel-checker/" data-i18n="trvm">Travel / booking checker</a>
+    <a href="/lottery-checker/" data-i18n="lotm">Lottery / prize checker</a>
+    <a href="/shop-checker/" data-i18n="moresh">Fake shop checker</a>
+    <a href="/ticket-checker/" data-i18n="moret">Ticket scam checker</a>
+    <a href="/marketplace-checker/" data-i18n="morem">Marketplace scam checker</a>
+    <a href="/romance-checker/" data-i18n="morer2">Romance scam checker</a>
+    <a href="/investment-checker/" data-i18n="morei">Investment scam checker</a>
+    <a href="/call-checker/" data-i18n="morec">Scam call checker</a>
+    <a href="/sms-checker/" data-i18n="mores2">SMS / WhatsApp checker</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/doorstep-checker/" data-i18n="dsf">Doorstep checker</a> · <a href="/pet-checker/" data-i18n="petf">Pet checker</a> · <a href="/tech-support-checker/" data-i18n="tsf">Tech support checker</a> · <a href="/account-checker/" data-i18n="acf">Account checker</a> · <a href="/blackmail-checker/" data-i18n="bmf">Blackmail checker</a> · <a href="/loan-checker/" data-i18n="lnf">Loan checker</a> · <a href="/charity-checker/" data-i18n="chf">Charity checker</a> · <a href="/qr-checker/" data-i18n="qrf">QR checker</a> · <a href="/travel-checker/" data-i18n="trvf">Travel checker</a> · <a href="/lottery-checker/" data-i18n="lotf">Lottery checker</a> · <a href="/shop-checker/" data-i18n="fsh">Shop checker</a> · <a href="/ticket-checker/" data-i18n="ftk">Ticket checker</a> · <a href="/marketplace-checker/" data-i18n="fm">Marketplace checker</a> · <a href="/romance-checker/" data-i18n="fro">Romance checker</a> · <a href="/investment-checker/" data-i18n="fi">Investment checker</a> · <a href="/call-checker/" data-i18n="fc">Call checker</a> · <a href="/sms-checker/" data-i18n="fs">SMS checker</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Gas, electricity and water companies, councils, locksmiths and builders appear only because scammers impersonate them; they are not accused of anything. Not legal or safety advice. If you smell gas, leave the building and call 112. If a fake technician is at the door now, do not open and call 091 (Policía Nacional) or 062 (Guardia Civil). If you already paid or signed, call your bank, keep the bill and any leaflet, file a complaint with your local consumer office (OMIC) and report it to the police.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{"acm": "Account / code checker", "acf": "Account checker", "tsm": "Tech support / virus pop-up checker", "tsf": "Tech support checker", "ctah": "Want to roast these on camera?", "ctap": "The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.", "ctab": "See the Script Pack", "tiph": "Tip jar", "tipb": "Tip via PayPal", "bmm": "Blackmail email checker", "bmf": "Blackmail checker", "lnm": "Loan scam checker", "lnf": "Loan checker", "qrm": "QR code checker", "qrf": "QR checker", "trvm": "Travel / booking checker", "trvf": "Travel checker", "lotm": "Lottery / prize checker", "lotf": "Lottery checker", "moresh": "Fake shop checker", "moret": "Ticket scam checker", "morer2": "Romance scam checker", "morei": "Investment scam checker", "morec": "Scam call checker", "mores2": "SMS / WhatsApp checker", "morem": "Marketplace scam checker", "morer": "Rental listing checker", "morerec": "Crypto recovery checker", "morep": "Phishing / invoice checker", "morej": "Job offer checker", "moreg": "Giveaway / airdrop checker", "moresig": "Signal / VIP group checker", "mores": "900 Shorts guide (19€)", "fsh": "Shop checker", "ftk": "Ticket checker", "fro": "Romance checker", "fi": "Investment checker", "fc": "Call checker", "fs": "SMS checker", "fm": "Marketplace checker", "fr": "Rental checker", "frec": "Recovery checker", "fpish": "Phishing checker", "fj": "Job offer checker", "fg": "Giveaway checker", "fp": "Scam-Roast Script Pack", "ft": "Tip jar", "fd": "Scam-Clip Detector", "chm": "Charity / donation checker", "chf": "Charity checker", "petm": "Pet / puppy sale checker", "petf": "Pet checker", "dsm": "Doorstep / fake technician checker", "dsf": "Doorstep checker", "brand": "Doorstep Checker", "navd": "Scam-Clip Detector", "navr": "Calls", "navs": "SMS", "h1": "“I’m here for the gas inspection.” <em>Did you book it?</em>", "sub": "Paste what the visitor said, the leaflet in your building or the call that announced the visit: a “mandatory gas inspection” that ends with a new hose and a 180€ bill in cash, an energy seller who wants to see your bill and your bank details to “lower your tariff”, a 24-hour locksmith whose price triples after the door is open, or a stranger who “noticed loose tiles on your roof”. In one second you get a red-flag score and what to do before you open the door or pay.", "h2": "Check a doorstep visit, a building leaflet, a technician’s bill or a call that announces a visit", "hint": "Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool and can be wrong both ways. The safe rule never changes: you do not have to let anyone in. Close the door and call the company yourself on the number printed on your own bill.", "l1": "Paste what they said, the leaflet, the message or the bill", "l2": "How it reached you (optional)", "go": "Check it", "e0": "Example: ES mandatory gas inspection at the door", "e1": "Example: energy seller wants your bill and IBAN", "e2": "Example: ES leaflet in the building lobby", "e3": "Example: 24h locksmith triples the price", "e4": "Example: loose tiles on your roof", "e5": "Example: I booked the visit myself", "of": "/ 100 scam score", "todoh": "What to do before you open or pay", "c1h": "Real visits are announced", "c1p": "Regulated gas inspections and meter work are announced in advance by the distributor, by letter or on your bill, with a date and a way to check it. Nobody needs to “pass by today” without notice, and you can always say no and book it yourself.", "c2h": "Nobody sells at the door for the gas company", "c2p": "The scam is not the inspection, it is the sale: a hose, a regulator or a gas detector at five times the price, paid on the spot, with a threat to cut your supply or fine you. No law forces you to buy a part from someone who knocks on your door.", "c3h": "Your bill and your IBAN stay inside", "c3p": "An energy seller who asks to see your bill, photographs the CUPS code or gets you to sign on a tablet can switch your contract without you noticing. If you signed at home, Spanish law gives you 14 days to withdraw from a contract made outside a shop.", "tipp": "This checker is free and stays free. If it kept a fake technician out of your home, or your parents’ home, you can tip.", "disc": "Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Gas, electricity and water companies, councils, locksmiths and builders appear only because scammers impersonate them; they are not accused of anything. Not legal or safety advice. If you smell gas, leave the building and call 112. If a fake technician is at the door now, do not open and call 091 (Policía Nacional) or 062 (Guardia Civil). If you already paid or signed, call your bank, keep the bill and any leaflet, file a complaint with your local consumer office (OMIC) and report it to the police."},
+ es:{"acm": "Comprobador de cuentas y códigos", "acf": "Comprobador de cuentas", "tsm": "Comprobador de falso soporte técnico", "tsf": "Comprobador de soporte técnico", "ctah": "¿Quieres hacer un roast de esto en vídeo?", "ctap": "El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) sobre las estafas más comunes. Paga lo que quieras, desde 5 €.", "ctab": "Ver el pack de guiones", "tiph": "Bote de propinas", "tipb": "Propina por PayPal", "bmm": "Comprobador de chantajes", "bmf": "Comprobador de chantajes", "lnm": "Comprobador de préstamos", "lnf": "Comprobador de préstamos", "qrm": "Comprobador de códigos QR", "qrf": "Comprobador de QR", "trvm": "Comprobador de viajes y reservas", "trvf": "Comprobador de viajes", "lotm": "Comprobador de premios y loterías", "lotf": "Comprobador de premios", "moresh": "Comprobador de tiendas online", "moret": "Comprobador de entradas", "morer2": "Comprobador de romances", "morei": "Comprobador de inversiones", "morec": "Comprobador de llamadas", "mores2": "Comprobador de SMS / WhatsApp", "morem": "Comprobador de segunda mano", "morer": "Comprobador de alquileres", "morerec": "Comprobador de recuperación de cripto", "morep": "Comprobador de phishing / facturas", "morej": "Comprobador de ofertas de trabajo", "moreg": "Comprobador de sorteos / airdrops", "moresig": "Comprobador de grupos VIP / señales", "mores": "Guía de 900 Shorts (19 €)", "fsh": "Comprobador de tiendas", "ftk": "Comprobador de entradas", "fro": "Comprobador de romances", "fi": "Comprobador de inversiones", "fc": "Comprobador de llamadas", "fs": "Comprobador de SMS", "fm": "Comprobador de segunda mano", "fr": "Comprobador de alquileres", "frec": "Comprobador de recuperación", "fpish": "Comprobador de phishing", "fj": "Comprobador de ofertas", "fg": "Comprobador de sorteos", "fp": "Pack de guiones Scam-Roast", "ft": "Bote de propinas", "fd": "Detector de estafas", "chm": "Comprobador de donaciones", "chf": "Comprobador de donaciones", "petm": "Comprobador de venta de mascotas", "petf": "Comprobador de mascotas", "dsm": "Comprobador de falsos técnicos a domicilio", "dsf": "Comprobador de visitas a domicilio", "brand": "Comprobador de visitas a domicilio", "navd": "Detector de estafas", "navr": "Llamadas", "navs": "SMS", "h1": "“Vengo a hacer la revisión del gas.” <em>¿La pediste tú?</em>", "sub": "Pega lo que te dijo el visitante, el cartel del portal o la llamada que anunciaba la visita: una “revisión obligatoria del gas” que termina con un tubo nuevo y 180 € en efectivo, un comercial de la luz que quiere ver tu factura y tu cuenta para “bajarte la tarifa”, un cerrajero 24 horas que triplica el precio cuando ya ha abierto la puerta, o un desconocido que “ha visto tejas sueltas en tu tejado”. En un segundo tienes una nota de banderas rojas y qué hacer antes de abrir o pagar.", "h2": "Comprueba una visita a domicilio, un cartel del portal, la factura de un técnico o una llamada que anuncia una visita", "hint": "Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples y puede fallar en ambos sentidos. La regla segura no cambia: no tienes que dejar pasar a nadie. Cierra la puerta y llama tú a la compañía al teléfono que aparece en tu propia factura.", "l1": "Pega lo que te dijeron, el cartel, el mensaje o la factura", "l2": "Cómo te llegó (opcional)", "go": "Comprobar", "e0": "Ejemplo: revisión obligatoria del gas en la puerta", "e1": "Ejemplo: comercial de la luz pide factura e IBAN", "e2": "Ejemplo: cartel en el portal", "e3": "Ejemplo: cerrajero 24 h triplica el precio", "e4": "Ejemplo: tejas sueltas en tu tejado", "e5": "Ejemplo: pedí yo la cita", "of": "/ 100 nota de estafa", "todoh": "Qué hacer antes de abrir o pagar", "c1h": "Las visitas reales se avisan", "c1p": "Las inspecciones de gas reguladas y los trabajos en contadores los avisa antes la distribuidora, por carta o en la factura, con fecha y una forma de comprobarlo. Nadie tiene que “pasar hoy” sin aviso, y siempre puedes decir que no y pedir la cita tú.", "c2h": "Nadie vende en la puerta en nombre del gas", "c2p": "La estafa no es la revisión, es la venta: un tubo, un regulador o un detector de gas a cinco veces su precio, pagado en el acto, con la amenaza de cortarte el suministro o multarte. Ninguna ley te obliga a comprar una pieza a quien llama a tu puerta.", "c3h": "Tu factura y tu IBAN se quedan dentro", "c3p": "Un comercial que pide ver tu factura, fotografía el código CUPS o te hace firmar en una tableta puede cambiarte de compañía sin que te des cuenta. Si firmaste en casa, la ley te da 14 días para desistir de un contrato hecho fuera de un establecimiento.", "tipp": "Este comprobador es gratis y seguirá siéndolo. Si hoy dejó a un falso técnico fuera de tu casa, o de la de tus padres, puedes dejar una propina.", "disc": "Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. Compañías de gas, luz y agua, ayuntamientos, cerrajeros y albañiles aparecen solo porque los estafadores se hacen pasar por ellos; no se les acusa de nada. No es asesoramiento legal ni de seguridad. Si huele a gas, sal del edificio y llama al 112. Si un falso técnico está ahora en la puerta, no abras y llama al 091 (Policía Nacional) o al 062 (Guardia Civil). Si ya pagaste o firmaste, llama a tu banco, guarda la factura y el cartel, reclama en la oficina de consumo de tu ayuntamiento (OMIC) y denúncialo a la policía."}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|won'?t|will not|didn'?t|did not|don'?t|do not|hasn'?t|has not|no need to|without|\bno\b|nunca|jam[aá]s|no me|no te|no ha|no hace falta|\bsin\b|\bni\b)[^.!?\n]{0,30}$/i.test(t.slice(Math.max(0,idx-40),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'insp',w:18,en:'Someone claims to come from the gas, butane, electricity or water company, or the council, for a “mandatory inspection” or check',es:'Alguien dice venir de la compañía del gas, del butano, de la luz o del agua, o del ayuntamiento, para una “revisión obligatoria” o una comprobación',
+  wen:'This is the opening line of the most common doorstep scam in Spain. Many are private firms using an official-sounding name; some are not technicians at all. A real distributor inspection is announced in advance and can be checked by calling the number on your bill.',wes:'Es la frase de entrada de la estafa a domicilio más común en España. Muchos son empresas privadas con un nombre que suena oficial; otros ni siquiera son técnicos. Una inspección real de la distribuidora se avisa antes y se puede comprobar llamando al número de tu factura.',
+  re:[/(?:mandatory|compulsory|obligatory|required|annual|periodic|official|routine|safety) (?:gas |boiler |electric\w* |water |meter )?(?:inspection|check|review|revision|service)|(?:gas|butane|electric\w*|water|meter|boiler|energy) (?:inspection|inspector|check|technician|engineer|man)|(?:from|sent by|on behalf of|work for|working for) (?:the )?(?:gas|butane|electric\w*|water|energy|power) (?:company|board|supplier|distributor)|(?:from|sent by|on behalf of) (?:the )?(?:council|town hall|city hall|ministry|government|industry department)/i,
+   /revisi[oó]n (?:obligatoria|peri[oó]dica|anual|oficial|de seguridad)?\s?(?:del |de la |de |)(?:gas|butano|caldera|instalaci[oó]n|contador|luz|agua)|inspecci[oó]n (?:obligatoria |peri[oó]dica |oficial )?(?:del |de la |de )?(?:gas|butano|caldera|instalaci[oó]n|contador)|(?:revisi[oó]n|inspecci[oó]n) obligatoria|(?:t[eé]cnico|inspector|revisor|operario)s? (?:del |de la |de )?(?:gas|butano|luz|agua|contador|compa[nñ][ií]a|ayuntamiento|industria)|(?:venimos|vengo|somos|soy|de parte) (?:de|del|de la) (?:la )?(?:compa[nñ][ií]a (?:del |de la |de )?(?:gas|luz|agua|el[eé]ctrica)|el[eé]ctrica|distribuidora|ayuntamiento|repsol|naturgy|nedgia|endesa|iberdrola|cepsa|canal de isabel|industria|consejer[ií]a)/i]},
+ {id:'sell',w:16,neg:true,en:'They want to replace or sell something on the spot: a hose, regulator, valve, gas detector or “safety kit”, a new boiler, or say your installation fails',es:'Quieren cambiarte o venderte algo en el acto: un tubo o goma, un regulador, una llave, un detector de gas o un “kit de seguridad”, una caldera nueva, o dicen que tu instalación no pasa',
+  wen:'The visit exists to sell a cheap part at a huge price. A rubber hose that costs a few euros in a hardware shop is “replaced” for 60 to 200€, plus labour and travel. You can always ask for a written quote and buy elsewhere.',wes:'La visita existe para venderte una pieza barata a un precio enorme. Un tubo de goma que cuesta pocos euros en una ferretería se “cambia” por 60 a 200 €, más mano de obra y desplazamiento. Siempre puedes pedir un presupuesto por escrito y comprarlo en otro sitio.',
+  re:[/(?:replace|change|install|fit|sell|need|must buy|have to buy)[^.!?\n]{0,30}(?:hose|pipe|tube|regulator|valve|detector|alarm|safety kit|filter|boiler|flue|seal)|(?:hose|pipe|tube|regulator|valve|detector|installation|boiler)[^.!?\n]{0,30}(?:expired|out of date|illegal|not legal|not compliant|fails?|failed|dangerous|leak\w*|must be (?:replaced|changed))|(?:detector|alarm)[^.!?\n]{0,20}(?:mandatory|compulsory|required by law|obligatory)/i,
+   /(?:cambiar|cambiarle|cambiarte|sustituir|instalar|poner|vender|comprar|necesita|tiene que (?:cambiar|comprar|poner))[^.!?\n]{0,30}(?:tubo|goma|manguera|regulador|llave|v[aá]lvula|detector|alarma|kit|filtro|caldera|calentador|junta)|(?:tubo|goma|manguera|regulador|llave|detector|instalaci[oó]n|caldera)[^.!?\n]{0,30}(?:caducad\w*|vencid\w*|no (?:es )?legal|ilegal|no cumple|no pasa|peligros\w*|fuga|hay que cambiar)|(?:detector|alarma)[^.!?\n]{0,25}(?:obligatori\w*|lo exige la ley|por ley)/i]},
+ {id:'bill',w:16,neg:true,en:'Asks to see your electricity or gas bill, your CUPS code, DNI or bank details (IBAN), or to sign on a tablet, to “lower your tariff” or because “the government changed the rates”',es:'Pide ver tu factura de la luz o del gas, el código CUPS, el DNI o la cuenta bancaria (IBAN), o que firmes en una tableta, para “bajarte la tarifa” o porque “el Gobierno ha cambiado las tarifas”',
+  wen:'With the bill, the CUPS and a signature, a door-to-door seller can switch your supplier without you understanding it, often to a more expensive plan. No company needs your IBAN at the door to tell you the price.',wes:'Con la factura, el CUPS y una firma, un comercial puerta a puerta puede cambiarte de compañía sin que lo entiendas, muchas veces a una tarifa más cara. Ninguna compañía necesita tu IBAN en la puerta para decirte un precio.',
+  re:[/(?:see|show (?:me|us)|look at|check|photo\w*|picture of|bring)[^.!?\n]{0,20}(?:your |the |last )?(?:electricity |gas |energy |power |latest |last )?(?:bill|invoice)|\bCUPS\b|(?:your |the )?(?:iban|bank (?:details|account)|account number|dni|nie|id card)[^.!?\n]{0,30}(?:please|for|to|so)|sign (?:here|on (?:the|this|my) (?:tablet|screen|phone|ipad))|(?:lower|reduce|cut|save on) (?:your )?(?:tariff|bill|rate|price)|(?:government|new law|regulation)[^.!?\n]{0,30}(?:changed|new|changing) (?:the )?(?:tariff|rates?|prices?|meters?)/i,
+   /(?:ver|ense[nñ]a\w*|mostrar\w*|mirar|comprobar|foto\w*|traiga|traer)[^.!?\n]{0,20}(?:su |tu |la |una |[uú]ltima )?factura|\bCUPS\b|(?:su |tu |el |la )?(?:iban|n[uú]mero de cuenta|cuenta (?:bancaria|del banco)|dni|nie)[^.!?\n]{0,30}(?:por favor|para|necesit\w*)|firm\w* (?:aqu[ií]|en (?:la|esta|mi) (?:tablet\w*|pantalla|m[oó]vil))|(?:bajar\w*|rebajar\w*|reducir\w*|ahorrar\w*)[^.!?\n]{0,15}(?:la )?(?:tarifa|factura|luz|potencia)|(?:el )?gobierno[^.!?\n]{0,30}(?:cambiado|cambia|nueva\w*|nuevo\w*) (?:las |la |los )?(?:tarifas?|precios?|contadores?|bono)/i]},
+ {id:'cash',w:14,neg:true,en:'Wants payment now: cash, card on their own terminal or Bizum at the door, before or right after the job, with no quote or proper invoice',es:'Quiere cobrar ya: en efectivo, con tarjeta en su datáfono o por Bizum en la puerta, antes o justo después del trabajo, sin presupuesto ni factura en condiciones',
+  wen:'Payment on the spot means you cannot compare prices or cancel. Many fake visits only accept cash or Bizum to a personal number. A real distributor inspection is charged on your gas bill, not collected at the door.',wes:'Pagar en el acto significa que no puedes comparar precios ni cancelar. Muchas falsas visitas solo aceptan efectivo o Bizum a un número personal. Una inspección real de la distribuidora se cobra en tu factura del gas, no en la puerta.',
+  re:[/(?:pay|paid|payment|charge|costs?|fee)[^.!?\n]{0,25}(?:cash|in cash|now|today|right now|on the spot|before (?:we|I) (?:start|leave)|at the door|by bizum)|(?:cash|card) only|(?:card|payment) (?:machine|terminal)|(?:€|eur|euros)\s?\d{2,4}\b[^.!?\n]{0,30}(?:cash|now|today)|\b\d{2,4}\s?(?:€|eur|euros)[^.!?\n]{0,30}(?:cash|now|today|on the spot)|(?:travel|call[- ]?out|night|emergency|urgency) (?:fee|charge|surcharge)/i,
+   /(?:pag\w*|cobr\w*|abon\w*|cuesta|son|importe)[^.!?\n]{0,25}(?:en efectivo|efectivo|en met[aá]lico|ahora|hoy|ya|en el acto|al momento|en la puerta|por bizum|antes de empezar|antes de irnos)|solo (?:efectivo|met[aá]lico|bizum)|dat[aá]fono|\d{2,4}\s?(?:€|eur|euros)[^.!?\n]{0,30}(?:efectivo|met[aá]lico|ahora|hoy|en el acto)|(?:desplazamiento|salida|nocturnidad|urgencia|festivo)[^.!?\n]{0,20}(?:\d|€|euros|cobr\w*|aparte)/i]},
+ {id:'threat',w:12,en:'Threats or fear: “danger of explosion”, “we will cut your gas or electricity today”, “you will be fined”, “you are not insured if something happens”',es:'Amenazas o miedo: “peligro de explosión”, “le cortamos el gas o la luz hoy”, “le van a multar”, “el seguro no le cubre si pasa algo”',
+  wen:'Fear stops you from closing the door and checking. A technician who finds a real leak closes the valve and tells you to call your supplier; he does not sell you the fix on the spot under threat of fines.',wes:'El miedo evita que cierres la puerta y lo compruebes. Un técnico que encuentra una fuga real cierra la llave y te dice que llames a tu suministradora; no te vende el arreglo en el acto con amenazas de multa.',
+  re:[/(?:danger|risk) of (?:explosion|fire|leak|poisoning)|(?:could|will|might) (?:explode|blow up|catch fire)|(?:cut|disconnect|shut off|turn off|suspend)[^.!?\n]{0,20}(?:your )?(?:gas|electricity|power|water|supply)|(?:fine|fined|penalty|sanction)[^.!?\n]{0,20}(?:\d|€|euros|if|unless|by law)|(?:get|receive|face) (?:a )?(?:fine|penalty)|(?:insurance|insurer)[^.!?\n]{0,30}(?:won'?t|will not|doesn'?t|does not) (?:cover|pay)|only today|last day|today only/i,
+   /peligro de (?:explosi[oó]n|incendio|fuga|intoxicaci[oó]n)|(?:puede|podr[ií]a|va a) (?:explotar|reventar|incendiarse)|(?:cort\w*|suspend\w*|precint\w*|dar de baja)[^.!?\n]{0,20}(?:el |la |su |tu )?(?:gas|luz|suministro|agua|contador)|(?:multa\w*|sanci[oó]n\w*|sancionar\w*|penaliz\w*)[^.!?\n]{0,25}(?:\d|€|euros|si no|por ley)|(?:recibir|poner|imponer|tener|llevar)\w* (?:una )?(?:multa|sanci[oó]n)|(?:el |su |tu )?seguro (?:no (?:le |te )?(?:cubre|cubrir[aá]|paga))|solo (?:por )?hoy|[uú]ltimo d[ií]a/i]},
+ {id:'cold',w:10,en:'Unannounced or unverifiable: no prior letter, “we are in the building today”, a leaflet in the lobby with a mobile number to book, or they refuse to wait while you call the company',es:'Sin aviso o sin forma de comprobarlo: sin carta previa, “estamos hoy en el edificio”, un cartel en el portal con un móvil para pedir cita, o no quieren esperar mientras llamas a la compañía',
+  wen:'Leaflets stuck in building lobbies announcing “mandatory gas inspections” with a phone number to call are a classic: the number belongs to the private firm, not the distributor. A real technician waits while you check his ID with the number on your own bill.',wes:'Los carteles pegados en el portal anunciando “revisiones obligatorias del gas” con un teléfono para pedir cita son un clásico: el número es de la empresa privada, no de la distribuidora. Un técnico real espera mientras compruebas su identificación con el número de tu propia factura.',
+  re:[/(?:we are|we'?re|i am|i'?m) (?:in|doing|visiting|working in) (?:the|your|this) (?:building|block|street|area|neighbo\w+)(?: today| this week)?|(?:no|without) (?:appointment|prior notice|letter|warning)|(?:was|were) passing by|(?:your|the) neighbo\w+ (?:already|has|have|told|sent)|(?:leaflet|flyer|notice|poster|sign)[^.!?\n]{0,40}(?:lobby|entrance|building|door|stairs|lift|elevator|call|phone|book)|call (?:this|the) (?:number|mobile)[^.!?\n]{0,20}(?:book|arrange|appointment)|(?:don'?t|no need to|no time to) (?:call|check)/i,
+   /(?:estamos|estoy|estaremos|vamos a estar|pasaremos|pasaremos por) (?:hoy |esta semana |ma[nñ]ana )?(?:en|por) (?:el|su|tu|este|la|esta) (?:edificio|bloque|portal|finca|comunidad|calle|zona|barrio)|sin (?:cita|aviso|carta|previo aviso)|pas[aá]bamos por aqu[ií]|(?:su|tu) vecin\w* (?:ya|nos|me|ha|han)|(?:cartel|aviso|nota|papel|folleto)[^.!?\n]{0,40}(?:portal|ascensor|escalera|entrada|buz[oó]n|llam\w*|tel[eé]fono|cita)|llam\w* (?:a )?(?:este|al) (?:n[uú]mero|tel[eé]fono|m[oó]vil)[^.!?\n]{0,20}(?:cita|concertar|reservar)|(?:no hace falta|no tiene que|no hay tiempo de|no le hace falta) (?:llamar|comprobar)/i]},
+ {id:'repair',w:14,neg:true,en:'Rogue repair: a stranger “noticed” loose tiles, damp, a crack or a blocked drain and offers to fix it now, or a locksmith/plumber from an online ad gives no price until the job is done',es:'Chapuza a domicilio: un desconocido “ha visto” tejas sueltas, humedades, una grieta o un desagüe atascado y ofrece arreglarlo ya, o un cerrajero/fontanero de un anuncio en internet no da precio hasta acabar',
+  wen:'Rogue traders start with a small job at a low price and then “discover” more damage. Emergency locksmith and plumber ads at the top of search results are often call centres that send whoever is free and set the price afterwards: 300 to 900€ for opening a door is common.',wes:'Los chapuceros empiezan con un trabajo pequeño y barato y luego “descubren” más daños. Los anuncios de cerrajeros y fontaneros 24 horas que salen arriba en el buscador suelen ser centralitas que mandan a quien esté libre y ponen el precio después: 300 a 900 € por abrir una puerta es habitual.',
+  re:[/(?:noticed|saw|spotted)[^.!?\n]{0,30}(?:roof|tiles?|chimney|gutter|damp|crack|wall|drain|facade)|(?:loose|broken|missing|cracked) (?:roof )?(?:tiles?|slates?)|left ?over (?:asphalt|tarmac|material|paint)|(?:24 ?h|24[- ]hour|emergency|urgent) (?:locksmith|plumber|electrician|unblock\w*|drain\w*)|(?:locksmith|plumber|electrician)[^.!?\n]{0,40}(?:\d{3,4}\s?(?:€|eur|euros)|price (?:after|at the end|depends|tripled)|(?:wouldn'?t|would not|didn'?t|did not|won'?t|will not) (?:give|say|tell) (?:me |us )?(?:a |the )?price)|(?:price|quote)[^.!?\n]{0,25}(?:after|at the end|when (?:the job is )?done|depends)/i,
+   /(?:he|hemos) (?:visto|notado)[^.!?\n]{0,30}(?:tejado|tejas?|chimenea|canal[oó]n|humedad\w*|grieta|pared|fachada|desag[uü]e)|tejas? (?:suelta\w*|rota\w*|movida\w*)|(?:nos ha sobrado|sobrante de) (?:asfalto|material|pintura)|(?:cerrajer\w*|fontaner\w*|electricista|desatasco\w*)[^.!?\n]{0,15}(?:24 ?h|24 horas|urgente\w*|urgencias)|(?:cerrajer\w*|fontaner\w*|electricista|desatasco\w*)[^.!?\n]{0,40}(?:\d{3,4}\s?(?:€|eur|euros)|precio (?:despu[eé]s|al final|seg[uú]n|triplic\w*)|no (?:me |nos )?(?:dio|dijo|quiso dar) (?:el )?precio)|(?:precio|presupuesto)[^.!?\n]{0,25}(?:al final|despu[eé]s|cuando (?:acabe|termine)|depende)/i]},
+ {id:'inside',w:14,neg:true,en:'Tries to get inside or distract you: “I need to check the taps in the kitchen”, “run the water”, “a glass of water please”, a second person waiting, or “police” asking to check your cash or jewellery',es:'Intenta entrar o distraerte: “tengo que revisar los grifos de la cocina”, “abra el agua”, “un vaso de agua, por favor”, una segunda persona esperando, o “policías” que quieren revisar tu dinero o tus joyas',
+  wen:'Distraction burglaries target older people: while one person keeps you in the kitchen, another walks through the house. Real police never ask to see your cash, cards or jewellery at home to “check for fake notes”.',wes:'Los robos por distracción van a por personas mayores: mientras uno te entretiene en la cocina, otro recorre la casa. La policía real nunca pide ver en casa tu dinero, tarjetas o joyas para “comprobar si hay billetes falsos”.',
+  re:[/(?:check|test|look at|inspect) (?:the |your )?(?:taps?|pipes?|water|radiators?|kitchen|bathroom|meter inside)|(?:run|turn on|open) (?:the |your )?(?:taps?|water)|glass of water|(?:let|can) (?:me|us) (?:in|come in|inside)|my (?:colleague|partner|mate) (?:will|is) (?:come|coming|wait\w*)|(?:police|officers?|agents?)[^.!?\n]{0,40}(?:check|see|count|verify) (?:your )?(?:cash|money|notes|banknotes|jewel\w*|cards?|savings)|(?:fake|counterfeit) (?:notes|banknotes|bills)/i,
+   /(?:revisar|comprobar|mirar|ver) (?:los |el |su |tu |la )?(?:grifos?|tuber[ií]as?|agua|radiadores?|cocina|ba[nñ]o|cisterna)|(?:abr\w*|dej\w* correr|encien\w*) (?:el |los )?(?:agua|grifos?)|(?:un )?vaso de agua|(?:d[eé]jeme|d[eé]jenos|me deja|nos deja) (?:pasar|entrar)|(?:mi )?compa[nñ]ero (?:va a|viene|espera|est[aá] esperando|sube)|(?:polic[ií]a\w*|agentes?|guardia civil)[^.!?\n]{0,40}(?:revisar|ver|contar|comprobar|verificar) (?:su |tu |el |los |las )?(?:dinero|billetes|efectivo|joyas|tarjetas|ahorros)|billetes falsos/i]}
+];
+function stripOfficial(t){return t;}
+function analyze(text,url){
+  var raw=(text||'')+'\n'+(url||''),t=raw,hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  if(n>=4)score+=8;
+  if(on('insp')&&(on('sell')||on('cash')||on('threat')))score=Math.max(score,88);
+  if(on('insp')&&on('cold'))score=Math.max(score,75);
+  if(on('sell')&&(on('cash')||on('threat')))score=Math.max(score,85);
+  if(on('bill')&&(on('cold')||on('threat')||on('insp')))score=Math.max(score,80);
+  if(on('repair')&&(on('cash')||on('cold')))score=Math.max(score,85);
+  if(on('inside')&&(on('insp')||on('cold')))score=Math.max(score,90);
+  if(on('inside'))score=Math.max(score,60);
+  if(on('bill'))score=Math.max(score,55);
+  if(on('sell'))score=Math.max(score,55);
+  if(on('repair'))score=Math.max(score,50);
+  if(on('insp'))score=Math.max(score,35);
+  var legit=/(?:i|we) (?:booked|called|arranged|requested|asked for)[^.!?\n]{0,40}(?:myself|ourselves|the number on (?:my|our|the) bill|appointment|the company)|letter from (?:the )?(?:distributor|gas company|nedgia|naturgy)[^.!?\n]{0,60}(?:date|bill)|(?:ped[ií]|pedimos|llam[eé]|llamamos|concert[eé]|concertamos|solicit[eé]|solicitamos)[^.!?\n]{0,40}(?:yo mism\w*|nosotros|(?:al )?(?:n[uú]mero|tel[eé]fono) de (?:mi|la|nuestra) factura|la cita|a la compa[nñ][ií]a)|carta de la distribuidora/i.test(raw);
+  if(legit&&!on('sell')&&!on('cash')&&!on('threat')&&!on('inside')&&!on('bill')&&!on('cold')&&!on('repair'))score=Math.min(score,15);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Estafa a domicilio casi segura','Encaja con un guion conocido de falsos técnicos, comerciales o chapuceros a domicilio. No abras ni dejes pasar a nadie, no firmes nada y no pagues: cierra la puerta y llama tú a la compañía al teléfono de tu factura. Si ya pagaste o firmaste, mira abajo qué hacer.']:['Almost certainly a doorstep scam','This matches a known script for fake technicians, door-to-door sellers or rogue traders. Do not open or let anyone in, do not sign and do not pay: close the door and call the company yourself on the number on your bill. If you already paid or signed, see the steps below.'];
+  if(s>=40)return es?['Muchas banderas rojas','Tiene rasgos típicos de las falsas visitas a domicilio. No pagues ni firmes nada hasta comprobarlo con la compañía por tu cuenta y tener un presupuesto por escrito.']:['Big red flags','It has the usual signs of a fake home visit. Do not pay or sign anything until you have checked with the company yourself and have a written quote.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. Pide identificación, no dejes pasar a nadie todavía y comprueba la visita llamando al número de tu factura.']:['Kinda sus','Some classic signals. Ask for ID, do not let anyone in yet, and check the visit by calling the number on your bill.'];
+  return es?['Pocas banderas','No salta casi nada. Aun así, la regla de oro no cambia: no tienes que dejar pasar a nadie, y puedes comprobar cualquier visita llamando tú a la compañía.']:['Few flags','Not much trips the rules. The golden rule still applies: you do not have to let anyone in, and you can check any visit by calling the company yourself.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  L.push(es?'No abras ni dejes pasar a nadie que no hayas llamado tú. Habla por la mirilla o el portero automático, pide nombre, empresa y número de identificación, y di que lo comprobarás. Un técnico real puede volver otro día.':'Do not open or let in anyone you did not call yourself. Talk through the spyhole or the intercom, ask for name, company and ID number, and say you will check it. A real technician can come back another day.');
+  if(on('insp')||on('cold')||on('threat'))L.push(es?'Llama tú a tu distribuidora o suministradora al teléfono que aparece en tu factura (no al del cartel ni al que te den) y pregunta si hay una visita programada. La inspección periódica del gas natural la avisa la distribuidora con antelación y se cobra en la factura. Si huele a gas, sal de casa y llama al 112 o al teléfono de urgencias de tu distribuidora.':'Call your distributor or supplier yourself on the number printed on your bill (not the one on the leaflet or the one they give you) and ask whether a visit is scheduled. Periodic natural gas inspections are announced in advance by the distributor and charged on the bill. If you smell gas, leave home and call 112 or your distributor’s emergency number.');
+  if(on('sell')||on('repair')||on('cash'))L.push(es?'No pagues en el acto. Pide un presupuesto por escrito con el nombre, el CIF y la dirección de la empresa, y compáralo con otro profesional. Si ya pagaste o firmaste en casa, tienes 14 días naturales para desistir del contrato: reclama por escrito y en la oficina de consumo (OMIC) de tu ayuntamiento.':'Do not pay on the spot. Ask for a written quote with the company name, tax ID (CIF) and address, and compare it with another professional. If you already paid or signed at home, you have 14 calendar days to withdraw from the contract: complain in writing and at your local consumer office (OMIC).');
+  if(on('bill'))L.push(es?'No enseñes la factura, el CUPS, el DNI ni el IBAN, y no firmes en ninguna tableta. Si ya lo hiciste, llama a tu compañía actual para saber si han pedido un cambio a tu nombre y desiste por escrito en 14 días.':'Do not show your bill, CUPS code, DNI or IBAN, and do not sign on any tablet. If you already did, call your current supplier to find out whether a switch was requested in your name, and withdraw in writing within 14 days.');
+  if(on('inside'))L.push(es?'Si alguien está en tu casa ahora o se acaba de ir, comprueba dónde guardas dinero y joyas, y llama al 091 (Policía Nacional) o al 062 (Guardia Civil). La policía de verdad no revisa tu dinero en casa.':'If someone is inside now or just left, check where you keep cash and jewellery, and call 091 (Policía Nacional) or 062 (Guardia Civil). Real police do not check your cash at home.');
+  L.push(es?'Avisa a tus vecinos y al presidente de la comunidad, quita el cartel del portal si es falso, guarda la factura y cualquier papel, y si perdiste dinero denúncialo a la policía. Cuéntaselo a tus padres o abuelos: son el objetivo principal.':'Warn your neighbours and the building’s community president, remove the leaflet from the lobby if it is fake, keep the bill and any paperwork, and if you lost money report it to the police. Tell your parents or grandparents: they are the main target.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Buenos días, venimos de parte de la compañía del gas para la revisión obligatoria. Tiene que cambiar el tubo y el regulador porque están caducados, si no le cortamos el gas hoy. Son 180 € en efectivo.',u:'En la puerta de casa, sin aviso previo'},
+ {t:'Hi, I am from the electricity company, the government has changed the tariffs. Can you show me your latest bill and your IBAN so we can lower your tariff? Just sign here on the tablet.',u:'Door-to-door seller'},
+ {t:'AVISO A LOS VECINOS: Inspección obligatoria de la instalación de gas. Estaremos en el edificio esta semana. Llame a este número para concertar cita: 6XX XXX XXX. En caso de no realizarla puede recibir una multa.',u:'Cartel pegado en el portal'},
+ {t:'I called a 24h locksmith from an ad. He would not give a price on the phone. After opening the door in two minutes he charged 480€ plus travel fee and night surcharge, card terminal or cash only.',u:'Google ad, emergency locksmith'},
+ {t:'Hello, we are working in your street and noticed some loose tiles on your roof. We have leftover material, we can fix it today for 200€ cash.',u:'Man at the door'},
+ {t:'Llamé yo al número de mi factura y concerté la cita de la inspección con la distribuidora. Llegó la carta de la distribuidora con la fecha y el coste va en la factura.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+
+
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
