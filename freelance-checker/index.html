@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freelance Client Scam Checker: fake clients, overpayments, buy-the-software-first, off-platform payments, money mule jobs (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="A new client found you on Upwork, Fiverr, LinkedIn or Instagram, wants to move to Telegram, sends a cheque for too much, or asks you to buy software from their vendor first? Paste the message and get a free rule-based red-flag score and what to do before you pay or forward anything. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/freelance-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="“I sent you 1.500€ by mistake, please refund 1.000€ to our designer.” There was never a client. Free freelance client scam checker">
+<meta property="og:description" content="Paste the client message. Get a red-flag score for overpayments, software and equipment you must buy first, off-platform chats, receive-and-forward payments and malware project briefs.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/freelance-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Freelance client scam checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for fake freelance clients, overpayments, buy-first software, off-platform payments and money mule jobs, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Freelance Client Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/job-offer-checker/" data-i18n="navr">Job offers</a>
+      <a class="hide-m" href="/phishing-email-checker/" data-i18n="navs">Phishing emails</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">“I sent you 1.500€ by mistake. Please refund 1.000€ to our designer.” <em>There was never a client.</em></h1>
+    <p class="sub" data-i18n="sub">Paste the client message: a new client who found you on Upwork, Fiverr, LinkedIn or Instagram and wants to move to Telegram or WhatsApp, a cheque or transfer for more than your invoice, software, a laptop or a “license” you must buy from their vendor first, money to receive and forward to someone else, or a project brief you must download, install or log in to see. In one second you get a red-flag score and what to do before you pay, forward or open anything.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a new client, a project offer or a payment message</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool and can be wrong both ways. The safe rule never changes: clients pay you through a channel you control, you never pay them, and you never pass their money on to anyone.</p>
+    <label for="txt" data-i18n="l1">Paste the message, the email or the job post</label>
+    <textarea id="txt" placeholder="e.g. Hi! I found your profile on Upwork. I sent a cheque for 1.500€ by mistake instead of 500€, please send the extra 1.000€ to our designer by Bizum today."></textarea>
+    <label for="url" data-i18n="l2">Where it reached you or the sender address (optional)</label>
+    <input type="text" id="url" placeholder="e.g. Upwork chat, Fiverr inbox, LinkedIn message, Telegram, the sender address" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: overpaid cheque, refund the difference</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: buy the software from our vendor first</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: move to Telegram and skip the fees</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: receive payments and forward them</button>
+      <button class="chip" onclick="ex(4)" data-i18n="e4">Example: download the brief and install our tracker</button>
+      <button class="chip" onclick="ex(5)" data-i18n="e5">Example: real client, funded milestone, contract</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to do before you pay, forward or open anything</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">Overpayment is the whole trick</b><p data-i18n="c1p">The client “pays” more than the invoice by cheque, a transfer screenshot or a stolen card and asks you to send the difference to a designer, a supplier or back to them. Days later the payment bounces or is reversed, and the money you sent is gone.</p></div>
+    <div class="card"><b data-i18n="c2h">Clients pay you, not the other way</b><p data-i18n="c2p">A real client never asks you to buy a software license, a laptop, a training course, an “account upgrade” or an escrow fee from a vendor they choose before the work starts, even if they promise to reimburse it.</p></div>
+    <div class="card"><b data-i18n="c3h">Never be the pipe for someone else’s money</b><p data-i18n="c3p">“Receive payments from our customers and forward them minus 10%” is not a job, it is money laundering, and the person whose account was used is the one the police find. Never lend your bank, PayPal, Bizum or crypto account.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it stopped you or a freelancer friend from refunding a fake overpayment or buying “the client’s software”, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/freelance-checker/" data-i18n="flm">Freelance client scam checker</a>
+    <a href="/brand-deal-checker/" data-i18n="bdm">Brand deal / sponsorship scam checker</a>
+    <a href="/car-checker/" data-i18n="carm">Used car scam checker</a>
+    <a href="/immigration-checker/" data-i18n="imm">Cita previa / immigration paperwork checker</a>
+    <a href="/doorstep-checker/" data-i18n="dsm">Doorstep / fake technician checker</a>
+    <a href="/pet-checker/" data-i18n="petm">Pet / puppy sale checker</a>
+    <a href="/tech-support-checker/" data-i18n="tsm">Tech support / virus pop-up checker</a>
+    <a href="/account-checker/" data-i18n="acm">Account / code checker</a>
+    <a href="/blackmail-checker/" data-i18n="bmm">Blackmail email checker</a>
+    <a href="/loan-checker/" data-i18n="lnm">Loan scam checker</a>
+    <a href="/charity-checker/" data-i18n="chm">Charity / donation checker</a>
+    <a href="/qr-checker/" data-i18n="qrm">QR code checker</a>
+    <a href="/travel-checker/" data-i18n="trvm">Travel / booking checker</a>
+    <a href="/lottery-checker/" data-i18n="lotm">Lottery / prize checker</a>
+    <a href="/shop-checker/" data-i18n="moresh">Fake shop checker</a>
+    <a href="/ticket-checker/" data-i18n="moret">Ticket scam checker</a>
+    <a href="/marketplace-checker/" data-i18n="morem">Marketplace scam checker</a>
+    <a href="/romance-checker/" data-i18n="morer2">Romance scam checker</a>
+    <a href="/investment-checker/" data-i18n="morei">Investment scam checker</a>
+    <a href="/call-checker/" data-i18n="morec">Scam call checker</a>
+    <a href="/sms-checker/" data-i18n="mores2">SMS / WhatsApp checker</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/freelance-checker/" data-i18n="flf">Freelance checker</a> · <a href="/brand-deal-checker/" data-i18n="bdf">Brand deal checker</a> · <a href="/car-checker/" data-i18n="carf">Car checker</a> · <a href="/immigration-checker/" data-i18n="imf">Paperwork checker</a> · <a href="/doorstep-checker/" data-i18n="dsf">Doorstep checker</a> · <a href="/pet-checker/" data-i18n="petf">Pet checker</a> · <a href="/tech-support-checker/" data-i18n="tsf">Tech support checker</a> · <a href="/account-checker/" data-i18n="acf">Account checker</a> · <a href="/blackmail-checker/" data-i18n="bmf">Blackmail checker</a> · <a href="/loan-checker/" data-i18n="lnf">Loan checker</a> · <a href="/charity-checker/" data-i18n="chf">Charity checker</a> · <a href="/qr-checker/" data-i18n="qrf">QR checker</a> · <a href="/travel-checker/" data-i18n="trvf">Travel checker</a> · <a href="/lottery-checker/" data-i18n="lotf">Lottery checker</a> · <a href="/shop-checker/" data-i18n="fsh">Shop checker</a> · <a href="/ticket-checker/" data-i18n="ftk">Ticket checker</a> · <a href="/marketplace-checker/" data-i18n="fm">Marketplace checker</a> · <a href="/romance-checker/" data-i18n="fro">Romance checker</a> · <a href="/investment-checker/" data-i18n="fi">Investment checker</a> · <a href="/call-checker/" data-i18n="fc">Call checker</a> · <a href="/sms-checker/" data-i18n="fs">SMS checker</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Upwork, Fiverr, LinkedIn, PayPal, banks, messaging apps and software brands appear only because scammers impersonate them or use them; they are not accused of anything. Not legal, tax or security advice. If you already paid or passed money on, call your bank now, report it to the police and ask INCIBE for free help on 017.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{"acm": "Account / code checker", "acf": "Account checker", "tsm": "Tech support / virus pop-up checker", "tsf": "Tech support checker", "ctah": "Want to roast these on camera?", "ctap": "The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.", "ctab": "See the Script Pack", "tiph": "Tip jar", "tipb": "Tip via PayPal", "bmm": "Blackmail email checker", "bmf": "Blackmail checker", "lnm": "Loan scam checker", "lnf": "Loan checker", "qrm": "QR code checker", "qrf": "QR checker", "trvm": "Travel / booking checker", "trvf": "Travel checker", "lotm": "Lottery / prize checker", "lotf": "Lottery checker", "moresh": "Fake shop checker", "moret": "Ticket scam checker", "morer2": "Romance scam checker", "morei": "Investment scam checker", "morec": "Scam call checker", "mores2": "SMS / WhatsApp checker", "morem": "Marketplace scam checker", "morer": "Rental listing checker", "morerec": "Crypto recovery checker", "morep": "Phishing / invoice checker", "morej": "Job offer checker", "moreg": "Giveaway / airdrop checker", "moresig": "Signal / VIP group checker", "mores": "900 Shorts guide (19€)", "fsh": "Shop checker", "ftk": "Ticket checker", "fro": "Romance checker", "fi": "Investment checker", "fc": "Call checker", "fs": "SMS checker", "fm": "Marketplace checker", "fr": "Rental checker", "frec": "Recovery checker", "fpish": "Phishing checker", "fj": "Job offer checker", "fg": "Giveaway checker", "fp": "Scam-Roast Script Pack", "ft": "Tip jar", "fd": "Scam-Clip Detector", "chm": "Charity / donation checker", "chf": "Charity checker", "petm": "Pet / puppy sale checker", "petf": "Pet checker", "dsm": "Doorstep / fake technician checker", "dsf": "Doorstep checker", "imm": "Cita previa / immigration paperwork checker", "imf": "Paperwork checker", "carm": "Used car scam checker", "carf": "Car checker", "bdm": "Brand deal / sponsorship scam checker", "bdf": "Brand deal checker", "brand": "Freelance Client Checker", "navd": "Scam-Clip Detector", "navr": "Job offers", "navs": "Phishing emails", "h1": "“I sent you 1.500€ by mistake. Please refund 1.000€ to our designer.” <em>There was never a client.</em>", "sub": "Paste the client message: a new client who found you on Upwork, Fiverr, LinkedIn or Instagram and wants to move to Telegram or WhatsApp, a cheque or transfer for more than your invoice, software, a laptop or a “license” you must buy from their vendor first, money to receive and forward to someone else, or a project brief you must download, install or log in to see. In one second you get a red-flag score and what to do before you pay, forward or open anything.", "h2": "Check a new client, a project offer or a payment message", "hint": "Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool and can be wrong both ways. The safe rule never changes: clients pay you through a channel you control, you never pay them, and you never pass their money on to anyone.", "l1": "Paste the message, the email or the job post", "l2": "Where it reached you or the sender address (optional)", "go": "Check it", "e0": "Example: overpaid cheque, refund the difference", "e1": "Example: buy the software from our vendor first", "e2": "Example: move to Telegram and skip the fees", "e3": "Example: receive payments and forward them", "e4": "Example: download the brief and install our tracker", "e5": "Example: real client, funded milestone, contract", "of": "/ 100 scam score", "todoh": "What to do before you pay, forward or open anything", "c1h": "Overpayment is the whole trick", "c1p": "The client “pays” more than the invoice by cheque, a transfer screenshot or a stolen card and asks you to send the difference to a designer, a supplier or back to them. Days later the payment bounces or is reversed, and the money you sent is gone.", "c2h": "Clients pay you, not the other way", "c2p": "A real client never asks you to buy a software license, a laptop, a training course, an “account upgrade” or an escrow fee from a vendor they choose before the work starts, even if they promise to reimburse it.", "c3h": "Never be the pipe for someone else’s money", "c3p": "“Receive payments from our customers and forward them minus 10%” is not a job, it is money laundering, and the person whose account was used is the one the police find. Never lend your bank, PayPal, Bizum or crypto account.", "tipp": "This checker is free and stays free. If it stopped you or a freelancer friend from refunding a fake overpayment or buying “the client’s software”, you can tip.", "disc": "Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. Upwork, Fiverr, LinkedIn, PayPal, banks, messaging apps and software brands appear only because scammers impersonate them or use them; they are not accused of anything. Not legal, tax or security advice. If you already paid or passed money on, call your bank now, report it to the police and ask INCIBE for free help on 017.", "flm": "Freelance client scam checker", "flf": "Freelance checker"},
+ es:{"acm": "Comprobador de cuentas y códigos", "acf": "Comprobador de cuentas", "tsm": "Comprobador de falso soporte técnico", "tsf": "Comprobador de soporte técnico", "ctah": "¿Quieres hacer un roast de esto en vídeo?", "ctap": "El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) sobre las estafas más comunes. Paga lo que quieras, desde 5 €.", "ctab": "Ver el pack de guiones", "tiph": "Bote de propinas", "tipb": "Propina por PayPal", "bmm": "Comprobador de chantajes", "bmf": "Comprobador de chantajes", "lnm": "Comprobador de préstamos", "lnf": "Comprobador de préstamos", "qrm": "Comprobador de códigos QR", "qrf": "Comprobador de QR", "trvm": "Comprobador de viajes y reservas", "trvf": "Comprobador de viajes", "lotm": "Comprobador de premios y loterías", "lotf": "Comprobador de premios", "moresh": "Comprobador de tiendas online", "moret": "Comprobador de entradas", "morer2": "Comprobador de romances", "morei": "Comprobador de inversiones", "morec": "Comprobador de llamadas", "mores2": "Comprobador de SMS / WhatsApp", "morem": "Comprobador de segunda mano", "morer": "Comprobador de alquileres", "morerec": "Comprobador de recuperación de cripto", "morep": "Comprobador de phishing / facturas", "morej": "Comprobador de ofertas de trabajo", "moreg": "Comprobador de sorteos / airdrops", "moresig": "Comprobador de grupos VIP / señales", "mores": "Guía de 900 Shorts (19 €)", "fsh": "Comprobador de tiendas", "ftk": "Comprobador de entradas", "fro": "Comprobador de romances", "fi": "Comprobador de inversiones", "fc": "Comprobador de llamadas", "fs": "Comprobador de SMS", "fm": "Comprobador de segunda mano", "fr": "Comprobador de alquileres", "frec": "Comprobador de recuperación", "fpish": "Comprobador de phishing", "fj": "Comprobador de ofertas", "fg": "Comprobador de sorteos", "fp": "Pack de guiones Scam-Roast", "ft": "Bote de propinas", "fd": "Detector de estafas", "chm": "Comprobador de donaciones", "chf": "Comprobador de donaciones", "petm": "Comprobador de venta de mascotas", "petf": "Comprobador de mascotas", "dsm": "Comprobador de falsos técnicos a domicilio", "dsf": "Comprobador de visitas a domicilio", "imm": "Comprobador de cita previa y trámites de extranjería", "imf": "Comprobador de trámites", "carm": "Comprobador de estafas de coches de segunda mano", "carf": "Comprobador de coches", "bdm": "Comprobador de estafas de colaboraciones con marcas", "bdf": "Comprobador de colaboraciones", "brand": "Comprobador de clientes freelance", "navd": "Detector de estafas", "navr": "Ofertas de trabajo", "navs": "Emails de phishing", "h1": "“Te he enviado 1.500 € por error. Devuelve 1.000 € a nuestro diseñador.” <em>Nunca hubo cliente.</em>", "sub": "Pega el mensaje del cliente: alguien nuevo que te encontró en Upwork, Fiverr, LinkedIn o Instagram y quiere pasar a Telegram o WhatsApp, un cheque o una transferencia por más de lo que facturaste, un software, un portátil o una “licencia” que tienes que comprar primero a su proveedor, dinero que tienes que recibir y reenviar a otra persona, o un brief del proyecto que hay que descargar, instalar o abrir iniciando sesión. En un segundo tienes una nota de banderas rojas y qué hacer antes de pagar, reenviar o abrir nada.", "h2": "Comprueba un cliente nuevo, una oferta de proyecto o un mensaje de pago", "hint": "Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples y puede fallar en ambos sentidos. La regla segura no cambia: el cliente te paga por un canal que controlas tú, tú nunca le pagas a él y nunca pasas su dinero a nadie.", "l1": "Pega el mensaje, el email o la oferta", "l2": "Dónde te llegó o la dirección del remitente (opcional)", "go": "Comprobar", "e0": "Ejemplo: cheque de más, devuelve la diferencia", "e1": "Ejemplo: compra primero el software a nuestro proveedor", "e2": "Ejemplo: pasa a Telegram y nos ahorramos comisiones", "e3": "Ejemplo: recibe pagos y reenvíalos", "e4": "Ejemplo: descarga el brief e instala nuestro control horario", "e5": "Ejemplo: cliente real, hito con fondos, contrato", "of": "/ 100 nota de estafa", "todoh": "Qué hacer antes de pagar, reenviar o abrir nada", "c1h": "El pago de más es todo el truco", "c1p": "El “cliente” paga más de lo facturado con un cheque, una captura de transferencia o una tarjeta robada y te pide que mandes la diferencia a un diseñador, a un proveedor o a él mismo. Días después el pago se devuelve o se anula y el dinero que enviaste ya no vuelve.", "c2h": "El cliente te paga a ti, no al revés", "c2p": "Un cliente real nunca te pide comprar una licencia de software, un portátil, un curso, una “mejora de cuenta” o una comisión de depósito a un proveedor que elige él antes de empezar, aunque prometa devolvértelo.", "c3h": "Nunca seas la tubería del dinero de otro", "c3p": "“Recibe pagos de nuestros clientes y reenvíalos quedándote un 10%” no es un trabajo, es blanqueo de dinero, y a quien busca la policía es al titular de la cuenta. Nunca prestes tu cuenta del banco, PayPal, Bizum o cripto.", "tipp": "Este comprobador es gratis y seguirá siéndolo. Si te ha salvado a ti o a un amigo freelance de devolver un pago falso o de comprar “el software del cliente”, puedes dejar una propina.", "disc": "Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. Upwork, Fiverr, LinkedIn, PayPal, los bancos, las apps de mensajería y las marcas de software aparecen solo porque los estafadores se hacen pasar por ellos o los usan; no se les acusa de nada. No es asesoramiento legal, fiscal ni de seguridad. Si ya pagaste o pasaste dinero, llama ya a tu banco, denúncialo a la policía y pide ayuda gratis a INCIBE en el 017.", "flm": "Comprobador de estafas de clientes freelance", "flf": "Comprobador de clientes freelance"}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|won'?t|will not|didn'?t|did not|don'?t|do not|hasn'?t|has not|no need to|without|\bno\b|nunca|jam[aá]s|no me|no te|no ha|no hace falta|\bsin\b|\bni\b)[^.!?\n]{0,30}$/i.test(t.slice(Math.max(0,idx-40),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'offer',w:10,en:'An unsolicited client or project: “I found your profile on Upwork, Fiverr, LinkedIn or Instagram”, a simple task for a generous rate, or a start today with no call and no contract',es:'Un cliente o proyecto que no pediste: “vi tu perfil en Upwork, Fiverr, LinkedIn o Instagram”, una tarea sencilla muy bien pagada, o empezar hoy sin llamada y sin contrato',
+  wen:'Real clients do find freelancers this way, so this alone proves nothing. But fake clients use the same opening because it lowers your guard before the payment trick arrives.',wes:'Los clientes reales también te encuentran así, así que esto solo no prueba nada. Pero los clientes falsos usan la misma apertura porque te baja la guardia antes de que llegue el truco del pago.',
+  re:[/(?:found|saw|came across|checked)\s(?:your|ur)\s(?:profile|portfolio|gig|work|page)|(?:on|from|via)\s(?:upwork|fiverr|freelancer\.com|linkedin|malt|workana|behance|dribbble)|(?:simple|easy|quick|small)\s(?:task|job|project|work)\s[^.!?\n]{0,40}(?:\$|€|usd|eur|\d)|(?:start|begin)\s(?:today|immediately|right away|asap)|no (?:interview|call|experience) (?:needed|required)/i,
+   /(?:vi|he visto|encontr[eé]|vimos|hemos visto)\s(?:tu|su)\s(?:perfil|portafolio|portfolio|trabajo|p[aá]gina|gig)|(?:en|desde|por)\s(?:upwork|fiverr|freelancer\.com|linkedin|malt|workana|infojobs|behance)|(?:tarea|trabajo|proyecto|encargo)\s(?:sencill\w*|f[aá]cil|r[aá]pid\w*|peque[nñ]\w*)\s[^.!?\n]{0,40}(?:\$|€|euros?|\d)|(?:empieza\w*|empezar|comienza\w*)\s(?:hoy|ya|ahora mismo|de inmediato)|sin (?:entrevista|llamada|experiencia)/i]},
+ {id:'overpay',w:24,en:'An overpayment: a cheque, transfer or card payment for more than your invoice, a “mistake”, or a payment screenshot, and a request to send the difference back or on to a designer, supplier, vendor or agent',es:'Un pago de más: un cheque, una transferencia o un pago con tarjeta por más de lo facturado, un “error”, o una captura del pago, y la petición de devolver la diferencia o mandarla a un diseñador, proveedor o agente',
+  wen:'This is the oldest freelance scam. The incoming payment is fake, stolen or reversible and bounces days later; the money you sent out is real and gone.',wes:'Es la estafa freelance más antigua. El pago que entra es falso, robado o reversible y se devuelve días después; el dinero que tú mandaste es real y ya no vuelve.',
+  re:[/(?:sent|paid|transferred|issued|mailed)\s(?:you\s)?[^.!?\n]{0,30}(?:by mistake|too much|more than|extra|excess|overpa\w*)|overpa(?:id|yment)|(?:cheque|check)\s[^.!?\n]{0,40}(?:deposit|cash|clear)|(?:refund|return|send back|send)\s(?:the\s)?(?:difference|balance|extra|excess|rest|remaining)|(?:send|pay|forward|transfer)\s[^.!?\n]{0,30}(?:to\s)?(?:our|the|my)\s(?:designer|supplier|vendor|agent|contractor|shipper|mover|assistant)/i,
+   /(?:envi[eé]|pagu[eé]|transfer[ií]|ingres[eé]|hemos (?:enviado|pagado|transferido|ingresado))\s[^.!?\n]{0,30}(?:por error|de m[aá]s|m[aá]s de lo|en exceso)|pago de m[aá]s|(?:cheque|tal[oó]n)\s[^.!?\n]{0,40}(?:ingres\w*|cobr\w*|deposit\w*)|(?:devu[eé]lve\w*|devolver|reenv[ií]a\w*|manda\w*|env[ií]a\w*)\s(?:\w+\s){0,2}(?:la\s)?(?:diferencia|resto|exceso|sobrante)|(?:env[ií]a\w*|paga\w*|transfiere\w*|haz un bizum)\s[^.!?\n]{0,30}(?:a\s)?(?:nuestr[oa]|el|la|mi)\s(?:dise[nñ]ador\w*|proveedor\w*|agente|contratista|transportista|asistente)/i]},
+ {id:'buyfirst',w:22,en:'You must pay or buy first: a software license, laptop, equipment, “onboarding kit”, training, a test fee, an account upgrade to receive payment, or an escrow or release fee, often from a vendor they pick and “we will reimburse you”',es:'Tienes que pagar o comprar primero: una licencia de software, un portátil, equipo, un “kit de bienvenida”, formación, una tasa de prueba, mejorar la cuenta para recibir el pago, o una comisión de depósito o liberación, a menudo a un proveedor que eligen ellos y “te lo reembolsamos”',
+  wen:'The vendor belongs to the scammer and the reimbursement never comes. Real escrow and payment platforms never ask you to pay to release money that is owed to you.',wes:'El proveedor es del estafador y el reembolso no llega nunca. Las plataformas reales de pago y depósito nunca te piden pagar para liberar un dinero que te deben.',
+  re:[/(?:buy|purchase|order|pay for)\s[^.!?\n]{0,30}(?:license|licence|software|laptop|computer|equipment|macbook|ipad|kit|subscription|course|training)|(?:our|approved|certified|designated)\s(?:vendor|supplier|store)|(?:will|we'?ll)\s(?:reimburse|refund|pay you back)|(?:onboarding|registration|activation|test|training|processing|clearance|release|escrow|verification)\s(?:fee|cost|charge|payment)|upgrade\s(?:your\s)?(?:account|wallet|profile)\s[^.!?\n]{0,30}(?:receive|release|withdraw|unlock)/i,
+   /(?:compra\w*|adquiere\w*|paga\w*)\s[^.!?\n]{0,30}(?:licencia|software|programa|port[aá]til|ordenador|equipo|macbook|ipad|kit|suscripci[oó]n|curso|formaci[oó]n)|(?:nuestro|el)\s(?:proveedor|distribuidor)\s(?:autorizado|homologado|oficial)|(?:te lo|te la|te los)\s(?:reembolsamos|devolvemos|pagamos despu[eé]s)|(?:cuota|tasa|comisi[oó]n|pago)\s(?:de\s)?(?:alta|registro|activaci[oó]n|prueba|formaci[oó]n|tramitaci[oó]n|liberaci[oó]n|dep[oó]sito|verificaci[oó]n)|(?:mejora|actualiza)\w*\s(?:tu\s)?(?:cuenta|monedero|perfil)\s[^.!?\n]{0,30}(?:recibir|liberar|retirar|desbloquear)/i]},
+ {id:'mule',w:24,en:'You receive money and pass it on: “process payments for our customers”, receive transfers or parcels and forward them, keep a commission, convert to crypto or gift cards, or share your bank, PayPal or Bizum details for “payroll”',es:'Recibes dinero y lo pasas: “gestionar pagos de nuestros clientes”, recibir transferencias o paquetes y reenviarlos, quedarte una comisión, convertirlo en cripto o tarjetas regalo, o dar tus datos del banco, PayPal o Bizum para la “nómina”',
+  wen:'That is a money mule job. The money is stolen, the account in your name is the one that gets frozen, and in Spain it can mean a criminal record for money laundering.',wes:'Eso es ser una “mula” de dinero. El dinero es robado, la cuenta bloqueada es la tuya y en España puede acabar en antecedentes por blanqueo de capitales.',
+  re:[/(?:receive|accept|process|handle)\s[^.!?\n]{0,30}(?:payments?|transfers?|funds|money|parcels?|packages?)\s[^.!?\n]{0,50}(?:forward|send (?:it|them) (?:on|to)|transfer (?:it|them)|reship|pass)|(?:keep|retain)\s(?:\d+\s?%|a commission|your (?:cut|commission))|(?:convert|buy)\s[^.!?\n]{0,20}(?:bitcoin|btc|usdt|crypto|gift cards?)|(?:payment|financial|transfer)\s(?:agent|processor|representative|coordinator)|(?:bank|online banking|paypal)\s(?:login|password|credentials)/i,
+   /(?:recib\w*|acept\w*|gestion\w*|tramit\w*)\s[^.!?\n]{0,30}(?:pagos?|transferencias?|fondos|dinero|paquetes?)\s[^.!?\n]{0,50}(?:reenv\w*|transfier\w*|transferir\w*|mand\w*|pas\w*)|(?:qu[eé]date|te quedas|qued[aá]ndote)\s(?:con\s)?(?:un\s)?(?:\d+\s?%|comisi[oó]n)|(?:convierte\w*|compra\w*|cambia\w*)\s[^.!?\n]{0,20}(?:bitcoin|btc|usdt|cripto\w*|tarjetas? regalo)|(?:agente|gestor|representante|coordinador)\s(?:de\s)?(?:pagos|financiero|transferencias)|(?:usuario|contrase[nñ]a|claves?)\s(?:de\s)?(?:tu\s)?(?:banco|banca online|paypal)/i]},
+ {id:'offplat',w:16,en:'They move you off the platform or onto a weak payment: continue on Telegram, WhatsApp, Signal, Teams or Google Chat, “pay outside Upwork to avoid fees”, Zelle, Western Union, crypto, gift cards or a cheque',es:'Te sacan de la plataforma o te llevan a un pago débil: seguir por Telegram, WhatsApp, Signal, Teams o Google Chat, “pagar fuera de Upwork para ahorrar comisiones”, Western Union, cripto, tarjetas regalo o un cheque',
+  wen:'Off the platform you lose its payment protection and the platform cannot ban them. Cheques, crypto and gift cards are chosen because they cannot be recovered or they bounce after you act.',wes:'Fuera de la plataforma pierdes su protección de pagos y ya no pueden bloquearle. Los cheques, la cripto y las tarjetas regalo se eligen porque no se recuperan o se devuelven después de que actúes.',
+  re:[/(?:move|continue|talk|chat|contact|add|message)\s[^.!?\n]{0,25}(?:on|to|via)\s(?:telegram|whatsapp|signal|teams|google chat|hangouts|skype|wickr)|(?:outside|off)\s(?:of\s)?(?:the\s)?(?:upwork|fiverr|platform|site)|(?:avoid|skip|save)\s(?:the\s)?(?:platform\s)?(?:fees|commission)|western union|moneygram|\bzelle\b|(?:pay|paid|payment)\s[^.!?\n]{0,20}(?:in|by|with|via)\s(?:crypto|bitcoin|usdt|gift cards?|cheque|check)/i,
+   /(?:seguimos|pasamos|hablamos|escr[ií]be\w*|contacta\w*|a[nñ][aá]de\w*)\s[^.!?\n]{0,25}(?:por|en|a)\s(?:telegram|whatsapp|wasap|signal|teams|google chat|skype)|fuera de\s(?:la\s)?(?:upwork|fiverr|plataforma|web)|(?:ahorr\w*|evit\w*|saltarnos)\s(?:las\s)?(?:comisiones|tasas)|western union|moneygram|(?:pago|pagamos|pagar\w*|te pago)\s[^.!?\n]{0,20}(?:en|con|por|mediante)\s(?:cripto\w*|bitcoin|usdt|tarjetas? regalo|cheque|tal[oó]n)/i]},
+ {id:'file',w:16,en:'To see the project you must download a ZIP, RAR or password-protected brief, install a “time tracker”, test app or plugin from a link, or log in with Google, Microsoft or your platform account on their page',es:'Para ver el proyecto tienes que descargar un ZIP, RAR o brief con contraseña, instalar un “control horario”, una app de prueba o un plugin desde un enlace, o iniciar sesión con Google, Microsoft o tu cuenta de la plataforma en su página',
+  wen:'Fake client briefs are a common way to install info-stealers that copy saved passwords and logged-in sessions, including your freelance platform, bank and email.',wes:'Los briefs de clientes falsos son una vía habitual para instalar programas que copian las contraseñas guardadas y las sesiones abiertas, incluidas tu plataforma freelance, tu banco y tu correo.',
+  re:[/\.(?:zip|rar|7z|exe|scr|lnk|msi|bat|cmd|vbs|iso)\b|\.pdf\.\w{2,4}\b|password\s?(?:is|:)\s?\S+|(?:install|download|run)\s[^.!?\n]{0,30}(?:time ?tracker|tracking app|our (?:app|software|tool|plugin|extension)|test (?:app|build)|anydesk|teamviewer)|(?:log ?in|sign ?in)\s[^.!?\n]{0,25}(?:with|using)\s(?:google|microsoft|outlook|upwork|fiverr|linkedin)\s[^.!?\n]{0,25}(?:to (?:view|see|open|access))/i,
+   /\.(?:zip|rar|7z|exe|scr|lnk|msi|bat|cmd|vbs|iso)\b|\.pdf\.\w{2,4}\b|contrase[nñ]a\s?(?:es|:)\s?\S+|(?:instala\w*|descarga\w*|ejecuta\w*)\s[^.!?\n]{0,30}(?:control horario|app de (?:seguimiento|fichaje|prueba)|nuestr[ao] (?:app|aplicaci[oó]n|programa|herramienta|plugin|extensi[oó]n)|anydesk|teamviewer)|(?:inicia\w* sesi[oó]n|entra\w*)\s[^.!?\n]{0,25}con\s(?:google|microsoft|outlook|upwork|fiverr|linkedin)\s[^.!?\n]{0,25}(?:para (?:ver|abrir|acceder))/i]},
+ {id:'pressure',w:10,en:'Pressure or no real identity: a Gmail or Outlook “company” address, no website or company name you can check, “today only”, “urgent”, or “do not tell the platform”',es:'Prisas o ninguna identidad real: una “empresa” con dirección de Gmail u Outlook, sin web ni nombre de empresa que puedas comprobar, “solo hoy”, “urgente” o “no se lo digas a la plataforma”',
+  wen:'Real businesses write from their own domain, can be looked up and give you time. Urgency and secrecy exist so you skip the checks.',wes:'Las empresas reales escriben desde su propio dominio, se pueden buscar y te dan tiempo. Las prisas y el secreto están para que te saltes las comprobaciones.',
+  re:[/@(?:gmail|googlemail|outlook|hotmail|live|yahoo|proton(?:mail)?|aol|gmx|yandex)\.\w+|\b(?:urgent(?:ly)?|asap|today only|right now|within (?:the next\s)?(?:1|2|3|12|24)\s?(?:h|hours?))\b|(?:don'?t|do not)\s(?:tell|inform|mention|report)\s[^.!?\n]{0,20}(?:upwork|fiverr|platform|bank|anyone)/i,
+   /@(?:gmail|googlemail|outlook|hotmail|live|yahoo|proton(?:mail)?|aol|gmx|yandex)\.\w+|\b(?:urgente|cuanto antes|solo hoy|s[oó]lo hoy|ahora mismo|en (?:las pr[oó]ximas\s)?(?:1|2|3|12|24)\s?(?:h|horas))\b|no\s(?:se lo\s)?(?:digas|cuentes|comentes|menciones)\s[^.!?\n]{0,20}(?:upwork|fiverr|plataforma|banco|nadie)/i]}
+];
+function stripOfficial(t){return t.replace(/https?:\/\/(?:[a-z0-9-]+\.)*(?:gob\.es|incibe\.es|policia\.es|guardiacivil\.es)\S*/gi,' ');}
+function analyze(text,url){
+  var raw=(text||'')+'\n'+(url||''),t=stripOfficial(raw),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  if(n>=4)score+=8;
+  if(on('overpay'))score=Math.max(score,85);
+  if(on('mule'))score=Math.max(score,85);
+  if(on('buyfirst'))score=Math.max(score,72);
+  if(on('buyfirst')&&(on('offer')||on('offplat')||on('pressure')))score=Math.max(score,85);
+  if(on('file'))score=Math.max(score,60);
+  if(on('file')&&/(?:password|contrase[nñ]a|\.(?:zip|rar|7z|exe|scr|lnk)\b|time ?tracker|control horario|anydesk|teamviewer)/i.test(t))score=Math.max(score,78);
+  if(on('file')&&(on('offer')||on('offplat')))score=Math.max(score,80);
+  if(on('offplat'))score=Math.max(score,40);
+  if(on('offplat')&&/(?:usdt|bitcoin|btc|crypto|cripto|gift cards?|tarjetas? regalo|western union|moneygram|zelle|cheque|check|tal[oó]n)/i.test(t))score=Math.max(score,72);
+  if(on('offplat')&&on('offer'))score=Math.max(score,55);
+  var legit=/(?:milestone (?:is )?funded|funded (?:the )?milestone|(?:through|via|on) (?:upwork|fiverr|the platform)(?:'s)? (?:escrow|payment)|signed contract|company website|(?:our|the) (?:own|official) domain|after (?:delivery|approval)|net ?30|against (?:your|an) invoice|hito (?:con fondos|financiado)|(?:por|a trav[eé]s de) (?:upwork|fiverr|la plataforma)|contrato firmado|dominio (?:oficial|propio)|(?:tras|despu[eé]s de) la entrega|a 30 d[ií]as|contra factura)/i.test(raw);
+  if(legit&&!on('overpay')&&!on('mule')&&!on('buyfirst')&&!on('file')&&!on('offplat'))score=Math.min(score,10);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Cliente falso casi seguro','Encaja con un guion conocido: un pago de más que hay que devolver, algo que comprar primero, dinero que recibir y reenviar, o un archivo que abrir. No pagues, no devuelvas ni reenvíes dinero y no abras nada. Si ya lo hiciste, mira abajo qué hacer.']:['Almost certainly a fake client','This matches a known script: an overpayment to send back, something to buy first, money to receive and pass on, or a file to open. Do not pay, do not send back or forward money and do not open anything. If you already did, see the steps below.'];
+  if(s>=40)return es?['Muchas banderas rojas','Tiene rasgos típicos de los clientes falsos. Quédate en la plataforma, no aceptes pagos fuera de ella y no hagas nada con dinero hasta que el pago esté confirmado en tu propia cuenta.']:['Big red flags','It has the usual signs of a fake client. Stay on the platform, do not accept payment outside it, and do nothing with money until the payment is confirmed in your own account.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. Busca la empresa y su web, pide una videollamada y un contrato, y cobra un anticipo por un canal que controles tú antes de empezar.']:['Kinda sus','Some classic signals. Look up the company and its website, ask for a video call and a contract, and take a deposit through a channel you control before you start.'];
+  return es?['Pocas banderas','No salta casi nada. La regla de oro sigue igual: el cliente te paga a ti, tú nunca pagas ni reenvías su dinero.']:['Few flags','Not much trips the rules. The golden rule still applies: the client pays you, you never pay or forward their money.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  L.push(es?'No pagues, no devuelvas ninguna “diferencia” y no reenvíes dinero a nadie. Un pago solo es real cuando aparece como disponible en tu propia app del banco o de la plataforma, no en una captura ni en un email.':'Do not pay, do not send back any “difference” and do not forward money to anyone. A payment is only real when it shows as available in your own bank or platform app, not in a screenshot or an email.');
+  L.push(es?'Mantén la conversación y el pago dentro de Upwork, Fiverr o la plataforma donde te encontraron, con el hito financiado antes de empezar. Si es un cliente directo, busca la empresa tú mismo, pide una videollamada, un contrato y un anticipo.':'Keep the conversation and the payment inside Upwork, Fiverr or the platform where they found you, with the milestone funded before you start. For a direct client, look up the company yourself and ask for a video call, a contract and a deposit.');
+  if(on('overpay'))L.push(es?'Si te llegó un pago de más, no lo toques: pide al banco que confirme que es firme y, si el cliente insiste, devuélvelo solo por el mismo medio y a la misma cuenta de origen, nunca a un tercero. Los cheques pueden rebotar semanas después de “ingresarse”.':'If you got an overpayment, do not touch it: ask your bank to confirm it is final, and if the client insists, return it only by the same method to the same source account, never to a third party. Cheques can bounce weeks after they “clear”.');
+  if(on('buyfirst'))L.push(es?'No compres licencias, equipos ni cursos a un proveedor que elija el cliente y no pagues para “liberar” o “recibir” tu dinero. Si ya pagaste, llama al banco o abre una disputa en PayPal hoy mismo y guarda los mensajes.':'Do not buy licenses, equipment or courses from a vendor the client picks and do not pay to “release” or “receive” your money. If you already paid, call your bank or open a PayPal dispute today and keep the messages.');
+  if(on('mule'))L.push(es?'No prestes tu cuenta ni muevas dinero de otros. Si ya recibiste o reenviaste algo, para ya, avisa a tu banco y denúncialo en la Policía Nacional (091) o la Guardia Civil (062) antes de que te llamen a ti.':'Do not lend your account or move other people’s money. If you already received or forwarded anything, stop now, tell your bank and report it to the police (Policía Nacional 091 or Guardia Civil 062 in Spain) before they come to you.');
+  if(on('file'))L.push(es?'No abras el archivo ni instales nada. Si ya lo hiciste, desconecta ese ordenador de internet y, desde otro dispositivo limpio, cambia las contraseñas del correo, la plataforma freelance y el banco y cierra las demás sesiones.':'Do not open the file or install anything. If you already did, disconnect that computer from the internet and, from another clean device, change the passwords for your email, freelance platform and bank and sign out other sessions.');
+  L.push(es?'Denuncia el perfil en la plataforma donde llegó y pide ayuda gratis a INCIBE en el 017 si diste datos, pagaste o abriste algo.':'Report the profile on the platform where it arrived and get free help from INCIBE on 017 (Spain) if you shared details, paid or opened something.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Hi! I found your profile on Upwork and love your work. I mailed you a cheque for 1.500€ by mistake instead of 500€. Please deposit it and send the difference to our designer by Bizum today, it is urgent.',u:'Upwork chat'},
+ {t:'Hola, queremos contratarte para un proyecto de diseño, 45€/hora. Antes de empezar compra la licencia del software a nuestro proveedor autorizado (320€), te lo reembolsamos en la primera nómina.',u:'recruiting.studio@gmail.com'},
+ {t:'Great gig! Let us continue on Telegram so we can pay outside Upwork and avoid the fees. I can pay in USDT or by gift cards.',u:'Upwork message'},
+ {t:'Buscamos asistente remoto: recibirás pagos de nuestros clientes en tu cuenta y los reenviarás a nuestros proveedores, quedándote un 10% de comisión. Solo necesitamos tu IBAN.',u:'LinkedIn'},
+ {t:'Here is the project brief, download project_brief.zip (password: 2026) and install our time tracker from the link before you start.',u:'Fiverr inbox'},
+ {t:'Hi, we would like to hire you for a logo. I funded the milestone on Upwork, the contract is in the offer and payment is released after delivery and approval.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+
+
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
