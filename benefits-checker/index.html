@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tax Refund, Benefit and Grant Scam Checker: fake Hacienda and HMRC refunds, Kit Digital and subsidy “agents”, fake Seguridad Social and pension messages (free, EN/ES) | alibadmoney</title>
+<meta name="description" content="A text says you are owed a tax refund, someone guarantees your grant or Kit Digital voucher for a fee, or “Seguridad Social” wants your Cl@ve to pay your pension? Paste it and get a free rule-based red-flag score and what to check. EN/ES.">
+<link rel="canonical" href="https://alibadmoney-scam-detector.netlify.app/benefits-checker/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230e0f12'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='system-ui,sans-serif' font-weight='800' fill='%23c6ff3d'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0e0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="alibadmoney">
+<meta property="og:title" content="“You are owed a tax refund, claim it here.” You are not. Free refund, benefit and grant scam checker">
+<meta property="og:description" content="Paste the SMS, email or WhatsApp. Get a red-flag score for fake tax refunds, fees to release a grant, Kit Digital and subsidy agents, and requests for your Cl@ve, certificate or card.">
+<meta property="og:url" content="https://alibadmoney-scam-detector.netlify.app/benefits-checker/">
+<meta property="og:image" content="https://alibadmoney-scam-detector.netlify.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tax refund, benefit and grant scam checker">
+<meta name="twitter:description" content="Free rule-based red-flag score for fake tax refunds, grant and Kit Digital fees, fake pension and benefit messages, EN/ES, by @alibadmoney.">
+<meta name="twitter:image" content="https://alibadmoney-scam-detector.netlify.app/og-image.png">
+<style>
+  :root{--bg:#0e0f12;--card:#17191f;--ink:#f3f1ea;--mute:#9a9ca6;--lime:#c6ff3d;--red:#ff4d4d;--amber:#ffb020;--green:#3ddc84;--line:#2a2d36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--lime)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--lime)}
+  .hdr-r{display:flex;gap:14px;align-items:center}
+  .hdr-r a{font-size:14px;font-weight:700;text-decoration:none}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--mute);padding:6px 14px;font-weight:700;cursor:pointer}
+  .lang button.on{background:var(--lime);color:#111}
+  .hero{padding:24px 0 26px;max-width:820px}
+  h1{font-size:48px;line-height:1.03;letter-spacing:-.03em;margin:0 0 14px}
+  h1 em{font-style:normal;color:var(--lime)}
+  .sub{color:var(--mute);font-size:19px;margin:0}
+  section.demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;margin:10px 0 28px}
+  h2{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .hint{color:var(--mute);margin:0 0 14px}
+  label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}
+  textarea,input[type=text]{width:100%;background:#0b0c0f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit}
+  textarea{min-height:130px;resize:vertical}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+  .btn{background:var(--lime);color:#111;border:0;border-radius:10px;padding:12px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .chip{background:none;border:1px dashed var(--line);color:var(--mute);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+  .chip:hover{color:var(--ink);border-color:var(--mute)}
+  #out{display:none;margin-top:22px;grid-template-columns:.9fr 1.1fr;gap:22px}
+  .panel{background:#0b0c0f;border:1px solid var(--line);border-radius:14px;padding:18px}
+  .score{display:flex;align-items:baseline;gap:10px}
+  .score .n{font-size:56px;font-weight:900;line-height:1}
+  .meter{height:10px;background:#22252d;border-radius:99px;overflow:hidden;margin:10px 0 14px}
+  .meter i{display:block;height:100%;width:0;transition:width .4s}
+  .verdict{font-weight:800;font-size:18px;margin:0 0 6px}
+  .checklist{list-style:none;padding:0;margin:12px 0 0}
+  .checklist li{display:flex;gap:10px;padding:7px 0;border-top:1px solid #1d2027;font-size:14px}
+  .checklist li .m{width:22px;flex:none;text-align:center;font-weight:800}
+  .checklist li.miss{color:#6b6e78}
+  .checklist small{display:block;color:var(--mute)}
+  .checklist small.ev{color:var(--amber)}
+  ol.todo{margin:8px 0 0;padding-left:20px}
+  ol.todo li{margin:6px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card b{display:block;margin-bottom:4px}
+  .card p{margin:0;color:var(--mute);font-size:14px}
+  section.cta{background:var(--card);border:2px solid var(--lime);border-radius:20px;padding:24px;margin:0 0 16px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.cta p{margin:4px 0 0;color:var(--mute)}
+  section.tip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:0 0 28px;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  section.tip p{margin:4px 0 0;color:var(--mute);font-size:14px}
+  .more{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 28px;font-size:14px;font-weight:700}
+  footer{color:#6b6e78;font-size:13px;padding:24px 0 40px;border-top:1px solid var(--line)}
+  @media (max-width:860px){#out,.cards{grid-template-columns:1fr}h1{font-size:34px}.hdr-r a.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">alibad<span>money</span> · <span data-i18n="brand" style="color:inherit">Refund and Grant Scam Checker</span></a>
+    <div class="hdr-r">
+      <a class="hide-m" href="/" data-i18n="navd">Scam-Clip Detector</a>
+      <a class="hide-m" href="/sms-checker/" data-i18n="navr">Scam SMS</a>
+      <a class="hide-m" href="/invoice-checker/" data-i18n="navs">Fake invoices</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="bEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="bES" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 data-i18n="h1">“You are owed a tax refund. Claim it here.” <em>You are not.</em></h1>
+    <p class="sub" data-i18n="sub">Paste the SMS, email or WhatsApp: a tax refund or rebate waiting for you behind a link, a grant, subsidy or Kit Digital voucher that someone guarantees for a small fee, “Seguridad Social” or “HMRC” asking you to update your details to keep your pension or benefit, or a stranger who wants your Cl@ve, digital certificate or card number to pay you. In one second you get a red-flag score and what to check.</p>
+  </div>
+
+  <section class="demo" id="check">
+    <h2 data-i18n="h2">Check a refund, benefit or grant message</h2>
+    <p class="hint" data-i18n="hint">Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool and can be wrong both ways. The safe rule never changes: you never pay, and never hand over your logins, to receive public money.</p>
+    <label for="txt" data-i18n="l1">Paste the SMS, email or message</label>
+    <textarea id="txt" placeholder="e.g. Tax agency: you have a pending refund of 498,20€. Confirm your details and IBAN at the link below within 24 hours to receive it."></textarea>
+    <label for="url" data-i18n="l2">Sender, number or link (optional)</label>
+    <input type="text" id="url" placeholder="e.g. SMS, a WhatsApp number, refund-claim.online" autocomplete="off" spellcheck="false">
+    <div class="row">
+      <button class="btn" onclick="run()" data-i18n="go">Check it</button>
+      <button class="chip" onclick="ex(0)" data-i18n="e0">Example: Hacienda refund by SMS</button>
+      <button class="chip" onclick="ex(1)" data-i18n="e1">Example: HMRC tax refund link</button>
+      <button class="chip" onclick="ex(2)" data-i18n="e2">Example: Kit Digital for a fee</button>
+      <button class="chip" onclick="ex(3)" data-i18n="e3">Example: pension will be suspended</button>
+      <button class="chip" onclick="ex(4)" data-i18n="e4">Example: winter fuel payment</button>
+      <button class="chip" onclick="ex(5)" data-i18n="e5">Example: real refund notice</button>
+    </div>
+    <div id="out">
+      <div class="panel">
+        <div class="score"><span class="n" id="sN">0</span><span data-i18n="of">/ 100 scam score</span></div>
+        <div class="meter"><i id="sBar"></i></div>
+        <p class="verdict" id="vTitle"></p>
+        <div id="vText" style="color:var(--mute);font-size:15px"></div>
+        <ul class="checklist" id="list"></ul>
+      </div>
+      <div class="panel">
+        <b data-i18n="todoh">What to check before you click</b>
+        <ol class="todo" id="todo"></ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="cards">
+    <div class="card"><b data-i18n="c1h">Refunds arrive on their own</b><p data-i18n="c1p">Hacienda, HMRC and other tax agencies pay refunds automatically to the account you already gave them. A message with a link to “claim” a refund exists to take your card or bank details.</p></div>
+    <div class="card"><b data-i18n="c2h">Paying to get paid is the scam</b><p data-i18n="c2p">No real grant, subsidy, voucher or benefit is released after a fee, commission or “tax” paid by Bizum, card, transfer or crypto. Public money costs nothing to receive.</p></div>
+    <div class="card"><b data-i18n="c3h">Your Cl@ve is your identity</b><p data-i18n="c3p">With your Cl@ve PIN or digital certificate someone can change the account where you are paid, file in your name or take out loans. No agent, gestor or “official” needs it from you by message.</p></div>
+  </div>
+
+  <section class="cta">
+    <div><b data-i18n="ctah">Want to roast these on camera?</b><p data-i18n="ctap">The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.</p></div>
+    <a class="btn" href="/#pack" data-i18n="ctab">See the Script Pack</a>
+  </section>
+
+  <section class="tip" id="support">
+    <div>
+      <b data-i18n="tiph">Tip jar</b>
+      <p data-i18n="tipp">This checker is free and stays free. If it stopped you or someone in your family from giving away a refund or a pension, you can tip.</p>
+    </div>
+    <a class="btn" href="https://paypal.me/nowbabe10" target="_blank" rel="noopener" data-i18n="tipb">Tip via PayPal</a>
+  </section>
+
+  <div class="more">
+    <a href="/">Scam-Clip Detector</a>
+    <a href="/benefits-checker/" data-i18n="bnm">Tax refund, benefit and grant scam checker</a>
+    <a href="/invoice-checker/" data-i18n="ivm">Fake invoice / bank change checker</a>
+    <a href="/freelance-checker/" data-i18n="flm">Freelance client scam checker</a>
+    <a href="/brand-deal-checker/" data-i18n="bdm">Brand deal / sponsorship scam checker</a>
+    <a href="/car-checker/" data-i18n="carm">Used car scam checker</a>
+    <a href="/immigration-checker/" data-i18n="imm">Cita previa / immigration paperwork checker</a>
+    <a href="/doorstep-checker/" data-i18n="dsm">Doorstep / fake technician checker</a>
+    <a href="/pet-checker/" data-i18n="petm">Pet / puppy sale checker</a>
+    <a href="/tech-support-checker/" data-i18n="tsm">Tech support / virus pop-up checker</a>
+    <a href="/account-checker/" data-i18n="acm">Account / code checker</a>
+    <a href="/blackmail-checker/" data-i18n="bmm">Blackmail email checker</a>
+    <a href="/loan-checker/" data-i18n="lnm">Loan scam checker</a>
+    <a href="/charity-checker/" data-i18n="chm">Charity / donation checker</a>
+    <a href="/qr-checker/" data-i18n="qrm">QR code checker</a>
+    <a href="/travel-checker/" data-i18n="trvm">Travel / booking checker</a>
+    <a href="/lottery-checker/" data-i18n="lotm">Lottery / prize checker</a>
+    <a href="/shop-checker/" data-i18n="moresh">Fake shop checker</a>
+    <a href="/ticket-checker/" data-i18n="moret">Ticket scam checker</a>
+    <a href="/marketplace-checker/" data-i18n="morem">Marketplace scam checker</a>
+    <a href="/romance-checker/" data-i18n="morer2">Romance scam checker</a>
+    <a href="/investment-checker/" data-i18n="morei">Investment scam checker</a>
+    <a href="/call-checker/" data-i18n="morec">Scam call checker</a>
+    <a href="/sms-checker/" data-i18n="mores2">SMS / WhatsApp checker</a>
+    <a href="/rental-checker/" data-i18n="morer">Rental listing checker</a>
+    <a href="/recovery-checker/" data-i18n="morerec">Crypto recovery checker</a>
+    <a href="/phishing-email-checker/" data-i18n="morep">Phishing / invoice checker</a>
+    <a href="/job-offer-checker/" data-i18n="morej">Job offer checker</a>
+    <a href="/giveaway-checker/" data-i18n="moreg">Giveaway / airdrop checker</a>
+    <a href="/signal-group-checker/" data-i18n="moresig">Signal / VIP group checker</a>
+    <a href="/shorts-guide/" data-i18n="mores">900 Shorts guide (19€)</a>
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px"><a href="/" data-i18n="fd">Scam-Clip Detector</a> · <a href="/benefits-checker/" data-i18n="bnf">Refund and grant checker</a> · <a href="/invoice-checker/" data-i18n="ivf">Invoice checker</a> · <a href="/freelance-checker/" data-i18n="flf">Freelance checker</a> · <a href="/brand-deal-checker/" data-i18n="bdf">Brand deal checker</a> · <a href="/car-checker/" data-i18n="carf">Car checker</a> · <a href="/immigration-checker/" data-i18n="imf">Paperwork checker</a> · <a href="/doorstep-checker/" data-i18n="dsf">Doorstep checker</a> · <a href="/pet-checker/" data-i18n="petf">Pet checker</a> · <a href="/tech-support-checker/" data-i18n="tsf">Tech support checker</a> · <a href="/account-checker/" data-i18n="acf">Account checker</a> · <a href="/blackmail-checker/" data-i18n="bmf">Blackmail checker</a> · <a href="/loan-checker/" data-i18n="lnf">Loan checker</a> · <a href="/charity-checker/" data-i18n="chf">Charity checker</a> · <a href="/qr-checker/" data-i18n="qrf">QR checker</a> · <a href="/travel-checker/" data-i18n="trvf">Travel checker</a> · <a href="/lottery-checker/" data-i18n="lotf">Lottery checker</a> · <a href="/shop-checker/" data-i18n="fsh">Shop checker</a> · <a href="/ticket-checker/" data-i18n="ftk">Ticket checker</a> · <a href="/marketplace-checker/" data-i18n="fm">Marketplace checker</a> · <a href="/romance-checker/" data-i18n="fro">Romance checker</a> · <a href="/investment-checker/" data-i18n="fi">Investment checker</a> · <a href="/call-checker/" data-i18n="fc">Call checker</a> · <a href="/sms-checker/" data-i18n="fs">SMS checker</a> · <a href="/rental-checker/" data-i18n="fr">Rental checker</a> · <a href="/recovery-checker/" data-i18n="frec">Recovery checker</a> · <a href="/phishing-email-checker/" data-i18n="fpish">Phishing checker</a> · <a href="/job-offer-checker/" data-i18n="fj">Job offer checker</a> · <a href="/giveaway-checker/" data-i18n="fg">Giveaway checker</a> · <a href="/signal-group-checker/">Signal / VIP group checker</a> · <a href="/#pack" data-i18n="fp">Scam-Roast Script Pack</a> · <a href="#support" data-i18n="ft">Tip jar</a></p>
+    <span data-i18n="disc">Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. The Agencia Tributaria, the Seguridad Social, the SEPE, HMRC, DWP, Red.es, councils and banks appear only because scammers impersonate them; they are not accused of anything. Not legal, tax or security advice. If you already paid or gave your details, call your bank now, report it to the police and ask INCIBE for free help on 017.</span>
+  </footer>
+</div>
+
+<script>
+var I18N={
+ en:{"acm": "Account / code checker", "acf": "Account checker", "tsm": "Tech support / virus pop-up checker", "tsf": "Tech support checker", "ctah": "Want to roast these on camera?", "ctap": "The Scam-Roast Script Pack has 30 ready-to-film scripts (EN + ES) on the scams people fall for most. Pay what you want, from 5€.", "ctab": "See the Script Pack", "tiph": "Tip jar", "tipb": "Tip via PayPal", "bmm": "Blackmail email checker", "bmf": "Blackmail checker", "lnm": "Loan scam checker", "lnf": "Loan checker", "qrm": "QR code checker", "qrf": "QR checker", "trvm": "Travel / booking checker", "trvf": "Travel checker", "lotm": "Lottery / prize checker", "lotf": "Lottery checker", "moresh": "Fake shop checker", "moret": "Ticket scam checker", "morer2": "Romance scam checker", "morei": "Investment scam checker", "morec": "Scam call checker", "mores2": "SMS / WhatsApp checker", "morem": "Marketplace scam checker", "morer": "Rental listing checker", "morerec": "Crypto recovery checker", "morep": "Phishing / invoice checker", "morej": "Job offer checker", "moreg": "Giveaway / airdrop checker", "moresig": "Signal / VIP group checker", "mores": "900 Shorts guide (19€)", "fsh": "Shop checker", "ftk": "Ticket checker", "fro": "Romance checker", "fi": "Investment checker", "fc": "Call checker", "fs": "SMS checker", "fm": "Marketplace checker", "fr": "Rental checker", "frec": "Recovery checker", "fpish": "Phishing checker", "fj": "Job offer checker", "fg": "Giveaway checker", "fp": "Scam-Roast Script Pack", "ft": "Tip jar", "fd": "Scam-Clip Detector", "chm": "Charity / donation checker", "chf": "Charity checker", "petm": "Pet / puppy sale checker", "petf": "Pet checker", "dsm": "Doorstep / fake technician checker", "dsf": "Doorstep checker", "imm": "Cita previa / immigration paperwork checker", "imf": "Paperwork checker", "carm": "Used car scam checker", "carf": "Car checker", "bdm": "Brand deal / sponsorship scam checker", "bdf": "Brand deal checker", "brand": "Refund and Grant Scam Checker", "navd": "Scam-Clip Detector", "navr": "Scam SMS", "navs": "Fake invoices", "h1": "“You are owed a tax refund. Claim it here.” <em>You are not.</em>", "sub": "Paste the SMS, email or WhatsApp: a tax refund or rebate waiting for you behind a link, a grant, subsidy or Kit Digital voucher that someone guarantees for a small fee, “Seguridad Social” or “HMRC” asking you to update your details to keep your pension or benefit, or a stranger who wants your Cl@ve, digital certificate or card number to pay you. In one second you get a red-flag score and what to check.", "h2": "Check a refund, benefit or grant message", "hint": "Runs 100% in your browser. Nothing is sent anywhere. It is a rule-based awareness tool and can be wrong both ways. The safe rule never changes: you never pay, and never hand over your logins, to receive public money.", "l1": "Paste the SMS, email or message", "l2": "Sender, number or link (optional)", "go": "Check it", "e0": "Example: Hacienda refund by SMS", "e1": "Example: HMRC tax refund link", "e2": "Example: Kit Digital for a fee", "e3": "Example: pension will be suspended", "e4": "Example: winter fuel payment", "e5": "Example: real refund notice", "of": "/ 100 scam score", "todoh": "What to check before you click", "c1h": "Refunds arrive on their own", "c1p": "Hacienda, HMRC and other tax agencies pay refunds automatically to the account you already gave them. A message with a link to “claim” a refund exists to take your card or bank details.", "c2h": "Paying to get paid is the scam", "c2p": "No real grant, subsidy, voucher or benefit is released after a fee, commission or “tax” paid by Bizum, card, transfer or crypto. Public money costs nothing to receive.", "c3h": "Your Cl@ve is your identity", "c3p": "With your Cl@ve PIN or digital certificate someone can change the account where you are paid, file in your name or take out loans. No agent, gestor or “official” needs it from you by message.", "tipp": "This checker is free and stays free. If it stopped you or someone in your family from giving away a refund or a pension, you can tip.", "disc": "Comedy + awareness tool by @alibadmoney / @alidineromalo. It uses simple keyword rules and can be wrong both ways. The Agencia Tributaria, the Seguridad Social, the SEPE, HMRC, DWP, Red.es, councils and banks appear only because scammers impersonate them; they are not accused of anything. Not legal, tax or security advice. If you already paid or gave your details, call your bank now, report it to the police and ask INCIBE for free help on 017.", "flm": "Freelance client scam checker", "flf": "Freelance checker", "ivm": "Fake invoice / bank change checker", "ivf": "Invoice checker", "bnm": "Tax refund, benefit and grant scam checker", "bnf": "Refund and grant checker"},
+ es:{"acm": "Comprobador de cuentas y códigos", "acf": "Comprobador de cuentas", "tsm": "Comprobador de falso soporte técnico", "tsf": "Comprobador de soporte técnico", "ctah": "¿Quieres hacer un roast de esto en vídeo?", "ctap": "El pack de guiones Scam-Roast trae 30 guiones listos para grabar (EN + ES) sobre las estafas más comunes. Paga lo que quieras, desde 5 €.", "ctab": "Ver el pack de guiones", "tiph": "Bote de propinas", "tipb": "Propina por PayPal", "bmm": "Comprobador de chantajes", "bmf": "Comprobador de chantajes", "lnm": "Comprobador de préstamos", "lnf": "Comprobador de préstamos", "qrm": "Comprobador de códigos QR", "qrf": "Comprobador de QR", "trvm": "Comprobador de viajes y reservas", "trvf": "Comprobador de viajes", "lotm": "Comprobador de premios y loterías", "lotf": "Comprobador de premios", "moresh": "Comprobador de tiendas online", "moret": "Comprobador de entradas", "morer2": "Comprobador de romances", "morei": "Comprobador de inversiones", "morec": "Comprobador de llamadas", "mores2": "Comprobador de SMS / WhatsApp", "morem": "Comprobador de segunda mano", "morer": "Comprobador de alquileres", "morerec": "Comprobador de recuperación de cripto", "morep": "Comprobador de phishing / facturas", "morej": "Comprobador de ofertas de trabajo", "moreg": "Comprobador de sorteos / airdrops", "moresig": "Comprobador de grupos VIP / señales", "mores": "Guía de 900 Shorts (19 €)", "fsh": "Comprobador de tiendas", "ftk": "Comprobador de entradas", "fro": "Comprobador de romances", "fi": "Comprobador de inversiones", "fc": "Comprobador de llamadas", "fs": "Comprobador de SMS", "fm": "Comprobador de segunda mano", "fr": "Comprobador de alquileres", "frec": "Comprobador de recuperación", "fpish": "Comprobador de phishing", "fj": "Comprobador de ofertas", "fg": "Comprobador de sorteos", "fp": "Pack de guiones Scam-Roast", "ft": "Bote de propinas", "fd": "Detector de estafas", "chm": "Comprobador de donaciones", "chf": "Comprobador de donaciones", "petm": "Comprobador de venta de mascotas", "petf": "Comprobador de mascotas", "dsm": "Comprobador de falsos técnicos a domicilio", "dsf": "Comprobador de visitas a domicilio", "imm": "Comprobador de cita previa y trámites de extranjería", "imf": "Comprobador de trámites", "carm": "Comprobador de estafas de coches de segunda mano", "carf": "Comprobador de coches", "bdm": "Comprobador de estafas de colaboraciones con marcas", "bdf": "Comprobador de colaboraciones", "brand": "Comprobador de estafas de devoluciones y ayudas", "navd": "Detector de estafas", "navr": "SMS de estafa", "navs": "Facturas falsas", "h1": "“Tienes una devolución de Hacienda pendiente. Reclámala aquí.” <em>No la tienes.</em>", "sub": "Pega el SMS, el email o el WhatsApp: una devolución de Hacienda o un reembolso que te espera detrás de un enlace, una subvención, ayuda o bono Kit Digital que alguien te garantiza por una pequeña tasa, la “Seguridad Social” pidiendo que actualices tus datos para no perder la pensión o la prestación, o un desconocido que quiere tu Cl@ve, tu certificado digital o tu tarjeta para pagarte. En un segundo tienes una nota de banderas rojas y qué comprobar.", "h2": "Comprueba un mensaje de devolución, prestación o ayuda", "hint": "Funciona 100% en tu navegador. No se envía nada a ningún sitio. Es una herramienta de concienciación con reglas simples y puede fallar en ambos sentidos. La regla segura no cambia: para cobrar dinero público nunca se paga ni se dan claves a nadie.", "l1": "Pega el SMS, el email o el mensaje", "l2": "Remitente, número o enlace (opcional)", "go": "Comprobar", "e0": "Ejemplo: devolución de Hacienda por SMS", "e1": "Ejemplo: devolución de HMRC (Reino Unido)", "e2": "Ejemplo: Kit Digital pagando una tasa", "e3": "Ejemplo: su pensión será suspendida", "e4": "Ejemplo: ayuda de calefacción (Reino Unido)", "e5": "Ejemplo: aviso real de la Renta", "of": "/ 100 nota de estafa", "todoh": "Qué comprobar antes de pulsar", "c1h": "Las devoluciones llegan solas", "c1p": "Hacienda paga las devoluciones sola, en la cuenta que pusiste en la declaración. Un mensaje con un enlace para “reclamar” una devolución existe para quedarse con tu tarjeta o tus datos bancarios.", "c2h": "Pagar para cobrar es la estafa", "c2p": "Ninguna subvención, ayuda, bono o prestación real se libera tras pagar una tasa, comisión o “impuesto” por Bizum, tarjeta, transferencia o cripto. Cobrar dinero público no cuesta nada.", "c3h": "Tu Cl@ve es tu identidad", "c3p": "Con el PIN de tu Cl@ve o tu certificado digital pueden cambiar la cuenta donde cobras, hacer trámites en tu nombre o pedir préstamos. Ningún agente, gestor ni “funcionario” te lo pide por mensaje.", "tipp": "Este comprobador es gratis y seguirá siéndolo. Si te ha salvado a ti o a alguien de tu familia de regalar una devolución o una pensión, puedes dejar una propina.", "disc": "Herramienta de humor y concienciación de @alibadmoney / @alidineromalo. Usa reglas simples de palabras y puede fallar en ambos sentidos. La Agencia Tributaria, la Seguridad Social, el SEPE, HMRC, DWP, Red.es, los ayuntamientos y los bancos aparecen solo porque los estafadores se hacen pasar por ellos; no se les acusa de nada. No es asesoramiento legal, fiscal ni de seguridad. Si ya pagaste o diste tus datos, llama ya a tu banco, denúncialo a la policía y pide ayuda gratis a INCIBE en el 017.", "flm": "Comprobador de estafas de clientes freelance", "flf": "Comprobador de clientes freelance", "ivm": "Comprobador de facturas falsas y cambios de cuenta", "ivf": "Comprobador de facturas", "bnm": "Comprobador de estafas de devoluciones, prestaciones y ayudas", "bnf": "Comprobador de devoluciones y ayudas"}
+};
+var lang='en';
+function setLang(l){lang=l;document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!=null)el.innerHTML=v;});
+  document.getElementById('bEN').className=l==='en'?'on':'';document.getElementById('bES').className=l==='es'?'on':'';
+  if(document.getElementById('out').style.display==='grid')run();
+}
+function negated(t,idx){return /(never|won'?t|will not|didn'?t|did not|don'?t|do not|hasn'?t|has not|no need to|without|\bno\b|nunca|jam[aá]s|no me|no te|no ha|no hace falta|\bsin\b|\bni\b)[^.!?\n]{0,30}$/i.test(t.slice(Math.max(0,idx-40),idx));}
+function findRx(t,rxs,neg){for(var i=0;i<rxs.length;i++){var re=new RegExp(rxs[i].source,rxs[i].flags.replace('g','')+'g'),x;while((x=re.exec(t))){if(!neg||!negated(t,x.index))return x[0];}}return null;}
+
+var RULES=[
+ {id:'fee',w:26,en:'You must pay first to receive money: a fee, commission, deposit, “processing”, “release” or “tax” before a grant, subsidy, aid, Kit Digital voucher, refund, pension or benefit is paid out',es:'Hay que pagar primero para cobrar: una tasa, comisión, depósito, gasto de “tramitación”, “liberación” o un “impuesto” antes de recibir una subvención, ayuda, bono Kit Digital, devolución, pensión o prestación',
+  wen:'Public money is never released for a fee paid by Bizum, card, transfer or crypto. Anyone who asks for one is the scam.',wes:'El dinero público nunca se libera pagando una tasa por Bizum, tarjeta, transferencia o cripto. Quien te la pide es la estafa.',
+  re:[/(?:pay|send|transfer)\s[^.!?\n]{0,40}(?:fee|commission|deposit|charge|tax)\s[^.!?\n]{0,60}(?:grant|subsid\w*|aid|voucher|refund|rebate|payment|benefit|pension|funds?)|(?:processing|release|admin\w*|handling|activation|registration|transfer|clearance)\s(?:fee|charge|cost)|(?:grant|subsid\w*|aid|voucher|refund|rebate|benefit|funds?)\s[^.!?\n]{0,60}(?:after|once|when)\s(?:you\s)?(?:pay|paying)|(?:small|one-?off|refundable)\s(?:fee|payment|deposit)/i,
+   /(?:paga\w*|abona\w*|env[ií]a\w*|ingresa\w*|transfier\w*)\s[^.!?\n]{0,40}(?:tasa|comisi[oó]n|dep[oó]sito|gastos?|impuesto|cuota|importe)\s[^.!?\n]{0,60}(?:subvenci[oó]n|ayuda|bono|kit digital|devoluci[oó]n|reembolso|pensi[oó]n|prestaci[oó]n|fondos?)|(?:gastos?|tasa|comisi[oó]n|cuota)\s(?:de\s)?(?:tramitaci[oó]n|gesti[oó]n|liberaci[oó]n|activaci[oó]n|apertura|alta|desbloqueo)|(?:subvenci[oó]n|ayuda|bono|devoluci[oó]n|prestaci[oó]n|fondos?)\s[^.!?\n]{0,60}(?:tras|despu[eé]s de|una vez|cuando)\s(?:pagar|abonar|ingresar)|(?:peque[nñ]a|[uú]nica)\s(?:tasa|comisi[oó]n|cuota)/i]},
+ {id:'creds',w:22,en:'It asks for your Cl@ve PIN, digital certificate, Government Gateway or login, SMS code, card number, bank login, or a photo of your ID and a selfie to “verify” you or “receive the payment”',es:'Te pide el PIN de Cl@ve, el certificado digital, tus claves de acceso, un código SMS, el número de la tarjeta, las claves del banco, o foto del DNI y un selfie para “verificarte” o “recibir el pago”',
+  wen:'With your Cl@ve or certificate a criminal can change the bank account where your refund or benefit is paid, apply for loans or file in your name. No real refund needs your card number.',wes:'Con tu Cl@ve o tu certificado un delincuente puede cambiar la cuenta donde cobras la devolución o la prestación, pedir préstamos o hacer trámites en tu nombre. Ninguna devolución real necesita el número de tu tarjeta.',
+  re:[/(?:cl@ve|clave)\s?(?:pin|code|password)?|digital certificate|government gateway|(?:send|share|give|enter|confirm|provide)\s[^.!?\n]{0,30}(?:pin|code|password|card (?:number|details)|cvv|bank (?:login|details|credentials)|online banking)|(?:photo|picture|scan|copy)\s(?:of\s)?(?:your\s)?(?:id|passport|dni|nie|driving licen[cs]e)|selfie|(?:verify|confirm|update)\s(?:your\s)?(?:identity|personal details|details|bank details|account|iban)/i,
+   /cl@ve|pin\s(?:de\s)?(?:la\s)?clave|certificado digital|(?:env[ií]a\w*|manda\w*|facilita\w*|introduce\w*|confirma\w*|dime|p[aá]sa\w*)\s[^.!?\n]{0,30}(?:pin|c[oó]digo|contrase[nñ]a|n[uú]mero de (?:la\s)?tarjeta|cvv|claves? (?:del\s)?banc\w*|banca online)|(?:foto|copia|imagen)\s(?:de(?:l)?\s)?(?:tu\s)?(?:dni|nie|pasaporte|carnet)|selfie|(?:verifi\w*|confirm[ae]\w*|actualic\w*|actualiz\w*)\s(?:tus\s|sus\s)?(?:datos|identidad|cuenta|iban)/i]},
+ {id:'refund',w:20,en:'“You are owed a refund”: a tax refund, rebate, overpaid tax, energy or electricity rebate, cost of living or winter fuel payment, or unclaimed money waiting for you to claim through a link',es:'“Tienes una devolución pendiente”: devolución de Hacienda o de la Renta, reembolso, cobro indebido a tu favor, bono de luz o de energía, cheque o ayuda “sin reclamar” que tienes que pedir por un enlace',
+  wen:'Tax agencies pay refunds automatically to the account you already gave them. They do not text or email a link to “claim” one.',wes:'Hacienda paga las devoluciones sola, en la cuenta que ya indicaste. No manda SMS ni emails con un enlace para “reclamarla”.',
+  re:[/(?:tax\s)?(?:refund|rebate|reimbursement)\s[^.!?\n]{0,40}(?:pending|due|owed|available|waiting|approved|ready)|(?:you are|you're|you have been)\s(?:owed|eligible|entitled|due)\s[^.!?\n]{0,30}(?:refund|rebate|payment|£|€|\$)|(?:claim|collect)\s(?:your\s)?(?:refund|rebate|payment|money|funds)|(?:cost of living|winter fuel|energy bill|energy|heating)\s(?:payment|rebate|support|grant|discount)|unclaimed\s(?:money|funds|refund|payment)|overpaid\s(?:tax|taxes|bills?)/i,
+   /devoluci[oó]n\s[^.!?\n]{0,40}(?:pendiente|disponible|aprobada|a tu favor|a su favor|lista)|(?:tienes|tiene)\s(?:una\s)?(?:devoluci[oó]n|reembolso|ayuda|cheque)\s(?:pendiente|disponible|asignad[oa]|sin reclamar)|(?:reclama|solicita|cobra|recibe)\s(?:tu|su|la)\s(?:devoluci[oó]n|reembolso|ayuda|bono|cheque)|(?:bono|ayuda|cheque)\s(?:social\s)?(?:de\s)?(?:la\s)?(?:luz|energ[eé]tico|energ[ií]a|calefacci[oó]n|gas)|sin reclamar|cobro indebido/i]},
+ {id:'agent',w:16,en:'Someone offers to “process” or “guarantee” your grant, aid, Kit Digital voucher, pension or benefit for you: pre-approved, “you have been selected”, “we handle everything”, commission on what you get, or a request to sign over your voucher or certificate',es:'Alguien se ofrece a “tramitarte” o “garantizarte” la subvención, la ayuda, el bono Kit Digital, la pensión o la prestación: preaprobada, “has sido seleccionado”, “nos encargamos de todo”, un porcentaje de lo que cobres, o firmar la cesión de tu bono o de tu certificado',
+  wen:'Real aid is applied for on official websites and decided by the administration. Nobody can guarantee it, and Kit Digital agents may not charge you for the voucher itself.',wes:'Las ayudas reales se piden en webs oficiales y las resuelve la Administración. Nadie puede garantizarlas, y los agentes del Kit Digital no pueden cobrarte por el bono.',
+  re:[/(?:pre-?approved|guaranteed|you have been selected|you(?:'ve| have) been chosen|you qualify)\s[^.!?\n]{0,40}(?:grant|aid|funding|voucher|subsid\w*|payment|benefit|loan)?|(?:we|our (?:team|agency|consultants?))\s(?:will\s)?(?:handle|process|manage|apply for)\s[^.!?\n]{0,30}(?:grant|aid|funding|voucher|subsid\w*|application|paperwork|benefit)|(?:commission|percentage|%)\s(?:of|on)\s(?:the\s)?(?:grant|aid|funding|subsid\w*)|kit digital|next generation (?:eu\s)?funds?/i,
+   /(?:preaprobad[oa]|garantizad[oa]|ha(?:s)? sido seleccionad[oa]|eres beneficiari[oa]|cumples los requisitos)|(?:te|le|os)\s(?:la\s|lo\s)?(?:tramitamos|gestionamos|conseguimos|solicitamos)|nos encargamos de todo|(?:comisi[oó]n|porcentaje|%)\s(?:de|sobre)\s(?:la\s|lo que\s)?(?:subvenci[oó]n|ayuda|cobres|bono)|kit digital|fondos? (?:next generation|europeos)|cesi[oó]n (?:del\s)?(?:bono|certificado)/i]},
+ {id:'auth',w:10,en:'It claims to be the tax agency, social security, the employment service, a ministry or council, or HMRC, DWP, the IRS or gov.uk',es:'Dice venir de Hacienda / la Agencia Tributaria, la Seguridad Social, el SEPE, un ministerio, la comunidad autónoma o el ayuntamiento, o de HMRC, DWP, el IRS o gov.uk',
+  wen:'The name is free to use. What matters is where the link goes and what they ask you to do.',wes:'El nombre lo puede usar cualquiera. Lo que importa es adónde lleva el enlace y qué te piden.',
+  re:[/\b(?:hmrc|dwp|irs|gov\.uk|tax (?:office|agency|authority)|social security|ministry|department for|council|revenue service)\b/i,
+   /(?:hacienda|agencia tributaria|aeat|seguridad social|inss|sepe|ministerio|ayuntamiento|junta de|gobierno de|consejer[ií]a|red\.es|acelera ?pyme)/i]},
+ {id:'link',w:14,en:'A link to click, a shortened link, a WhatsApp or Telegram contact, or a website that does not end in gob.es / gov.uk',es:'Un enlace para pulsar, un enlace acortado, un contacto de WhatsApp o Telegram, o una web que no termina en gob.es',
+  wen:'Official Spanish services live on gob.es (and the regional sites), UK ones on gov.uk. A refund or grant link anywhere else is fake.',wes:'Los servicios oficiales están en gob.es (y en las webs autonómicas). Un enlace de devolución o ayuda en otro sitio es falso.',
+  re:[/https?:\/\/\S+|\bwww\.\S+|\b(?:bit\.ly|tinyurl|t\.co|cutt\.ly|is\.gd|rb\.gy)\b|(?:click|tap|follow|visit)\s(?:the\s|this\s|on\s)?(?:link|here|below|button)|whatsapp|telegram|\b[a-z0-9-]+\.(?:com|net|info|top|xyz|online|site|live|icu|cc)\b/i,
+   /https?:\/\/\S+|\bwww\.\S+|\b(?:bit\.ly|tinyurl|cutt\.ly|is\.gd|rb\.gy)\b|(?:pulsa|haz clic|accede|entra|visita)\s(?:en\s)?(?:el\s|este\s)?(?:enlace|aqu[ií]|bot[oó]n|link)|whatsapp|telegram/i]},
+ {id:'pressure',w:12,en:'Pressure: claim today, the offer expires in hours, last notice, limited places, or you will lose the money',es:'Prisa: reclámalo hoy, caduca en unas horas, último aviso, plazas limitadas, o perderás el dinero',
+  wen:'Real deadlines are published in official bulletins weeks in advance. A countdown is there to stop you checking.',wes:'Los plazos reales se publican en los boletines oficiales con semanas de margen. La cuenta atrás es para que no lo compruebes.',
+  re:[/(?:today|immediately|urgent\w*|asap|within\s\d+\s?(?:h|hours?|days?)|expires?|deadline|last (?:chance|day|notice)|final (?:notice|reminder)|limited (?:places|spots|funds)|lose (?:it|your|the)|suspend\w*|blocked)/i,
+   /(?:hoy mismo|hoy|inmediatamente|urgente\w*|cuanto antes|en (?:las pr[oó]ximas\s)?\d+\s?(?:h|horas|d[ií]as)|caduca\w*|plazo|[uú]ltimo (?:aviso|d[ií]a)|[uú]ltima oportunidad|plazas limitadas|fondos limitados|perder[aá]s|la perder|suspend\w*|bloquead[oa])/i]}
+];
+
+function stripOfficial(t){return t.replace(/https?:\/\/(?:[a-z0-9-]+\.)*(?:gob\.es|gov\.uk|incibe\.es|policia\.es|guardiacivil\.es|seg-social\.es|asturias\.es|boe\.es)(?:\/\S*)?/gi,' ');}
+function analyze(text,url){
+  var raw=(text||'')+'\n'+(url||''),t=stripOfficial(raw),hits=[],score=0;
+  RULES.forEach(function(r){var ev=findRx(t,r.re,r.neg);hits.push({rule:r,hit:!!ev,ev:ev});if(ev)score+=r.w;});
+  var on=function(id){return hits.some(function(h){return h.hit&&h.rule.id===id;});};
+  var n=hits.filter(function(h){return h.hit;}).length;
+  if(n>=4)score+=8;
+  if(on('fee'))score=Math.max(score,75);
+  if(on('fee')&&(on('agent')||on('auth')||on('pressure')))score=Math.max(score,88);
+  if(on('creds'))score=Math.max(score,68);
+  if(on('creds')&&(on('refund')||on('auth')||on('agent')))score=Math.max(score,85);
+  if(on('refund')&&on('link'))score=Math.max(score,80);
+  if(on('refund')&&on('auth'))score=Math.max(score,55);
+  if(on('agent')&&on('pressure'))score=Math.max(score,55);
+  if(on('auth')&&on('link')&&on('pressure'))score=Math.max(score,70);
+  var legit=/(?:log in (?:yourself|to your account)|through your (?:online )?account|no (?:action|need to do anything)|you don'?t need to do anything|accede t[uú] mism[oa]|desde tu [aá]rea personal|no tienes que hacer nada|no es necesario hacer nada|renta web|mis expedientes)/i.test(raw);
+  if(legit&&!on('fee')&&!on('creds')&&!on('link'))score=Math.min(score,10);
+  score=Math.min(100,score);
+  return {score:score,hits:hits,count:n};
+}
+function verdict(s,es){
+  if(s>=70)return es?['Estafa casi segura','Encaja con un guion conocido: una devolución o ayuda que hay que “reclamar” por un enlace, pagar antes de cobrar, o dar tu Cl@ve, certificado o tarjeta. No pulses, no pagues y no des datos. Compruébalo tú en la sede oficial.']:['Almost certainly a scam','This matches a known script: a refund or grant you must “claim” through a link, a fee before you get paid, or a request for your login, certificate or card. Do not click, pay or share anything. Check it yourself on the official site.'];
+  if(s>=40)return es?['Muchas banderas rojas','Tiene rasgos típicos de las estafas de devoluciones y ayudas. Entra tú en la web oficial escribiendo la dirección, no desde el mensaje, y mira si hay algo de verdad.']:['Big red flags','It has the usual signs of refund and grant scams. Go to the official website by typing the address yourself, not from the message, and see whether anything is really there.'];
+  if(s>=15)return es?['Huele raro','Alguna señal típica. Las ayudas reales se piden en webs gob.es y no cuestan nada.']:['Kinda sus','Some classic signals. Real aid is applied for on official government websites and costs nothing.'];
+  return es?['Pocas banderas','No salta casi nada. La regla de oro sigue igual: para cobrar dinero público nunca hay que pagar ni dar claves a nadie.']:['Few flags','Not much trips the rules. The golden rule still applies: you never pay or hand over your logins to receive public money.'];
+}
+function todo(r,es){
+  var on=function(id){return r.hits.some(function(h){return h.hit&&h.rule.id===id;});},L=[];
+  L.push(es?'No pulses el enlace ni contestes. Entra tú escribiendo la dirección: sede.agenciatributaria.gob.es o la app de la Agencia Tributaria para devoluciones, sede.seg-social.gob.es para pensiones y prestaciones, sepe.es para el paro.':'Do not click or reply. Go there yourself by typing the address: in Spain sede.agenciatributaria.gob.es or the tax agency app for refunds, sede.seg-social.gob.es for pensions and benefits; in the UK gov.uk.');
+  L.push(es?'Las devoluciones de Hacienda llegan solas a la cuenta que pusiste en la declaración. Si alguien pide “confirmar” o cambiar tu IBAN para cobrar, es para quedarse el dinero.':'Tax refunds are paid automatically to the account you already gave. Anyone asking you to “confirm” or change your bank details to get paid wants the money for themselves.');
+  if(on('fee'))L.push(es?'No pagues ninguna tasa, comisión ni “liberación”. Si ya pagaste, llama a tu banco ahora para anular la tarjeta o pedir la retrocesión; un Bizum casi nunca se recupera, así que denúncialo cuanto antes.':'Pay no fee, commission or “release” charge. If you already paid, call your bank now to block the card or recall the transfer, and report it as soon as possible.');
+  if(on('creds'))L.push(es?'Si diste tu Cl@ve, cambia el PIN y la contraseña desde clave.gob.es. Si diste el certificado digital, revócalo en la FNMT o en tu entidad emisora. Si diste la tarjeta o claves del banco, llama al banco y bloquéalas.':'If you shared a government login, change it from the official site. If you shared a digital certificate, revoke it with the issuer (FNMT in Spain). If you shared card or bank details, call your bank and block them.');
+  if(on('agent'))L.push(es?'Comprueba la convocatoria en el BOE o el boletín de tu comunidad (BOPA en Asturias). Para el Kit Digital, los agentes digitalizadores autorizados están en acelerapyme.gob.es y no pueden cobrarte por el bono. No firmes ninguna cesión sin leerla.':'Check the call for applications in the official bulletin (BOE or your region’s in Spain). For Kit Digital, authorised agents are listed on acelerapyme.gob.es and may not charge you for the voucher. Do not sign anything that transfers your voucher or certificate.');
+  L.push(es?'Denúncialo en la Policía Nacional (091) o la Guardia Civil (062), y pide ayuda gratis a INCIBE en el 017. En Reino Unido reenvía los SMS al 7726 y los emails a report@phishing.gov.uk.':'Report it to the police (Policía Nacional 091 or Guardia Civil 062 in Spain) and get free help from INCIBE on 017. In the UK forward scam texts to 7726 and emails to report@phishing.gov.uk.');
+  return L;
+}
+var EXAMPLES=[
+ {t:'Agencia Tributaria: tiene una devolución pendiente de 498,20€. Para recibirla, confirme sus datos y su IBAN en el siguiente enlace antes de 24 horas: https://aeat-devolucion.info',u:'SMS'},
+ {t:'HMRC: You are owed a tax refund of £326.40. Claim your refund today at https://hmrc-refund-claim.online before it expires.',u:'SMS from an unknown mobile number'},
+ {t:'Enhorabuena, su empresa ha sido seleccionada para el Kit Digital de 12.000€. Nos encargamos de todo, solo tiene que abonar 150€ de gastos de tramitación por Bizum hoy y enviarnos foto del DNI y el PIN de su Cl@ve.',u:'WhatsApp'},
+ {t:'Seguridad Social: su pensión será suspendida. Actualice sus datos para recibir el pago del mes en este enlace.',u:'seg-social-actualizacion@gmail.com'},
+ {t:'Winter fuel payment: you are eligible for £300. Tap the link and enter your card details to receive the payment, last day today.',u:'SMS'},
+ {t:'Su declaración de la Renta ha sido tramitada. No tiene que hacer nada; puede consultar el estado accediendo usted mismo desde su área personal en la sede.',u:''}
+];
+function ex(i){document.getElementById('txt').value=EXAMPLES[i].t;document.getElementById('url').value=EXAMPLES[i].u;run();}
+
+
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function run(){
+  var t=document.getElementById('txt').value.trim(),u=document.getElementById('url').value.trim();
+  if(!t&&!u){document.getElementById('txt').focus();return;}
+  var es=lang==='es',r=analyze(t,u),v=verdict(r.score,es);
+  document.getElementById('out').style.display='grid';
+  document.getElementById('sN').textContent=r.score;
+  var bar=document.getElementById('sBar');bar.style.width=r.score+'%';bar.style.background=r.score>=70?'var(--red)':r.score>=40?'var(--amber)':r.score>=15?'#e0d34a':'var(--green)';
+  document.getElementById('vTitle').textContent=v[0];document.getElementById('vText').textContent=v[1];
+  document.getElementById('list').innerHTML=r.hits.map(function(h){return '<li class="'+(h.hit?'hit':'miss')+'"><span class="m">'+(h.hit?'!':'·')+'</span><span>'+(es?h.rule.es:h.rule.en)+(h.hit?'<small>'+(es?h.rule.wes:h.rule.wen)+'</small>'+(h.ev?'<small class="ev">“'+esc(String(h.ev).slice(0,70))+'”</small>':''):'')+'</span></li>';}).join('');
+  document.getElementById('todo').innerHTML=todo(r,es).map(function(x){return '<li>'+x+'</li>';}).join('');
+}
+if(typeof location!=='undefined'){if(/lang=es/.test(location.hash||''))setLang('es');var hm=(location.hash||'').match(/ex=(\d)/);if(hm)ex(+hm[1]);}
+if(typeof module!=='undefined')module.exports={analyze:analyze,EXAMPLES:EXAMPLES};
+</script>
+</body>
+</html>
